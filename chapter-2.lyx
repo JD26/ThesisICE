@@ -1,0 +1,2380 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass scrbook
+\begin_preamble
+% increases link area for cross-references and autoname them
+\AtBeginDocument{\renewcommand{\ref}[1]{\mbox{\autoref{#1}}}}
+
+
+% in case somebody want to have the label "Equation"
+%\renewcommand{\eqref}[1]{Equation~(\negthinspace\autoref{#1})}
+
+% that links to image floats jumps to the beginning
+% of the float and not to its caption
+\usepackage[figure]{hypcap}
+
+% the pages of the TOC is numbered roman
+% and a pdf-bookmark for the TOC is added
+\let\myTOC\tableofcontents
+\renewcommand\tableofcontents{%
+  \frontmatter
+  \pdfbookmark[1]{\contentsname}{}
+  \myTOC
+  \mainmatter }
+
+% makes caption labels bold
+\setkomafont{captionlabel}{\bfseries}
+\setcapindent{1em}
+
+% enables calculations
+\usepackage{calc}
+
+% fancy page header/footer settings
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+% increases the bottom float placement fraction
+\renewcommand{\bottomfraction}{0.5}
+
+% avoids that floats are placed above its sections
+\let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
+\end_preamble
+\options intoc,bibliography=totoc,index=totoc,BCOR10mm,captions=tableheading,titlepage,fleqn
+\use_default_options true
+\master thesis.lyx
+\begin_modules
+customHeadersFooters
+theorems-ams-bytype
+theorems-sec-bytype
+tabs-within-sections
+figs-within-sections
+eqs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman lmodern
+\font_sans lmss
+\font_typewriter lmtt
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_title "Your title"
+\pdf_author "Your name"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle false
+\pdf_quoted_options "pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\branch NoChildDocument
+\selected 0
+\filename_suffix 0
+\color #ff0000
+\end_branch
+\branch Lema
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Left Header
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+chaptername
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thechapter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+rightmark
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Enable page headers and add the chapter to the header line.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Right Header
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+leftmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Left Footer
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thepage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Center Footer
+
+\end_layout
+
+\begin_layout Right Footer
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thepage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Teoría de Ecuaciones Diferenciales Ordinarias
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $t$
+\end_inset
+
+ que pertenece a los reales y 
+\begin_inset Formula $D$
+\end_inset
+
+ un conjunto abierto en 
+\begin_inset Formula $R^{n+1}$
+\end_inset
+
+.
+ Un elemento de 
+\begin_inset Formula $D$
+\end_inset
+
+ se escribe como 
+\begin_inset Formula $\left(t,x\right)$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $f:D\rightarrow R^{n}$
+\end_inset
+
+, continua.
+ Una ecuación diferencial es una relación de la forma
+\begin_inset Formula 
+\begin{equation}
+x'\left(t\right)=f\left(t,x\left(t\right)\right)\label{eq:edo}
+\end{equation}
+
+\end_inset
+
+Decimos que 
+\begin_inset Formula $x$
+\end_inset
+
+ es una solución de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:edo"
+
+\end_inset
+
+ en un intervalo 
+\begin_inset Formula $I\subset R$
+\end_inset
+
+ si 
+\begin_inset Formula $x$
+\end_inset
+
+ es una función continuamente diferenciable en 
+\begin_inset Formula $I$
+\end_inset
+
+, 
+\begin_inset Formula $\left(t,x\left(t\right)\right)$
+\end_inset
+
+
+\begin_inset Formula $\in$
+\end_inset
+
+
+\begin_inset Formula $D$
+\end_inset
+
+, 
+\begin_inset Formula $t$
+\end_inset
+
+
+\begin_inset Formula $\in$
+\end_inset
+
+
+\begin_inset Formula $I$
+\end_inset
+
+ y 
+\begin_inset Formula $x$
+\end_inset
+
+ satisface 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:edo"
+
+\end_inset
+
+ en 
+\begin_inset Formula $I$
+\end_inset
+
+.
+ Nos referimos a 
+\begin_inset Formula $f$
+\end_inset
+
+ como un campo vectorial sobre 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ Suponemos que 
+\begin_inset Formula $\left(t_{0},x_{0}\right)$
+\end_inset
+
+
+\begin_inset Formula $\in$
+\end_inset
+
+
+\begin_inset Formula $D$
+\end_inset
+
+ es dado.
+ Un problema de valor inicial para la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:edo"
+
+\end_inset
+
+ consiste de encontrar un intervalo 
+\begin_inset Formula $I$
+\end_inset
+
+ conteniendo a 
+\begin_inset Formula $t_{0}$
+\end_inset
+
+ y a 
+\begin_inset Formula $x$
+\end_inset
+
+ solución de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:edo"
+
+\end_inset
+
+ satisfaciendo 
+\begin_inset Formula $x\left(t_{0}\right)=x_{0}$
+\end_inset
+
+.
+ Escribimos este problema simbolicamente como
+\begin_inset Formula 
+\begin{equation}
+x'=f\left(t,x\right),\: x\left(t_{0}\right)=x_{0},\: t\in I\label{eq:pvi}
+\end{equation}
+
+\end_inset
+
+Si existe un intervalo 
+\begin_inset Formula $I$
+\end_inset
+
+ conteniendo a 
+\begin_inset Formula $t_{0}$
+\end_inset
+
+ y una función 
+\begin_inset Formula $x$
+\end_inset
+
+ satisfaciendo 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:pvi"
+
+\end_inset
+
+, nos referimos a esta como una solución de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:edo"
+
+\end_inset
+
+ pasando por 
+\begin_inset Formula $\left(t_{0},x_{0}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+(Peano)(Existencia).
+ Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es continua en 
+\begin_inset Formula $D$
+\end_inset
+
+, entonces para cualquier 
+\begin_inset Formula $\left(t_{0},x_{0}\right)$
+\end_inset
+
+
+\begin_inset Formula $\in$
+\end_inset
+
+
+\begin_inset Formula $D$
+\end_inset
+
+, existe al menos una solución de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:edo"
+
+\end_inset
+
+ pasando por 
+\begin_inset Formula $\left(t_{0},x_{0}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Ver
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HODE1980"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Corollary
+Si 
+\begin_inset Formula $U$
+\end_inset
+
+ es un conjunto compacto de 
+\begin_inset Formula $D$
+\end_inset
+
+, 
+\begin_inset Formula $U\subset V$
+\end_inset
+
+, un conjunto abierto en 
+\begin_inset Formula $D$
+\end_inset
+
+ con la cerradura 
+\begin_inset Formula $\bar{V}$
+\end_inset
+
+ de 
+\begin_inset Formula $V$
+\end_inset
+
+ en 
+\begin_inset Formula $D$
+\end_inset
+
+, entonces existe 
+\begin_inset Formula $\alpha>0$
+\end_inset
+
+ tal que, para cualquier valor inicial 
+\begin_inset Formula $\left(t_{0},x_{0}\right)$
+\end_inset
+
+ 
+\begin_inset Formula $\in$
+\end_inset
+
+ 
+\begin_inset Formula $U$
+\end_inset
+
+, existe una solución de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:edo"
+
+\end_inset
+
+ pasando por 
+\begin_inset Formula $\left(t_{0},x_{0}\right)$
+\end_inset
+
+ la cual existe en el intervalo 
+\begin_inset Formula $\left[t_{0}-\alpha,t_{0}+\alpha\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Ver
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HODE1980"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $\phi$
+\end_inset
+
+ es una solución de una ecuación diferencial en un intervalo 
+\begin_inset Formula $I$
+\end_inset
+
+, decimos que 
+\begin_inset Formula $\hat{\phi}$
+\end_inset
+
+ es una extensión de 
+\begin_inset Formula $\phi$
+\end_inset
+
+ si 
+\begin_inset Formula $\hat{\phi}$
+\end_inset
+
+ es definida en un intervalo 
+\begin_inset Formula $\hat{I}$
+\end_inset
+
+ el cual contiene propiamente a 
+\begin_inset Formula $I$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{\phi}$
+\end_inset
+
+ coincide con 
+\begin_inset Formula $\phi$
+\end_inset
+
+ sobre 
+\begin_inset Formula $I$
+\end_inset
+
+ y 
+\begin_inset Formula $\hat{\phi}$
+\end_inset
+
+ satisface la ecuación diferencial en 
+\begin_inset Formula $\hat{I}$
+\end_inset
+
+.
+ Una solución 
+\begin_inset Formula $\phi$
+\end_inset
+
+ es no extendible si no existe tal extensión; esto es, el intervalo 
+\begin_inset Formula $I$
+\end_inset
+
+ es el máximo intervalo de existencia de la solución.
+\end_layout
+
+\begin_layout Theorem
+Si 
+\begin_inset Formula $D$
+\end_inset
+
+ es un conjunto abierto en 
+\begin_inset Formula $R^{n+1}$
+\end_inset
+
+, 
+\begin_inset Formula $f:D\rightarrow R^{n}$
+\end_inset
+
+ es continua y 
+\begin_inset Formula $\phi\left(t\right)$
+\end_inset
+
+ es solución de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:edo"
+
+\end_inset
+
+ sobre algún intervalo, entonces existe una extención de 
+\begin_inset Formula $\phi$
+\end_inset
+
+ a un máximo intervalo de existencia.
+ Además, si 
+\begin_inset Formula $\left(a,b\right)$
+\end_inset
+
+ es el máximo intervalo de existencia de una solución 
+\begin_inset Formula $x$
+\end_inset
+
+ de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:edo"
+
+\end_inset
+
+, entonces 
+\begin_inset Formula $\left(t,x\left(t\right)\right)$
+\end_inset
+
+ tiende a la frontera de 
+\begin_inset Formula $D$
+\end_inset
+
+ cuando 
+\begin_inset Formula $t\rightarrow a$
+\end_inset
+
+ y 
+\begin_inset Formula $t\rightarrow b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Ver
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HODE1980"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Section
+Funciones localmente 
+\shape italic
+Lipschitz
+\end_layout
+
+\begin_layout Standard
+Denotamos por 
+\begin_inset Formula $\left(t,x\right)$
+\end_inset
+
+ un elemento de 
+\begin_inset Formula $\mathbb{R}_{+}^{n+1}=\left[0,\infty^{+}\right\rangle ^{n+1}$
+\end_inset
+
+ o de 
+\begin_inset Formula $\mathbb{R}^{n+1}$
+\end_inset
+
+ con 
+\begin_inset Formula $t\in\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $\left[t\right]_{+}=\mbox{max}\left\{ 0,t\right\} $
+\end_inset
+
+ si 
+\begin_inset Formula $t\in\mathbb{R}$
+\end_inset
+
+ , 
+\begin_inset Formula $\left[x\right]_{+}=\left(\left[x_{1}\right]_{+},...,\left[x_{n}\right]_{+}\right)$
+\end_inset
+
+ si 
+\begin_inset Formula $x\in\mathbb{R}^{n}$
+\end_inset
+
+ y 
+\begin_inset Formula $\left[U\right]_{+}=\left\{ \left(\left[t\right]_{+},\left[x\right]_{+}\right),\,\left(t,x\right)\in U\right\} $
+\end_inset
+
+ con 
+\begin_inset Formula $U\subset\mathbb{R}^{n+1}$
+\end_inset
+
+.
+ Utilizamos la norma 
+\begin_inset Formula $|\left(x_{1},...,x_{n}\right)|=|x_{1}|+..|x_{n}|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Sean 
+\begin_inset Formula $t\in\mathbb{R}$
+\end_inset
+
+ , 
+\begin_inset Formula $\left(t,x\right)\in D\subset\mathbb{R}^{n+1}$
+\end_inset
+
+ y 
+\begin_inset Formula $f:D\rightarrow\mathbb{R}^{m}$
+\end_inset
+
+.
+ Se dice que 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\shape italic
+localmente Lipschitz
+\shape default
+ en 
+\begin_inset Formula $x$
+\end_inset
+
+ si 
+\begin_inset Formula $\forall\, U\subseteq D$
+\end_inset
+
+ cerrado y acotado 
+\begin_inset Formula $\exists\, K_{U}$
+\end_inset
+
+ tal que
+\begin_inset Formula 
+\[
+|f\left(t,x_{1}\right)-f\left(t,x_{2}\right)|\leq K_{U}|x_{1}-x_{2}|;\quad\forall\left(t,x_{1}\right),\left(t,x_{2}\right)\in U.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+Sean 
+\begin_inset Formula $x\in D\subset\mathbb{R}^{n}$
+\end_inset
+
+ y 
+\begin_inset Formula $f:D\rightarrow\mathbb{R}^{m}$
+\end_inset
+
+.
+ Se dice que 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\shape italic
+localmente Lipschitz
+\shape default
+ si 
+\begin_inset Formula $\forall\, U\subseteq D$
+\end_inset
+
+ cerrado y acotado 
+\begin_inset Formula $\exists\, K_{U}$
+\end_inset
+
+ tal que
+\begin_inset Formula 
+\[
+|f\left(x_{1}\right)-f\left(x_{2}\right)|\leq K_{U}|x_{1}-x_{2}|;\quad\forall x_{1},x_{2}\in U.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proposition
+
+\shape up
+Sean 
+\begin_inset Formula $t\in\mathbb{R}$
+\end_inset
+
+ , 
+\begin_inset Formula $\left(t,x\right)\in E\subset\mathbb{R}^{n+1}$
+\end_inset
+
+ y 
+\begin_inset Formula $f:E\rightarrow\mathbb{R}^{m}$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es localmente Lipschitz en 
+\begin_inset Formula $x$
+\end_inset
+
+ entoces 
+\begin_inset Formula $f_{t}\left(x\right)=f\left(t,x\right)$
+\end_inset
+
+ es localmente Lipschitz.
+\end_layout
+
+\begin_layout Proof
+Sean 
+\begin_inset Formula $x_{1},x_{2}\in U\subset E$
+\end_inset
+
+, 
+\begin_inset Formula $U$
+\end_inset
+
+ cerrado y acotado.
+ Entonces 
+\begin_inset Formula $\left\{ t\right\} \times U$
+\end_inset
+
+ es cerrado y acotado.
+ Entonces 
+\begin_inset Formula $\exists K_{f}$
+\end_inset
+
+ tal que
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $|f_{t}\left(x_{1}\right)-f_{t}\left(x_{2}\right)|=|f\left(t,x_{1}\right)-f\left(t,x_{2}\right)|\leq K_{f}|x_{1}-x_{2}|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Por lo tanto 
+\begin_inset Formula $f_{t}$
+\end_inset
+
+ es localmente Lipschitz.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proposition
+
+\shape up
+Sean 
+\begin_inset Formula $x\in D\subset\mathbb{R}^{n}$
+\end_inset
+
+ y 
+\begin_inset Formula $F:D\rightarrow\mathbb{R}^{m}$
+\end_inset
+
+.
+ Sean 
+\begin_inset Formula $t\in\mathbb{R}$
+\end_inset
+
+ , 
+\begin_inset Formula $\left(t,x\right)\in E\subset\mathbb{R}^{n+1}$
+\end_inset
+
+ y 
+\begin_inset Formula $f:E\rightarrow\mathbb{R}^{m}$
+\end_inset
+
+, definida por 
+\begin_inset Formula $f\left(t,x\right)=F\left(x\right)$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $F$
+\end_inset
+
+ es localmente Lipschitz, entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ es localmente Lipschitz en 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Sea 
+\begin_inset Formula $U_{f}\subset E$
+\end_inset
+
+ cerrado y acotado.
+ Sea 
+\begin_inset Formula $U_{F}=\left\{ x,\:\left(t,x\right)\in U_{f}\right\} $
+\end_inset
+
+ y 
+\begin_inset Formula $\left(x_{m}\right)$
+\end_inset
+
+una suceción en 
+\begin_inset Formula $U_{F}$
+\end_inset
+
+ tal que 
+\begin_inset Formula ${\displaystyle \lim_{m\rightarrow\infty^{+}}x_{m}=x^{*}}$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $\exists t_{m}$
+\end_inset
+
+tal que 
+\begin_inset Formula $\left(t_{m},x_{m}\right)\in U_{f}$
+\end_inset
+
+, 
+\begin_inset Formula $\forall m$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\begin{array}{l}
+\Rightarrow{\displaystyle \lim_{m\rightarrow\infty^{+}}}\left(t_{1},x_{m}\right)=\left(t_{1},x^{*}\right)\\
+\Rightarrow\left(t_{1},x^{*}\right)\in U_{f}\mbox{ (Pues \ensuremath{U_{f}} es cerrado)}\\
+\Rightarrow x^{*}\in U_{F}
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Por lo tanto 
+\begin_inset Formula $U_{F}$
+\end_inset
+
+ es cerrado.
+ Como 
+\begin_inset Formula $U_{f}$
+\end_inset
+
+ es acotado, 
+\begin_inset Formula $\exists C$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\forall\left(t,x\right)\in U_{f}$
+\end_inset
+
+, 
+\begin_inset Formula $|x|\leq|t|+|x_{1}|+...+|x_{n}|\leq|\left(t,x\right)|\leq C$
+\end_inset
+
+, luego 
+\begin_inset Formula $U_{F}$
+\end_inset
+
+ es acotado.
+\end_layout
+
+\begin_layout Proof
+Sean 
+\begin_inset Formula $\left(t,x_{1}\right),\left(t,x_{2}\right)\in U_{f}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $x_{1},x_{2}\in U_{F}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\begin{array}{l}
+|f\left(t,x_{1}\right)-f\left(t,x_{2}\right)|\\
+=|F\left(x_{1}\right)-F\left(x_{2}\right)|\\
+\leq K_{U_{F}}|x_{1}-x_{2}|\mbox{(Pues \ensuremath{F}es localmente Lipschitz)}
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Por lo tanto 
+\begin_inset Formula $f$
+\end_inset
+
+ es localmente Lipschitz en 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proposition
+
+\shape up
+Sean 
+\begin_inset Formula $t\in\mathbb{R}$
+\end_inset
+
+ , 
+\begin_inset Formula $\left(t,x\right)\in D\subset\mathbb{R}^{n+1}$
+\end_inset
+
+, 
+\begin_inset Formula $f:D\rightarrow\mathbb{R}^{m}$
+\end_inset
+
+ y 
+\begin_inset Formula $g:D\rightarrow\mathbb{R}^{m}$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $f$
+\end_inset
+
+ y 
+\begin_inset Formula $g$
+\end_inset
+
+ son localmente Lipschitz en 
+\begin_inset Formula $x$
+\end_inset
+
+ entonces 
+\begin_inset Formula $f\pm g$
+\end_inset
+
+ es localmente Lipschitz en 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Sea 
+\begin_inset Formula $U\subset D$
+\end_inset
+
+ cerrado y acotado.
+ Sean 
+\begin_inset Formula $\left(t,x_{1}\right),\left(t,x_{2}\right)\in U$
+\end_inset
+
+.
+ Entonces
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\begin{array}{l}
+|\left(f\pm g\right)\left(t,x_{1}\right)-\left(f\pm g\right)\left(t,x_{2}\right)|\\
+=|\left(f\left(t,x_{1}\right)\pm g\left(t,x_{1}\right)\right)-\left(f\left(t,x_{2}\right)\pm g\left(t,x_{2}\right)\right)|\\
+\leq|f\left(t,x_{1}\right)-f\left(t,x_{2}\right)|+|g\left(t,x_{1}\right)-g\left(t,x_{2}\right)|\\
+\leq K_{U}^{f}|x_{1}-x_{2}|+K_{U}^{g}|x_{1}-x_{2}|\mbox{(Por hipótesis)}\\
+=\left(K_{U}^{f}+K_{U}^{g}\right)|x_{1}-x_{2}|
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Por lo tanto 
+\begin_inset Formula $f\pm g$
+\end_inset
+
+ es localmente Lipschitz en 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proposition
+
+\shape up
+Sean 
+\begin_inset Formula $c\in\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $t\in\mathbb{R}$
+\end_inset
+
+ , 
+\begin_inset Formula $\left(t,x\right)\in D\subset\mathbb{R}^{n+1}$
+\end_inset
+
+, 
+\begin_inset Formula $f:D\rightarrow\mathbb{R}^{m}$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es localmente Lipschitz en 
+\begin_inset Formula $x$
+\end_inset
+
+ entonces 
+\begin_inset Formula $cf$
+\end_inset
+
+ es localmente Lipschitz en 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Sea 
+\begin_inset Formula $U\subset D$
+\end_inset
+
+ cerrado y acotado.
+ Sean 
+\begin_inset Formula $\left(t,x_{1}\right),\left(t,x_{2}\right)\in U$
+\end_inset
+
+.
+ Entonces
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\begin{array}{l}
+|\left(cf\right)\left(t,x_{1}\right)-\left(cf\right)\left(t,x_{2}\right)|\\
+=|cf\left(t,x_{1}\right)-cf\left(t,x_{2}\right)|\\
+\leq|c|K_{U}|x_{1}-x_{2}|
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Por lo tanto 
+\begin_inset Formula $cf$
+\end_inset
+
+ es localmente Lipschitz.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proposition
+
+\shape up
+Sean 
+\begin_inset Formula $t\in\mathbb{R}$
+\end_inset
+
+ , 
+\begin_inset Formula $\left(t,x\right)\in D\subset\mathbb{R}^{n+1}$
+\end_inset
+
+, 
+\begin_inset Formula $f:D\rightarrow\mathbb{R}^{m}$
+\end_inset
+
+ y 
+\begin_inset Formula $g:D\rightarrow\mathbb{R}^{m}$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $f$
+\end_inset
+
+ y 
+\begin_inset Formula $g$
+\end_inset
+
+ son localmente Lipschitz en 
+\begin_inset Formula $x$
+\end_inset
+
+ y además 
+\begin_inset Formula $\exists C$
+\end_inset
+
+ tal que 
+\begin_inset Formula $|f\left(U\right)|,|g\left(U\right)|<C$
+\end_inset
+
+ 
+\begin_inset Formula $\forall U$
+\end_inset
+
+ cerrado acotado en 
+\begin_inset Formula $D$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\left\langle f,g\right\rangle $
+\end_inset
+
+ es localmente Lipschitz en 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Sea 
+\begin_inset Formula $U\subset D$
+\end_inset
+
+ cerrado y acotado.
+ Sean 
+\begin_inset Formula $\left(t,x_{1}\right),\left(t,x_{2}\right)\in U$
+\end_inset
+
+.
+ Entonces
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\begin{array}{l}
+|\left\langle f,g\right\rangle \left(t,x_{1}\right)-\left\langle f,g\right\rangle \left(t,x_{2}\right)|\\
+=|\left\langle f\left(t,x_{1}\right),g\left(t,x_{1}\right)\right\rangle -\left\langle f\left(t,x_{2}\right),g\left(t,x_{1}\right)\right\rangle \\
+\quad\quad+\left\langle f\left(t,x_{2}\right),g\left(t,x_{1}\right)\right\rangle -\left\langle f\left(t,x_{2}\right),g\left(t,x_{2}\right)\right\rangle |\\
+=|\left\langle f\left(t,x_{1}\right)-f\left(t,x_{2}\right),g\left(t,x_{1}\right)\right\rangle +\left\langle f\left(t,x_{2}\right),g\left(t,x_{1}\right)-g\left(t,x_{2}\right)\right\rangle |\\
+\leq|\left\langle f\left(t,x_{1}\right)-f\left(t,x_{2}\right),g\left(t,x_{1}\right)\right\rangle |+|\left\langle f\left(t,x_{2}\right),g\left(t,x_{1}\right)-g\left(t,x_{2}\right)\right\rangle |\\
+\leq|f\left(t,x_{1}\right)-f\left(t,x_{2}\right)||g\left(t,x_{1}\right)|+|f\left(t,x_{2}\right)||g\left(t,x_{1}\right)-g\left(t,x_{2}\right)|\mbox{(Por C. S.)}\\
+\leq K_{U}^{f}|x_{1}-x_{2}|C+CK_{U}^{g}|x_{1}-x_{2}|\mbox{(Por hipótesis)}\\
+=C\left(K_{U}^{f}+K_{U}^{g}\right)|x_{1}-x_{2}|
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Por lo tanto 
+\begin_inset Formula $\left\langle f,g\right\rangle $
+\end_inset
+
+ es localmente Lipschitz en 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proposition
+
+\shape up
+Sean 
+\begin_inset Formula $F:\mathbb{R}_{+}^{n}\rightarrow\mathbb{R}^{m}$
+\end_inset
+
+ función de clase 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+ en 
+\begin_inset Formula $\mathbb{R}_{+}^{n}$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $F$
+\end_inset
+
+ es localmente Lipschitz.
+\end_layout
+
+\begin_layout Proof
+Sea 
+\begin_inset Formula $U\subset D$
+\end_inset
+
+ cerrado y acotado.
+ Sean 
+\begin_inset Formula $x_{1},x_{2}\in U$
+\end_inset
+
+.
+ Dado que 
+\begin_inset Formula $[x_{1},x_{2}]$
+\end_inset
+
+ (segmento de recta) es cerrado y acotado, 
+\begin_inset Formula $\exists m_{\left[x_{1},x_{2}\right]}={\displaystyle \max_{\left[x_{1},x_{2}\right]}|\partial F|}$
+\end_inset
+
+, y por la Desigualdad del Valor Medio
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\begin{array}{c}
+|F\left(x_{1}\right)-F\left(x_{2}\right)|\leq m_{\left[x_{1},x_{2}\right]}|x_{1}-x_{2}|\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Puesto que 
+\begin_inset Formula $U$
+\end_inset
+
+ es acotado, 
+\begin_inset Formula $\exists C$
+\end_inset
+
+ tal que 
+\begin_inset Formula $|x|\leq C$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\in U$
+\end_inset
+
+ y se cumple que 
+\begin_inset Formula $\left[x_{1},x_{2}\right]\subset B=\left\{ x\in\mathbb{R}_{+}^{n},\,|x|\leq C\right\} $
+\end_inset
+
+ cerrado y acotado.
+ Luego como 
+\begin_inset Formula $\partial F$
+\end_inset
+
+ es continua
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\begin{array}{l}
+m_{\left[x_{1},x_{2}\right]}\leq{\displaystyle \max_{B}|\partial F|}<\infty^{+}\\
+\Rightarrow|F\left(x_{1}\right)-F\left(x_{2}\right)|\leq{\displaystyle \max_{B}|\partial F|}|x_{1}-x_{2}|
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Por lo tanto 
+\begin_inset Formula $F$
+\end_inset
+
+ es localmente Lipschitz.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proposition
+Sean 
+\begin_inset Formula $a,t\in\mathbb{R}$
+\end_inset
+
+ y 
+\begin_inset Formula $x,y\in\mathbb{R}^{n}$
+\end_inset
+
+.
+ Las siguientes proposiciones son verdaderas.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $t\leq\left[t\right]_{+}\leq|t|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $|t-a|\leq|\left[t\right]_{+}-a|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $|\left[t\right]_{+}-\left[a\right]_{+}|\leq|t-a|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $|x-y|\leq|\left[x\right]_{+}-y|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $|\left[x\right]_{+}-\left[y\right]_{+}|\leq|x-y|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Basta usar la definición de 
+\begin_inset Formula $\left[.\right]_{+}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Lemma
+Sea 
+\begin_inset Formula $U\subset\mathbb{R}^{n+1}$
+\end_inset
+
+ cerrado y acotado.
+ Entonces 
+\begin_inset Formula $\left[U\right]_{+}$
+\end_inset
+
+ es cerrado y acotado.
+\end_layout
+
+\begin_layout Proof
+Sea 
+\begin_inset Formula $\left(\left[t\right]_{+},\left[x\right]_{+}\right)\in\left[U\right]_{+}$
+\end_inset
+
+, entonces
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\begin{array}{l}
+|\left(\left[t\right]_{+},\left[x\right]_{+}\right)|\\
+=|\left[t\right]_{+}|+|\left[x_{1}\right]_{+}|+...+|\left[x_{n}\right]_{n}|\\
+=\left[t\right]_{+}+\left[x_{1}\right]_{+}+...+\left[x_{n}\right]_{n}\\
+\leq|t|+|x_{1}|+...+|x_{n}|\\
+=|\left(t,x\right)|\leq C\mbox{ (Pues \ensuremath{U}es acotado)}
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Por lo tanto 
+\begin_inset Formula $\left[U\right]_{+}$
+\end_inset
+
+es acotado.
+\end_layout
+
+\begin_layout Proof
+Sea 
+\begin_inset Formula $\left(\left[t_{m}\right]_{+},\left[x_{m}\right]_{+}\right)$
+\end_inset
+
+una sucesión en 
+\begin_inset Formula $\left[U\right]_{+}$
+\end_inset
+
+ tal que 
+\begin_inset Formula ${\displaystyle \lim_{m\rightarrow\infty^{+}}\left(\left[t_{m}\right]_{+},\left[x_{m}\right]_{+}\right)=\left(t^{*},x^{*}\right)}$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $\forall\varepsilon>0$
+\end_inset
+
+, 
+\begin_inset Formula $\exists m_{0}$
+\end_inset
+
+ tal que
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\begin{array}{l}
+|\left(t_{m},x_{m}\right)-\left(t^{*},x^{*}\right)|\\
+\leq|\left(\left[t_{m}\right]_{+},\left[x_{m}\right]_{+}\right)-\left(t^{*},x^{*}\right)|\mbox{ (Por la proposición anterior)}\\
+<\varepsilon\quad\forall m\geq m_{0}\mbox{ (Por la definición de límite)}
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Luego 
+\begin_inset Formula ${\displaystyle \lim_{m\rightarrow\infty^{+}}\left(t_{m},x_{m}\right)=\left(t^{*},x^{*}\right)}.$
+\end_inset
+
+ Como 
+\begin_inset Formula $U$
+\end_inset
+
+ es cerrado 
+\begin_inset Formula $\left(t^{*},x^{*}\right)\in U$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $\left(\left[t^{*}\right]_{+},\left[x^{*}\right]_{+}\right)\in\left[U\right]_{+}$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $\forall\varepsilon>0$
+\end_inset
+
+, 
+\begin_inset Formula $\exists m_{0}$
+\end_inset
+
+ tal que 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\begin{array}{l}
+|\left(\left[t_{m}\right]_{+},\left[x_{m}\right]_{+}\right)-\left(\left[t^{*}\right]_{+},\left[x^{*}\right]_{+}\right)|\\
+\leq|\left(t_{m},x_{m}\right)-\left(t^{*},x^{*}\right)|\mbox{ (Por la proposición anterior)}\\
+<\varepsilon\quad\forall m\geq m_{0}\mbox{ (Por la definición de límite)}
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Luego 
+\begin_inset Formula ${\displaystyle \lim_{m\rightarrow\infty^{+}}\left(\left[t_{m}\right]_{+},\left[x_{m}\right]_{+}\right)=\left(\left[t^{*}\right]_{+},\left[x^{*}\right]_{+}\right)}.$
+\end_inset
+
+ Por unicidad del límite 
+\begin_inset Formula $\left(t^{*},x^{*}\right)=\left(\left[t^{*}\right]_{+},\left[x^{*}\right]_{+}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(t^{*},x^{*}\right)\in\left[U\right]_{+}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Por lo tanto 
+\begin_inset Formula $\left[U\right]_{+}$
+\end_inset
+
+es cerrado.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+
+\shape up
+Sean 
+\begin_inset Formula $t\in\mathbb{R}$
+\end_inset
+
+ , 
+\begin_inset Formula $\left(t,x\right)\in\mathbb{R}_{+}^{n+1}$
+\end_inset
+
+, 
+\begin_inset Formula $f:\mathbb{R}_{+}^{n+1}\rightarrow\mathbb{R}^{m}$
+\end_inset
+
+ y 
+\begin_inset Formula $\tilde{f}:\mathbb{R}^{n+1}\rightarrow\mathbb{R}^{m}$
+\end_inset
+
+ definida como 
+\begin_inset Formula $\tilde{f}\left(t,x\right)=f\left(\left[t\right]_{+},\left[x\right]_{+}\right)$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es localmente Lipschitz en 
+\begin_inset Formula $x$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\tilde{f}$
+\end_inset
+
+ es localmente Lipchitz en 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Sea 
+\begin_inset Formula $U\subset\mathbb{R}^{n+1}$
+\end_inset
+
+ cerrado y acotado.
+ Sean 
+\begin_inset Formula $\left(t,x_{1}\right),\left(t,x_{2}\right)\in U$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $\left[U\right]_{+}\subset\mathbb{R}_{+}^{n+1}$
+\end_inset
+
+ es cerrado y acotado por el lema anterior.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\begin{array}{l}
+|\tilde{f}\left(t,x_{1}\right)-\tilde{f}\left(t,x_{2}\right)|\\
+=|f\left(\left[t\right]_{+},\left[x_{1}\right]_{+}\right)-f\left(\left[t\right]_{+},\left[x_{2}\right]_{+}\right)|\\
+\leq K_{\left[U\right]_{+}}|\left[x_{1}\right]_{+}-\left[x_{2}\right]_{+}|\mbox{(Pues \ensuremath{f}es localmente Lipschitz)}\\
+\leq K_{\left[U\right]_{+}}|x_{1}-x_{2}|\mbox{ (Por la proposición anterior)}
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Por lo tanto 
+\begin_inset Formula $\tilde{f}$
+\end_inset
+
+ es localmente Lipchitz en 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Section
+Teoremas de Existencia y Unicidad
+\end_layout
+
+\begin_layout Theorem
+Si 
+\begin_inset Formula $f(t,x)$
+\end_inset
+
+ es continua en 
+\begin_inset Formula $D$
+\end_inset
+
+ y localmente lipschitz con respecto a 
+\begin_inset Formula $x$
+\end_inset
+
+ en 
+\begin_inset Formula $D$
+\end_inset
+
+, entonces para cualquier 
+\begin_inset Formula $\left(t_{0},x_{0}\right)$
+\end_inset
+
+ en 
+\begin_inset Formula $D$
+\end_inset
+
+, existe una única solución 
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $x\left(t,t_{0},x_{0}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $x\left(t_{0},t_{0},x_{0}\right)$
+\end_inset
+
+
+\begin_inset Formula $=$
+\end_inset
+
+
+\begin_inset Formula $x_{0}$
+\end_inset
+
+, de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:edo"
+
+\end_inset
+
+ pasando por 
+\begin_inset Formula $\left(t_{0},x_{0}\right)$
+\end_inset
+
+.
+ Además, el dominio 
+\begin_inset Formula $E$
+\end_inset
+
+ en 
+\begin_inset Formula $R^{n+2}$
+\end_inset
+
+ de definición de la función 
+\begin_inset Formula $x\left(t,t_{0},x_{0}\right)$
+\end_inset
+
+ es abierto y 
+\begin_inset Formula $x\left(t,t_{0},x_{0}\right)$
+\end_inset
+
+ es continua en 
+\begin_inset Formula $E$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Ver
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HODE1980"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proposition
+Considere la ecuación diferencial en 
+\begin_inset Formula $R^{n}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+x'=f(t,x)
+\]
+
+\end_inset
+
+
+\begin_inset Formula $x(t)=\left(x_{1}\left(t\right),\ldots,x_{n}\left(t\right)\right)$
+\end_inset
+
+, 
+\begin_inset Formula $f\left(t,x\right)=\left(f_{1}\left(t,x\right),,\ldots,f_{n}\left(t,x\right)\right)$
+\end_inset
+
+, donde 
+\begin_inset Formula $f\left(t,x\right)$
+\end_inset
+
+ es definida para todo 
+\begin_inset Formula $t\geq0$
+\end_inset
+
+, 
+\begin_inset Formula $x$
+\end_inset
+
+
+\begin_inset Formula $\in$
+\end_inset
+
+
+\begin_inset Formula $R^{n}$
+\end_inset
+
+.
+ Si existe solucion única de 
+\begin_inset Formula $x'=f(t,x)$
+\end_inset
+
+, 
+\begin_inset Formula $x\left(t_{0}\right)=x_{0}$
+\end_inset
+
+ para 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+
+\begin_inset Formula $\in$
+\end_inset
+
+
+\begin_inset Formula $R_{+}^{n}$
+\end_inset
+
+, 
+\begin_inset Formula $t_{0}\geq0$
+\end_inset
+
+ y 
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Formula $f_{j}\left(t,x\right)\geq0,\: x\in R_{+}^{n},\: x_{j}=0,\: t\geq0,\:\forall j$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proposition
+Entonces 
+\begin_inset Formula $x\left(t\right)\in R_{+}^{n}$
+\end_inset
+
+ 
+\begin_inset Formula $\forall t\geq t_{0}\geq0$
+\end_inset
+
+ para los cuales esta definida.
+\end_layout
+
+\begin_layout Proof
+Ver
+\begin_inset CommandInset citation
+LatexCommand cite
+key "TMPB2003"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Lemma
+Considere la ecuacion diferencial
+\begin_inset Formula 
+\[
+x'=f\left(t,x\right)
+\]
+
+\end_inset
+
+con un campo vectorial continuo 
+\begin_inset Formula $f:D\rightarrow R^{n}$
+\end_inset
+
+, 
+\begin_inset Formula $D\subset R^{n+1}$
+\end_inset
+
+ abierto.
+ Si 
+\begin_inset Formula $f_{i}\left(t,x\right)=x_{j}G_{j}\left(t,x\right)$
+\end_inset
+
+ 
+\begin_inset Formula $\forall j$
+\end_inset
+
+ con un función real continua 
+\begin_inset Formula $G_{i}$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $x$
+\end_inset
+
+ es una solución con 
+\begin_inset Formula $x_{j}\left(t_{0}\right)>0$
+\end_inset
+
+ o 
+\begin_inset Formula $x_{j}\left(t_{0}\right)\geq0$
+\end_inset
+
+, entonces 
+\begin_inset Formula $x\left(t\right)\in R_{+}^{n}$
+\end_inset
+
+ 
+\begin_inset Formula $\forall t>t_{0}$
+\end_inset
+
+ para los cuales esta definida.
+\end_layout
+
+\begin_layout Proof
+Ver
+\begin_inset CommandInset citation
+LatexCommand cite
+key "TMPB2003"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+Sea 
+\begin_inset Formula $f:R_{+}^{n+1}\rightarrow R^{n}$
+\end_inset
+
+localmente lipschitz en 
+\begin_inset Formula $x$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f\left(t,x\right)=\left(f_{1}\left(t,x\right),\ldots,f_{n}\left(t,x\right)\right),\: x=\left(x_{1},\ldots,x_{n}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+que satisface
+\begin_inset Formula 
+\[
+f_{j}\left(t,x\right)\geq0,\: t\geq0,\: x\in R_{+}^{n},\: x_{j}=0
+\]
+
+\end_inset
+
+Entonces, para todo 
+\begin_inset Formula $x_{0}\in$
+\end_inset
+
+
+\begin_inset Formula $R_{+}^{n}$
+\end_inset
+
+, existe una unica solución de 
+\begin_inset Formula $x'=f(t,x)$
+\end_inset
+
+, 
+\begin_inset Formula $x\left(0\right)=x_{0}$
+\end_inset
+
+, con valores en 
+\begin_inset Formula $R_{+}^{n}$
+\end_inset
+
+, la cual es definida en algún intervalo 
+\begin_inset Formula $\left[0,b\right)$
+\end_inset
+
+, 
+\begin_inset Formula $b\in\left(0,\infty\right]$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $b<\infty$
+\end_inset
+
+, entonces
+\begin_inset Formula 
+\[
+\underset{t\nearrow b}{\lim\sup}{\displaystyle \sum_{j=1}^{n}x_{j}\left(t\right)=\infty}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Ver
+\begin_inset CommandInset citation
+LatexCommand cite
+key "TMPB2003"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Section
+Perturbaciones singulares
+\end_layout
+
+\begin_layout Standard
+Considere el sistema de ecuaciones
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{c}
+\mu\dfrac{dz}{dt}=F\left(z,y,t\right)\\
+\dfrac{dy}{dt}=f\left(z,y,t\right)
+\end{array}\label{eq:singular}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+con 
+\begin_inset Formula $\mu>0$
+\end_inset
+
+.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:singular"
+
+\end_inset
+
+ con 
+\begin_inset Formula $z\left(0,\mu\right)=z^{0}$
+\end_inset
+
+, 
+\begin_inset Formula $y\left(0,\mu\right)=y^{0}$
+\end_inset
+
+ es un problema de valor inicial con parámetro 
+\begin_inset Formula $\mu$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $\mu=0$
+\end_inset
+
+, obtenemos un sistema de ecuaciones sin perturbación, o como es llamado
+ en la teoría de perturbaciones singulares, un sistema degenerado
+\begin_inset Formula 
+\begin{equation}
+F\left(z,y,t\right)=0,\:\dfrac{dy}{dt}=f\left(z,y,t\right)\label{eq:degen}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sean las siguientes condiciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $F\left(z,y,t\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $f\left(z,y,t\right)$
+\end_inset
+
+ son continuas y con derivada continua respecto a 
+\begin_inset Formula $z$
+\end_inset
+
+ e 
+\begin_inset Formula $y$
+\end_inset
+
+, en algún dominio 
+\begin_inset Formula $0\leq t\leq T$
+\end_inset
+
+, 
+\begin_inset Formula $|y|\leq b$
+\end_inset
+
+, 
+\begin_inset Formula $|z|<d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $z=\varphi\left(y,t\right)$
+\end_inset
+
+ una raíz de 
+\begin_inset Formula $F\left(z,y,t\right)=0$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ es continua con derivada respecto a 
+\begin_inset Formula $y$
+\end_inset
+
+ continua.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\dfrac{\partial F}{\partial z}\left(\varphi\left(y,t\right),y,t\right)<0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+La solución del problema de valor inicial 
+\begin_inset Formula $\dfrac{d\bar{y}}{dt}=f\left(\varphi\left(\bar{y},t\right),\bar{y},t\right),\:\bar{y}\left(0\right)=y^{0}$
+\end_inset
+
+ es definida en 
+\begin_inset Formula $0\leq t\leq T$
+\end_inset
+
+ y 
+\begin_inset Formula $|\bar{y}|<b$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+El valor inicial 
+\begin_inset Formula $z_{0}$
+\end_inset
+
+ es tal que 
+\begin_inset Formula $z_{1}=\varphi_{1}\left(y^{0},0\right)\leq z_{0}\leq z_{1}=\varphi_{2}\left(y^{0},0\right)$
+\end_inset
+
+, donde 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $z_{2}$
+\end_inset
+
+ son las raíces mas cercanas a 
+\begin_inset Formula $\varphi\left(y^{0},0\right)$
+\end_inset
+
+ de la ecuación 
+\begin_inset Formula $F\left(z^{0},y^{0},0\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+(Tikhonov) Si las condiciones 1-5 se cumplen, la solución del problema 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:singular"
+
+\end_inset
+
+ existe en 
+\begin_inset Formula $\left[0,T\right]$
+\end_inset
+
+ y además
+\begin_inset Formula 
+\[
+\begin{array}{c}
+\lim_{\mu\rightarrow0}y\left(t,u\right)=\bar{y}\left(t\right),\:0\leq t\leq T\\
+\lim_{\mu\rightarrow0}z\left(t,u\right)=\varphi\left(\bar{y}\left(t\right),t\right)=\bar{z}\left(t\right),\:0\leq t\leq T
+\end{array}
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $\bar{y}\left(t\right)$
+\end_inset
+
+ es la solución del problema degenerado 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:degen"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Ver
+\begin_inset CommandInset citation
+LatexCommand cite
+key "RISP1974"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\end_body
+\end_document

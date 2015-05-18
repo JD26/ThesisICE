@@ -1,0 +1,827 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Proyecto de tesis
+\end_layout
+
+\begin_layout Abstract
+En este proyecto de tesis nuestro objetivo es construir y analizar un modelo
+ de dinámica de comunidades con impacto de un contaminante.
+ Partiremos de un modelo simple de consumidor - recurso.
+ Agregaremos interacción entre las especies, tales como competencia y predador
+ - presa.
+ Además añadiremos el efecto que podría tener un contaminante en la dinámica
+ de las especies.
+ En cada etapa haremos el análisis de estabilidad del sistema.
+\end_layout
+
+\begin_layout Section
+Modelo I: Consumidor(es) - recurso y competencia interespecífica
+\end_layout
+
+\begin_layout Subsection
+Una única especie
+\end_layout
+
+\begin_layout Subsubsection
+Libre de competencia
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+F' & = & \Lambda-\nu F-\dfrac{\beta}{\gamma}FM\\
+M' & = & \beta FM-\mu M
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Con competencia interespecífica
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+F' & = & \Lambda-\nu F-\dfrac{\beta}{\gamma}FM\\
+M' & = & \beta FM-\mu M-\alpha M^{2}
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Varias especies
+\end_layout
+
+\begin_layout Subsubsection
+Competencia por recurso
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+F' & = & \Lambda-\nu F-{\displaystyle \sum_{i}}\dfrac{\beta_{i}}{\gamma_{i}}FM_{i}\\
+M_{j}' & = & \beta_{j}FM_{j}-\mu_{j}M_{j}
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Competencia intraespecífica e interespecífica
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+F' & = & \Lambda-\nu F-{\displaystyle \sum_{i}}\dfrac{\beta_{i}}{\gamma_{i}}FM_{i}\\
+M_{j}' & = & \beta_{j}FM_{j}-\mu_{j}M_{j}-\alpha M_{j}^{2}
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Modelo II: Modelo reducido
+\end_layout
+
+\begin_layout Subsection
+Una especie
+\end_layout
+
+\begin_layout Subsubsection
+Libre de competencia
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+M'=M\left(\dfrac{\beta}{1+M}-\mu\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Con competencia interespecífica
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+M'=M\left(\dfrac{\beta}{1+M}-\mu\right)-\alpha M^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Varias especies
+\end_layout
+
+\begin_layout Subsubsection
+Competencia por recurso
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+M_{j}'=M_{j}\left(\dfrac{\beta_{j}}{1+{\displaystyle \sum_{1}^{n}M_{i}}}-\mu_{j}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Competencia intraespecífica e interespecífica
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+M_{j}'=M_{j}\left(\dfrac{\beta_{j}}{1+{\displaystyle \sum_{i}M_{i}}}-\mu_{j}\right)-\alpha_{j}M_{j}^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Modelo de una población afectada por un contaminante
+\end_layout
+
+\begin_layout Subsection
+Modelo I
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{c}
+M'=M\left(\beta\left(M,y\right)-\mu\right)\\
+y'=aC_{E}-\left(\eta+\kappa+\beta\left(M,y\right)\right)y
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Modelo II
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{c}
+M'=M\left(\beta\left(M,y\right)-\mu\left(y\right)\right)\\
+y'=aC_{E}-\left(\eta+\kappa+\beta\left(M,y\right)\right)y
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Ecuaciones para el poster
+\end_layout
+
+\begin_layout Standard
+Comenzamos con la ecuación recurso consumidor
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+F' & = & \Lambda-\nu F-\dfrac{b\left(y\right)}{\gamma\left(y\right)}FM\\
+M' & = & b\left(y\right)FM-\mu M
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suponiendo que 
+\begin_inset Formula $\epsilon=\dfrac{\mu}{\nu}\ll1$
+\end_inset
+
+.
+ Usando la teoría de perturbaciones singulares las solución del sistema
+ converge a la solución del sistema:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+M'=M\left(\beta\left(M,y\right)-\mu\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\beta\left(M,y\right)=\dfrac{\rho\left(y\right)}{1+cM}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+donde 
+\begin_inset Formula $\rho\left(y\right)=\dfrac{\varLambda}{\nu}b\left(y\right)$
+\end_inset
+
+.
+ Podemos suponer 
+\begin_inset Formula $\rho\left(y\right)$
+\end_inset
+
+ constante.
+\end_layout
+
+\begin_layout Standard
+Considerando ahora el sistema propuesto por Thieme
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+M' & = & M\left(\beta\left(M,y\right)-\mu\right)\\
+C_{I}' & = & aC_{E}M-\left(\mu+\eta+k\right)C_{I}\\
+C_{E}' & = & -aC_{E}M+\left(pu+n\right)C_{I}-\theta C_{E}+u\left(t\right)\\
+y & = & C_{I}/M
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se puede reducir a uno de la forma por dos motivos
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+M' & = & M\left(\beta\left(M,y\right)-\mu\right)\\
+y' & = & \tilde{a}-\left(\sigma+\beta\left(M,y\right)\right)y
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sigma=\eta+\kappa$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Y también podemos considerar
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+M' & = & M\left(\beta\left(M,y\right)-\mu\left(y\right)\right)\\
+y' & = & \tilde{a}-\left(\sigma+\beta\left(M,y\right)\right)y
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\rho\left(y\right)=\alpha_{1}\left[1-\alpha_{2}y\right]_{+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mu\left(y\right)=ky^{l}+m
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nuestras propuestas
+\end_layout
+
+\begin_layout Standard
+Especies en competencia interespecífica y intraespecífica
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{ccl}
+M_{j}' & = & M_{j}\left(\dfrac{\rho_{j}\left(y_{j}\right)}{1+{\displaystyle \sum_{i}c_{i}M_{i}}}-\mu_{j}\left(y_{j}\right)\right)-\alpha_{j}M_{j}^{2}\\
+y_{j}' & = & a_{j}-\left(\sigma_{j}+\dfrac{\rho_{j}\left(y_{j}\right)}{1+{\displaystyle \sum_{i}c_{i}M_{i}}}\right)y_{j}
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Depredador - presa - competencia
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{ccl}
+M' & = & M\left(\dfrac{\rho_{1}\left(x\right)}{1+c_{1}M+c_{2}N}-\mu_{1}\left(x\right)\right)-p\left(M\right)P\\
+N' & = & N\left(\dfrac{\rho_{2}\left(y\right)}{1+c_{1}M+c_{2}N}-\mu_{2}\left(y\right)\right)\\
+P' & = & \rho_{3}\left(z\right)p\left(M\right)P-\mu_{3}\left(z\right)P\\
+U' & = & a_{1}C_{E}M-\sigma_{1}U-\mu_{1}\left(x\right)U-p\left(M\right)Px\\
+V' & = & a_{2}C_{E}N-\sigma_{2}V-\mu_{2}\left(y\right)V\\
+W' & = & a_{3}C_{E}P-\sigma_{3}W-\mu_{3}\left(z\right)W+p\left(M\right)Px
+\end{array}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{array}{ccccc}
+x=\dfrac{U}{M} & ,\: & y=\dfrac{V}{N} & ,\: & z=\dfrac{W}{P}\end{array}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+\rho_{i}\left(\tau\right)=\alpha_{i}\max\left\{ 0,1-\beta_{i}\tau\right\} ,\: & \mu_{i}\left(\tau\right)=k_{i}\tau^{l_{i}}+m_{i},\: & p\left(\tau\right)=\dfrac{\xi\tau}{\eta+\tau}\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+como
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{ccccc}
+\dfrac{dx}{dt}=\dfrac{U'}{M}-\dfrac{U}{M}\dfrac{M'}{M} & ,\: & \dfrac{dy}{dt}=\dfrac{V'}{N}-\dfrac{V}{N}\dfrac{N'}{N} & ,\: & \dfrac{dz}{dt}=\dfrac{W'}{P}\end{array}-\dfrac{W}{P}\dfrac{P'}{P}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{ccl}
+\dfrac{dx}{dt} & = & a_{1}C_{E}-\sigma_{1}x-\mu_{1}\left(x\right)x-\dfrac{p\left(M\right)Px}{M}-x\left[\left(\dfrac{\rho_{1}\left(x\right)}{1+c_{1}M+c_{2}N}-\mu_{1}\left(x\right)\right)-\dfrac{p\left(M\right)P}{M}\right]\\
+\dfrac{dy}{dt} & = & a_{2}C_{E}-\sigma_{2}y-\mu_{2}\left(y\right)y-y\left[\dfrac{\rho_{2}\left(y\right)}{1+c_{1}M+c_{2}N}-\mu_{2}\left(y\right)\right]\\
+\dfrac{dz}{dt} & = & a_{3}C_{E}-\sigma_{3}z-\mu_{3}\left(z\right)z+p\left(M\right)x-z\left[\rho_{3}\left(z\right)p\left(M\right)-\mu_{3}\left(z\right)\right]
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{ccl}
+\dfrac{dx}{dt} & = & a_{1}C_{E}-\sigma_{1}x-x\left(\dfrac{\rho_{1}\left(x\right)}{1+c_{1}M+c_{2}N}\right)\\
+\dfrac{dy}{dt} & = & a_{2}C_{E}-\sigma_{2}y-y\left(\dfrac{\rho_{2}\left(y\right)}{1+c_{1}M+c_{2}N}\right)\\
+\dfrac{dz}{dt} & = & a_{3}C_{E}-\sigma_{3}z+p\left(M\right)\left(x-z\rho_{3}\left(z\right)\right)
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{ccl}
+\dfrac{dx}{dt} & = & a_{1}C_{E}-\left(\sigma_{1}+b_{1}\left(x,M,N\right)\right)x\\
+\dfrac{dy}{dt} & = & a_{2}C_{E}-\left(\sigma_{2}+b_{2}\left(y,M,N\right)\right)y\\
+\dfrac{dz}{dt} & = & a_{3}C_{E}-\sigma_{3}z+p\left(M\right)\left(x-z\rho_{3}\left(z\right)\right)
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+b_{i}\left(\tau,M,N\right)=\left(\dfrac{\rho_{i}\left(\tau\right)}{1+c_{1}M+c_{2}N}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Entonces :
+\end_layout
+
+\begin_layout Standard
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+\SpecialChar \-
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{ccl}
+M' & = & M\left(b_{1}\left(x,M,N\right)-\mu_{1}\left(x\right)\right)-p\left(M\right)P\\
+N' & = & N\left(b_{2}\left(y,M,N\right)-\mu_{2}\left(y\right)\right)\\
+P' & = & \rho_{3}\left(z\right)p\left(M\right)P-\mu_{3}\left(z\right)P\\
+\dfrac{dx}{dt} & = & a_{1}C_{E}-\left(\sigma_{1}+b_{1}\left(x,M,N\right)\right)x\\
+\dfrac{dy}{dt} & = & a_{2}C_{E}-\left(\sigma_{2}+b_{2}\left(y,M,N\right)\right)y\\
+\dfrac{dz}{dt} & = & a_{3}C_{E}-\sigma_{3}z+p\left(M\right)\left(x-z\rho_{3}\left(z\right)\right)
+\end{array}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{array}{cc}
+\rho_{i}\left(\tau\right)=\alpha_{i}\max\left\{ 0,1-\beta_{i}\tau\right\} ,\: & \mu_{i}\left(\tau\right)=k_{i}\tau^{l_{i}}+m_{i}\end{array}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+b_{j}\left(\tau,M,N\right)=\left(\dfrac{\rho_{j}\left(\tau\right)}{1+c_{1}M+c_{2}N}\right) & ,\: & p\left(\tau\right)=\dfrac{\xi\tau}{\eta+\tau}\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
