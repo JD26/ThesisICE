@@ -366,8 +366,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename images/chapter1/git.pdf
-	scale 50
+	filename images/logo/git.pdf
 
 \end_inset
 
