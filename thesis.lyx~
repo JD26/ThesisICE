@@ -41,7 +41,7 @@
 \renewcommand{\bibname}{Bibliografía}
 \renewcommand{\contentsname}{Índice}
 \renewcommand{\nomname}{Lista de símbolos}
-\renewcommand*{\proofname}{Demostración}
+\renewcommand*{\proofname}{Solution}
 
 % avoids that floats are placed above its sections
 \let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}

@@ -822,11 +822,7 @@ Usaremos la siguiente notación:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\mbox{diam}\left(A\right)=\sup\left\{ |x-y|,\;x,y\in A\right\} $
-\end_inset
-
-, 
-\begin_inset Formula $A\subset\mathbb{R}^{n}$
+\begin_inset Formula $\mbox{diam}\left(A\right)=\sup\left\{ \right\} $
 \end_inset
 
 
@@ -909,6 +905,192 @@ Sean
 |f\left(x_{1}\right)-f\left(x_{2}\right)|\leq K_{C}|x_{1}-x_{2}|;\quad\forall x_{1},x_{2}\in C.
 \]
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proposition
+
+\shape up
+Sean 
+\begin_inset Formula $t\in\mathbb{R}$
+\end_inset
+
+ , 
+\begin_inset Formula $\left(t,x\right)\in D\subset\mathbb{R}^{n+1}$
+\end_inset
+
+, 
+\begin_inset Formula $D$
+\end_inset
+
+ abierto y 
+\begin_inset Formula $f:D\rightarrow\mathbb{R}^{n}$
+\end_inset
+
+.
+ Si para cada 
+\begin_inset Formula $(t,x)\in D$
+\end_inset
+
+ existen un entorno abierto 
+\begin_inset Formula $U_{(t,x)}$
+\end_inset
+
+ de 
+\begin_inset Formula $(t,x)$
+\end_inset
+
+ contenido en 
+\begin_inset Formula $D$
+\end_inset
+
+ y 
+\begin_inset Formula $L_{(t,x)}>0$
+\end_inset
+
+ tal que
+\shape default
+
+\begin_inset Formula 
+\[
+|f\left(t,x_{1}\right)-f\left(t,x_{2}\right)|\leq L_{(t,x)}|x_{1}-x_{2}|;\quad\forall\left(t,x_{1}\right),\left(t,x_{2}\right)\in U_{(t,x)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+
+\shape up
+entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ es continua en 
+\begin_inset Formula $D$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Sea 
+\begin_inset Formula $\left(t,x\right)\in D$
+\end_inset
+
+.
+ Entonces 
+\shape up
+existen un entorno abierto 
+\begin_inset Formula $U_{(t,x)}$
+\end_inset
+
+ de 
+\begin_inset Formula $(t,x)$
+\end_inset
+
+ contenido en 
+\begin_inset Formula $D$
+\end_inset
+
+ y 
+\begin_inset Formula $L_{(t,x)}>0$
+\end_inset
+
+ tal que
+\shape default
+
+\begin_inset Formula 
+\[
+|f\left(t,x_{1}\right)-f\left(t,x_{2}\right)|\leq L_{(t,x)}|x_{1}-x_{2}|;\quad\forall\left(t,x_{1}\right),\left(t,x_{2}\right)\in U_{(t,x)}
+\]
+
+\end_inset
+
+Como 
+\begin_inset Formula $U_{(t,x)}$
+\end_inset
+
+ es abierto, existe 
+\begin_inset Formula $\alpha>0$
+\end_inset
+
+ tal que 
+\series bold
+
+\begin_inset Formula $B\left(\left(t,x\right),\alpha\right)\subset U_{(t,x)}$
+\end_inset
+
+
+\series default
+
+\begin_inset Formula 
+\[
+|f\left(t,x_{1}\right)-f\left(t,x_{2}\right)|\leq L_{(t,x)}|x_{1}-x_{2}|;\quad\forall\left(t,x_{1}\right),\left(t,x_{2}\right)\in B\left(\left(t,x\right),\alpha\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Dado 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+, existe 
+\begin_inset Formula $\delta=\min\left\{ \alpha,\dfrac{\varepsilon}{2L}\right\} $
+\end_inset
+
+ tal que
+\end_layout
+
+\begin_layout Proof
+Si 
+\begin_inset Formula $(t',x')\in D$
+\end_inset
+
+ y 
+\begin_inset Formula $|(t',x')-(t,x)|<\delta$
+\end_inset
+
+, se cumple lo siguiente
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $|(t',x)-(t,x)|=|t'-t|\leq|t'-t|+|x'-x|=|(t',x')-(t,x)|<\delta$
+\end_inset
+
+, y
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $|(t,x')-(t,x)|=|x'-x|\leq|t'-t|+|x'-x|=|(t',x')-(t,x)|<\delta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Es decir, 
+\begin_inset Formula $(t,x'),(t',x),(t',x'),(t,x)\in B\left(\left(t,x\right),\alpha\right)$
+\end_inset
+
+.
+ Por lo tanto
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $|f(t',x')-f(t,x)|\leq|f(t',x')-f(t',x)|+|f(t,x')-f(t,x)|$
 \end_inset
 
 
@@ -1201,7 +1383,7 @@ y
 
 \begin_layout Proof
 Sea 
-\begin_inset Formula $M=\sup\left\{ |f\left(t,x\right)|,\:\left(t,x\right)\in K\right\} $
+\begin_inset Formula $M=\sup\left\{ |f\left(t,x\right)|,\:\left(t,x\right)\in C\right\} $
 \end_inset
 
 (
@@ -1213,7 +1395,7 @@ Sea
 \end_inset
 
  es continua y 
-\begin_inset Formula $K$
+\begin_inset Formula $C$
 \end_inset
 
  compacto) y 
@@ -1274,7 +1456,7 @@ Sea
 
 .
  Para 
-\begin_inset Formula $\left(t,x\right),\left(t,y\right)\in K$
+\begin_inset Formula $\left(t,x\right),\left(t,y\right)\in C$
 \end_inset
 
  consideraremos dos casos:
