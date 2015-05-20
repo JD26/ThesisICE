@@ -37,6 +37,11 @@
 
 % increases the bottom float placement fraction
 \renewcommand{\bottomfraction}{0.5}
+%Cambio de Nombres a algunos titulos
+\renewcommand{\bibname}{Bibliografía}
+\renewcommand{\contentsname}{Índice}
+\renewcommand{\nomname}{Lista de símbolos}
+
 
 % avoids that floats are placed above its sections
 \let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
@@ -878,7 +883,7 @@ rightmark
 
 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 remove the chapter from the header line
@@ -913,7 +918,7 @@ leftmark
 
 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 restore the right header line
@@ -947,21 +952,21 @@ options "alpha"
 status open
 
 \begin_layout Plain Layout
-
+Nomenclatura
 \end_layout
 
 \end_inset
 
-Nomenclatura
+
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 print 
 \begin_inset Quotes eld
 \end_inset
 
-Nomenclature
+Nomenclatura
 \begin_inset Quotes erd
 \end_inset
 
@@ -978,7 +983,7 @@ Nomenclature
 status open
 
 \begin_layout Plain Layout
-Nomenclature
+Nomenclatura
 \end_layout
 
 \end_inset

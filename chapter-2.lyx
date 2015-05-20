@@ -444,7 +444,7 @@ reference "eq:edo"
  Escribimos este problema simbolicamente como
 \begin_inset Formula 
 \begin{equation}
-x'=f\left(t,x\right),\: x\left(t_{0}\right)=x_{0},\: t\in I\label{eq:pvi}
+x'=f\left(t,x\right),\:x\left(t_{0}\right)=x_{0},\:t\in I\label{eq:pvi}
 \end{equation}
 
 \end_inset
@@ -751,58 +751,78 @@ key "HODE1980"
 \end_layout
 
 \begin_layout Section
-Funciones localmente 
-\shape italic
-Lipschitz
+Funciones localmente Lipschitz
 \end_layout
 
 \begin_layout Standard
-Denotamos por 
-\begin_inset Formula $\left(t,x\right)$
+Usaremos la siguiente notación:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $n,m\in\mathbb{N}$
 \end_inset
 
- un elemento de 
-\begin_inset Formula $\mathbb{R}_{+}^{n+1}=\left[0,\infty^{+}\right\rangle ^{n+1}$
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbb{R}_{+}^{m}=\left\{ \left(x_{1},\ldots,x_{m}\right),\:x_{i}\in\mathbb{R},\:x_{i}\geq0,\:\forall i=1,\ldots,m\right\} $
 \end_inset
 
- o de 
-\begin_inset Formula $\mathbb{R}^{n+1}$
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $t\in\mathbb{R}\left(\mathbb{R}_{+}\right)$
 \end_inset
 
- con 
-\begin_inset Formula $t\in\mathbb{R}$
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x\in\mathbb{R}^{n}\left(\mathbb{R}_{+}^{n}\right)$
 \end_inset
 
-, 
-\begin_inset Formula $\left[t\right]_{+}=\mbox{max}\left\{ 0,t\right\} $
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left(t,x\right)\in\mathbb{R}^{n+1}\left(\mathbb{R}_{+}^{n+1}\right)$
 \end_inset
 
- si 
-\begin_inset Formula $t\in\mathbb{R}$
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[t\right]_{+}=\mbox{max}\left\{ 0,t\right\} ,\,t\in\mathbb{R}$
 \end_inset
 
- , 
-\begin_inset Formula $\left[x\right]_{+}=\left(\left[x_{1}\right]_{+},...,\left[x_{n}\right]_{+}\right)$
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[x\right]_{+}=\left(\left[x_{1}\right]_{+},...,\left[x_{n}\right]_{+}\right),\,x\in\mathbb{R}^{n}$
 \end_inset
 
- si 
-\begin_inset Formula $x\in\mathbb{R}^{n}$
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[U\right]_{+}=\left\{ \left(\left[t\right]_{+},\left[x\right]_{+}\right),\,\left(t,x\right)\in U\right\} ,\,U\subset\mathbb{R}^{n+1}$
 \end_inset
 
- y 
-\begin_inset Formula $\left[U\right]_{+}=\left\{ \left(\left[t\right]_{+},\left[x\right]_{+}\right),\,\left(t,x\right)\in U\right\} $
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $|x|=|x_{1}|+..|x_{n}|,\,x\in\mathbb{R}^{n}$
 \end_inset
 
- con 
-\begin_inset Formula $U\subset\mathbb{R}^{n+1}$
-\end_inset
 
-.
- Utilizamos la norma 
-\begin_inset Formula $|\left(x_{1},...,x_{n}\right)|=|x_{1}|+..|x_{n}|$
-\end_inset
+\end_layout
 
-.
+\begin_layout Standard
+Acontinuación daremos algunas definiciones.
 \end_layout
 
 \begin_layout Definition
@@ -815,7 +835,7 @@ Sean
 \end_inset
 
  y 
-\begin_inset Formula $f:D\rightarrow\mathbb{R}^{m}$
+\begin_inset Formula $f:D\rightarrow\mathbb{R}^{n}$
 \end_inset
 
 .
@@ -823,26 +843,22 @@ Sean
 \begin_inset Formula $f$
 \end_inset
 
- es 
-\shape italic
-localmente Lipschitz
-\shape default
- en 
+ es localmente Lipschitz respecto a 
 \begin_inset Formula $x$
 \end_inset
 
  si 
-\begin_inset Formula $\forall\, U\subseteq D$
+\begin_inset Formula $\forall\,K\subseteq D$
 \end_inset
 
- cerrado y acotado 
-\begin_inset Formula $\exists\, K_{U}$
+ compacto 
+\begin_inset Formula $\exists\,L_{K}>0$
 \end_inset
 
- tal que
+ constante tal que
 \begin_inset Formula 
 \[
-|f\left(t,x_{1}\right)-f\left(t,x_{2}\right)|\leq K_{U}|x_{1}-x_{2}|;\quad\forall\left(t,x_{1}\right),\left(t,x_{2}\right)\in U.
+|f\left(t,x_{1}\right)-f\left(t,x_{2}\right)|\leq L_{K}|x_{1}-x_{2}|;\quad\forall\left(t,x_{1}\right),\left(t,x_{2}\right)\in K.
 \]
 
 \end_inset
@@ -856,11 +872,11 @@ localmente Lipschitz
 
 \begin_layout Definition
 Sean 
-\begin_inset Formula $x\in D\subset\mathbb{R}^{n}$
+\begin_inset Formula $x\in E\subset\mathbb{R}^{n}$
 \end_inset
 
  y 
-\begin_inset Formula $f:D\rightarrow\mathbb{R}^{m}$
+\begin_inset Formula $f:E\rightarrow\mathbb{R}^{n}$
 \end_inset
 
 .
@@ -868,24 +884,191 @@ Sean
 \begin_inset Formula $f$
 \end_inset
 
- es 
-\shape italic
-localmente Lipschitz
-\shape default
- si 
-\begin_inset Formula $\forall\, U\subseteq D$
+ es localmente Lipschitz si 
+\begin_inset Formula $\forall\,C\subseteq E$
 \end_inset
 
- cerrado y acotado 
-\begin_inset Formula $\exists\, K_{U}$
+ compacto 
+\begin_inset Formula $\exists\,L_{C}>0$
+\end_inset
+
+ constante tal que
+\begin_inset Formula 
+\[
+|f\left(x_{1}\right)-f\left(x_{2}\right)|\leq K_{C}|x_{1}-x_{2}|;\quad\forall x_{1},x_{2}\in C.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+
+\shape up
+\begin_inset CommandInset label
+LatexCommand label
+name "teo:equivalenciaLL"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\shape up
+Equivalencia
+\end_layout
+
+\end_inset
+
+Sean 
+\begin_inset Formula $t\in\mathbb{R}$
+\end_inset
+
+ , 
+\begin_inset Formula $\left(t,x\right)\in D\subset\mathbb{R}^{n+1}$
+\end_inset
+
+, 
+\begin_inset Formula $D$
+\end_inset
+
+ abierto y 
+\begin_inset Formula $f:D\rightarrow\mathbb{R}^{n}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $f$
+\end_inset
+
+ es localmente Lipschitz respecto a 
+\begin_inset Formula $x$
+\end_inset
+
+ si y solo si para cada 
+\begin_inset Formula $(t,x)\in D$
+\end_inset
+
+ existen un entorno abierto 
+\begin_inset Formula $U_{(t,x)}$
+\end_inset
+
+ de 
+\begin_inset Formula $(t,x)$
+\end_inset
+
+ contenido en 
+\begin_inset Formula $D$
+\end_inset
+
+ y 
+\begin_inset Formula $L_{(t,x)}>0$
+\end_inset
+
+ tal que
+\shape default
+
+\begin_inset Formula 
+\[
+|f\left(t,x_{1}\right)-f\left(t,x_{2}\right)|\leq L_{(t,x)}|x_{1}-x_{2}|;\quad\forall\left(t,x_{1}\right),\left(t,x_{2}\right)\in U_{(t,x)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Demostraremos las dos implicaciones:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\left[\Longrightarrow\right]$
+\end_inset
+
+Sea 
+\begin_inset Formula $\left(t,x\right)\in D$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $D$
+\end_inset
+
+ es un conjunto abierto, 
+\begin_inset Formula $\exists\varepsilon>0$
 \end_inset
 
  tal que
 \begin_inset Formula 
 \[
-|f\left(x_{1}\right)-f\left(x_{2}\right)|\leq K_{U}|x_{1}-x_{2}|;\quad\forall x_{1},x_{2}\in U.
+\bar{B}\left(\left(t,x\right),\dfrac{\varepsilon}{2}\right)\subset B\left(\left(t,x\right),\varepsilon\right)\subset D
 \]
 
+\end_inset
+
+Como 
+\begin_inset Formula $\bar{B}\left(\left(t,x\right),\dfrac{\varepsilon}{2}\right)$
+\end_inset
+
+ es compacto, por hipótesis 
+\begin_inset Formula $\exists L>0$
+\end_inset
+
+ tal que
+\begin_inset Formula 
+\[
+|f\left(t,x_{1}\right)-f\left(t,x_{2}\right)|\leq L|x_{1}-x_{2}|;\quad\forall\left(t,x_{1}\right),\left(t,x_{2}\right)\in\bar{B}\left(\left(t,x\right),\dfrac{\varepsilon}{2}\right).
+\]
+
+\end_inset
+
+En particular la desigualdad anterior se cumple para 
+\begin_inset Formula $U=B\left(\left(t,x\right),\dfrac{\varepsilon}{2}\right)$
+\end_inset
+
+ el cual es un entorno abierto de 
+\begin_inset Formula $\left(t,x\right)$
+\end_inset
+
+.
+ Por lo tanto, para 
+\begin_inset Formula $\left(t,x\right)\in D$
+\end_inset
+
+ arbitrario, existen 
+\begin_inset Formula $U=B\left(\left(t,x\right),\dfrac{\varepsilon}{2}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $L>0$
+\end_inset
+
+ tal que 
+\begin_inset Formula 
+\[
+|f\left(t,x_{1}\right)-f\left(t,x_{2}\right)|\leq L|x_{1}-x_{2}|;\quad\forall\left(t,x_{1}\right),\left(t,x_{2}\right)\in U.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+que es lo que queríamos demostrar.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\left[\Longleftarrow\right]$
 \end_inset
 
 
@@ -923,7 +1106,14 @@ Sean
 \begin_inset Formula $f_{t}\left(x\right)=f\left(t,x\right)$
 \end_inset
 
- es localmente Lipschitz.
+ es localmente Lipschitz(Teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "teo:equivalenciaLL"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Proof
@@ -1965,7 +2155,7 @@ x'=f(t,x)
 \end_layout
 
 \begin_layout Proposition
-\begin_inset Formula $f_{j}\left(t,x\right)\geq0,\: x\in R_{+}^{n},\: x_{j}=0,\: t\geq0,\:\forall j$
+\begin_inset Formula $f_{j}\left(t,x\right)\geq0,\:x\in R_{+}^{n},\:x_{j}=0,\:t\geq0,\:\forall j$
 \end_inset
 
  
@@ -2079,7 +2269,7 @@ localmente lipschitz en
 
 \begin_inset Formula 
 \[
-f\left(t,x\right)=\left(f_{1}\left(t,x\right),\ldots,f_{n}\left(t,x\right)\right),\: x=\left(x_{1},\ldots,x_{n}\right)
+f\left(t,x\right)=\left(f_{1}\left(t,x\right),\ldots,f_{n}\left(t,x\right)\right),\:x=\left(x_{1},\ldots,x_{n}\right)
 \]
 
 \end_inset
@@ -2091,7 +2281,7 @@ f\left(t,x\right)=\left(f_{1}\left(t,x\right),\ldots,f_{n}\left(t,x\right)\right
 que satisface
 \begin_inset Formula 
 \[
-f_{j}\left(t,x\right)\geq0,\: t\geq0,\: x\in R_{+}^{n},\: x_{j}=0
+f_{j}\left(t,x\right)\geq0,\:t\geq0,\:x\in R_{+}^{n},\:x_{j}=0
 \]
 
 \end_inset
