@@ -288,7 +288,7 @@ Modelo
 \end_layout
 
 \begin_layout Standard
-...
+Estudiaremos el siguiente sistema de ecuaciones
 \end_layout
 
 \begin_layout Standard
@@ -302,9 +302,9 @@ y' & = & aC_{E}-\left(\eta+\xi+\beta\left(M,y\right)\right)y
 \,\\
 \beta\left(M,y\right)=\dfrac{\rho\left(y\right)}{1+cM},\,\rho\left(y\right)=\alpha_{1}\left[1-\alpha_{2}y\right]_{+},\,\mu\left(y\right)=ky^{l}+m\\
 t\geq0\\
-M\left(t\right),\, y\left(t\right)\geq0\\
-a,\, C_{E},\,\eta,\,\xi,\, c,\,\alpha_{1},\, m,\,\alpha_{2}>0\\
-k\geq0,\, l\geq1
+M\left(t\right),\,y\left(t\right)\geq0\\
+a,\,C_{E},\,\eta,\,\xi,\,c,\,\alpha_{1},\,m,\,\alpha_{2}>0\\
+k\geq0,\,l\geq1
 \end{array}$
 \end_inset
 
@@ -935,6 +935,10 @@ Tasa de mortalidad natural.
 \end_layout
 
 \begin_layout Standard
+Cambio de variables
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula $\sigma=\eta+\xi$
 \end_inset
 
@@ -960,6 +964,10 @@ y' & = & a-\left(\sigma+\dfrac{\left[1-y\right]_{+}}{1+M}\right)y
 
 \end_layout
 
+\begin_layout --Separator--
+
+\end_layout
+
 \begin_layout Theorem
 La función 
 \begin_inset Formula $F:\mathbb{R}_{+}^{2}\rightarrow\mathbb{R}^{2}$
@@ -969,8 +977,11 @@ La función
 \begin_inset Formula 
 \[
 \begin{array}{crl}
-F(x,y) & = & \left(x\left(\dfrac{\left[1-y\right]_{+}}{1+x}-ky^{l}-m\right),\, a-\left(\sigma+\dfrac{\left[1-y\right]_{+}}{1+x}\right)y\right)\\
-F(x,y) & = & \left(F_{1}(x,y),\, F_{2}(x,y)\right)
+F(x,y) & = & \left[\begin{array}{c}
+x\left(\dfrac{\left[1-y\right]_{+}}{1+x}-ky^{l}-m\right)\\
+a-\left(\sigma+\dfrac{\left[1-y\right]_{+}}{1+x}\right)y
+\end{array}\right]\\
+F(x,y) & = & \left(F_{1}(x,y),\,F_{2}(x,y)\right)
 \end{array}
 \]
 
@@ -1140,8 +1151,42 @@ Por lo tanto
 
 \end_layout
 
+\begin_layout Proposition
+Sea 
+\begin_inset Formula $\tilde{F}:\mathbb{R}^{2}\rightarrow\mathbb{R}^{2}$
+\end_inset
+
+ definida como 
+\begin_inset Formula $\tilde{F}\left(x,y\right)=F\left(\left[x\right]_{+},\left[y\right]_{+}\right)$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $\tilde{F}$
+\end_inset
+
+ es es continua, definida en un conjunto abierto y localmente Lipschitz.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
 \begin_layout Theorem
-(Existencia y unicidad de soluciones)
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Existencia y unicidad
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
@@ -1178,6 +1223,711 @@ Del Teorema anterior tenemos que
 
 \begin_layout --Separator--
 
+\end_layout
+
+\begin_layout Section
+Equilibrio
+\end_layout
+
+\begin_layout Standard
+Para explorar el equilibrio del sistema, hacemos 
+\begin_inset Formula $F\left(x,y\right)=\left(0,0\right)$
+\end_inset
+
+, i.e.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+x\left(\dfrac{\left[1-y\right]_{+}}{1+x}-ky^{l}-m\right) & = & 0,\\
+a-\left(\sigma+\dfrac{\left[1-y\right]_{+}}{1+x}\right)y & = & 0.
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De la primera ecuación tenemos
+\begin_inset Formula 
+\[
+x=0\:\lor\:\dfrac{\left[1-y\right]_{+}}{1+x}=ky^{l}+m
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sustituyendo 
+\begin_inset Formula $x=0$
+\end_inset
+
+ en la segunda ecuación
+\begin_inset Formula 
+\[
+a=\left(\sigma+\left[1-y^{*}\right]_{+}\right)y^{*}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\phi:\mathbb{R}_{+}\rightarrow\mathbb{R},\,\phi\left(y\right)=\left(\sigma+\left[1-y\right]_{+}\right)y$
+\end_inset
+
+.
+ Notamos que
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\phi\left(0\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\displaystyle \lim_{y\rightarrow\infty^{+}}\phi\left(y\right)=}{\displaystyle \lim_{y\rightarrow\infty^{+}}}\sigma y=\infty^{+}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Claim
+Existe 
+\begin_inset Formula $y^{*}>0$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\phi\left(y^{*}\right)=a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Por definición de límite, existe 
+\begin_inset Formula $\gamma>0$
+\end_inset
+
+ tal que
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $y\in\mathbb{R}_{+},\;y>\gamma\Rightarrow\phi\left(y\right)>a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Como 
+\begin_inset Formula $\phi\left(0\right)=0<a<\phi\left(\gamma+1\right)$
+\end_inset
+
+, entonces, por el Teorema del Valor Intermedio, existe 
+\begin_inset Formula $y^{*}\in\left(0,\gamma+1\right)$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\phi\left(y^{*}\right)=a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/chapter5/roless.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sigma=0.4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/chapter5/romore.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sigma=1.3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+(-, 
+\begin_inset Formula $\cdot$
+\end_inset
+
+) Ejes 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ paralelos a los ejes cartesianos.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $y\geq1$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\phi\left(y\right)=\sigma y$
+\end_inset
+
+.
+ Resolviendo 
+\begin_inset Formula $\phi\left(y^{*}\right)=\sigma y^{*}=a$
+\end_inset
+
+ tenemos 
+\begin_inset Formula $y^{*}=\dfrac{a}{\sigma}$
+\end_inset
+
+.
+ Por lo tanto sea
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E_{0}=\left(0,\dfrac{a}{\sigma}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $y<1$
+\end_inset
+
+, entonces tenemos 
+\begin_inset Formula $\phi\left(y\right)=\left(\sigma+1\right)y-y^{2}$
+\end_inset
+
+.
+ Resolviendo 
+\begin_inset Formula $\phi\left(y^{*}\right)=\left(\sigma+1\right)y^{*}-y^{*2}=a$
+\end_inset
+
+ tenemos 
+\begin_inset Formula $y^{*}=\dfrac{1+\sigma\pm\sqrt{\left(1+\sigma\right)^{2}-4a}}{2}$
+\end_inset
+
+.
+ Por lo tanto sean 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E_{1}=\left(0,\dfrac{1+\sigma+\sqrt{\left(1+\sigma\right)^{2}-4a}}{2}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $E_{2}=\left(0,\dfrac{1+\sigma-\sqrt{\left(1+\sigma\right)^{2}-4a}}{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Extinción
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $a\geq\sigma$
+\end_inset
+
+ entonces 
+\begin_inset Formula $E_{0}$
+\end_inset
+
+ existe.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $a>\sigma\:\land\:1>\sigma\:\land\:\dfrac{\left(1+\sigma\right)^{2}}{4}>a$
+\end_inset
+
+ entonces 
+\begin_inset Formula $E_{1}$
+\end_inset
+
+ existe.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\left(1>\sigma\:\land\:\dfrac{\left(1+\sigma\right)^{2}}{4}\geq a\right)\lor\left(a<\sigma\:\land\:1\leq\sigma\right)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $E_{2}$
+\end_inset
+
+ existe.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\dfrac{\left(1+\sigma\right)^{2}}{4}>a>\sigma\:\land1>\sigma$
+\end_inset
+
+ entonces 
+\begin_inset Formula $E_{0},\,E_{1},\,E_{2}$
+\end_inset
+
+ existen.
+\end_layout
+
+\begin_layout Proof
+En (1), si 
+\begin_inset Formula $a\geq\sigma$
+\end_inset
+
+ , entonces 
+\begin_inset Formula $y^{*}=\dfrac{a}{\sigma}\geq1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+En (2), si 
+\begin_inset Formula $a>\sigma$
+\end_inset
+
+, entonces
+\begin_inset Formula 
+\[
+\begin{array}{c}
+0>\sigma-a\\
+-2\sigma>2\sigma-4a\\
+\left(1-\sigma\right)^{2}>\left(1+\sigma\right)^{2}-4a
+\end{array}
+\]
+
+\end_inset
+
+como 
+\begin_inset Formula $1>\sigma\:\land\:\dfrac{\left(1+\sigma\right)^{2}}{4}>a$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{array}{c}
+1-\sigma>\sqrt{\left(1+\sigma\right)^{2}-4a}\\
+2>\sigma+1+\sqrt{\left(1+\sigma\right)^{2}-4a}\\
+1>\dfrac{\sigma+1+\sqrt{\left(1+\sigma\right)^{2}-4a}}{2}
+\end{array}
+\]
+
+\end_inset
+
+Por lo tanto 
+\begin_inset Formula $E_{1}$
+\end_inset
+
+ existe.
+ En (3), si 
+\begin_inset Formula $\left(1>\sigma\:\land\:\dfrac{\left(1+\sigma\right)^{2}}{4}\geq a\right)$
+\end_inset
+
+, entonces
+\begin_inset Formula 
+\[
+\begin{array}{c}
+\sqrt{\left(1+\sigma\right)^{2}-4a}\geq0>\sigma-1\\
+2>\sigma-1+2-\sqrt{\left(1+\sigma\right)^{2}-4a}\\
+1>\dfrac{\sigma+1-\sqrt{\left(1+\sigma\right)^{2}-4a}}{2}=y^{*}
+\end{array}
+\]
+
+\end_inset
+
+Si 
+\begin_inset Formula $\left(a<\sigma\:\land\:1\leq\sigma\right)$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{array}{c}
+4a<4\sigma\\
+-2\sigma<2\sigma-4a\\
+\left(\sigma-1\right)^{2}<\left(1+\sigma\right)^{2}-4a\\
+\sigma-1<\sqrt{\left(1+\sigma\right)^{2}-4a}\\
+\sigma-\sqrt{\left(1+\sigma\right)^{2}-4a}<1\\
+y^{*}=\dfrac{\sigma+1-\sqrt{\left(1+\sigma\right)^{2}-4a}}{2}<1
+\end{array}
+\]
+
+\end_inset
+
+Por lo tanto 
+\begin_inset Formula $E_{2}$
+\end_inset
+
+ existe.
+ Por último es fácil ver que (4) se cumple.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+Supongamos ahora que 
+\begin_inset Formula $x>0\;\land\;\dfrac{\left[1-y\right]_{+}}{1+x}=ky^{l}+m$
+\end_inset
+
+.
+ Deducimos aquí que 
+\begin_inset Formula $0<y<1$
+\end_inset
+
+.
+ Sustituyendo en la segunda ecuación
+\begin_inset Formula 
+\[
+a-\left(\sigma+ky^{l}+m\right)y=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $k=0.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{c}
+a-\left(\sigma+m\right)y^{*}=0\\
+y^{*}=\dfrac{a}{\sigma+m}
+\end{array}
+\]
+
+\end_inset
+
+Reemplazando en 
+\begin_inset Formula $\dfrac{\left[1-y\right]_{+}}{1+x}=m$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{array}{c}
+\dfrac{\left[1-y^{*}\right]_{+}}{1+x^{*}}=m\\
+\dfrac{\left[1-y^{*}\right]_{+}}{m}-1=x^{*}
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo tanto sea 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E_{3}=\left(\dfrac{\left[1-y^{*}\right]_{+}}{m}-1,y^{*}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $k>0.$
+\end_inset
+
+ Si 
+\begin_inset Formula $l=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{c}
+a-\left(\sigma+ky^{*}+m\right)y^{*}=0\\
+y^{*}=\dfrac{-\sigma-m+\sqrt{\left(\sigma+m\right)^{2}+4ka}}{2k}>0
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo tanto sea 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E_{4}=\left(\dfrac{1-y^{*}}{ky^{*}+m}-1,y^{*}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $k>0.$
+\end_inset
+
+ Si 
+\begin_inset Formula $l>1$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+a-\left(\sigma+ky^{*l}+m\right)y^{*}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Probaremos luego que existe 
+\begin_inset Formula $y^{*}$
+\end_inset
+
+tal que cumple esta ecuación.
+ Denotemos por el momento 
+\begin_inset Formula $E_{5}=\left(\dfrac{1-y^{*}}{ky^{*}+m}-1,y^{*}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Supervivencia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $1-\dfrac{a}{\sigma+m}>m$
+\end_inset
+
+ entonces 
+\begin_inset Formula $E_{4}$
+\end_inset
+
+ existe.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $0<m<1\;\land\;a<\dfrac{\left(1-m\right)\left(k\sigma+\sigma+m+k\right)}{\left(k+1\right)^{2}}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $E_{5}$
+\end_inset
+
+ existe.
+\end_layout
+
+\begin_layout Enumerate
+Si entonces 
+\begin_inset Formula $E_{6}$
+\end_inset
+
+ existe.
+\end_layout
+
+\begin_layout Proof
+En (1), si 
+\begin_inset Formula $\left[1-\dfrac{a}{\sigma+m}\right]_{+}>m$
+\end_inset
+
+ , entonces como 
+\begin_inset Formula $E_{4}=\left(x^{*}=\dfrac{\left[1-y^{*}\right]_{+}}{m}-1,y^{*}=\dfrac{a}{\sigma+m}\right)$
+\end_inset
+
+ tenemos que
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\begin{array}{c}
+y^{*}=\dfrac{a}{\sigma+m}>0\\
+1-y^{*}>m>0\Rightarrow y^{*}<1\\
+x^{*}=\dfrac{\left[1-y^{*}\right]_{+}}{m}-1=\dfrac{1-\dfrac{a}{\sigma+m}}{m}-1>0
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Por lo tanto 
+\begin_inset Formula $0<y^{*}<1$
+\end_inset
+
+, 
+\begin_inset Formula $x^{*}>0$
+\end_inset
+
+ y 
+\begin_inset Formula $E_{4}$
+\end_inset
+
+ existe.
+ 
+\end_layout
+
+\begin_layout Proof
+En (2), si 
+\begin_inset Formula $0<m<1\;\land\;a<\dfrac{\left(1-m\right)\left(k\sigma+\sigma+m+k\right)}{\left(k+1\right)^{2}}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Section
+Estabilidad
 \end_layout
 
 \end_body

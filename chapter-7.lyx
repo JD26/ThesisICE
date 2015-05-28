@@ -289,7 +289,7 @@ Modelo
 \end_layout
 
 \begin_layout Standard
-Estudiaremos el siguiente sistema de ecuaciones
+...
 \end_layout
 
 \begin_layout Standard
@@ -297,19 +297,19 @@ Estudiaremos el siguiente sistema de ecuaciones
 \align center
 \begin_inset Formula $\begin{array}{c}
 \begin{array}{crl}
-M' & = & M\left(\beta_{M}\left(M,N,y\right)-\mu_{M}\left(y\right)\right)-\lambda_{M}M^{2}\\
-N' & = & N\left(\beta_{N}\left(M,N,z\right)-\mu_{N}\left(z\right)\right)-\lambda_{N}N^{2}\\
-y' & = & a_{M}C_{E}-\left(\eta_{M}+\xi_{M}+\beta_{M}\left(M,N,y\right)\right)y\\
-z' & = & a_{N}C_{E}-\left(\eta_{N}+\xi_{N}+\beta_{N}\left(M,N,z\right)\right)z
+M' & = & M\left(\beta\left(M,y\right)-\mu_{M}\left(y\right)\right)-p\left(M\right)N\\
+N' & = & N\left(\rho_{N}\left(z\right)p\left(M\right)-\mu_{N}\left(z\right)\right)\\
+y' & = & a_{M}C_{E}-\left(\eta_{M}+\xi_{M}+\beta\left(M,y\right)\right)y\\
+z' & = & a_{N}C_{E}-\left(\eta_{N}+\xi_{N}+\rho_{N}\left(z\right)p\left(M\right)\right)z+p\left(M\right)y
 \end{array}\\
 \,\\
-\beta_{M}\left(M,N,x\right)=\dfrac{\rho_{M}\left(x\right)}{1+c_{M}M+c_{N}N}\,\beta_{N}\left(M,N,z\right)=\dfrac{\rho_{N}\left(z\right)}{1+c_{M}M+c_{N}N},\\
+\beta\left(M,y\right)=\dfrac{\rho_{M}\left(y\right)}{1+cM},\,p\left(M\right)=\dfrac{\gamma M}{\tau+M}\\
 \rho_{M}\left(y\right)=\alpha_{M,1}\left[1-\alpha_{M,2}y\right]_{+},\rho_{N}\left(z\right)=\alpha_{N,1}\left[1-\alpha_{N,2}z\right]_{+},\\
 \mu_{M}\left(y\right)=k_{M}y^{l_{M}}+m_{M},\,\mu_{N}\left(z\right)=k_{N}z^{l_{N}}+m_{N},\\
 t\geq0\\
 M\left(t\right),\,N\left(t\right),\,y\left(t\right),\,z\left(t\right)\geq0\\
-a_{M},\,a_{N},\,C_{E},\,\eta_{M},\,\eta_{N},\,\xi_{M},\,\xi_{N},\,c_{M},\,c_{N},\,\alpha_{M,1},\,\alpha_{M,2},\,\alpha_{N,1},\,\alpha_{N,2},\,m_{M},\,m_{N}>0\\
-k_{M},\,k_{N},\,\lambda_{M},\,\lambda_{N}\geq0,\,l_{M},\,l_{N}\geq1
+a_{M},\,a_{N},\,C_{E},\,\eta_{M},\,\eta_{N},\,\xi_{M},\,\xi_{N},\,c,\,\alpha_{M,1},\,\alpha_{M,2},\,\alpha_{N,1},\,\alpha_{N,2},\,m_{M},\,m_{N},\,\gamma,\,\tau>0\\
+k_{M},\,k_{N}\geq0,\,l_{M},\,l_{N}\geq1
 \end{array}$
 \end_inset
 
@@ -320,7 +320,7 @@ k_{M},\,k_{N},\,\lambda_{M},\,\lambda_{N}\geq0,\,l_{M},\,l_{N}\geq1
 \noindent
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="16" columns="3">
+<lyxtabular version="3" rows="17" columns="3">
 <features rotate="0" tabularvalignment="middle">
 <column alignment="left" valignment="top" width="0pt">
 <column alignment="left" valignment="top">
@@ -449,7 +449,7 @@ Concentración del contaminante por unidad de biomasa.
 \begin_layout Plain Layout
 
 \size scriptsize
-\begin_inset Formula $\beta_{M},\,\beta_{N}$
+\begin_inset Formula $\beta$
 \end_inset
 
 
@@ -698,7 +698,7 @@ Tasa de depuración del contaminante por unidad de biomasa.
 \begin_layout Plain Layout
 
 \size scriptsize
-\begin_inset Formula $c_{M},\,c_{N}$
+\begin_inset Formula $c$
 \end_inset
 
 
@@ -933,13 +933,54 @@ Tasa de mortalidad natural.
 </cell>
 </row>
 <row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\gamma$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Tasa de alimentación.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\mbox{día}^{-1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
 <cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \size scriptsize
-\begin_inset Formula $\lambda_{M},\,\lambda_{N}$
+\begin_inset Formula $\tau$
 \end_inset
 
 
@@ -953,7 +994,7 @@ Tasa de mortalidad natural.
 \begin_layout Plain Layout
 
 \size scriptsize
-Tasa de mortalidad natural.
+Constante de saturación media.
 \end_layout
 
 \end_inset
@@ -964,7 +1005,7 @@ Tasa de mortalidad natural.
 \begin_layout Plain Layout
 
 \size scriptsize
-\begin_inset Formula $Lg^{-1}\mbox{día}^{-1}$
+\begin_inset Formula $g/L$
 \end_inset
 
 
@@ -978,10 +1019,6 @@ Tasa de mortalidad natural.
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-Cambio de variables
 \end_layout
 
 \begin_layout Standard
@@ -999,21 +1036,21 @@ Cambio de variables
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\widehat{M}=c_{M}M,\,\widehat{N}=c_{N}N,\,\hat{y}=\alpha_{M,2}y,\,\hat{z}=\alpha_{N,2}z,$
+\begin_inset Formula $\widehat{M}=c_{1}M,\,\widehat{N}=c_{2}N,\,\hat{y}=\alpha_{M,2}y,\,\hat{z}=\alpha_{N,2}z,$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\hat{\alpha}_{M}=\alpha_{M,1},\,\hat{\alpha}_{N}=\alpha_{N,1},\,\hat{k}_{M}=\dfrac{k_{M}}{\alpha_{M,2}^{l_{M}}},\,\hat{k}_{N}=\dfrac{k_{N}}{\alpha_{N,2}^{l_{N}}},\,\hat{\lambda}_{M}=\dfrac{\lambda_{M}}{c_{M}},\,\hat{\lambda}_{N}=\dfrac{\lambda_{N}}{c_{N}}$
+\begin_inset Formula $\hat{\alpha}_{M}=\alpha_{M,1},\,\hat{\alpha}_{N}=\alpha_{N,1},\,\hat{k}_{M}=\dfrac{k_{M}}{\alpha_{M,2}^{l_{M}}},\,\hat{k}_{N}=\dfrac{k_{N}}{\alpha_{N,2}^{l_{N}}},\,\hat{\lambda}_{M}=\dfrac{\lambda_{M}}{c_{1}},\,\hat{\lambda}_{N}=\dfrac{\lambda_{N}}{c_{2}}$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\hat{a}_{M}=\alpha_{M,2}a_{M}C_{E},\,\hat{a}_{N}=\alpha_{N,2}a_{N}C_{E}$
+\begin_inset Formula $\hat{a_{M}}=\alpha_{M,2}a_{M}C_{E},\,\hat{a_{N}}=\alpha_{N,2}a_{N}C_{E}$
 \end_inset
 
 
@@ -1024,16 +1061,12 @@ Cambio de variables
 \align center
 \begin_inset Formula $\begin{array}{crl}
 M' & = & M\left(\dfrac{\alpha_{M}\left[1-y\right]_{+}}{1+M+N}-k_{M}y^{l_{M}}-m_{M}\right)-\lambda_{M}M^{2}\\
-N' & = & N\left(\dfrac{\alpha_{N}\left[1-z\right]_{+}}{1+M+N}-k_{N}z^{l_{N}}-m_{N}\right)-\lambda_{N}N^{2}\\
+N' & = & N\left(\dfrac{\alpha_{N}\left[1-z\right]_{+}}{1+M+N}-k_{N}y^{l_{N}}-m_{N}\right)-\lambda_{N}N^{2}\\
 y' & = & a_{M}-\left(\sigma_{M}+\dfrac{\alpha_{M}\left[1-y\right]_{+}}{1+M+N}\right)y\\
-z' & = & a_{N}-\left(\sigma_{N}+\dfrac{\alpha_{N}\left[1-z\right]_{+}}{1+M+N}\right)z
+z\text{'} & = & a_{N}-\left(\sigma_{N}+\dfrac{\alpha_{N}\left[1-z\right]_{+}}{1+M+N}\right)z
 \end{array}$
 \end_inset
 
-
-\end_layout
-
-\begin_layout --Separator--
 
 \end_layout
 
@@ -1059,33 +1092,6 @@ F(x,y,z,w) & = & \left(F_{1}(x,y,z,w),\,F_{2}(x,y,z,w),\,F_{3}(x,y,z,w),\,F_{4}(
 \end_inset
 
 es localmente lipschitz.
-\end_layout
-
-\begin_layout Proof
-...
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout Proposition
-
-\shape up
-Sea 
-\begin_inset Formula $\tilde{F}:\mathbb{R}^{2}\rightarrow\mathbb{R}^{2}$
-\end_inset
-
- definida como 
-\begin_inset Formula $\tilde{F}\left(x,y\right)=F\left(\left[x\right]_{+},\left[y\right]_{+}\right)$
-\end_inset
-
-.
- Entonces 
-\begin_inset Formula $\tilde{F}$
-\end_inset
-
- es localmente Lipchitz.
 \end_layout
 
 \begin_layout Proof

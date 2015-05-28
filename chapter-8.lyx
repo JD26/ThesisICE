@@ -289,7 +289,7 @@ Modelo
 \end_layout
 
 \begin_layout Standard
-Estudiaremos el siguiente sistema de ecuaciones
+...
 \end_layout
 
 \begin_layout Standard
@@ -297,19 +297,22 @@ Estudiaremos el siguiente sistema de ecuaciones
 \align center
 \begin_inset Formula $\begin{array}{c}
 \begin{array}{crl}
-M' & = & M\left(\beta_{M}\left(M,N,y\right)-\mu_{M}\left(y\right)\right)-\lambda_{M}M^{2}\\
-N' & = & N\left(\beta_{N}\left(M,N,z\right)-\mu_{N}\left(z\right)\right)-\lambda_{N}N^{2}\\
-y' & = & a_{M}C_{E}-\left(\eta_{M}+\xi_{M}+\beta_{M}\left(M,N,y\right)\right)y\\
-z' & = & a_{N}C_{E}-\left(\eta_{N}+\xi_{N}+\beta_{N}\left(M,N,z\right)\right)z
+M' & = & M\left(\beta_{M}\left(M,N,x\right)-\mu_{M}\left(x\right)\right)-p\left(M\right)P\\
+N' & = & N\left(\beta_{N}\left(M,N,y\right)-\mu_{N}\left(y\right)\right)\\
+P' & = & P\left(\rho_{P}\left(z\right)p\left(M\right)-\mu_{P}\left(z\right)\right)\\
+x' & = & a_{M}C_{E}-\left(\eta_{M}+\xi_{M}+\beta_{M}\left(M,N,x\right)\right)x\\
+y' & = & a_{N}C_{E}-\left(\eta_{N}+\xi_{N}+\beta_{N}\left(M,N,y\right)\right)y\\
+z' & = & a_{P}C_{E}-\left(\eta_{P}+\xi_{P}+\rho_{P}\left(z\right)p\left(M\right)\right)z+p\left(M\right)x
 \end{array}\\
 \,\\
-\beta_{M}\left(M,N,x\right)=\dfrac{\rho_{M}\left(x\right)}{1+c_{M}M+c_{N}N}\,\beta_{N}\left(M,N,z\right)=\dfrac{\rho_{N}\left(z\right)}{1+c_{M}M+c_{N}N},\\
-\rho_{M}\left(y\right)=\alpha_{M,1}\left[1-\alpha_{M,2}y\right]_{+},\rho_{N}\left(z\right)=\alpha_{N,1}\left[1-\alpha_{N,2}z\right]_{+},\\
-\mu_{M}\left(y\right)=k_{M}y^{l_{M}}+m_{M},\,\mu_{N}\left(z\right)=k_{N}z^{l_{N}}+m_{N},\\
+\beta_{M}\left(M,N,x\right)=\dfrac{\rho_{M}\left(x\right)}{1+c_{M}M+c_{N}N},\,\beta_{N}\left(M,N,y\right)=\dfrac{\rho_{N}\left(y\right)}{1+c_{M}M+c_{N}N},\,p\left(M\right)=\dfrac{\gamma M}{\tau+M}\\
+\rho_{M}\left(x\right)=\alpha_{M,1}\left[1-\alpha_{M,2}x\right]_{+},\,\rho_{N}\left(y\right)=\alpha_{N,1}\left[1-\alpha_{N,2}y\right]_{+},\,\rho_{P}\left(z\right)=\alpha_{P,1}\left[1-\alpha_{P,2}z\right]_{+}\\
+\mu_{M}\left(x\right)=k_{M}x^{l_{M}}+m_{M},\,\mu_{N}\left(y\right)=k_{N}y^{l_{N}}+m_{N},\,\mu_{P}\left(z\right)=k_{P}z^{l_{P}}+m_{P},\\
 t\geq0\\
 M\left(t\right),\,N\left(t\right),\,y\left(t\right),\,z\left(t\right)\geq0\\
-a_{M},\,a_{N},\,C_{E},\,\eta_{M},\,\eta_{N},\,\xi_{M},\,\xi_{N},\,c_{M},\,c_{N},\,\alpha_{M,1},\,\alpha_{M,2},\,\alpha_{N,1},\,\alpha_{N,2},\,m_{M},\,m_{N}>0\\
-k_{M},\,k_{N},\,\lambda_{M},\,\lambda_{N}\geq0,\,l_{M},\,l_{N}\geq1
+a_{M},\,a_{N},\,a_{P},\,\eta_{M},\,\eta_{N},\,\eta_{P},\,\xi_{M},\,\xi_{N},\,\xi_{P},\,\alpha_{M,1},\,\alpha_{M,2},\,\alpha_{N,1},\,\alpha_{N,2},\,\alpha_{P,1},\,\alpha_{P,2},\,m_{M},\,m_{N},\,m_{P}>0\\
+C_{E},\,c_{M},\,c_{N},\,\gamma,\,\tau>0\\
+k_{M},\,k_{N},\,k_{P}\geq0,\,l_{M},\,l_{N},\,l_{P}\geq1
 \end{array}$
 \end_inset
 
@@ -320,7 +323,7 @@ k_{M},\,k_{N},\,\lambda_{M},\,\lambda_{N}\geq0,\,l_{M},\,l_{N}\geq1
 \noindent
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="16" columns="3">
+<lyxtabular version="3" rows="17" columns="3">
 <features rotate="0" tabularvalignment="middle">
 <column alignment="left" valignment="top" width="0pt">
 <column alignment="left" valignment="top">
@@ -367,7 +370,7 @@ Unidad
 \begin_layout Plain Layout
 
 \size scriptsize
-\begin_inset Formula $M\left(t\right),\,N\left(t\right)$
+\begin_inset Formula $M\left(t\right),\,N\left(t\right),\,P\left(t\right)$
 \end_inset
 
 
@@ -408,7 +411,7 @@ Concentración de biomasa de la población.
 \begin_layout Plain Layout
 
 \size scriptsize
-\begin_inset Formula $y\left(t\right),\,z\left(t\right)$
+\begin_inset Formula $x\left(t\right),\,y\left(t\right),\,z\left(t\right)$
 \end_inset
 
 
@@ -490,7 +493,7 @@ Tasa de crecimiento de la biomasa de la población por unidad de biomasa.
 \begin_layout Plain Layout
 
 \size scriptsize
-\begin_inset Formula $\mu_{M},\,\mu_{N}$
+\begin_inset Formula $\mu_{M},\,\mu_{N},\,\mu_{P}$
 \end_inset
 
 
@@ -534,7 +537,7 @@ Tasa de perdida de biomasa de la población por muerte por unidad de biomasa.
 \begin_layout Plain Layout
 
 \size scriptsize
-\begin_inset Formula $a_{M},\,a_{N}$
+\begin_inset Formula $a_{M},\,a_{N},\,a_{P}$
 \end_inset
 
 
@@ -616,7 +619,7 @@ Concentración del contaminante en el medio ambiente.
 \begin_layout Plain Layout
 
 \size scriptsize
-\begin_inset Formula $\eta_{M},\,\eta_{N}$
+\begin_inset Formula $\eta_{M},\,\eta_{N},\,\eta_{P}$
 \end_inset
 
 
@@ -657,7 +660,7 @@ Tasa de egestión del contaminante por unidad de biomasa.
 \begin_layout Plain Layout
 
 \size scriptsize
-\begin_inset Formula $\xi_{M},\,\xi_{N}$
+\begin_inset Formula $\xi_{M},\,\xi_{N},\,\xi_{P}$
 \end_inset
 
 
@@ -739,7 +742,7 @@ Coeficiente del efecto desplazamiento.
 \begin_layout Plain Layout
 
 \size scriptsize
-\begin_inset Formula $\alpha_{M,1},\,\alpha_{N,1}$
+\begin_inset Formula $\alpha_{M,1},\,\alpha_{N,1},\,\alpha_{P,1}$
 \end_inset
 
 
@@ -780,7 +783,7 @@ Tasa de máximo crecimiento.
 \begin_layout Plain Layout
 
 \size scriptsize
-\begin_inset Formula $\alpha_{M,2},\,\alpha_{N,2}$
+\begin_inset Formula $\alpha_{M,2},\,\alpha_{N,2},\,\alpha_{P,2}$
 \end_inset
 
 
@@ -821,7 +824,7 @@ Coeficiente del efecto del contaminante en el crecimiento de la población.
 \begin_layout Plain Layout
 
 \size scriptsize
-\begin_inset Formula $k_{M},\,k_{N}$
+\begin_inset Formula $k_{M},\,k_{N},\,k_{P}$
 \end_inset
 
 
@@ -862,7 +865,7 @@ Coeficiente de la función potencia.
 \begin_layout Plain Layout
 
 \size scriptsize
-\begin_inset Formula $l_{M},\,l_{N}$
+\begin_inset Formula $l_{M},\,l_{N},\,l_{P}$
 \end_inset
 
 
@@ -898,7 +901,7 @@ Exponente de la función potencia.
 \begin_layout Plain Layout
 
 \size scriptsize
-\begin_inset Formula $m_{M},\,m_{N}$
+\begin_inset Formula $m_{M},\,m_{N},\,m_{P}$
 \end_inset
 
 
@@ -933,13 +936,54 @@ Tasa de mortalidad natural.
 </cell>
 </row>
 <row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\gamma$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Tasa de alimentación.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\mbox{día}^{-1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
 <cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \size scriptsize
-\begin_inset Formula $\lambda_{M},\,\lambda_{N}$
+\begin_inset Formula $\tau$
 \end_inset
 
 
@@ -953,7 +997,7 @@ Tasa de mortalidad natural.
 \begin_layout Plain Layout
 
 \size scriptsize
-Tasa de mortalidad natural.
+Constante de saturación media.
 \end_layout
 
 \end_inset
@@ -964,7 +1008,7 @@ Tasa de mortalidad natural.
 \begin_layout Plain Layout
 
 \size scriptsize
-\begin_inset Formula $Lg^{-1}\mbox{día}^{-1}$
+\begin_inset Formula $g/L$
 \end_inset
 
 
@@ -977,143 +1021,6 @@ Tasa de mortalidad natural.
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-Cambio de variables
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\sigma_{M}=\eta_{M}+\xi_{M}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\sigma_{N}=\eta_{N}+\xi_{N}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\widehat{M}=c_{M}M,\,\widehat{N}=c_{N}N,\,\hat{y}=\alpha_{M,2}y,\,\hat{z}=\alpha_{N,2}z,$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\hat{\alpha}_{M}=\alpha_{M,1},\,\hat{\alpha}_{N}=\alpha_{N,1},\,\hat{k}_{M}=\dfrac{k_{M}}{\alpha_{M,2}^{l_{M}}},\,\hat{k}_{N}=\dfrac{k_{N}}{\alpha_{N,2}^{l_{N}}},\,\hat{\lambda}_{M}=\dfrac{\lambda_{M}}{c_{M}},\,\hat{\lambda}_{N}=\dfrac{\lambda_{N}}{c_{N}}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\hat{a}_{M}=\alpha_{M,2}a_{M}C_{E},\,\hat{a}_{N}=\alpha_{N,2}a_{N}C_{E}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-\align center
-\begin_inset Formula $\begin{array}{crl}
-M' & = & M\left(\dfrac{\alpha_{M}\left[1-y\right]_{+}}{1+M+N}-k_{M}y^{l_{M}}-m_{M}\right)-\lambda_{M}M^{2}\\
-N' & = & N\left(\dfrac{\alpha_{N}\left[1-z\right]_{+}}{1+M+N}-k_{N}z^{l_{N}}-m_{N}\right)-\lambda_{N}N^{2}\\
-y' & = & a_{M}-\left(\sigma_{M}+\dfrac{\alpha_{M}\left[1-y\right]_{+}}{1+M+N}\right)y\\
-z' & = & a_{N}-\left(\sigma_{N}+\dfrac{\alpha_{N}\left[1-z\right]_{+}}{1+M+N}\right)z
-\end{array}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout Theorem
-La función 
-\begin_inset Formula $F:\mathbb{R}_{+}^{4}\rightarrow\mathbb{R}^{4}$
-\end_inset
-
- 
-\begin_inset Formula 
-\[
-\begin{array}{crl}
-F(x,y,z,w) & = & \left[\begin{array}{c}
-x\left(\dfrac{\alpha_{1}\left[1-z\right]_{+}}{1+x+y}-k_{1}z^{l_{1}}-m_{1}\right)-\lambda_{1}x^{2}\\
-y\left(\dfrac{\alpha_{2}\left[1-w\right]_{+}}{1+x+y}-k_{2}w^{l_{2}}-m_{2}\right)-\lambda_{2}y^{2}\\
-a_{1}-\left(\sigma_{1}+\dfrac{\alpha_{1}\left[1-z\right]_{+}}{1+x+y}\right)z\\
-a_{2}-\left(\sigma_{2}+\dfrac{\alpha_{2}\left[1-w\right]_{+}}{1+x+y}\right)w
-\end{array}\right]\\
-F(x,y,z,w) & = & \left(F_{1}(x,y,z,w),\,F_{2}(x,y,z,w),\,F_{3}(x,y,z,w),\,F_{4}(x,y,z,w)\right)
-\end{array}
-\]
-
-\end_inset
-
-es localmente lipschitz.
-\end_layout
-
-\begin_layout Proof
-...
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout Proposition
-
-\shape up
-Sea 
-\begin_inset Formula $\tilde{F}:\mathbb{R}^{2}\rightarrow\mathbb{R}^{2}$
-\end_inset
-
- definida como 
-\begin_inset Formula $\tilde{F}\left(x,y\right)=F\left(\left[x\right]_{+},\left[y\right]_{+}\right)$
-\end_inset
-
-.
- Entonces 
-\begin_inset Formula $\tilde{F}$
-\end_inset
-
- es localmente Lipchitz.
-\end_layout
-
-\begin_layout Proof
-...
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout Theorem
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-Existencia y unicidad
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-...
-\end_layout
-
-\begin_layout --Separator--
 
 \end_layout
 

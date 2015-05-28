@@ -836,6 +836,420 @@ Usaremos la siguiente notación:
 Acontinuación daremos algunas definiciones.
 \end_layout
 
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+Sean 
+\begin_inset Formula $x\in E\subset\mathbb{R}^{n}$
+\end_inset
+
+ y 
+\begin_inset Formula $f:E\rightarrow\mathbb{R}^{n}$
+\end_inset
+
+.
+ Se dice que 
+\begin_inset Formula $f$
+\end_inset
+
+ es localmente Lipschitz si 
+\begin_inset Formula $\forall\,C\subseteq E$
+\end_inset
+
+ compacto 
+\begin_inset Formula $\exists\,L_{C}>0$
+\end_inset
+
+ constante tal que
+\begin_inset Formula 
+\[
+|f\left(x_{1}\right)-f\left(x_{2}\right)|\leq K_{C}|x_{1}-x_{2}|;\quad\forall x_{1},x_{2}\in C.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "propo:basic"
+
+\end_inset
+
+Sean 
+\begin_inset Formula $x,y\in\mathbb{R}^{n}$
+\end_inset
+
+.
+ Las siguientes proposiciones son verdaderas.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $x\leq\left[x\right]_{+}\leq|x|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $|x-y|\leq|\left[x\right]_{+}-y|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $|\left[x\right]_{+}-\left[y\right]_{+}|\leq|x-y|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Basta usar la definición de 
+\begin_inset Formula $\left[.\right]_{+}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "Lema:compa"
+
+\end_inset
+
+Sea 
+\begin_inset Formula $U\subset\mathbb{R}^{n+1}$
+\end_inset
+
+ compacto.
+ Entonces 
+\begin_inset Formula $\left[U\right]_{+}$
+\end_inset
+
+ es compacto.
+\end_layout
+
+\begin_layout Proof
+Sea 
+\begin_inset Formula $\left[x\right]_{+}\in\left[U\right]_{+}$
+\end_inset
+
+, entonces
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\begin{array}{l}
+|\left[x\right]_{+}|\\
+=|\left[x_{1}\right]_{+}|+...+|\left[x_{n}\right]_{+}|\\
+=\left[x_{1}\right]_{+}+...+\left[x_{n}\right]_{n}\\
+\leq|x_{1}|+...+|x_{n}|\\
+=|x|\leq C\mbox{  (Pues \ensuremath{U} es acotado)}
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Por lo tanto 
+\begin_inset Formula $\left[U\right]_{+}$
+\end_inset
+
+es acotado.
+\end_layout
+
+\begin_layout Proof
+Sea 
+\begin_inset Formula $\left(\left[x_{m}\right]_{+}\right)$
+\end_inset
+
+una sucesión en 
+\begin_inset Formula $\left[U\right]_{+}$
+\end_inset
+
+ tal que 
+\begin_inset Formula ${\displaystyle \lim_{m\rightarrow\infty^{+}}\left[x_{m}\right]_{+}=x^{*}}$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $\forall\varepsilon>0$
+\end_inset
+
+, 
+\begin_inset Formula $\exists m_{0}$
+\end_inset
+
+ tal que
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\begin{array}{l}
+|x_{m}-x^{*}|\leq|\left[x_{m}\right]_{+}-x^{*}|<\varepsilon\quad\forall m\geq m_{0}\mbox{ }\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Luego 
+\begin_inset Formula ${\displaystyle \lim_{m\rightarrow\infty^{+}}x_{m}=x^{*}}.$
+\end_inset
+
+ Como 
+\begin_inset Formula $U$
+\end_inset
+
+ es cerrado 
+\begin_inset Formula $x^{*}\in U$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $\left[x^{*}\right]_{+}\in\left[U\right]_{+}$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $\forall\varepsilon>0$
+\end_inset
+
+, 
+\begin_inset Formula $\exists m_{0}$
+\end_inset
+
+ tal que 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\begin{array}{l}
+|\left[x_{m}\right]_{+}-\left[x^{*}\right]_{+}|\leq|x_{m}-x^{*}|<\varepsilon\quad\forall m\geq m_{0}\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Luego 
+\begin_inset Formula ${\displaystyle \lim_{m\rightarrow\infty^{+}}\left[x_{m}\right]_{+}=\left[x^{*}\right]_{+}}.$
+\end_inset
+
+ Por unicidad del límite 
+\begin_inset Formula $x^{*}=\left[x^{*}\right]_{+}$
+\end_inset
+
+ y 
+\begin_inset Formula $x^{*}\in\left[U\right]_{+}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Por lo tanto 
+\begin_inset Formula $\left[U\right]_{+}$
+\end_inset
+
+es cerrado.
+\end_layout
+
+\begin_layout Proof
+Luego, como 
+\begin_inset Formula $\left[U\right]_{+}$
+\end_inset
+
+ es cerrado y acotado, entonces 
+\begin_inset Formula $\left[U\right]_{+}$
+\end_inset
+
+ es compacto.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+
+\shape up
+Sean 
+\begin_inset Formula $x\in\mathbb{R}_{+}^{n}$
+\end_inset
+
+, 
+\begin_inset Formula $f:\mathbb{R}_{+}^{n}\rightarrow\mathbb{R}^{m}$
+\end_inset
+
+ y 
+\begin_inset Formula $\tilde{f}:\mathbb{R}^{n}\rightarrow\mathbb{R}^{m}$
+\end_inset
+
+ definida como 
+\begin_inset Formula $\tilde{f}\left(x\right)=f\left(\left[x\right]_{+}\right)$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es localmente Lipschitz entonces 
+\begin_inset Formula $\tilde{f}$
+\end_inset
+
+ es localmente Lipchitz.
+\end_layout
+
+\begin_layout Proof
+Sea 
+\begin_inset Formula $U\subset\mathbb{R}^{n}$
+\end_inset
+
+ un conjunto compacto.
+ Sean 
+\begin_inset Formula $x_{1},x_{2}\in U$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $\left[U\right]_{+}\subset\mathbb{R}_{+}^{n}$
+\end_inset
+
+ es compacto por el Lema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Lema:compa"
+
+\end_inset
+
+ anterior.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\begin{array}{l}
+|\tilde{f}\left(x_{1}\right)-\tilde{f}\left(x_{2}\right)|\\
+=|f\left(\left[x_{1}\right]_{+}\right)-f\left(\left[x_{2}\right]_{+}\right)|\\
+\leq K_{\left[U\right]_{+}}|\left[x_{1}\right]_{+}-\left[x_{2}\right]_{+}|\mbox{(Pues \ensuremath{f} es localmente Lipschitz)}\\
+\leq K_{\left[U\right]_{+}}|x_{1}-x_{2}|\mbox{ (Por la Proposición \ref{propo:basic})}
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Por lo tanto 
+\begin_inset Formula $\tilde{f}$
+\end_inset
+
+ es localmente Lipchitz.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Section
+Funciones localmente Lipschitz(----)
+\end_layout
+
+\begin_layout Standard
+Usaremos la siguiente notación:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $n,m\in\mathbb{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbb{R}_{+}^{m}=\left\{ \left(x_{1},\ldots,x_{m}\right),\:x_{i}\in\mathbb{R},\:x_{i}\geq0,\:\forall i=1,\ldots,m\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $t\in\mathbb{R}\left(\mathbb{R}_{+}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x\in\mathbb{R}^{n}\left(\mathbb{R}_{+}^{n}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left(t,x\right)\in\mathbb{R}^{n+1}\left(\mathbb{R}_{+}^{n+1}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[t\right]_{+}=\mbox{max}\left\{ 0,t\right\} ,\,t\in\mathbb{R}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[x\right]_{+}=\left(\left[x_{1}\right]_{+},...,\left[x_{n}\right]_{+}\right),\,x\in\mathbb{R}^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[U\right]_{+}=\left\{ \left(\left[t\right]_{+},\left[x\right]_{+}\right),\,\left(t,x\right)\in U\right\} ,\,U\subset\mathbb{R}^{n+1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $|x|=|x_{1}|+..|x_{n}|,\,x\in\mathbb{R}^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mbox{diam}\left(A\right)=\sup\left\{ |x-y|,\;x,y\in A\right\} $
+\end_inset
+
+, 
+\begin_inset Formula $A\subset\mathbb{R}^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Acontinuación daremos algunas definiciones.
+\end_layout
+
 \begin_layout Definition
 Sean 
 \begin_inset Formula $t\in\mathbb{R}$
@@ -2013,7 +2427,7 @@ Sea
 \begin_inset Formula $U\subset\mathbb{R}^{n+1}$
 \end_inset
 
- cerrado y acotado.
+ compacto.
  Entonces 
 \begin_inset Formula $\left[U\right]_{+}$
 \end_inset
@@ -2238,6 +2652,83 @@ Por lo tanto
 \end_inset
 
 .
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+
+\shape up
+Sean 
+\begin_inset Formula $x\in\mathbb{R}_{+}^{n}$
+\end_inset
+
+, 
+\begin_inset Formula $f:\mathbb{R}_{+}^{n}\rightarrow\mathbb{R}^{m}$
+\end_inset
+
+ y 
+\begin_inset Formula $\tilde{f}:\mathbb{R}^{n}\rightarrow\mathbb{R}^{m}$
+\end_inset
+
+ definida como 
+\begin_inset Formula $\tilde{f}\left(x\right)=f\left(\left[x\right]_{+}\right)$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es localmente Lipschitz entonces 
+\begin_inset Formula $\tilde{f}$
+\end_inset
+
+ es localmente Lipchitz.
+\end_layout
+
+\begin_layout Proof
+Sea 
+\begin_inset Formula $U\subset\mathbb{R}^{n}$
+\end_inset
+
+ un conjunto compacto.
+ Sean 
+\begin_inset Formula $x_{1},x_{2}\in U$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $\left[U\right]_{+}\subset\mathbb{R}_{+}^{n}$
+\end_inset
+
+ es compacto por el lema anterior.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\begin{array}{l}
+|\tilde{f}\left(x_{1}\right)-\tilde{f}\left(x_{2}\right)|\\
+=|f\left(\left[x_{1}\right]_{+}\right)-f\left(\left[x_{2}\right]_{+}\right)|\\
+\leq K_{\left[U\right]_{+}}|\left[x_{1}\right]_{+}-\left[x_{2}\right]_{+}|\mbox{(Pues \ensuremath{f} es localmente Lipschitz)}\\
+\leq K_{\left[U\right]_{+}}|x_{1}-x_{2}|\mbox{ (Por la proposición anterior)}
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Por lo tanto 
+\begin_inset Formula $\tilde{f}$
+\end_inset
+
+ es localmente Lipchitz.
 \end_layout
 
 \begin_layout --Separator--
