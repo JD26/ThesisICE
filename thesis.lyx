@@ -5,11 +5,11 @@
 \textclass scrbook
 \begin_preamble
 % increases link area for cross-references and autoname them
-\AtBeginDocument{\renewcommand{\ref}[1]{\mbox{\autoref{#1}}}}
+%\AtBeginDocument{\renewcommand{\ref}[1]{\mbox{\autoref{#1}}}}
 
 
 % in case somebody want to have the label "Equation"
-%\renewcommand{\eqref}[1]{Equation~(\negthinspace\autoref{#1})}
+%\renewcommand{\eqref}[1]{\mbox{\autoref{#1}}}
 
 % that links to image floats jumps to the beginning
 % of the float and not to its caption
@@ -42,7 +42,9 @@
 \renewcommand{\contentsname}{Índice}
 \renewcommand{\nomname}{Lista de símbolos}
 \renewcommand*{\proofname}{Demostración}
+\renewcommand{\chaptername}{Capítulo}
 
+\algolang{spanish}
 % avoids that floats are placed above its sections
 \let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
 \end_preamble
@@ -55,6 +57,8 @@ theorems-sec-bytype
 tabs-within-sections
 figs-within-sections
 eqs-within-sections
+enumitem
+algolyx
 \end_modules
 \maintain_unincluded_children false
 \language spanish
@@ -133,6 +137,11 @@ eqs-within-sections
 \end_branch
 \branch Appendix
 \selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch Nomenclatura
+\selected 0
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -484,6 +493,52 @@ LatexCommand tableofcontents
 \end_inset
 
 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagestyle{plain}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The summary should not have page headers.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Summary
+status open
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "Nomenclature.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -753,25 +808,6 @@ filename "chapter-7.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Branch chapter-2
-status open
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "chapter-8.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Newpage cleardoublepage
 \end_inset
 
@@ -790,7 +826,7 @@ status open
 
 Acknowledgments
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 print 
@@ -821,7 +857,7 @@ Acknowledgments
 
 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 print 
@@ -971,7 +1007,7 @@ restore the right header line
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "thesisExample"
-options "alpha"
+options "apalike"
 
 \end_inset
 
@@ -990,12 +1026,12 @@ options "alpha"
 status open
 
 \begin_layout Plain Layout
-Nomenclatura
+
 \end_layout
 
 \end_inset
 
-
+Nomenclatura
 \begin_inset Note Note
 status open
 
@@ -1021,7 +1057,7 @@ Nomenclatura
 status open
 
 \begin_layout Plain Layout
-Nomenclatura
+Nomenclature
 \end_layout
 
 \end_inset
@@ -1032,8 +1068,7 @@ Nomenclatura
 \begin_layout Standard
 \begin_inset CommandInset nomencl_print
 LatexCommand printnomenclature
-set_width "custom"
-width "2.5cm"
+set_width "auto"
 
 \end_inset
 

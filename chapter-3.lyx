@@ -38,6 +38,8 @@
 % increases the bottom float placement fraction
 \renewcommand{\bottomfraction}{0.5}
 
+\renewcommand*{\proofname}{Demostración}
+
 % avoids that floats are placed above its sections
 \let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
 \end_preamble
@@ -51,6 +53,7 @@ theorems-sec-bytype
 tabs-within-sections
 figs-within-sections
 eqs-within-sections
+enumitem
 \end_modules
 \maintain_unincluded_children false
 \language spanish
@@ -281,399 +284,1440 @@ thepage
 \end_layout
 
 \begin_layout Chapter
-El Modelo en Ecuaciones Diferenciales Ordinarias
+Análisis Cualitativo
 \end_layout
 
 \begin_layout Standard
-Intro ...
+Intro...
 \end_layout
 
 \begin_layout Section
-El Problema de Tikhonov 
+Introducción
 \end_layout
 
 \begin_layout Standard
-Intro.
-\end_layout
+Consideremos la dinámica de una comunidad de 
+\begin_inset Formula $n$
+\end_inset
 
-\begin_layout Subsection
-Definición del Problema de Tikhonov
+ variables representada por 
+\begin_inset Formula $n$
+\end_inset
+
+ ecuaciones diferenciales.
+ Usualmente las variables son densidades o abundancias de especies, niveles
+ de uso de recurso, o algún factor producido por una especie como toxicidad
+ o predación.
+ Entonces, la tasa de cambio de la abundancia o nivel 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ de la 
+\begin_inset Formula $i-\mbox{ésima}$
+\end_inset
+
+ variable es
 \end_layout
 
 \begin_layout Standard
-Consideremos el problema de Cauchy:
-\begin_inset Formula 
-\begin{equation}
-\begin{array}[b]{rcccc}
-\dfrac{dx_{1}}{dt} & = & F_{1}\left(x,t,\mu\right), & x_{1}|_{t=0}=x_{1}^{0}\left(\mu\right)\\[0.7em]
-\mu^{k_{i}}\dfrac{dx_{i}}{dt} & = & F_{i}\left(x,t,\mu\right), & x_{i}|_{t=0}=x_{i}^{0}\left(\mu\right) & i=\overline{2,m}
-\end{array}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-donde 
-\begin_inset Formula $x_{i}$
-\end_inset
-
-, 
-\begin_inset Formula $F_{i}$
-\end_inset
-
-, 
-\begin_inset Formula $x_{i}^{0}$
-\end_inset
-
- son vectores 
-\begin_inset Formula $N_{i}$
-\end_inset
-
- - dimensional; 
-\begin_inset Formula $x=\left(x_{1},\ldots,x_{m}\right)$
-\end_inset
-
-; 
-\begin_inset Formula $N=N_{1}+\ldots+N_{M}$
-\end_inset
-
-, 
-\begin_inset Formula $t$
-\end_inset
-
- es la variable independiente (tiempo); 
-\begin_inset Formula $\mu>0$
-\end_inset
-
- es un parámetro pequeño; 
-\begin_inset Formula $K_{i}$
-\end_inset
-
- son enteros; 
-\begin_inset Formula $0=K_{1}<K_{2}<\ldots<K_{m}$
+\begin_inset Formula $\dfrac{dX_{i}}{dt}=f_{i}\left(X_{1},X_{2},\ldots,X_{n};C_{1},C_{2},\ldots,C_{n}\right)$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-Sea 
-\begin_inset Formula $D_{x}=D_{1}\times\ldots\times D_{m}$
+Es decir, la tasa de crecimiento de 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ es alguna función 
+\begin_inset Formula $f_{i}$
+\end_inset
+
+ que depende de la abundancia de 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+, de todas las otras variables del sistema 
+\begin_inset Formula $X_{1},X_{2},\ldots,X_{n}$
+\end_inset
+
+ y del conjunto de parámetros 
+\begin_inset Formula $C_{1},C_{2},\ldots,C_{n}$
 \end_inset
 
 .
- Sea 
-\begin_inset Formula $D_{i}\subset\mathbb{R}^{N_{i}}$
+ Un punto 
+\begin_inset Formula $X_{1}^{*},X_{2}^{*},\ldots,X_{n}^{*}$
 \end_inset
 
- una vecindad del punto 
-\begin_inset Formula $x_{i}=0$
+ es un punto de equilibrio del sistema si, dado los parámetros 
+\begin_inset Formula $C_{1},C_{2},\ldots,C_{n}$
 \end_inset
 
-, 
-\begin_inset Formula $D_{t}$
+ se cumple que
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\dfrac{dX_{i}}{dt}=f_{i}\left(X_{1}^{*},X_{2}^{*},\ldots,X_{n}^{*};C_{1},C_{2},\ldots,C_{n}\right)=0,\;\forall\,i$
 \end_inset
 
- un subconjunto de 
-\begin_inset Formula $\mathbb{R}$
+
+\end_layout
+
+\begin_layout Standard
+Pueden existir uno o más puntos de equilibrio.
+ En el entorno cercado de cualquier punto de equilibrio, el comportamiento
+ del sistema depende de la llamada matriz de la comunidad (conocido también
+ como jacobiano),
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A=\left[\begin{array}{cccc}
+a_{11} & a_{12} & \ldots & a_{1n}\\
+a_{21} & a_{22} & \ldots\\
+\vdots & \vdots &  & \vdots\\
+a_{n1} &  & \ldots & a_{nn}
+\end{array}\right]$
 \end_inset
 
- (
-\begin_inset Formula $t\in D_{t}$
+
+\end_layout
+
+\begin_layout Standard
+donde los elementos 
+\begin_inset Formula $a_{ij}$
+\end_inset
+
+ están dados por
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{ij}=\dfrac{\partial f_{i}}{\partial X_{j}}\left(X_{1}^{*},X_{2}^{*},\ldots,X_{n}^{*};C_{1},C_{2},\ldots,C_{n}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los elementos 
+\begin_inset Formula $a_{ij}$
+\end_inset
+
+ son interpretados como el efecto de 
+\begin_inset Formula $X_{j}$
+\end_inset
+
+ sobre 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+.
+ Representamos el sistema usando un grafo, donde:
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\checkmark$
+\end_inset
+
+ Cada 
+\begin_inset Formula $vértice$
+\end_inset
+
+ representa una variable del sistema.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\checkmark$
+\end_inset
+
+ Cada 
+\begin_inset Formula $link$
+\end_inset
+
+ (arista orientada) representa la relación entre los vértices.
+ El 
+\begin_inset Formula $link$
+\end_inset
+
+ conectando 
+\begin_inset Formula $X_{j}$
+\end_inset
+
+ a 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ representa la interacción o efecto de 
+\begin_inset Formula $X_{j}$
+\end_inset
+
+ sobre 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ y corresponde al elemento 
+\begin_inset Formula $a_{ij}$
+\end_inset
+
+ de la matriz 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\checkmark$
+\end_inset
+
+ Un 
+\begin_inset Formula $loop$
+\end_inset
+
+ es una suceción de 
+\begin_inset Formula $links$
+\end_inset
+
+ que inician y eventualmente terminan en el mismo vértice.
+ Cada vértice recorrido en un 
+\begin_inset Formula $loop$
+\end_inset
+
+ tiene solamente un 
+\begin_inset Formula $link$
+\end_inset
+
+ hacia el, y solamente un 
+\begin_inset Formula $link$
+\end_inset
+
+ desde el.
+ Su 
+\begin_inset Formula $valor$
+\end_inset
+
+ queda determinado por el producto de los correspondientes 
+\begin_inset Formula $a_{ij}$
+\end_inset
+
+ de sus 
+\begin_inset Formula $links$
+\end_inset
+
+.
+ Su 
+\begin_inset Formula $signo$
+\end_inset
+
+ es el signo de su 
+\begin_inset Formula $valor$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\checkmark$
+\end_inset
+
+ Un 
+\begin_inset Formula $loop$
+\end_inset
+
+ con 
+\begin_inset Formula $signo$
+\end_inset
+
+ negativo es llamado 
+\shape italic
+loop de feedback negativo.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\checkmark$
+\end_inset
+
+ Cualquier 
+\begin_inset Formula $loop$
+\end_inset
+
+ que corresponde a los elementos 
+\begin_inset Formula $a_{ii}$
+\end_inset
+
+ de la diagonal de la matriz es llamado 
+\begin_inset Formula $self-loop$
+\end_inset
+
+ y conecta cada 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ a si mismo.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\checkmark$
+\end_inset
+
+ Dos 
+\begin_inset Formula $loop$
+\end_inset
+
+ son considerados disjuntos si no tienen 
+\begin_inset Formula $links$
+\end_inset
+
+ en común.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Consideremos algunas definiciones:
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Example
+..
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\begin{array}{ccc}
+\dfrac{dX}{dt}=f\left(X\right), & X=\left[\begin{array}{c}
+X_{1}\\
+X_{2}\\
+X_{3}
+\end{array}\right], & f=\left[\begin{array}{c}
+f_{1}\\
+f_{2}\\
+f_{3}
+\end{array}\right]\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $f\left(X^{*}\right)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\begin{array}{ccc}
+A=\left[\begin{array}{ccc}
+a_{11} & a_{12} & a_{13}\\
+a_{21} & a_{22} & a_{23}\\
+a_{31} & a_{32} & a_{33}
+\end{array}\right], & a_{ij}= & \dfrac{\partial f_{i}}{\partial X_{j}}\left(X^{*}\right)\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\begin{array}{l}
+L_{1,1}=\left\{ \left(a_{11}\right),\left(a_{22}\right),\left(a_{33}\right)\right\} \\
+L_{1,2}=\left\{ \left(a_{12}a_{21}\right),\left(a_{23}a_{32}\right),\left(a_{13}a_{31}\right)\right\} \\
+L_{2,2}=\left\{ \left(a_{11}\right)\left(a_{22}\right),\left(a_{22}\right)\left(a_{33}\right),\left(a_{33}\right)\left(a_{11}\right)\right\} \\
+L_{1,3}=\left\{ \left(a_{12}a_{23}a_{31}\right),\left(a_{21}a_{13}a_{32}\right)\right\} \\
+L_{2,3}=\left\{ \left(a_{11}\right)\left(a_{23}a_{32}\right),\left(a_{22}\right)\left(a_{13}a_{31}\right),\left(a_{33}\right)\left(a_{12}a_{21}\right)\right\} \\
+L_{3,3}=\left\{ \left(a_{11}\right)\left(a_{22}\right)\left(a_{33}\right)\right\} 
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\begin{array}{l}
+F_{0}=-1\\
+F_{1}=\left(-1\right)^{2}{\displaystyle \sum_{L\left(1,1\right)\in L_{m,1}}L\left(1,1\right)}=a_{11}+a_{22}+a_{33}\\
+F_{2}={\displaystyle \left(-1\right)^{2}\sum_{L\left(1,2\right)\in L_{1,2}}L\left(1,2\right)}+\left(-1\right)^{3}{\displaystyle \sum_{L\left(2,2\right)\in L_{2,2}}L\left(2,2\right)}\\
+\qquad=a_{12}a_{21}+a_{23}a_{32}+a_{13}a_{31}-a_{11}a_{22}-a_{22}a_{33}-a_{11}a_{33}\\
+F_{3}={\displaystyle \left(-1\right)^{2}\sum_{L\left(1,3\right)\in L_{1,3}}L\left(1,3\right)+{\displaystyle \left(-1\right)^{3}\sum_{L\left(2,3\right)\in L_{2,3}}L\left(2,3\right)}}+{\displaystyle \left(-1\right)^{4}\sum_{L\left(3,3\right)\in L_{3,3}}L\left(3,3\right)}\\
+\qquad=a_{12}a_{23}a_{31}+a_{21}a_{13}a_{32}-a_{11}a_{23}a_{32}-a_{22}a_{13}a_{31}-a_{33}a_{12}a_{21}+a_{11}a_{22}a_{33}
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $p\left(\lambda\right)=F_{3}+\lambda F_{2}+\lambda^{2}F_{1}+\lambda^{3}F_{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Graphics
+	filename images/chapter3/Example1.pdf
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Contaminación de un lago
+\end_layout
+
+\end_inset
+
+Consideramos un sistema con dos nutrientes que se filtran en el lago desde
+ afuera: nitrato (
+\begin_inset Formula $N$
+\end_inset
+
+) y fosfato (
+\begin_inset Formula $P$
 \end_inset
 
 ).
- Sean 
-\begin_inset Formula $T$
+ En el lago existen dos tipos de algas: la alga verde (
+\begin_inset Formula $BG$
 \end_inset
 
-, 
-\begin_inset Formula $\bar{\mu}$
+) usa el fosfato y nitrato, y además es sensible a la tóxina liberada por
+ las algas azules (
+\begin_inset Formula $G$
 \end_inset
 
- números positivos.
- 
+).
+ Las algas azules liberan nitrato en el lago pero dependen del fósfato.
 \end_layout
 
-\begin_layout Definition
-El problema 
-\begin_inset Formula $(2.1.1)$
-\end_inset
-
- es llamado 
-\shape italic
-Problema de Cauchy Singularmente Perturbado
-\shape default
- si:
-\end_layout
-
-\begin_layout Enumerate
-Las funciones 
-\begin_inset Formula $F_{i}\left(x,t,\mu\right)$
-\end_inset
-
-, 
-\begin_inset Formula $i=\overline{1,m}$
-\end_inset
-
-, estan definidas en 
-\begin_inset Formula $D_{x}\times\left[0,T\right]\times\left[0,\bar{\mu}\right]$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-Las funciones 
-\begin_inset Formula $x_{i}^{0}\left(\mu\right)$
-\end_inset
-
-, 
-\begin_inset Formula $i=\overline{1,m}$
-\end_inset
-
- estan definidas en 
-\begin_inset Formula $\left[0,\bar{\mu}\right]$
-\end_inset
-
- y toman valores en el dominio 
-\begin_inset Formula $D_{x}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-Las funciones 
-\begin_inset Formula $F_{j}\left(x,t,0\right)$
-\end_inset
-
-, 
-\begin_inset Formula $j=\overline{2,m}$
-\end_inset
-
- no son identicamente nulas.
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Esta bien escrito , 
-\begin_inset Quotes eld
-\end_inset
-
-nulas
-\begin_inset Quotes erd
-\end_inset
-
-?
-\end_layout
-
+\begin_layout Example
+\begin_inset Formula $A=\left[\begin{array}{ccc}
+a_{11} & a_{12} & a_{13}\\
+a_{21} & a_{22} & a_{23}\\
+a_{31} & a_{32} & a_{33}
+\end{array}\right]$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Enumerate
-\begin_inset Formula $m\geq2$
-\end_inset
-
-.
+\begin_layout Example
+Entonces el dígrafo asociado es
 \end_layout
 
 \begin_layout --Separator--
 
 \end_layout
 
-\begin_layout Definition
-El problema
-\begin_inset Formula 
-\begin{equation}
-\begin{array}{cccc}
-\dfrac{d\bar{x}_{1}}{dt}=F_{1}\left(\bar{x},t,0\right), & \bar{x}_{1}|_{t=0}=x_{1}^{0}\left(\mu\right), & F_{i}\left(\bar{x},t,0\right)=0, & i=\overline{2,m}\end{array}
-\end{equation}
-
-\end_inset
-
-es llamado 
-\shape italic
-Problema Degenerado.
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout Definition
-El problema 
-\begin_inset Formula $(2\mbox{.}1\mbox{.}1)$
-\end_inset
-
- es llamado 
-\shape italic
-Problema de Tikhonov
-\shape default
- en 
-\begin_inset Formula $D_{t\mu}$
-\end_inset
-
-(
-\begin_inset Formula $\left(t,\mu\right)\in D_{t\mu}$
-\end_inset
-
-), si existe una solución del problema 
-\begin_inset Formula $(2\mbox{.}1\mbox{.}2)$
-\end_inset
-
- tal que 
-\begin_inset Formula $\forall$
-\end_inset
-
- 
-\begin_inset Formula $\left(t_{*},\mu_{*}\right)\in D_{t\mu}>0$
-\end_inset
-
- la solución de 
-\begin_inset Formula $(2\mbox{.}1\mbox{.}1)$
-\end_inset
-
- existe para 
-\begin_inset Formula $0\leq t\leq t_{*}$
-\end_inset
-
-, 
-\begin_inset Formula $0<\mu\leq\mu_{*}$
-\end_inset
-
- y 
-\begin_inset Formula 
-\begin{equation}
-\lim_{\mu\rightarrow+0}x\left(t_{*},\mu_{*}\right)=\bar{x}\left(t_{*}\right).
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout --Separator--
-
+\begin_layout Section
+Permutaciones
 \end_layout
 
 \begin_layout Standard
-Para ser un Problema de Tikonov, el Problema de Cauchy Singularmente Perturbado
- debe cumplir estrictas condiciones, las cuales vemos en el siguiente aparatado.
+Intro...
 \end_layout
 
-\begin_layout Theorem
+\begin_layout Definition
+Sea 
+\begin_inset Formula $X$
+\end_inset
 
-\shape up
-El problema 
+ un conjunto finito.
+ Una 
+\shape italic
+permutación 
 \shape default
+de 
+\begin_inset Formula $X$
+\end_inset
 
+ es una biyección de 
+\begin_inset Formula $X$
+\end_inset
+
+ en 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ En otras palabras, un 
+\shape italic
+reordenamiento
+\shape default
+ de los elementos de 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Denotamos a una permutación 
+\begin_inset Formula $\pi$
+\end_inset
+
+ de la siguiente manera
 \begin_inset Formula 
 \[
-\begin{array}{rcccc}
-\dfrac{dx_{j}}{dt} & = & b_{j}x_{j}\left(a_{j}\left(y+1\right)-1\right) & x_{j}|_{t=0}=x_{j}^{0} & j=\overline{1,n}\\[0.7em]
-\varepsilon\dfrac{dy}{dt} & = & -y-{\displaystyle \sum_{j=1}^{n}a_{j}\left(y+1\right)x_{j}} & y|_{t=0}=y^{0}
+\begin{array}{c}
+\pi:X\rightarrow X\\
+\left(\begin{array}{cccc}
+a & b & c & \ldots\\
+\pi\left(a\right) & \pi\left(b\right) & \pi\left(c\right) & \ldots
+\end{array}\right)
 \end{array}
 \]
 
 \end_inset
 
 
-\shape up
-donde 
-\begin_inset Formula $0<\varepsilon\ll1$
-\end_inset
-
-, 
-\begin_inset Formula $t\geq0$
-\end_inset
-
-, 
-\begin_inset Formula $a_{j},b_{j}\neq0$
-\end_inset
-
-, es un
-\shape default
- Problema de Cauchy Singularmente Perturbado.
 \end_layout
 
-\begin_layout Proof
-Desmotraremos que se cumple cada uno de los requerimientos de la definición.
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+Sea 
+\begin_inset Formula $X$
+\end_inset
+
+ un conjunto finito.
+ Denotamos por 
+\begin_inset Formula $\sum_{X}$
+\end_inset
+
+ el conjunto de todas las permutaciones del conjunto 
+\begin_inset Formula $X$
+\end_inset
+
+ equipado con la operación de composición de funciones.
+ 
+\begin_inset Formula $\sum_{X}$
+\end_inset
+
+ es llamado 
+\shape italic
+grupo simétrico
+\shape default
+ en 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+Sea 
+\begin_inset Formula $X$
+\end_inset
+
+ un conjunto finito.
+ Entonces 
+\begin_inset Formula $\sum_{X}$
+\end_inset
+
+ satisface las siguientes condiciones:
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $F_{1}=\left(F_{11},\ldots,F_{1n}\right)$
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+label=
+\backslash
+roman{enumi})
+\end_layout
+
 \end_inset
 
-, 
-\begin_inset Formula $F_{1j}=b_{j}x_{j}\left(a_{j}\left(y+1\right)-1\right)$
+
+\end_layout
+
 \end_inset
 
-, 
-\begin_inset Formula $\mbox{Dom}\left(F_{1}\right)=\mathbb{R}^{n+1}$
+ Si 
+\begin_inset Formula $\pi,\sigma\in\sum_{X}$
+\end_inset
+
+ entonces la composición 
+\begin_inset Formula $\pi\sigma\in\sum_{X}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+La función indentidad 
+\begin_inset Formula $\mbox{id}_{X}\in\sum_{X}$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\pi\in\sum_{X}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\pi^{-1}\in\sum_{X}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Ver 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hump2004"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+Una permutación 
+\begin_inset Formula $\pi$
+\end_inset
+
+ en 
+\begin_inset Formula $\sum_{X}$
+\end_inset
+
+ es un 
+\shape italic
+ciclo
+\shape default
+ si los elementos de 
+\begin_inset Formula $X$
+\end_inset
+
+ pueden ser reordenados como 
+\begin_inset Formula $k_{1},\ldots,k_{r},k_{r+1},\ldots k_{n}$
+\end_inset
+
+(permitimos las posibilidades donde 
+\begin_inset Formula $r+1=1$
+\end_inset
+
+ o 
+\begin_inset Formula $r=n$
+\end_inset
+
+), de tal manera que 
+\begin_inset Formula 
+\[
+\begin{array}{c}
+\pi\left(k_{r+1}\right)=k_{r+1},\ldots,\pi\left(k_{n}\right)=k_{n}\\
+\pi\left(k_{1}\right)=k_{2},\pi\left(k_{2}\right)=k_{3},\ldots,\pi\left(k_{r-1}\right)=k_{r},\pi\left(k_{r}\right)=k_{1}
+\end{array}
+\]
+
+\end_inset
+
+El número 
+\begin_inset Formula $r$
+\end_inset
+
+ es llamado 
+\shape italic
+longitud
+\shape default
+ de 
+\begin_inset Formula $\pi$
+\end_inset
+
+.
+ La longitud de la permutación 
+\begin_inset Formula $\mbox{id}_{X}$
+\end_inset
+
+ es 1.
+ Un ciclo de longitud 2 es una 
+\shape italic
+transposición
+\shape default
+.
+ Un ciclo de longitud 
+\begin_inset Formula $r$
+\end_inset
+
+ se denota por 
+\begin_inset Formula $r-\mbox{ciclo}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Existe una notación especial para un ciclo: 
+\begin_inset Formula $\left(k_{1},\ldots,k_{r}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+Sean 
+\begin_inset Formula $\pi\in\sum_{X}$
+\end_inset
+
+.
+ Denotamos por 
+\begin_inset Formula $\mbox{Mov}\left(\pi\right)$
+\end_inset
+
+ al conjunto 
+\begin_inset Formula 
+\[
+\left\{ x\in X:\ \pi\left(x\right)\neq x\right\} .
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+Sean 
+\begin_inset Formula $\pi,\sigma\in\sum_{X}$
 \end_inset
 
 .
  
-\begin_inset Formula $F_{2}=-y-{\displaystyle \sum_{j=1}^{n}a_{j}\left(y+1\right)x_{j}}$
+\begin_inset Formula $\pi$
 \end_inset
 
-, 
-\begin_inset Formula $\mbox{Dom}\left(F_{2}\right)=\mathbb{R}^{n+1}$
+ y 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ son 
+\shape italic
+disjuntos
+\shape default
+ si 
+\begin_inset Formula $\mbox{Mov}\left(\pi\right)\cap\mbox{Mov}\left(\sigma\right)=\emptyset$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Enumerate
-\begin_inset Formula $x_{j}^{0}$
-\end_inset
-
-, 
-\begin_inset Formula $y^{0}$
-\end_inset
-
- son constantes.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $F_{2}=-y-{\displaystyle \sum_{j=1}^{n}a_{j}\left(y+1\right)x_{j}}\not\equiv0$
-\end_inset
-
+\begin_layout --Separator--
 
 \end_layout
 
-\begin_layout Enumerate
-\begin_inset Formula $m=2$
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "permu-conmu"
+
 \end_inset
 
+Si 
+\begin_inset Formula $\pi$
+\end_inset
 
+ y 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ son permutaciones disjuntas en 
+\begin_inset Formula $\sum_{X}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\pi$
+\end_inset
+
+ y 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ conmutan, es decir, 
+\begin_inset Formula $\pi\tau=\tau\pi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Ver 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hump2004"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout --Separator--
 
 \end_layout
 
-\begin_layout Subsection
-Construcción de la Solución Asintótica por el Método de Funciones de Frontera
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "ciclos-disjuntos"
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\pi\in\sum_{X}$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $\pi$
+\end_inset
+
+ puede ser expresado como una composición de ciclos disjuntos.
+ Esta descomposición es única excepto por el reordenamiento de los ciclos.
+\end_layout
+
+\begin_layout Proof
+Ver 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hump2004"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout --Separator--
 
 \end_layout
 
-\begin_layout Subsection
-Condiciones Impuestas sobre las Ecuaciones Singulares
+\begin_layout Definition
+Sea 
+\begin_inset Formula $X=\left\{ x_{1},\ldots,x_{n}\right\} $
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $\pi$
+\end_inset
+
+ es una permutación en 
+\begin_inset Formula $X$
+\end_inset
+
+, se puede pasar de la sucesión 
+\begin_inset Formula $\left\{ x_{1},\ldots,x_{n}\right\} $
+\end_inset
+
+ a la sucesión 
+\begin_inset Formula $\left\{ \pi\left(x_{1}\right),\ldots,\pi\left(x_{n}\right)\right\} $
+\end_inset
+
+ por una sucesión de intercambio de pares, y ello puede hacerse de diversas
+ maneras; pero sin que importe cómo se haya hecho, el número de intercambios
+ empleados es siempre par o impar.
+ La permutación 
+\begin_inset Formula $\pi$
+\end_inset
+
+ se llama entonces 
+\shape italic
+par
+\shape default
+ o 
+\shape italic
+impar
+\shape default
+, respectivamente.
+ Se define el 
+\shape italic
+signo
+\shape default
+ de una permutación por
+\begin_inset Formula 
+\[
+\mbox{sgn}\left(\sigma\right)=\begin{cases}
+1, & \mbox{si }\sigma\mbox{ es par}\\
+-1, & \mbox{si }\sigma\mbox{ es impar}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Existen varias formas equivalentes de definir el signo de una permutación.
+ Hemos elegido la definición de 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hof1973"
+
+\end_inset
+
+ pag.
+ 150.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+Sea 
+\begin_inset Formula $\pi,\sigma\in\sum_{X}$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $\mbox{sgn}\left(\pi\sigma\right)=\mbox{sgn}\left(\pi\right)\mbox{sgn}\left(\sigma\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Ver 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hump2004"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+Sea 
+\begin_inset Formula $\pi,\sigma\in\sum_{X}$
+\end_inset
+
+.
+ Entonces 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument 1
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+label=
+\backslash
+roman{enumi})
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\mbox{sgn}\left(\mbox{id}_{X}\right)=1$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mbox{sgn}\left(\pi\right)=\mbox{sgn}\left(\pi^{-1}\right)$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mbox{sgn}\left(\pi^{-1}\sigma\pi\right)=\mbox{sgn}\left(\sigma\right)$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+si 
+\begin_inset Formula $\tau$
+\end_inset
+
+ es una transposición entonces 
+\begin_inset Formula $\mbox{sgn}\left(\tau\right)=-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Ver 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hump2004"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+Si 
+\begin_inset Formula $\pi$
+\end_inset
+
+ es un 
+\begin_inset Formula $r-$
+\end_inset
+
+ciclo entonces 
+\begin_inset Formula $\mbox{sgn}\left(\pi\right)=\left(-1\right)^{r-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Ver 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hump2004"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+Toda permutación en 
+\begin_inset Formula $\sum_{X}$
+\end_inset
+
+ es un producto de transposiciones.
+ Aunque existen muchas formas de escribir una permutación en términos de
+ transposiciones, el número de transposiciones es siempre par o es siempre
+ impar.
+\end_layout
+
+\begin_layout Proof
+Ver 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hump2004"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Section
+Teoría de Matrices
 \end_layout
 
 \begin_layout Standard
-A continuación listamos las condiciones bajo las cuales la serie () se transform
-a en una solución asintótica del problema ()
+Intro...
+\end_layout
+
+\begin_layout Definition
+Sea 
+\begin_inset Formula $A=\left[a_{ij}\right]\,\in M_{n}\left(\mathbb{R}\right)$
+\end_inset
+
+.
+ El polinomio carácteristico de 
+\begin_inset Formula $A$
+\end_inset
+
+ es 
+\begin_inset Formula $p\left(\lambda\right)=\mbox{det}\left(\lambda I-A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "poly-1"
+
+\end_inset
+
+Sea 
+\begin_inset Formula $A=\left[a_{ij}\right]\,\in M_{n}\left(\mathbb{R}\right)$
+\end_inset
+
+.
+ El polinomio carácteristico de 
+\begin_inset Formula $A$
+\end_inset
+
+ se expresa como
+\begin_inset Formula 
+\[
+p\left(\lambda\right)=E_{0}\left(A\right)\lambda^{n}-E_{1}\left(A\right)\lambda^{n-1}+E_{2}\left(A\right)\lambda^{n-2}-\ldots+\left(-1\right)^{n}E_{n}\left(A\right)
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $E_{0}\left(A\right)=1$
+\end_inset
+
+, 
+\begin_inset Formula $E_{k}\left(A\right)={\displaystyle \sum_{1\leq i_{1}<i_{2}<\ldots<i_{n-k}\leq n}\mbox{det}\left[A\left(i_{1},i_{2},\ldots,i_{n-k}\right)\right]}$
+\end_inset
+
+, 
+\begin_inset Formula $i_{1},i_{2},\ldots,i_{n-k}$
+\end_inset
+
+ son enteros y 
+\begin_inset Formula $A\left(i_{1},i_{2},\ldots,i_{n-k}\right)$
+\end_inset
+
+ es la submatriz de 
+\begin_inset Formula $A$
+\end_inset
+
+ obtenida por eliminar las filas 
+\begin_inset Formula $i_{1},i_{2},\ldots,i_{n-k}$
+\end_inset
+
+ y las columnas 
+\begin_inset Formula $i_{1},i_{2},\ldots,i_{n-k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Ver 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zha2013"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Example
+Sea 
+\begin_inset Formula $A=\left[a_{ij}\right]\,\in M_{3}\left(\mathbb{R}\right)$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+A=\left[\begin{array}{ccc}
+a_{11} & a_{12} & a_{13}\\
+a_{21} & a_{22} & a_{23}\\
+a_{31} & a_{32} & a_{33}
+\end{array}\right],
+\]
+
+\end_inset
+
+donde el polinomio carácteristico es forma 
+\begin_inset Formula $p\left(\lambda\right)=\lambda^{n}-E_{1}\left(A\right)\lambda^{2}+E_{2}\left(A\right)\lambda-E_{3}\left(A\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Example
+Para hallar 
+\begin_inset Formula $E_{1}\left(A\right)$
+\end_inset
+
+ debemos encontrar todos los conjuntos de índices enteros diferentes 
+\begin_inset Formula $i_{1},i_{2}$
+\end_inset
+
+ tales que 
+\begin_inset Formula $1\leq i_{1},i_{2}\leq3$
+\end_inset
+
+.
+ Tenemos entonces 
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $C_{2}^{3}=\dfrac{3!}{2!\left(3-2\right)!}=3\mbox{ conjuntos}:\left\{ 1,2\right\} ,\left\{ 2,3\right\} ,\left\{ 1,3\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\begin{array}{cl}
+E_{1}\left(A\right) & =\mbox{det}\left[A\left(1,2\right)\right]+\mbox{det}\left[A\left(2,3\right)\right]+\mbox{det}\left[A\left(1,3\right)\right]\\
+ & =a_{33}+a_{11}+a_{22}
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\:$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Para hallar 
+\begin_inset Formula $E_{2}\left(A\right)$
+\end_inset
+
+ debemos encontrar todos los conjuntos de índices enteros 
+\begin_inset Formula $i_{1}$
+\end_inset
+
+ tales que 
+\begin_inset Formula $1\leq i_{1}\leq3$
+\end_inset
+
+.
+ Tenemos entonces 
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $C_{1}^{3}=\dfrac{3!}{1!\left(3-1\right)!}=3\mbox{ conjuntos}:\left\{ 1\right\} ,\left\{ 2\right\} ,\left\{ 3\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\begin{array}{cl}
+E_{2}\left(A\right) & =\mbox{det}\left[A\left(1\right)\right]+\mbox{det}\left[A\left(2\right)\right]+\mbox{det}\left[A\left(3\right)\right]\\
+ & =\mbox{det}\left[\begin{array}{cc}
+a_{22} & a_{23}\\
+a_{32} & a_{33}
+\end{array}\right]+\mbox{det}\left[\begin{array}{cc}
+a_{11} & a_{13}\\
+a_{31} & a_{33}
+\end{array}\right]+\mbox{det}\left[\begin{array}{cc}
+a_{11} & a_{12}\\
+a_{21} & a_{22}
+\end{array}\right]
+\end{array}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\:$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Para hallar 
+\begin_inset Formula $E_{3}\left(A\right)$
+\end_inset
+
+ no eliminamos ninguna columna.
+ Tenemos entonces
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\begin{array}{cc}
+E_{3}\left(A\right) & =\mbox{det}\left[A\right].\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+Sea 
+\begin_inset Formula $A=\left[a_{ij}\right]\,\in M_{n}\left(\mathbb{R}\right)$
+\end_inset
+
+.
+ El determinante de 
+\begin_inset Formula $A$
+\end_inset
+
+ viene dado por
+\begin_inset Formula 
+\[
+\mbox{det}\left[A\right]={\displaystyle \sum_{\sigma\in\sum_{n}}\mbox{sgn}\left(\sigma\right)a_{1\sigma\left(1\right)}}a_{2\sigma\left(2\right)}a_{n\sigma\left(n\right)}
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ es una permutación y 
+\begin_inset Formula $\sum_{n}$
+\end_inset
+
+ el conjunto de todas las permutaciones en 
+\begin_inset Formula $\left\{ 1,\ldots,n\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Ver 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hof1973"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status collapsed
+
+\begin_layout Plain Layout
+Criterio de Routh-Hurwitz
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $A=\left[a_{ij}\right]\,\in M_{n}\left(\mathbb{R}\right)$
+\end_inset
+
+.
+ Todas las raíces del polinomio carácterístico de 
+\begin_inset Formula $A$
+\end_inset
+
+, es decir, los autovalores de 
+\begin_inset Formula $A$
+\end_inset
+
+, tienen parte real negativa si y solo si
+\begin_inset Formula 
+\[
+\Delta_{1}>0,\;\Delta_{2}>0,\ldots,\;\Delta_{n}>0.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+donde 
+\begin_inset Formula $p\left(\lambda\right)=c_{0}\lambda^{n}+c_{1}\lambda^{n-1}+\ldots+c_{n-1}\lambda+c_{n}$
+\end_inset
+
+ (
+\begin_inset Formula $c_{0}=1$
+\end_inset
+
+) es el polinomio carácteristico de 
+\begin_inset Formula $A$
+\end_inset
+
+ y
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\Delta_{1}=\mbox{det}\left[c_{1}\right],\;\Delta_{2}=\mbox{det}\left[\begin{array}{cc}
+c_{1} & c_{3}\\
+c_{0} & c_{2}
+\end{array}\right],\;\ldots,\;\Delta_{n}=\mbox{det}\left[\begin{array}{ccccc}
+c_{1} & c_{3} & c_{5} & \ldots & .\\
+c_{0} & c_{2} & c_{4} & \ldots & .\\
+0 & c_{1} & c_{3} & \ldots & .\\
+0 & c_{0} & c_{2} & \ldots & .\\
+. & . & . & . & .\\
+. & . & . & . & c_{n}
+\end{array}\right].$
+\end_inset
+
+
 \end_layout
 
 \begin_layout --Separator--
@@ -681,7 +1725,291 @@ a en una solución asintótica del problema ()
 \end_layout
 
 \begin_layout Subsection
-Teoremas de Convergencia
+Signo-Estabilidad
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "teo:signo-estabilidad"
+
+\end_inset
+
+Una matrix real 
+\begin_inset Formula $A=\left[a_{ij}\right]$
+\end_inset
+
+ es signo-estable, si y solo si, se satisfacen las siguientes tres condiciones:
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\left(\alpha\right)$
+\end_inset
+
+ 
+\begin_inset Formula $\forall\:\mathcal{J}$
+\end_inset
+
+ en 
+\begin_inset Formula $SD(A)$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\mathcal{L}\left(\mathcal{J}\right)=1$
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{S}\left(\mathcal{J}\right)=-$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\left(\beta\right)$
+\end_inset
+
+ 
+\begin_inset Formula $\forall\:\mathcal{J}$
+\end_inset
+
+ en 
+\begin_inset Formula $SD(A)$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\mathcal{L}\left(\mathcal{J}\right)=2$
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{S}\left(\mathcal{J}\right)=-$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\left(\gamma\right)$
+\end_inset
+
+ no existe 
+\begin_inset Formula $\mathcal{J}$
+\end_inset
+
+ en 
+\begin_inset Formula $D\left(A\right)$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\mathcal{L}\left(\mathcal{J}\right)\geq3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\left(\delta\right)$
+\end_inset
+
+ cada 
+\begin_inset Formula $\delta$
+\end_inset
+
+-coloring de 
+\begin_inset Formula $G\left(A\right)$
+\end_inset
+
+ es trivial;
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\left(\epsilon\right)$
+\end_inset
+
+ cada 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+-coloring de 
+\begin_inset Formula $G\left(A\right)$
+\end_inset
+
+ es trivial.
+\end_layout
+
+\begin_layout Proof
+Ver 
+\color blue
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "jeffries1987qualitative"
+
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Remark
+En términos de los elementos de la matriz 
+\begin_inset Formula $A$
+\end_inset
+
+, las condiciones 
+\begin_inset Formula $\alpha,\beta,\gamma$
+\end_inset
+
+ pueden formularse como:
+\end_layout
+
+\begin_layout Remark
+\begin_inset Formula $\left(\alpha\right)$
+\end_inset
+
+ 
+\begin_inset Formula $a_{ii}\leq0\;\forall i$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Remark
+\begin_inset Formula $\left(\beta\right)$
+\end_inset
+
+ 
+\begin_inset Formula $a_{ij}a_{ji}\leq0\;\forall i\neq j$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Remark
+\begin_inset Formula $\left(\gamma\right)$
+\end_inset
+
+ 
+\begin_inset Formula $a_{i\left(1\right)i\left(2\right)}\ldots a_{i\left(k-1\right)i\left(k\right)}a_{i\left(k\right)i\left(i\right)}=0$
+\end_inset
+
+ para toda sucesión de 
+\begin_inset Formula $k\geq3$
+\end_inset
+
+ distintos índices 
+\begin_inset Formula $i\left(1\right),\ldots,i\left(k\right).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Subsection
+Signo-Semiestabilidad
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "teo:signo-semi"
+
+\end_inset
+
+Una matrix real 
+\begin_inset Formula $A=\left[a_{ij}\right]$
+\end_inset
+
+ es signo-semiestable, si y solo si, se satisfacen las siguientes tres condicion
+es:
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\left(\alpha\right)$
+\end_inset
+
+ 
+\begin_inset Formula $\forall\:\mathcal{J}$
+\end_inset
+
+ en 
+\begin_inset Formula $SD(A)$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\mathcal{L}\left(\mathcal{J}\right)=1$
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{S}\left(\mathcal{J}\right)=-$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\left(\beta\right)$
+\end_inset
+
+ 
+\begin_inset Formula $\forall\:\mathcal{J}$
+\end_inset
+
+ en 
+\begin_inset Formula $SD(A)$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\mathcal{L}\left(\mathcal{J}\right)=2$
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{S}\left(\mathcal{J}\right)=-$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\left(\gamma\right)$
+\end_inset
+
+ no existe 
+\begin_inset Formula $\mathcal{J}$
+\end_inset
+
+ en 
+\begin_inset Formula $D\left(A\right)$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\mathcal{L}\left(\mathcal{J}\right)\geq3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Ver 
+\color blue
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "jeffries1987qualitative"
+
+\end_inset
+
+
+\color inherit
+.
 \end_layout
 
 \begin_layout --Separator--
@@ -689,27 +2017,788 @@ Teoremas de Convergencia
 \end_layout
 
 \begin_layout Section
-Modelos
+Teoría de Grafos
 \end_layout
 
-\begin_layout Subsection
-Modelo para Varias Especies en Competencia por un Recurso
+\begin_layout Standard
+Intro.
+\end_layout
+
+\begin_layout Definition
+Sea 
+\begin_inset Formula $A=\left[a_{ij}\right]\,\in M_{n}\left(\mathbb{R}\right)$
+\end_inset
+
+.
+ El 
+\shape italic
+grafo
+\shape default
+ de 
+\begin_inset Formula $A$
+\end_inset
+
+ es el par 
+\begin_inset Formula $G\left(A\right)=\left(V,\,E\right)$
+\end_inset
+
+, donde 
+\begin_inset Formula $V=\left\{ 1,\ldots,n\right\} $
+\end_inset
+
+ y 
+\begin_inset Formula $E=\left\{ \left\{ j,i\right\} :\:a_{ij}\neq0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Los elementos de 
+\begin_inset Formula $V$
+\end_inset
+
+ son llamados 
+\shape italic
+vértices
+\shape default
+ (o 
+\shape italic
+nodos
+\shape default
+).
+\end_layout
+
+\begin_layout Itemize
+Los elementos de 
+\begin_inset Formula $E$
+\end_inset
+
+ son llamados 
+\shape italic
+aristas
+\shape default
+.
+\end_layout
+
+\begin_layout Itemize
+Cada arista tiene un conjunto de uno o dos vértices asociados, los cuales
+ son llamados 
+\shape italic
+puntos finales
+\shape default
+.
+ Se dice que una arista 
+\shape italic
+une
+\shape default
+ sus puntos finales.
+\end_layout
+
+\begin_layout Itemize
+Un 
+\shape italic
+self-loop
+\shape default
+ es una arista que une un punto final a si mismo.
+\end_layout
+
+\begin_layout Itemize
+Si dos aristas 
+\begin_inset Formula $e_{1},e_{2}\in E$
+\end_inset
+
+ son tal que tienen el mismo conjunto de puntos finales entonces se dice
+ que son iguales 
+\begin_inset Formula $e_{1}=e_{2}$
+\end_inset
+
+, en caso contrario se dice que son diferentes 
+\begin_inset Formula $e_{1}\neq e_{2}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout --Separator--
 
 \end_layout
 
-\begin_layout Subsection
-Modelo con Impacto de un Contaminante
+\begin_layout Definition
+Una 
+\shape italic
+arista dirigida
+\shape default
+ es una arista 
+\begin_inset Formula $e$
+\end_inset
+
+ en la que uno de sus puntos finales es designado como 
+\shape italic
+cola
+\shape default
+ y el otro punto final es designado como 
+\shape italic
+cabeza
+\shape default
+.
+ Ellos son denotados por 
+\begin_inset Formula $cola\left(e\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $cabeza\left(e\right)$
+\end_inset
+
+ respectivamente.
+\end_layout
+
+\begin_layout Itemize
+Se dice que una arista dirigida 
+\shape italic
+va de
+\shape default
+ su cola 
+\shape italic
+a
+\shape default
+ su cabeza.
 \end_layout
 
 \begin_layout --Separator--
 
 \end_layout
 
-\begin_layout Subsection
-Modelo con Impacto de la Pesquería
+\begin_layout Definition
+Sea 
+\begin_inset Formula $A=\left[a_{ij}\right]\,\in M_{n}\left(\mathbb{R}\right)$
+\end_inset
+
+.
+ El 
+\shape italic
+dígrafo
+\shape default
+ de 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $D\left(A\right)$
+\end_inset
+
+, es el grafo de 
+\begin_inset Formula $A$
+\end_inset
+
+ con sus aristas dirigidas.
+ 
+\end_layout
+
+\begin_layout Itemize
+En la notación de aristas cambiamos 
+\begin_inset Formula $\left\{ \right\} $
+\end_inset
+
+ por 
+\begin_inset Formula $\left(\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $e=\left(j,i\right)\in E$
+\end_inset
+
+ entonces 
+\begin_inset Formula $e$
+\end_inset
+
+ va de 
+\begin_inset Formula $j$
+\end_inset
+
+ a 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si dos aristas 
+\begin_inset Formula $e_{1},e_{2}\in E$
+\end_inset
+
+ son tal que la 
+\begin_inset Formula $cola\left(e_{1}\right)=cola\left(e_{2}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $cabeza\left(e_{1}\right)=cabeza\left(e_{2}\right)$
+\end_inset
+
+ entonces se dice que son iguales 
+\begin_inset Formula $e_{1}=e_{2}$
+\end_inset
+
+, en caso contrario se dice que son diferentes 
+\begin_inset Formula $e_{1}\neq e_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+Sea 
+\begin_inset Formula $A=\left[a_{ij}\right]\,\in M_{n}\left(\mathbb{R}\right)$
+\end_inset
+
+.
+ El 
+\shape italic
+signo-dígrafo
+\shape default
+ de 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $SD\left(A\right)$
+\end_inset
+
+, es el dígrafo de 
+\begin_inset Formula $A$
+\end_inset
+
+ con la función sgn definida como 
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+\mbox{sgn}: & E & \rightarrow & \left\{ 1,-1\right\} \\
+ & \left(j,i\right) & \mapsto & \mbox{sgn}\left(j,i\right)=\mbox{sgn}\left(a_{ij}\right)
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+Sea 
+\begin_inset Formula $A=\left[a_{ij}\right]\,\in M_{n}\left(\mathbb{R}\right)$
+\end_inset
+
+.
+ El 
+\shape italic
+grafo ponderado
+\shape default
+ de 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $W\left(A\right)$
+\end_inset
+
+, es el dígrafo de 
+\begin_inset Formula $A$
+\end_inset
+
+ con una función 
+\begin_inset Formula $w$
+\end_inset
+
+ definida como
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+w: & E & \rightarrow & \left\{ a_{ij}:\,i,j=1,\ldots,n\right\} \\
+ & \left(j,i\right) & \mapsto & w\left(j,i\right)=a_{ij}
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+Sea 
+\begin_inset Formula $A=\left[a_{ij}\right]\,\in M_{n}\left(\mathbb{R}\right)$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $G\left(A\right)=\left(V,E\right)$
+\end_inset
+
+ el grafo de 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Los conjuntos 
+\begin_inset Formula $\Gamma,\Theta\subset E$
+\end_inset
+
+ son
+\begin_inset Formula 
+\[
+\begin{array}{c}
+\Gamma=\left\{ \left(j,i\right):\:a_{ij}\neq0,\:a_{ji}=0,\,i\neq j\right\} \\
+\Theta=\left\{ \left\{ j,i\right\} :\:a_{ij}\neq0\neq a_{ji},\mbox{\,}i\neq j\right\} 
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+tal que las aristas de 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ son dirigidas.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+Sea 
+\begin_inset Formula $A=\left[a_{ij}\right]\,\in M_{n}\left(\mathbb{R}\right)$
+\end_inset
+
+ .
+ Sea 
+\begin_inset Formula $G\left(A\right)=\left(V,E\right)$
+\end_inset
+
+ el grafo de 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ El 
+\shape italic
+grafo mixto
+\shape default
+ de 
+\begin_inset Formula $A$
+\end_inset
+
+ es el par 
+\begin_inset Formula $M\left(A\right)=\left(V,\Gamma\cup\Theta\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+Sea 
+\begin_inset Formula $A=\left[a_{ij}\right]\,\in M_{n}\left(\mathbb{R}\right)$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $G\left(A\right)=\left(V,E\right)$
+\end_inset
+
+ el grafo de 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ El 
+\shape italic
+grafo no ordenado
+\shape default
+ de 
+\begin_inset Formula $A$
+\end_inset
+
+ es el par 
+\begin_inset Formula $U\left(A\right)=\left(V,\Theta\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+Sea 
+\begin_inset Formula $A=\left[a_{ij}\right]\,\in M_{n}\left(\mathbb{R}\right)$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $U\left(A\right)=\left(V,\Theta\right)$
+\end_inset
+
+ el grafo no ordenado de 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Los vértices 
+\begin_inset Formula $i$
+\end_inset
+
+ tal que 
+\begin_inset Formula $a_{ii}\neq0$
+\end_inset
+
+ son llamados 
+\shape italic
+distiguidos
+\shape default
+ en 
+\begin_inset Formula $U\left(A\right)$
+\end_inset
+
+.
+ Un 
+\begin_inset Formula $\delta$
+\end_inset
+
+-
+\shape italic
+coloring
+\shape default
+ es una partición del conjunto de vértices en dos conjuntos, 
+\shape italic
+blancos
+\shape default
+ y 
+\shape italic
+negros
+\shape default
+, tal que
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $(i)$
+\end_inset
+
+cada vértice distinguido es negro,
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $(ii)$
+\end_inset
+
+ningún vértice negro tiene exactamente un vecino blanco,
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $(iii_{\delta})$
+\end_inset
+
+ cada vértice blanco tiene un vecino blanco.
+\end_layout
+
+\begin_layout Definition
+Un 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+
+\shape italic
+-coloring
+\shape default
+ es definido como por las condiciones 
+\begin_inset Formula $(i)$
+\end_inset
+
+, 
+\begin_inset Formula $(ii)$
+\end_inset
+
+, y 
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $(iii_{\delta})$
+\end_inset
+
+ ningún vértice blanco tiene un vecino blanco.
+\end_layout
+
+\begin_layout Definition
+Un 
+\shape italic
+trivial coloring
+\shape default
+ es una partición en la que todos los vértices son negros.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+Sea 
+\begin_inset Formula $A=\left[a_{ij}\right]\,\in M_{n}\left(\mathbb{R}\right)$
+\end_inset
+
+.
+ Un 
+\shape italic
+camino
+\shape default
+ 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ en el grafo de 
+\begin_inset Formula $A$
+\end_inset
+
+ es una secuencia alternada de vértices y aristas,
+\begin_inset Formula 
+\[
+\begin{array}{c}
+\mathcal{C}=v_{0},e_{1},v_{1},\ldots,e_{m},v_{m};\\
+v_{0},\ldots,v_{m}\in V\\
+e_{1},\ldots,e_{m}\in E
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+tal que 
+\begin_inset Formula 
+\[
+\begin{array}{cl}
+e_{j}=\left(v_{j-1},v_{j}\right), & \forall\:j=1,\ldots,m\\
+e_{i}\neq e_{j}, & \forall\:i,j=1,\ldots,m\:\wedge\:i\neq j\\
+v_{i}\neq v_{j}, & \forall\:i,j=0,\ldots,m-1\:\wedge\:i\neq j\\
+v_{i}\neq v_{j}, & \forall\:i,j=1,\ldots,m\:\wedge\:i\neq j
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+Análogamente se define un 
+\shape italic
+camino
+\shape default
+ para el dígrafo, signo-dígrafo y grafo ponderado de 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ está en el dígrafo de 
+\begin_inset Formula $A$
+\end_inset
+
+ se dice que es un 
+\shape italic
+camino dirigido
+\shape default
+.
+\end_layout
+
+\begin_layout Itemize
+El 
+\shape italic
+vértice inicial
+\shape default
+ es 
+\begin_inset Formula $v_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+El 
+\shape italic
+vértice final
+\shape default
+ es 
+\begin_inset Formula $v_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Un 
+\shape italic
+vértice interno
+\shape default
+ es un vértice que no es ni inicial ni final.
+\end_layout
+
+\begin_layout Itemize
+La 
+\shape italic
+longitud
+\shape default
+ del camino 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ es el número de vértices diferentes que recorre el camino y se denota por
+ 
+\begin_inset Formula $\mathcal{L}\left(\mathcal{C}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $\mathcal{C}_{1}=v_{0}^{1},e_{1}^{1},v_{1}^{1},\ldots,e_{m}^{1},v_{m}^{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathcal{C}_{2}=v_{0}^{2},e_{1}^{2},v_{1}^{2},\ldots,e_{m}^{2},v_{m}^{2}$
+\end_inset
+
+ dos caminos.
+ Si 
+\begin_inset Formula $\left\{ v_{0}^{1},v_{1}^{1},\ldots,v_{m}^{1}\right\} \cap\left\{ v_{0}^{2},v_{1}^{2},\ldots,v_{m}^{2}\right\} =\emptyset$
+\end_inset
+
+ entonces se dice que son 
+\shape italic
+disjuntos
+\shape default
+ y se denota por 
+\begin_inset Formula $\mathcal{C}_{1}\neq\mathcal{C}_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+Sea 
+\begin_inset Formula $A=\left[a_{ij}\right]\,\in M_{n}\left(\mathbb{R}\right)$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $\mathcal{C}=v_{0},e_{1},v_{1},\ldots,e_{m},v_{m}$
+\end_inset
+
+ un camino en el grafo ponderado de 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ El 
+\shape italic
+valor
+\shape default
+ del camino viene dado por 
+\begin_inset Formula 
+\[
+\mathcal{V\left(\mathcal{C}\right)}={\displaystyle \prod_{i=1}^{m}}w\left(e_{i}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+De la definición vemos que 
+\begin_inset Formula $\mathcal{V\left(\mathcal{C}\right)}=a_{v_{1}v_{0}}a_{v_{2}v_{1}}\ldots a_{v_{m}v_{m-1}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+Sea 
+\begin_inset Formula $A=\left[a_{ij}\right]\,\in M_{n}\left(\mathbb{R}\right)$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $\mathcal{C}=v_{0},e_{1},v_{1},\ldots,e_{m},v_{m}$
+\end_inset
+
+ un camino en el 
+\shape italic
+signo-dígrafo
+\shape default
+ de 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ El 
+\shape italic
+signo
+\shape default
+ del camino viene dado por 
+\begin_inset Formula 
+\[
+\mathcal{\mathcal{S}\left(\mathcal{C}\right)}={\displaystyle \prod_{i=1}^{m}}\mbox{sgn}\left(e_{i}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+De la definición vemos que 
+\begin_inset Formula $\mathcal{S}\left(\mathcal{C}\right)=\mbox{sgn}\left(a_{v_{1}v_{0}}\right)\mbox{sgn}\left(a_{v_{2}v_{1}}\right)\ldots\mbox{sgn}\left(a_{v_{m}v_{m-1}}\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout --Separator--
@@ -717,11 +2806,1385 @@ Modelo con Impacto de la Pesquería
 \end_layout
 
 \begin_layout Section
-Alcances y Limitaciones de los Modelos
+Loop Analysis
+\end_layout
+
+\begin_layout Standard
+Intro ...
+\end_layout
+
+\begin_layout Subsection
+Definiciones y Teoremas
+\end_layout
+
+\begin_layout Definition
+Un 
+\shape italic
+loop
+\shape default
+ 
+\begin_inset Formula $\mathcal{J}$
+\end_inset
+
+ es un camino 
+\begin_inset Formula $\mathcal{C}=v_{0},e_{1},v_{1},\ldots,e_{m},v_{m}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $v_{m}=v_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Por lo tanto 
+\begin_inset Formula $\mathcal{V\left(\mathcal{C}\right)}=a_{v_{1}v_{0}}a_{v_{2}v_{1}}\ldots a_{v_{0}v_{m-1}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+En términos de la permutación 
+\begin_inset Formula $\pi:I_{m}\rightarrow I_{m}$
+\end_inset
+
+, donde 
+\begin_inset Formula $I_{m}=\left\{ v_{1},v_{2},\ldots,v_{m-1},v_{0}\right\} $
+\end_inset
+
+ y 
+\begin_inset Formula 
+\[
+\pi=\left(\begin{array}{ccccc}
+v_{1} & v_{2} & \ldots & v_{m-1} & v_{0}\\
+v_{0} & v_{1} & \ldots & v_{m-2} & v_{m-1}
+\end{array}\right)
+\]
+
+\end_inset
+
+entonces 
+\begin_inset Formula $\mathcal{V\left(\mathcal{C}\right)}=a_{v_{1}\pi\left(v_{1}\right)}a_{v_{2}\pi\left(v_{2}\right)}\ldots a_{v_{0}\pi\left(v_{0}\right)}$
+\end_inset
+
+.
+ Además, 
+\begin_inset Formula $\pi$
+\end_inset
+
+ es un ciclo de longitud 
+\begin_inset Formula $m$
+\end_inset
+
+ pues 
+\begin_inset Formula 
+\[
+\begin{array}{ccccc}
+\pi\left(v_{0}\right)=v_{m-1}, & \pi\left(v_{m-1}\right)=v_{m-2}, & \ldots, & \pi\left(v_{2}\right)=v_{1}, & \pi\left(v_{1}\right)=v_{0}\end{array}
+\]
+
+\end_inset
+
+por lo tanto denotamos 
+\begin_inset Formula $\pi=\left(v_{0},v_{m-1},\ldots,v_{2},v_{1}\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout --Separator--
 
+\end_layout
+
+\begin_layout Definition
+Sea 
+\begin_inset Formula $A=\left[a_{ij}\right]\,\in M_{n}\left(\mathbb{R}\right)$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $D\left(A\right)=\left(V,E\right)$
+\end_inset
+
+ el dígrafo de 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Denotamos por 
+\begin_inset Formula $L\left(m,k\right)$
+\end_inset
+
+ con (
+\begin_inset Formula $m\leq k$
+\end_inset
+
+) al producto de los valores de 
+\begin_inset Formula $m$
+\end_inset
+
+ loops 
+\begin_inset Formula $\mathcal{J}_{1},\mathcal{J}_{2},\ldots,\mathcal{J}_{m}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+L\left(m,k\right)=\prod_{i=1}^{m}\mathcal{V}\left(\mathcal{J}_{i}\right)
+\]
+
+\end_inset
+
+tal que
+\begin_inset Formula 
+\[
+\begin{array}{c}
+{\displaystyle \sum_{i=1}^{m}}\mathcal{L}\left(\mathcal{J}_{i}\right)=k\\
+\mathcal{J}_{i}\neq\mathcal{J}_{k},\;i\neq k
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{L}_{m,k}$
+\end_inset
+
+ es el conjunto de todos los 
+\begin_inset Formula $L\left(m,k\right)$
+\end_inset
+
+ posibles.
+\end_layout
+
+\begin_layout Itemize
+En otras palabras, 
+\begin_inset Formula $L\left(m,k\right)$
+\end_inset
+
+ es el producto de los valores de 
+\begin_inset Formula $m$
+\end_inset
+
+ loops disjuntos tal que la suma de sus longitudes es 
+\begin_inset Formula $k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+Sea 
+\begin_inset Formula $A=\left[a_{ij}\right]\,\in M_{n}\left(\mathbb{R}\right)$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $D\left(A\right)=\left(V,E\right)$
+\end_inset
+
+ el dígrafo de 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ El 
+\shape italic
+feedback al nivel
+\shape default
+ 
+\begin_inset Formula $k$
+\end_inset
+
+
+\begin_inset Formula $\left(\leq n\right)$
+\end_inset
+
+ es
+\begin_inset Formula 
+\[
+F_{k}\left(A\right)={\displaystyle \sum_{m=1}^{k}\left(-1\right)^{m+1}{\displaystyle \sum_{L\left(m,k\right)\in\mathbf{L}_{m,k}}L\left(m,k\right)}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+La definición de los feedbacks de una matrix se ha dado en términos de loops
+ en el grafo de la matrix.
+ A continuación demostraremos que podemos definir los feedbacks en términos
+ de permutaciones.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "ciclo-asociado"
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\mathcal{J}=v_{0}e_{1}v_{1}e_{2}v_{2}...e_{l-1}v_{l-1}e_{l}v_{0}$
+\end_inset
+
+ un loop de longitud 
+\begin_inset Formula $l\leq n$
+\end_inset
+
+, entonces existe un 
+\begin_inset Formula $l-$
+\end_inset
+
+ciclo 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ asociado a 
+\begin_inset Formula $\mathcal{J}$
+\end_inset
+
+, es decir, tal que
+\begin_inset Formula 
+\[
+\mathcal{V}\left(\mathcal{J}\right)=a_{v_{1}\sigma\left(v_{1}\right)}a_{v_{2}\sigma\left(v_{2}\right)}\ldots a_{v_{l-1}\sigma\left(v_{l-1}\right)}a_{v_{0}\sigma\left(v_{0}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Si 
+\begin_inset Formula $l=1$
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{J}=v_{0}e_{1}v_{0}$
+\end_inset
+
+ y el 
+\begin_inset Formula $1-$
+\end_inset
+
+ciclo es 
+\begin_inset Formula $\sigma=\mbox{id}_{I_{n}}$
+\end_inset
+
+.
+ Entonces
+\begin_inset Formula 
+\[
+\mathcal{V}\left(\mathcal{J}\right)=a_{v_{0}v_{0}}=a_{v_{0}\sigma\left(v_{0}\right)}.
+\]
+
+\end_inset
+
+Si 
+\begin_inset Formula $l\geq2$
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{J}=v_{0}e_{1}v_{1}e_{2}v_{2}...e_{l-1}v_{l-1}e_{l}v_{0}$
+\end_inset
+
+ y el 
+\begin_inset Formula $l-$
+\end_inset
+
+ciclo es 
+\begin_inset Formula $\sigma=\left(v_{l-1},v_{l-2},\ldots,v_{2},v_{1},v_{0}\right)$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula 
+\[
+\mathcal{V}\left(\mathcal{J}\right)=a_{v_{1}v_{0}}a_{v_{2}v_{1}}\ldots a_{v_{l-1}v_{l-2}}a_{v_{0}v_{l-1}}=a_{v_{1}\sigma\left(v_{1}\right)}a_{v_{2}\sigma\left(v_{2}\right)}\ldots a_{v_{l-1}\sigma\left(v_{l-1}\right)}a_{v_{0}\sigma\left(v_{0}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "loops-disjuntos"
+
+\end_inset
+
+Si 
+\begin_inset Formula $\mathcal{J}_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathcal{J}_{2}$
+\end_inset
+
+ son disjuntos entonces sus ciclos asociados son disjuntos.
+\end_layout
+
+\begin_layout Proof
+Sea 
+\begin_inset Formula $\sigma=\left(v_{0}v_{1}\ldots v_{p-1}\right)$
+\end_inset
+
+ el 
+\begin_inset Formula $p-$
+\end_inset
+
+ciclo asociado a 
+\begin_inset Formula $\mathcal{J}_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $\pi=\left(w_{0}w_{1}\ldots w_{q-1}\right)$
+\end_inset
+
+ el 
+\begin_inset Formula $q-$
+\end_inset
+
+ciclo asociado a 
+\begin_inset Formula $\mathcal{J}_{1}$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $\mathcal{J}_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathcal{J}_{2}$
+\end_inset
+
+ son disjuntos entonces
+\begin_inset Formula 
+\[
+\mbox{Mov}\left(\sigma\right)\cap\mbox{Mov}\left(\pi\right)=\left\{ v_{0}v_{1}\ldots v_{p-1}\right\} \cap\left\{ w_{0}w_{1}\ldots w_{q-1}\right\} =\emptyset
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Si 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ fuera de longitud 1 entonces 
+\begin_inset Formula $\mbox{Mov}\left(\sigma\right)=\emptyset$
+\end_inset
+
+ con lo cual se cumpliría la proposición.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "feedback-permutaciones"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Feedback en términos de permutaciones
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $A=\left[a_{ij}\right]\,\in M_{n}\left(\mathbb{R}\right)$
+\end_inset
+
+.
+ El feedback al nivel 
+\begin_inset Formula $k$
+\end_inset
+
+ de 
+\begin_inset Formula $A$
+\end_inset
+
+ se puede expresar como
+\begin_inset Formula 
+\[
+F_{k}\left(A\right)=\left(-1\right)^{k+1}{\displaystyle \sum_{j=1}^{C_{k}^{n}}}\:{\displaystyle \sum_{\sigma\in\sum_{\mathcal{F}_{j}}}\mbox{sgn}\left(\sigma\right)a_{v_{1}\sigma\left(v_{1}\right)}a_{v_{2}\sigma\left(v_{2}\right)}\ldots a_{v_{k}\sigma\left(v_{k}\right)}}
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $\mathcal{F}_{j}$
+\end_inset
+
+ es una combinación de 
+\begin_inset Formula $k$
+\end_inset
+
+ elementos de 
+\begin_inset Formula $I_{n}=\left\{ 1,\ldots,n\right\} $
+\end_inset
+
+, para 
+\begin_inset Formula $i=1,\ldots,C_{k}^{n}$
+\end_inset
+
+; 
+\begin_inset Formula $\sum_{\mathcal{F}_{j}}$
+\end_inset
+
+ es el conjunto de todas las permutaciones de 
+\begin_inset Formula $\mathcal{F}_{j}$
+\end_inset
+
+ y 
+\begin_inset Formula $v_{1},v_{2},\ldots,v_{k}$
+\end_inset
+
+ son los elementos de 
+\begin_inset Formula $\mathcal{F}_{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Sean los 
+\begin_inset Formula $m$
+\end_inset
+
+ loops 
+\begin_inset Formula $\mathcal{J}_{1},\mathcal{J}_{2},\ldots,\mathcal{J}_{m}$
+\end_inset
+
+ de longitudes 
+\begin_inset Formula $l_{1},l_{2},\ldots,l_{m}$
+\end_inset
+
+ respectivamente, tal que 
+\begin_inset Formula $\mathcal{J}_{i}\neq\mathcal{J}_{j}$
+\end_inset
+
+ si 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+ y 
+\begin_inset Formula ${\displaystyle \sum_{i=1}^{m}}l_{i}=k$
+\end_inset
+
+.
+ Entonces, para 
+\begin_inset Formula $m\leq k$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+L\left(m,k\right)=\prod_{i=1}^{m}\mathcal{V}\left(\mathcal{J}_{i}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Sin pérdida de genralidad, podemos ordenar los loops como sigue
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\begin{array}{c}
+\mathcal{J}_{1},\ldots,\mathcal{J}_{p},\mathcal{J}_{p+1},\ldots,\mathcal{J}_{m}\end{array}.
+\]
+
+\end_inset
+
+Los loops de 
+\begin_inset Formula $1$
+\end_inset
+
+ hasta 
+\begin_inset Formula $p$
+\end_inset
+
+ tienen longitud mayor que 1 y los loops de 
+\begin_inset Formula $p+1$
+\end_inset
+
+ hasta 
+\begin_inset Formula $m$
+\end_inset
+
+ tienen longitud 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $p+1=1$
+\end_inset
+
+ todos los loops tienen longitud 1 y si 
+\begin_inset Formula $p=m$
+\end_inset
+
+ todos los loops tienen longitud mayor que 1.
+ A cada loop le corresponde un conjunto de vértices recorrido
+\begin_inset Formula 
+\[
+I_{l_{1}},I_{l_{2}},\ldots,I_{l_{m}}
+\]
+
+\end_inset
+
+donde el subíndice indica el número de elementos del conjunto.
+ Se cumple que 
+\begin_inset Formula 
+\[
+I_{l_{j}}\bigcap I_{l_{i}}=\emptyset,\ \ensuremath{i\neq j}
+\]
+
+\end_inset
+
+pues los loops correspondientes son disjuntos.
+ Consideremos los ciclos asociados a los primeros 
+\begin_inset Formula $p$
+\end_inset
+
+ loops, 
+\begin_inset Formula $\sigma_{1},\sigma_{2},\ldots,\sigma_{p}$
+\end_inset
+
+ , las cuales existen por la proposición 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "ciclo-asociado"
+
+\end_inset
+
+.
+ Como los loops son disjuntos, por la proposición 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "loops-disjuntos"
+
+\end_inset
+
+, los ciclos 
+\begin_inset Formula $\sigma_{1},\sigma_{2},\ldots,\sigma_{p}$
+\end_inset
+
+ son disjuntos.
+ Además por el teorema 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "permu-conmu"
+
+\end_inset
+
+ los ciclos 
+\begin_inset Formula $\sigma_{1},\sigma_{2},\ldots,\sigma_{p}$
+\end_inset
+
+ conmutan.
+ Sea la permutación 
+\begin_inset Formula $\sigma=\sigma_{1}\sigma_{2}\ldots\sigma_{p}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+\sigma: & I_{k} & \rightarrow & I_{k}\\
+ & v_{i} & \mapsto & \sigma\left(v_{i}\right)=\sigma_{1}\sigma_{2}\ldots\sigma_{p}\left(v_{i}\right)
+\end{array}
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $I_{k}={\displaystyle \bigcup_{j=1}^{m}}l_{j}=\left\{ v_{1},\ldots,v_{k}\right\} $
+\end_inset
+
+.
+ Además, por el teorema 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "ciclos-disjuntos"
+
+\end_inset
+
+, la representación de 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ como 
+\begin_inset Formula $\sigma=\sigma_{1}\sigma_{2}\ldots\sigma_{p}$
+\end_inset
+
+ es única.
+ Entonces 
+\begin_inset Formula $L\left(m,k\right)$
+\end_inset
+
+ se puede expresar como
+\begin_inset Formula 
+\[
+L\left(m,k\right)=\prod_{i=1}^{k}a_{v_{i}\sigma\left(v_{i}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Por lo tanto, dado 
+\begin_inset Formula $k$
+\end_inset
+
+ fijo, y un subconjunto 
+\begin_inset Formula $I_{k}\subset I_{n}$
+\end_inset
+
+, hallar todas las posibles permutaciones (ciclos) resultantes de todas
+ las posibles multiplicaciones 
+\begin_inset Formula $L\left(m,k\right)$
+\end_inset
+
+ para todo 
+\begin_inset Formula $m$
+\end_inset
+
+, es equivalente, por el teorema 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "ciclos-disjuntos"
+
+\end_inset
+
+, a hallar todas las permutaciones en 
+\begin_inset Formula $I_{k}$
+\end_inset
+
+.
+ Entonces sean todos los 
+\begin_inset Formula $I_{k}$
+\end_inset
+
+'s (conjuntos de tamaño 
+\begin_inset Formula $k$
+\end_inset
+
+) posibles 
+\begin_inset Formula 
+\[
+\mathcal{F}_{j},\;j=1,\ldots C_{k}^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Y además como se cumple que
+\begin_inset Formula 
+\[
+\begin{array}{cl}
+\mbox{sgn}\left(\sigma\right) & =\mbox{sgn}\left(\sigma_{1}\right)\mbox{sgn}\left(\sigma_{2}\right)\ldots\mbox{sgn}\left(\sigma_{p}\right)\\
+ & =\left(-1\right)^{l_{1}-1}\left(-1\right)^{l_{2}-1}\ldots\left(-1\right)^{l_{p}-1}\\
+ & =\left(-1\right)^{\sum_{i=1}^{p}l_{i}-p}
+\end{array}
+\]
+
+\end_inset
+
+y como 
+\begin_inset Formula $l_{p+1}=\ldots=l_{m}=1$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{array}{cl}
+\sum_{i=1}^{p}l_{i}-p & =\sum_{i=1}^{p}l_{i}+\left(m-p\right)-p-\left(m-p\right)\\
+ & =\sum_{i=1}^{m}l_{i}-m\\
+ & =k-m
+\end{array}
+\]
+
+\end_inset
+
+entonces 
+\begin_inset Formula $\mbox{sgn}\left(\sigma\right)=\left(-1\right)^{k+1}\left(-1\right)^{-m-1}$
+\end_inset
+
+.
+ Por lo tanto
+\begin_inset Formula 
+\[
+\begin{array}{cl}
+\left(-1\right)^{m+1}L\left(m,k\right) & =\left(-1\right)^{-m-1}L\left(m,k\right)\\
+ & =\left(-1\right)^{-m-1}\left(-1\right)^{k+1}\left(-1\right)^{k+1}L\left(m,k\right)\\
+ & =\left(-1\right)^{k+1}\mbox{sgn}\left(\sigma\right)L\left(m,k\right)\\
+ & =\left(-1\right)^{k+1}\mbox{sgn}\left(\sigma\right)\prod_{i=1}^{k}a_{v_{i}\sigma\left(v_{i}\right)}
+\end{array}
+\]
+
+\end_inset
+
+y luego
+\begin_inset Formula 
+\[
+\begin{array}{cl}
+F_{k}\left(A\right) & ={\displaystyle \sum_{m=1}^{k}\left(-1\right)^{m+1}{\displaystyle \sum_{L\left(m,k\right)\in\mathbf{L}_{m,k}}L\left(m,k\right)}}\\
+ & ={\displaystyle \sum_{m=1}^{k}\:{\displaystyle \sum_{L\left(m,k\right)\in\mathbf{L}_{m,k}}\left(-1\right)^{m+1}L\left(m,k\right)}}\\
+ & {\displaystyle =\sum_{i=1}^{C_{k}^{n}}}\:{\displaystyle \sum_{\sigma\in\sum_{\mathcal{F}_{i}}}\left(-1\right)^{k+1}\mbox{sgn}\left(\sigma\right)\prod_{i=1}^{k}a_{v_{i}\sigma\left(v_{i}\right)}}\\
+ & {\displaystyle =\left(-1\right)^{k+1}\sum_{j=1}^{C_{k}^{n}}}\:{\displaystyle \sum_{\sigma\in\sum_{\mathcal{F}_{j}}}\mbox{sgn}\left(\sigma\right)\prod_{i=1}^{k}a_{v_{i}\sigma\left(v_{i}\right)}}
+\end{array}
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $\mathcal{F}_{j}=\left\{ v_{1},\ldots,v_{k}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+A continuación presentamos un teorema importante: Los coeficientes del polinomio
+ carácteristico de una matriz resultan ser los feedbacks de la matriz.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+Sea 
+\begin_inset Formula $A=\left[a_{ij}\right]\,\in M_{n}\left(\mathbb{R}\right)$
+\end_inset
+
+.
+ El polinomio carácteristico de 
+\begin_inset Formula $A$
+\end_inset
+
+ es
+\begin_inset Formula 
+\[
+p\left(\lambda\right)=F_{0}\lambda^{n}+F_{1}\lambda^{n-1}+F_{2}\lambda^{n-2}+\ldots+F_{n-2}\lambda^{2}+F_{n-1}\lambda+F_{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Del teorema 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "feedback-permutaciones"
+
+\end_inset
+
+ el feedback al nivel 
+\begin_inset Formula $k$
+\end_inset
+
+ es
+\begin_inset Formula 
+\[
+\begin{array}{cl}
+F_{k}\left(A\right) & =\left(-1\right)^{k+1}{\displaystyle \sum_{j=1}^{C_{k}^{n}}}\:{\displaystyle \sum_{\sigma\in\sum_{\mathcal{F}_{j}}}\mbox{sgn}\left(\sigma\right)a_{v_{1}\sigma\left(v_{1}\right)}a_{v_{2}\sigma\left(v_{2}\right)}\ldots a_{v_{k}\sigma\left(v_{k}\right)}}\\
+ & =\left(-1\right)^{k+1}{\displaystyle \sum_{j=1}^{C_{k}^{n}}}\:\mbox{det}\left[A\left(I_{n}-\mathcal{F}_{j}\right)\right]
+\end{array}
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $\mathcal{F}_{j}^{c}=I_{n}-\mathcal{F}_{j}$
+\end_inset
+
+ tiene 
+\begin_inset Formula $n-k$
+\end_inset
+
+ elementos, es decir, 
+\begin_inset Formula $\mathcal{F}_{j}^{c}=\left\{ i_{1},\ldots,i_{n-k}\right\} $
+\end_inset
+
+ tal que 
+\begin_inset Formula $1\leq i_{1}<\ldots<i_{n-k}\leq n$
+\end_inset
+
+, entonces del teorema 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "poly-1"
+
+\end_inset
+
+ se tiene
+\begin_inset Formula 
+\[
+\begin{array}{cl}
+F_{k}\left(A\right) & =\left(-1\right)^{k+1}{\displaystyle \sum_{1\leq i_{1}<\ldots<i_{n-k}\leq n}}\:\mbox{det}\left[A\left(i_{1},\ldots,i_{n-k}\right)\right]\\
+ & =\left(-1\right)^{k+1}E_{k}\left(A\right)
+\end{array}
+\]
+
+\end_inset
+
+Por lo tanto 
+\begin_inset Formula 
+\[
+\begin{array}{cl}
+-p\left(\lambda\right) & =\left(-1\right){\displaystyle \sum_{i=0}^{n}}\left(-1\right)^{i}E_{i}\left(A\right)\lambda^{n-i}\\
+ & ={\displaystyle \sum_{i=0}^{n}}\left(-1\right)^{i+1}E_{i}\left(A\right)\lambda^{n-i}\\
+ & ={\displaystyle \sum_{i=0}^{n}}F_{i}\left(A\right)\lambda^{n-i}
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+Como el término independiente del polinomio caracateristico de una matriz
+ resulta ser el determinante de la matriz, del teorema anterior tenemos
+ que
+\begin_inset Formula 
+\[
+F_{n}\left(A\right)=-p\left(0\right)=\left(-1\right)^{n+1}E_{n}\left(A\right)=\left(-1\right)^{n+1}\mbox{det}\left[A\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+Sea 
+\begin_inset Formula $X=\left\{ x_{1},\ldots,x_{n}\right\} \subset\mathbb{C}$
+\end_inset
+
+ un conjunto finito.
+ El promedio y la varianza de 
+\begin_inset Formula $X$
+\end_inset
+
+ es, respectivamente
+\begin_inset Formula 
+\[
+\mbox{E}\left(X\right)=\dfrac{1}{n}\left({\displaystyle \sum_{i=1}^{n}x_{i}}\right),\quad\mbox{Var}\left(X\right)=\mbox{E}\left(X^{2}\right)-\left(\mbox{E}\left(X\right)\right)^{2},
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $X^{2}=\left\{ x_{1}^{2},\ldots,x_{n}^{2}\right\} $
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $Y=\left\{ y_{1},\ldots,y_{n}\right\} \subset\mathbb{C}$
+\end_inset
+
+ un conjunto finito.
+ La covarianza de 
+\begin_inset Formula $X$
+\end_inset
+
+ e 
+\begin_inset Formula $Y$
+\end_inset
+
+ es
+\begin_inset Formula 
+\[
+\mbox{Cov}\left(X,Y\right)=\mbox{E}\left(XY\right)-\mbox{E}\left(X\right)\mbox{E}\left(Y\right),
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+donde 
+\begin_inset Formula $XY=\left\{ x_{1}y_{1},\ldots,x_{n}y_{n}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Remark
+La librería 
+\shape italic
+Armadillo C++
+\shape default
+ tiene una función para calcular la varianza.
+ Para obtener el resultado según nuestra definición debemos llamar a la
+ función de la siguiente manera 
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+var(X,1)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+En 
+\shape italic
+R
+\shape default
+ existe una función para calcular la varianza muestral.
+ Según nuestra definición, podemos calcular la varianza de 
+\begin_inset Formula $X$
+\end_inset
+
+ ejecutando 
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+((n-1)/n)*var(X)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proposition
+Sea 
+\begin_inset Formula $A=\left[a_{ij}\right]\,\in M_{n}\left(\mathbb{R}\right)$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $a_{ii}$
+\end_inset
+
+ los elementos de la diagonal de 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Los feedbacks de 
+\begin_inset Formula $A$
+\end_inset
+
+ al nivel 1 y 2 se expresan como
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+F_{1} & = & n\mbox{E}\left(a_{ii}\right)\\
+F_{2} & = & -\dfrac{n\left(n-1\right)}{2}\left(\left(\mbox{E}\left(a_{ii}\right)\right)^{2}-\dfrac{\mbox{var}\left(a_{ii}\right)}{\left(n-1\right)}\right)+
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Esperanza y Varianza
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Promedio, Varianza, Covarianza
+\end_layout
+
+\end_inset
+
+ En una matriz de comunidad (el jacobiano evaluado en el punto de equlibrio),
+ cada elemento 
+\begin_inset Formula $a_{ij}$
+\end_inset
+
+ representa el efecto, o la influencia 
+\color blue
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "justus2006loop"
+
+\end_inset
+
+
+\color inherit
+, de la especie 
+\begin_inset Formula $j$
+\end_inset
+
+ sobre la especie 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ Luego podemos considerar como afecta una especie 
+\begin_inset Formula $i$
+\end_inset
+
+ a todas las otras especies (menos a sí misma)
+\begin_inset Formula 
+\[
+a_{\cdotp i}=\left\{ a_{ji}:\:j\neq i\right\} ,\quad\mbox{para }i\mbox{ fijo.}
+\]
+
+\end_inset
+
+El promedio del efecto de la especie 
+\begin_inset Formula $i$
+\end_inset
+
+ sobre la comunidad es
+\begin_inset Formula 
+\[
+\mbox{E}\left[a_{i\cdotp}\right]={\displaystyle \sum_{\begin{array}{c}
+j=1\\
+j\neq i
+\end{array}}^{n}a_{i,j}}.
+\]
+
+\end_inset
+
+Los autovalores, las soluciones del polinomio característico, son medidas
+ importantes del comportamiento de la comunidad 
+\color blue
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "jorgensen2000variance"
+
+\end_inset
+
+
+\color inherit
+; la varianza de los autovalores es
+\begin_inset Formula 
+\[
+\mbox{var}\left(\lambda\right)=\mbox{E}\left[\lambda^{2}\right]-\mbox{E}^{2}\left[\lambda\right]
+\]
+
+\end_inset
+
+donde el primer término es el promedio de los cuadrados de los autovalores
+ 
+\begin_inset Formula $\dfrac{1}{n}\left({\displaystyle \sum_{i=1}^{n}\lambda_{i}^{2}}\right)$
+\end_inset
+
+ y el segundo término es el cuadrado del promedio de los autovalores 
+\begin_inset Formula $\left(\dfrac{1}{n}\left({\displaystyle \sum_{i=1}^{n}\lambda_{i}}\right)\right)^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\begin{array}{c}
+a_{i\cdotp}=\left\{ a_{ij}:\:j\neq i\right\} \\
+\\
+\mbox{E}\left[a_{i\cdotp}\right]=\left\{ \mbox{E}\left[a_{1\cdotp}\right],\ldots,\mbox{E}\left[a_{n\cdotp}\right]\right\} \\
+\mbox{E}\left[a_{\cdotp i}\right]=\left\{ \mbox{E}\left[a_{\cdotp1}\right],\ldots,\mbox{E}\left[a_{\cdotp n}\right]\right\} 
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\mbox{Cov}\left(\mbox{E}\left[a_{i\cdotp}\right],\mbox{E}\left[a_{\cdotp i}\right]\right)=\mbox{E}\left[\mbox{E}\left[a_{i\cdotp}\right]\mbox{E}\left[a_{\cdotp i}\right]\right]-\mbox{E}\left[\mbox{E}\left[a_{i\cdotp}\right]\right]\mbox{E}\left[\mbox{E}\left[a_{\cdotp i}\right]\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\mbox{E}\left[\mbox{Cov}\left(a_{i\cdotp},a_{\cdotp i}\right)\right]=\mbox{E}\left[\mbox{E}\left[a_{i\cdotp}a_{\cdotp i}\right]-\mbox{E}\left[a_{i\cdotp}\right]\mbox{E}\left[a_{\cdotp i}\right]\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\mbox{E}\left[\mbox{Cov}\left(a_{i\cdotp},a_{\cdotp i}\right)\right]=\dfrac{1}{n}{\displaystyle \sum_{i=1}^{n}\left(\dfrac{{\displaystyle \sum_{j=1\left(\neq i\right)}^{n}a_{ij}a_{ji}}}{n-1}-\left(\dfrac{{\displaystyle \sum_{j=1\left(\neq i\right)}^{n}a_{ji}}}{n-1}\right)\left(\dfrac{{\displaystyle \sum_{j=1\left(\neq i\right)}^{n}a_{ij}}}{n-1}\right)\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\mbox{Cov}\left(\mbox{E}\left[a_{i\cdotp}\right],\mbox{E}\left[a_{\cdotp i}\right]\right)=\dfrac{{\displaystyle \sum_{i=1}^{n}\mbox{E}\left[a_{i\cdotp}\right]\mbox{E}\left[a_{\cdotp i}\right]}}{n}-\left(\dfrac{{\displaystyle \sum_{i=1}^{n}\mbox{E}\left[a_{i\cdotp}\right]}}{n}\right)\left(\dfrac{{\displaystyle \sum_{i=1}^{n}\mbox{E}\left[a_{\cdotp i}\right]}}{n}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\mbox{Cov}\left(A\right)=\mbox{E}\left[\mbox{Cov}\left(a_{i\cdotp},a_{\cdotp i}\right)\right]+\mbox{Cov}\left(\mbox{E}\left[a_{i\cdotp}\right],\mbox{E}\left[a_{\cdotp i}\right]\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\mbox{E}\left[A\right]=\mbox{E}\left[A^{2}\right]+\mbox{Cov}\left(A\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Varianza de los autovalores
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $A=\left[a_{ij}\right]\,\in M_{n}\left(\mathbb{R}\right)$
+\end_inset
+
+.
+ La varianza de los autovalores de 
+\begin_inset Formula $A$
+\end_inset
+
+ se expresa como
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Formula 
+\[
+\mbox{var}\left(\lambda\right)=\mbox{var}\left(a_{ii}\right)+\left(n-1\right)\mbox{E}\left[a_{ij}a_{ji}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+.
+\color blue
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "jorgensen2000variance"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Subsection
+Aplicaciones
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Section
+Software, Grupos de Estudio, etc.
+\end_layout
+
+\begin_layout Subsection
+Software
+\end_layout
+
+\begin_layout Standard
+Se han desarrollado 2 paquetes en R: 'loop'(
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://cran.r-project.org/web/packages/loop/index.html
+\end_layout
+
+\end_inset
+
+) y 'LoopAnalyst'(
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://cran.r-project.org/web/packages/LoopAnalyst/index.html
+\end_layout
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Subsection
+Grupos de Estudio
+\end_layout
+
+\begin_layout Standard
+Existen algunos grupos de estudio en el tema: Novak Lab(
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://people.oregonstate.edu/~novakm/
+\end_layout
+
+\end_inset
+
+)
 \end_layout
 
 \end_body

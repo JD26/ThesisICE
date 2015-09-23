@@ -1,0 +1,385 @@
+#LyX file created by tex2lyx 2.1
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[x11names, rgb]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{snakes,arrows,shapes}
+
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding utf8
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+pagestyle
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+empty
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+enlargethispage{100cm}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% Start of code
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{tikzpicture}[>=latex',line join=bevel,]
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+%%
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+node (X2) at (179bp,97bp) [draw,circle] {<<<<i>>X<</i>><<sub>>2<</sub>>>>};
+\end_layout
+
+\begin_layout Plain Layout
+  
+\backslash
+node (X3) at (329bp,29bp) [draw,circle] {<<<<i>>X<</i>><<sub>>3<</sub>>>>};
+\end_layout
+
+\begin_layout Plain Layout
+  
+\backslash
+node (X1) at (29bp,29bp) [draw,circle] {<<<<i>>X<</i>><<sub>>1<</sub>>>>};
+\end_layout
+
+\begin_layout Plain Layout
+  
+\backslash
+draw [->] (X3) ..controls (276.42bp,16.046bp) and (240.14bp,8.1822bp)  .. (208bp,5bp) .. controls (182.35bp,2.4599bp) and (175.65bp,2.4599bp)  .. (150bp,5bp) .. controls (122.01bp,7.772bp) and (90.869bp,14.097bp)  .. (X1);
+\end_layout
+
+\begin_layout Plain Layout
+  
+\backslash
+definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+\end_layout
+
+\begin_layout Plain Layout
+  
+\backslash
+pgfsetstrokecolor{strokecol}
+\end_layout
+
+\begin_layout Plain Layout
+  
+\backslash
+draw (169bp,9.8bp) node[right] {a};
+\end_layout
+
+\begin_layout Plain Layout
+  
+\backslash
+draw (176bp,9.8bp) node[right] {31};
+\end_layout
+
+\begin_layout Plain Layout
+  
+\backslash
+draw [->] (X1) ..controls (12.54bp,73.963bp) and (16.643bp,93bp)  .. (29bp,93bp) .. controls (39.137bp,93bp) and (43.719bp,80.19bp)  .. (X1);
+\end_layout
+
+\begin_layout Plain Layout
+  
+\backslash
+draw (19bp,97.8bp) node[right] {a};
+\end_layout
+
+\begin_layout Plain Layout
+  
+\backslash
+draw (26bp,97.8bp) node[right] {11};
+\end_layout
+
+\begin_layout Plain Layout
+  
+\backslash
+draw [->] (X1) ..controls (63.151bp,56.76bp) and (78.646bp,67.778bp)  .. (94bp,75bp) .. controls (108.52bp,81.83bp) and (125.49bp,86.783bp)  .. (X2);
+\end_layout
+
+\begin_layout Plain Layout
+  
+\backslash
+draw (94bp,86.8bp) node[right] {a};
+\end_layout
+
+\begin_layout Plain Layout
+  
+\backslash
+draw (101bp,86.8bp) node[right] {12};
+\end_layout
+
+\begin_layout Plain Layout
+  
+\backslash
+draw [->] (X2) ..controls (144bp,71.055bp) and (128.77bp,60.962bp)  .. (114bp,54bp) .. controls (99.351bp,47.096bp) and (82.362bp,41.611bp)  .. (X1);
+\end_layout
+
+\begin_layout Plain Layout
+  
+\backslash
+draw (94bp,58.8bp) node[right] {a};
+\end_layout
+
+\begin_layout Plain Layout
+  
+\backslash
+draw (101bp,58.8bp) node[right] {21};
+\end_layout
+
+\begin_layout Plain Layout
+  
+\backslash
+draw [->] (X1) ..controls (111.61bp,29bp) and (228.63bp,29bp)  .. (X3);
+\end_layout
+
+\begin_layout Plain Layout
+  
+\backslash
+draw (169bp,33.8bp) node[right] {a};
+\end_layout
+
+\begin_layout Plain Layout
+  
+\backslash
+draw (176bp,33.8bp) node[right] {13};
+\end_layout
+
+\begin_layout Plain Layout
+  
+\backslash
+draw [->] (X3) ..controls (312.54bp,73.963bp) and (316.64bp,93bp)  .. (329bp,93bp) .. controls (339.14bp,93bp) and (343.72bp,80.19bp)  .. (X3);
+\end_layout
+
+\begin_layout Plain Layout
+  
+\backslash
+draw (319bp,97.8bp) node[right] {a};
+\end_layout
+
+\begin_layout Plain Layout
+  
+\backslash
+draw (326bp,97.8bp) node[right] {33};
+\end_layout
+
+\begin_layout Plain Layout
+  
+\backslash
+draw [->] (X2) ..controls (224.55bp,88.97bp) and (246.13bp,83.406bp)  .. (264bp,75bp) .. controls (276.11bp,69.301bp) and (288.32bp,61.239bp)  .. (X3);
+\end_layout
+
+\begin_layout Plain Layout
+  
+\backslash
+draw (244bp,86.8bp) node[right] {a};
+\end_layout
+
+\begin_layout Plain Layout
+  
+\backslash
+draw (251bp,86.8bp) node[right] {23};
+\end_layout
+
+\begin_layout Plain Layout
+  
+\backslash
+draw [->] (X2) ..controls (162.54bp,141.96bp) and (166.64bp,161bp)  .. (179bp,161bp) .. controls (189.14bp,161bp) and (193.72bp,148.19bp)  .. (X2);
+\end_layout
+
+\begin_layout Plain Layout
+  
+\backslash
+draw (169bp,165.8bp) node[right] {a};
+\end_layout
+
+\begin_layout Plain Layout
+  
+\backslash
+draw (176bp,165.8bp) node[right] {22};
+\end_layout
+
+\begin_layout Plain Layout
+  
+\backslash
+draw [->] (X3) ..controls (283.6bp,39.155bp) and (262.03bp,45.502bp)  .. (244bp,54bp) .. controls (232.46bp,59.439bp) and (220.64bp,66.789bp)  .. (X2);
+\end_layout
+
+\begin_layout Plain Layout
+  
+\backslash
+draw (244bp,58.8bp) node[right] {a};
+\end_layout
+
+\begin_layout Plain Layout
+  
+\backslash
+draw (251bp,58.8bp) node[right] {32};
+\end_layout
+
+\begin_layout Plain Layout
+%
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% End of code
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,26 @@
+digraph G {
+graph [bgcolor = "transparent", nodesep="0.5",fontsize="30", ranksep="1", rankdir="LR"];
+node [fixedsize=true, fontname="Sans", shape=circle, height="0.8", width="0.8",fontsize="16"];
+X1 [label=<<I>X</I><sub>1</sub>>]
+X2 [label=<<I>X</I><sub>2</sub>>]
+X3 [label=<<I>X</I><sub>3</sub>>]
+edge [];		
+		X1 [color=""];
+				X1 -> X2 [color="", dir=both, arrowtail= none, arrowhead = open, label = <<i>a</i><sub>12</sub>>, color="#e41a1c"];
+		X1 [color=""];
+				X1 -> X1 [color="", dir=both, arrowtail= none, arrowhead = open, label = <<i>a</i><sub>11</sub>>];
+		X1 [color=""];
+				X1 -> X3 [color="", dir=both, arrowtail= none, arrowhead = open, label = <<i>a</i><sub>13</sub>>, color="#377eb8"];
+		X2 [color=""];
+				X2 -> X1 [color="", dir=both, arrowtail= none, arrowhead = open, label = <<i>a</i><sub>21</sub>>, color="#377eb8"];
+		X2 [color=""];
+				X2 -> X3 [color="", dir=both, arrowtail= none, arrowhead = open, label = <<i>a</i><sub>23</sub>>, color="#e41a1c"];
+		X2 [color=""];
+				X2 -> X2 [color="", dir=both, arrowtail= none, arrowhead = open, label = <<i>a</i><sub>22</sub>>];
+		X3 [color=""];
+				X3 -> X1 [color="", dir=both, arrowtail= none, arrowhead = open, label = <<i>a</i><sub>31</sub>>, color="#e41a1c"];
+		X3 [color=""];
+				X3 -> X2 [color="", dir=both, arrowtail= none, arrowhead = open, label = <<i>a</i><sub>32</sub>>, color="#377eb8"];
+		X3 [color=""];
+				X3 -> X3 [color="", dir=both, arrowtail= none, arrowhead = open, label = <<i>a</i><sub>33</sub>>];
+}

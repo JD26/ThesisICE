@@ -37,7 +37,8 @@
 
 % increases the bottom float placement fraction
 \renewcommand{\bottomfraction}{0.5}
-
+\renewcommand*{\proofname}{Demostración}
+\renewcommand{\chaptername}{Capítulo}
 % avoids that floats are placed above its sections
 \let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
 \end_preamble
@@ -755,126 +756,40 @@ Funciones localmente Lipschitz
 \end_layout
 
 \begin_layout Standard
-Usaremos la siguiente notación:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $n,m\in\mathbb{N}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\mathbb{R}_{+}^{m}=\left\{ \left(x_{1},\ldots,x_{m}\right),\:x_{i}\in\mathbb{R},\:x_{i}\geq0,\:\forall i=1,\ldots,m\right\} $
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $t\in\mathbb{R}\left(\mathbb{R}_{+}\right)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $x\in\mathbb{R}^{n}\left(\mathbb{R}_{+}^{n}\right)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\left(t,x\right)\in\mathbb{R}^{n+1}\left(\mathbb{R}_{+}^{n+1}\right)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\left[t\right]_{+}=\mbox{max}\left\{ 0,t\right\} ,\,t\in\mathbb{R}$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\left[x\right]_{+}=\left(\left[x_{1}\right]_{+},...,\left[x_{n}\right]_{+}\right),\,x\in\mathbb{R}^{n}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\left[U\right]_{+}=\left\{ \left(\left[t\right]_{+},\left[x\right]_{+}\right),\,\left(t,x\right)\in U\right\} ,\,U\subset\mathbb{R}^{n+1}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $|x|=|x_{1}|+..|x_{n}|,\,x\in\mathbb{R}^{n}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\mbox{diam}\left(A\right)=\sup\left\{ |x-y|,\;x,y\in A\right\} $
-\end_inset
-
-, 
-\begin_inset Formula $A\subset\mathbb{R}^{n}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Acontinuación daremos algunas definiciones.
+A continuación daremos algunas definiciones.
 \end_layout
 
 \begin_layout Definition
-Sean 
-\begin_inset Formula $t\in\mathbb{R}$
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Conjunto Cerrado
+\end_layout
+
 \end_inset
 
- , 
-\begin_inset Formula $\left(t,x\right)\in D\subset\mathbb{R}^{n+1}$
+Un conjunto 
+\begin_inset Formula $F\subset\mathbb{R}^{n}$
+\end_inset
+
+ se llama cerrado si 
+\begin_inset Formula $\left(x_{n}\right)\in F$
+\end_inset
+
+ para todo 
+\begin_inset Formula $n\in\mathbb{N}$
 \end_inset
 
  y 
-\begin_inset Formula $f:D\rightarrow\mathbb{R}^{n}$
+\begin_inset Formula ${\displaystyle \lim_{n\rightarrow\infty}}x_{n}=a$
+\end_inset
+
+ , entonces 
+\begin_inset Formula $a\in F$
 \end_inset
 
 .
- Se dice que 
-\begin_inset Formula $f$
-\end_inset
-
- es localmente Lipschitz respecto a 
-\begin_inset Formula $x$
-\end_inset
-
- si 
-\begin_inset Formula $\forall\,K\subseteq D$
-\end_inset
-
- compacto 
-\begin_inset Formula $\exists\,L_{K}>0$
-\end_inset
-
- constante tal que
-\begin_inset Formula 
-\[
-|f\left(t,x_{1}\right)-f\left(t,x_{2}\right)|\leq L_{K}|x_{1}-x_{2}|;\quad\forall\left(t,x_{1}\right),\left(t,x_{2}\right)\in K.
-\]
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout --Separator--
@@ -882,8 +797,51 @@ Sean
 \end_layout
 
 \begin_layout Definition
+\begin_inset Argument 1
+status collapsed
+
+\begin_layout Plain Layout
+Conjunto Compacto
+\end_layout
+
+\end_inset
+
+Un conjunto 
+\begin_inset Formula $C\subset\mathbb{R}^{n}$
+\end_inset
+
+ se llama compacto si es cerrado y acotado.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Standard
+La siguiente definición se encuentra en 
+\color blue
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HODE1980"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status collapsed
+
+\begin_layout Plain Layout
+Función Localmente Lipschitz
+\end_layout
+
+\end_inset
+
 Sean 
-\begin_inset Formula $x\in E\subset\mathbb{R}^{n}$
+\begin_inset Formula $E\subset\mathbb{R}^{n}$
 \end_inset
 
  y 
@@ -896,17 +854,17 @@ Sean
 \end_inset
 
  es localmente Lipschitz si 
-\begin_inset Formula $\forall\,C\subseteq E$
+\begin_inset Formula $\forall C\subseteq E$
 \end_inset
 
  compacto 
-\begin_inset Formula $\exists\,L_{C}>0$
+\begin_inset Formula $\exists L>0$
 \end_inset
 
  constante tal que
 \begin_inset Formula 
 \[
-|f\left(x_{1}\right)-f\left(x_{2}\right)|\leq K_{C}|x_{1}-x_{2}|;\quad\forall x_{1},x_{2}\in C.
+|f\left(x_{1}\right)-f\left(x_{2}\right)|\leq L|x_{1}-x_{2}|;\quad\forall x_{1},x_{2}\in C.
 \]
 
 \end_inset
@@ -919,657 +877,90 @@ Sean
 \end_layout
 
 \begin_layout Theorem
+\begin_inset Argument 1
+status collapsed
 
-\shape up
+\begin_layout Plain Layout
+Borel-Lebesgue
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $C\subset\mathbb{R}^{n}$
+\end_inset
+
+ compacto, entonces todo recubrimiento abierto de 
+\begin_inset Formula $C$
+\end_inset
+
+ admite un subrecubrimiento finito.
+\end_layout
+
+\begin_layout Proof
+Ver 
+\color blue
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "EAR22004"
+
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
 \begin_inset CommandInset label
 LatexCommand label
-name "teo:equivalenciaLL"
+name "teo:CS"
 
 \end_inset
 
 
 \begin_inset Argument 1
-status open
+status collapsed
 
 \begin_layout Plain Layout
-
-\shape up
-Equivalencia
+Desigualdad de Cauchy-Schwarz
 \end_layout
 
 \end_inset
 
-Sean 
-\begin_inset Formula $t\in\mathbb{R}$
-\end_inset
-
- , 
-\begin_inset Formula $\left(t,x\right)\in D\subset\mathbb{R}^{n+1}$
-\end_inset
-
-, 
-\begin_inset Formula $D$
-\end_inset
-
- abierto y 
-\begin_inset Formula $f:D\rightarrow\mathbb{R}^{n}$
-\end_inset
-
- continua en 
-\begin_inset Formula $D$
-\end_inset
-
-.
- 
-\begin_inset Formula $f$
-\end_inset
-
- es localmente Lipschitz respecto a 
-\begin_inset Formula $x$
-\end_inset
-
- si y solo si para cada 
-\begin_inset Formula $(t,x)\in D$
-\end_inset
-
- existen un entorno abierto 
-\begin_inset Formula $U_{(t,x)}$
-\end_inset
-
- de 
-\begin_inset Formula $(t,x)$
-\end_inset
-
- contenido en 
-\begin_inset Formula $D$
-\end_inset
-
- y 
-\begin_inset Formula $L_{(t,x)}>0$
-\end_inset
-
- tal que
-\shape default
-
-\begin_inset Formula 
-\[
-|f\left(t,x_{1}\right)-f\left(t,x_{2}\right)|\leq L_{(t,x)}|x_{1}-x_{2}|;\quad\forall\left(t,x_{1}\right),\left(t,x_{2}\right)\in U_{(t,x)}.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-Demostraremos las dos implicaciones:
-\end_layout
-
-\begin_layout Proof
-\begin_inset Formula $\left[\Longrightarrow\right]$
-\end_inset
-
-Sea 
-\begin_inset Formula $\left(t,x\right)\in D$
-\end_inset
-
-.
- Como 
-\begin_inset Formula $D$
-\end_inset
-
- es un conjunto abierto, 
-\begin_inset Formula $\exists\varepsilon=\varepsilon(t,x)>0$
-\end_inset
-
- tal que
-\begin_inset Formula 
-\[
-\bar{B}\left(\left(t,x\right),\dfrac{\varepsilon}{2}\right)\subset B\left(\left(t,x\right),\varepsilon\right)\subset D
-\]
-
-\end_inset
-
-Como 
-\begin_inset Formula $\bar{B}\left(\left(t,x\right),\dfrac{\varepsilon}{2}\right)$
-\end_inset
-
- es compacto, por hipótesis 
-\begin_inset Formula $\exists L>0$
-\end_inset
-
- tal que
-\begin_inset Formula 
-\[
-|f\left(t,x_{1}\right)-f\left(t,x_{2}\right)|\leq L|x_{1}-x_{2}|;\quad\forall\left(t,x_{1}\right),\left(t,x_{2}\right)\in\bar{B}\left(\left(t,x\right),\dfrac{\varepsilon}{2}\right).
-\]
-
-\end_inset
-
-En particular la desigualdad anterior se cumple para 
-\begin_inset Formula $U=B\left(\left(t,x\right),\dfrac{\varepsilon}{2}\right)$
-\end_inset
-
- el cual es un entorno abierto de 
-\begin_inset Formula $\left(t,x\right)$
-\end_inset
-
-.
- Por lo tanto, para 
-\begin_inset Formula $\left(t,x\right)\in D$
-\end_inset
-
- arbitrario, existen 
-\begin_inset Formula $U=B\left(\left(t,x\right),\dfrac{\varepsilon}{2}\right)$
-\end_inset
-
- y 
-\begin_inset Formula $L>0$
-\end_inset
-
- tal que 
-\begin_inset Formula 
-\[
-|f\left(t,x_{1}\right)-f\left(t,x_{2}\right)|\leq L|x_{1}-x_{2}|;\quad\forall\left(t,x_{1}\right),\left(t,x_{2}\right)\in U.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-que es lo que queríamos demostrar.
-\end_layout
-
-\begin_layout Proof
-\begin_inset Formula $\left[\Longleftarrow\right]$
-\end_inset
-
-Sea 
-\begin_inset Formula $K$
-\end_inset
-
- un compacto contenido en 
-\begin_inset Formula $D$
-\end_inset
-
-.
- Sea 
-\begin_inset Formula $\left(t,x\right)\in K$
-\end_inset
-
-.
- Por hipótesis 
-\shape up
-existen un entorno abierto 
-\begin_inset Formula $U_{(t,x)}$
-\end_inset
-
- de 
-\begin_inset Formula $(t,x)$
-\end_inset
-
- contenido en 
-\begin_inset Formula $D$
-\end_inset
-
- y 
-\begin_inset Formula $L_{(t,x)}>0$
-\end_inset
-
- tal que
-\shape default
-
-\begin_inset Formula 
-\[
-|f\left(t,x_{1}\right)-f\left(t,x_{2}\right)|\leq L_{(t,x)}|x_{1}-x_{2}|;\quad\forall\left(t,x_{1}\right),\left(t,x_{2}\right)\in U_{(t,x)}.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-Como 
-\begin_inset Formula $U_{(t,x)}$
-\end_inset
-
- es abierto, existe 
-\begin_inset Formula $\varepsilon=\varepsilon(t,x)>0$
-\end_inset
-
- tal que
-\begin_inset Formula 
-\[
-(t,x)\in B\left(\left(t,x\right),\dfrac{\varepsilon}{2}\right)\subset B\left(\left(t,x\right),\varepsilon\right)\subset U_{(t,x)}
-\]
-
-\end_inset
-
-Entonces
-\begin_inset Formula 
-\[
-K\subset\bigcup_{(t,x)\in C}B\left(\left(t,x\right),\dfrac{\varepsilon}{2}\right),\;\varepsilon=\varepsilon(t,x)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-Como 
-\begin_inset Formula $K$
-\end_inset
-
- es compacto, existen 
-\begin_inset Formula $(t_{1},x_{1}),\ldots,(t_{n},x_{n})$
-\end_inset
-
- y 
-\begin_inset Formula $\varepsilon_{1},\ldots,\varepsilon_{n}$
-\end_inset
-
- tal que
-\begin_inset Formula 
-\[
-K\subset\bigcup_{i=1}^{n}B\left(\left(t_{i},x_{i}\right),\dfrac{\varepsilon_{i}}{2}\right)\subset\bigcup_{i=1}^{n}B\left(\left(t_{i},x_{i}\right),\varepsilon_{i}\right)\subset\bigcup_{i=1}^{n}U_{(t_{i},x_{i})}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-y 
-\begin_inset Formula $L_{1},\ldots,L_{n}$
-\end_inset
-
- tal que
-\begin_inset Formula 
-\[
-|f\left(t,x_{1}\right)-f\left(t,x_{2}\right)|\leq L_{i}|x_{1}-x_{2}|;\quad\forall\left(t,x_{1}\right),\left(t,x_{2}\right)\in U_{(t_{i},x_{i})}.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-Sea 
-\begin_inset Formula $M=\sup\left\{ |f\left(t,x\right)|,\:\left(t,x\right)\in K\right\} $
-\end_inset
-
-(
-\begin_inset Formula $M$
-\end_inset
-
- existe pues 
-\begin_inset Formula $f$
-\end_inset
-
- es continua y 
-\begin_inset Formula $K$
-\end_inset
-
- compacto) y 
-\begin_inset Formula $L'={\displaystyle \max_{i=1,\ldots,n}}\left\{ L_{i}\right\} $
-\end_inset
-
-.
- Sea 
-\begin_inset Formula $\delta<{\displaystyle \min_{i=1,\ldots,n}}\left\{ \dfrac{\varepsilon_{i}}{2}\right\} $
-\end_inset
-
-.
- Supongamos 
-\begin_inset Formula $A\subset K$
-\end_inset
-
- es tal que 
-\begin_inset Formula $\mbox{diam}\left(A\right)<\delta$
-\end_inset
-
-.
- Sea 
-\begin_inset Formula $a\in A$
-\end_inset
-
-, entonces existe 
-\begin_inset Formula $j\in\left\{ 1,\ldots,n\right\} $
-\end_inset
-
- tal que 
-\begin_inset Formula $a\in B\left(\left(t_{j},x_{j}\right),\dfrac{\varepsilon_{j}}{2}\right)$
-\end_inset
-
-.
- Sea 
-\begin_inset Formula $\left(t,x\right)\in A$
-\end_inset
-
- arbitrario, entonces
-\begin_inset Formula 
-\[
-|\left(t,x\right)-\left(t_{j},x_{j}\right)|\leq|\left(t,x\right)-a|+|a-\left(t_{j},x_{j}\right)|<\delta+\dfrac{\varepsilon_{j}}{2}<\varepsilon_{j}
-\]
-
-\end_inset
-
-y por lo tanto 
-\begin_inset Formula $A\subset B\left(\left(t_{j},x_{j}\right),\varepsilon_{j}\right)\subset U_{(t_{j},x_{j})}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Proof
-Sea 
-\begin_inset Formula $L=\max\left\{ L',2M/\delta\right\} $
-\end_inset
-
-.
- Para 
-\begin_inset Formula $\left(t,x\right),\left(t,y\right)\in C$
-\end_inset
-
- consideraremos dos casos:
-\end_layout
-
-\begin_layout Proof
-(i) Si 
-\begin_inset Formula $|\left(t,x\right)-\left(t,y\right)|<\delta$
-\end_inset
-
-, existe 
-\begin_inset Formula $j$
-\end_inset
-
- tal que 
-\begin_inset Formula $|f\left(t,x\right)-f\left(t,y\right)|\leq L_{j}|x-y|\leq L|x-y|$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Proof
-(ii) Si
-\begin_inset Formula $|\left(t,x\right)-\left(t,y\right)|\geq\delta$
-\end_inset
-
-, 
-\begin_inset Formula $|f\left(t,x\right)-f\left(t,y\right)|\leq2M=\dfrac{2M\delta}{\delta}\leq L|\left(t,x\right)-\left(t,y\right)|$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Proof
-Por lo tanto, para 
-\begin_inset Formula $K$
-\end_inset
-
- compacto contenido en 
-\begin_inset Formula $D$
-\end_inset
-
-, existe 
-\begin_inset Formula $L>0$
-\end_inset
-
- tal que
-\begin_inset Formula 
-\[
-|f\left(t,x\right)-f\left(t,y\right)|\leq L|x-y|,\quad\forall\left(t,x\right),\left(t,y\right)\in K
-\]
-
-\end_inset
-
-que es lo que queríamos demostrar.
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout Proposition
-
-\shape up
-Sean 
-\begin_inset Formula $t\in\mathbb{R}$
-\end_inset
-
- , 
-\begin_inset Formula $\left(t,x\right)\in E\subset\mathbb{R}^{n+1}$
-\end_inset
-
- y 
-\begin_inset Formula $f:E\rightarrow\mathbb{R}^{m}$
-\end_inset
-
-.
- Si 
-\begin_inset Formula $f$
-\end_inset
-
- es localmente Lipschitz en 
-\begin_inset Formula $x$
-\end_inset
-
- entoces 
-\begin_inset Formula $f_{t}\left(x\right)=f\left(t,x\right)$
-\end_inset
-
- es localmente Lipschitz(Teorema 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "teo:equivalenciaLL"
-
-\end_inset
-
-).
-\end_layout
-
-\begin_layout Proof
-Sean 
-\begin_inset Formula $x_{1},x_{2}\in U\subset E$
-\end_inset
-
-, 
-\begin_inset Formula $U$
-\end_inset
-
- cerrado y acotado.
- Entonces 
-\begin_inset Formula $\left\{ t\right\} \times U$
-\end_inset
-
- es cerrado y acotado.
- Entonces 
-\begin_inset Formula $\exists K_{f}$
-\end_inset
-
- tal que
-\end_layout
-
-\begin_layout Proof
-\begin_inset Formula $|f_{t}\left(x_{1}\right)-f_{t}\left(x_{2}\right)|=|f\left(t,x_{1}\right)-f\left(t,x_{2}\right)|\leq K_{f}|x_{1}-x_{2}|$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-Por lo tanto 
-\begin_inset Formula $f_{t}$
-\end_inset
-
- es localmente Lipschitz.
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout Proposition
-
-\shape up
-Sean 
-\begin_inset Formula $x\in D\subset\mathbb{R}^{n}$
-\end_inset
-
- y 
-\begin_inset Formula $F:D\rightarrow\mathbb{R}^{m}$
-\end_inset
-
-.
  Sean 
-\begin_inset Formula $t\in\mathbb{R}$
-\end_inset
-
- , 
-\begin_inset Formula $\left(t,x\right)\in E\subset\mathbb{R}^{n+1}$
-\end_inset
-
- y 
-\begin_inset Formula $f:E\rightarrow\mathbb{R}^{m}$
-\end_inset
-
-, definida por 
-\begin_inset Formula $f\left(t,x\right)=F\left(x\right)$
-\end_inset
-
-.
- Si 
-\begin_inset Formula $F$
-\end_inset
-
- es localmente Lipschitz, entonces 
-\begin_inset Formula $f$
-\end_inset
-
- es localmente Lipschitz en 
-\begin_inset Formula $x$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Proof
-Sea 
-\begin_inset Formula $U_{f}\subset E$
-\end_inset
-
- cerrado y acotado.
- Sea 
-\begin_inset Formula $U_{F}=\left\{ x,\:\left(t,x\right)\in U_{f}\right\} $
-\end_inset
-
- y 
-\begin_inset Formula $\left(x_{m}\right)$
-\end_inset
-
-una suceción en 
-\begin_inset Formula $U_{F}$
-\end_inset
-
- tal que 
-\begin_inset Formula ${\displaystyle \lim_{m\rightarrow\infty^{+}}x_{m}=x^{*}}$
+\begin_inset Formula $x,y\in\mathbb{R}^{n}$
 \end_inset
 
 .
  Entonces 
-\begin_inset Formula $\exists t_{m}$
+\begin_inset Formula $|\left\langle x,y\right\rangle |\leq|x||y|$
 \end_inset
 
-tal que 
-\begin_inset Formula $\left(t_{m},x_{m}\right)\in U_{f}$
+, valiendo la igualdad si y solo si uno de los vectores 
+\begin_inset Formula $x,y$
 \end_inset
 
-, 
-\begin_inset Formula $\forall m$
-\end_inset
-
-.
- 
+ es multiplo del otro.
 \end_layout
 
 \begin_layout Proof
-\begin_inset Formula $\begin{array}{l}
-\Rightarrow{\displaystyle \lim_{m\rightarrow\infty^{+}}}\left(t_{1},x_{m}\right)=\left(t_{1},x^{*}\right)\\
-\Rightarrow\left(t_{1},x^{*}\right)\in U_{f}\mbox{ (Pues \ensuremath{U_{f}} es cerrado)}\\
-\Rightarrow x^{*}\in U_{F}
-\end{array}$
+Ver 
+\color blue
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "EAR22004"
+
 \end_inset
 
 
-\end_layout
-
-\begin_layout Proof
-Por lo tanto 
-\begin_inset Formula $U_{F}$
-\end_inset
-
- es cerrado.
- Como 
-\begin_inset Formula $U_{f}$
-\end_inset
-
- es acotado, 
-\begin_inset Formula $\exists C$
-\end_inset
-
- tal que 
-\begin_inset Formula $\forall\left(t,x\right)\in U_{f}$
-\end_inset
-
-, 
-\begin_inset Formula $|x|\leq|t|+|x_{1}|+...+|x_{n}|\leq|\left(t,x\right)|\leq C$
-\end_inset
-
-, luego 
-\begin_inset Formula $U_{F}$
-\end_inset
-
- es acotado.
-\end_layout
-
-\begin_layout Proof
-Sean 
-\begin_inset Formula $\left(t,x_{1}\right),\left(t,x_{2}\right)\in U_{f}$
-\end_inset
-
- entonces 
-\begin_inset Formula $x_{1},x_{2}\in U_{F}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-\begin_inset Formula $\begin{array}{l}
-|f\left(t,x_{1}\right)-f\left(t,x_{2}\right)|\\
-=|F\left(x_{1}\right)-F\left(x_{2}\right)|\\
-\leq K_{U_{F}}|x_{1}-x_{2}|\mbox{(Pues \ensuremath{F}es localmente Lipschitz)}
-\end{array}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-Por lo tanto 
-\begin_inset Formula $f$
-\end_inset
-
- es localmente Lipschitz en 
-\begin_inset Formula $x$
-\end_inset
-
+\color inherit
 .
 \end_layout
 
@@ -1578,382 +969,13 @@ Por lo tanto
 \end_layout
 
 \begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "propo:basic"
 
-\shape up
+\end_inset
+
 Sean 
-\begin_inset Formula $t\in\mathbb{R}$
-\end_inset
-
- , 
-\begin_inset Formula $\left(t,x\right)\in D\subset\mathbb{R}^{n+1}$
-\end_inset
-
-, 
-\begin_inset Formula $f:D\rightarrow\mathbb{R}^{m}$
-\end_inset
-
- y 
-\begin_inset Formula $g:D\rightarrow\mathbb{R}^{m}$
-\end_inset
-
-.
- Si 
-\begin_inset Formula $f$
-\end_inset
-
- y 
-\begin_inset Formula $g$
-\end_inset
-
- son localmente Lipschitz en 
-\begin_inset Formula $x$
-\end_inset
-
- entonces 
-\begin_inset Formula $f\pm g$
-\end_inset
-
- es localmente Lipschitz en 
-\begin_inset Formula $x$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Proof
-Sea 
-\begin_inset Formula $U\subset D$
-\end_inset
-
- cerrado y acotado.
- Sean 
-\begin_inset Formula $\left(t,x_{1}\right),\left(t,x_{2}\right)\in U$
-\end_inset
-
-.
- Entonces
-\end_layout
-
-\begin_layout Proof
-\begin_inset Formula $\begin{array}{l}
-|\left(f\pm g\right)\left(t,x_{1}\right)-\left(f\pm g\right)\left(t,x_{2}\right)|\\
-=|\left(f\left(t,x_{1}\right)\pm g\left(t,x_{1}\right)\right)-\left(f\left(t,x_{2}\right)\pm g\left(t,x_{2}\right)\right)|\\
-\leq|f\left(t,x_{1}\right)-f\left(t,x_{2}\right)|+|g\left(t,x_{1}\right)-g\left(t,x_{2}\right)|\\
-\leq K_{U}^{f}|x_{1}-x_{2}|+K_{U}^{g}|x_{1}-x_{2}|\mbox{(Por hipótesis)}\\
-=\left(K_{U}^{f}+K_{U}^{g}\right)|x_{1}-x_{2}|
-\end{array}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-Por lo tanto 
-\begin_inset Formula $f\pm g$
-\end_inset
-
- es localmente Lipschitz en 
-\begin_inset Formula $x$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout Proposition
-
-\shape up
-Sean 
-\begin_inset Formula $c\in\mathbb{R}$
-\end_inset
-
-, 
-\begin_inset Formula $t\in\mathbb{R}$
-\end_inset
-
- , 
-\begin_inset Formula $\left(t,x\right)\in D\subset\mathbb{R}^{n+1}$
-\end_inset
-
-, 
-\begin_inset Formula $f:D\rightarrow\mathbb{R}^{m}$
-\end_inset
-
-.
- Si 
-\begin_inset Formula $f$
-\end_inset
-
- es localmente Lipschitz en 
-\begin_inset Formula $x$
-\end_inset
-
- entonces 
-\begin_inset Formula $cf$
-\end_inset
-
- es localmente Lipschitz en 
-\begin_inset Formula $x$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Proof
-Sea 
-\begin_inset Formula $U\subset D$
-\end_inset
-
- cerrado y acotado.
- Sean 
-\begin_inset Formula $\left(t,x_{1}\right),\left(t,x_{2}\right)\in U$
-\end_inset
-
-.
- Entonces
-\end_layout
-
-\begin_layout Proof
-\begin_inset Formula $\begin{array}{l}
-|\left(cf\right)\left(t,x_{1}\right)-\left(cf\right)\left(t,x_{2}\right)|\\
-=|cf\left(t,x_{1}\right)-cf\left(t,x_{2}\right)|\\
-\leq|c|K_{U}|x_{1}-x_{2}|
-\end{array}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-Por lo tanto 
-\begin_inset Formula $cf$
-\end_inset
-
- es localmente Lipschitz.
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout Proposition
-
-\shape up
-Sean 
-\begin_inset Formula $t\in\mathbb{R}$
-\end_inset
-
- , 
-\begin_inset Formula $\left(t,x\right)\in D\subset\mathbb{R}^{n+1}$
-\end_inset
-
-, 
-\begin_inset Formula $f:D\rightarrow\mathbb{R}^{m}$
-\end_inset
-
- y 
-\begin_inset Formula $g:D\rightarrow\mathbb{R}^{m}$
-\end_inset
-
-.
- Si 
-\begin_inset Formula $f$
-\end_inset
-
- y 
-\begin_inset Formula $g$
-\end_inset
-
- son localmente Lipschitz en 
-\begin_inset Formula $x$
-\end_inset
-
- y además 
-\begin_inset Formula $\exists C$
-\end_inset
-
- tal que 
-\begin_inset Formula $|f\left(U\right)|,|g\left(U\right)|<C$
-\end_inset
-
- 
-\begin_inset Formula $\forall U$
-\end_inset
-
- cerrado acotado en 
-\begin_inset Formula $D$
-\end_inset
-
-, entonces 
-\begin_inset Formula $\left\langle f,g\right\rangle $
-\end_inset
-
- es localmente Lipschitz en 
-\begin_inset Formula $x$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Proof
-Sea 
-\begin_inset Formula $U\subset D$
-\end_inset
-
- cerrado y acotado.
- Sean 
-\begin_inset Formula $\left(t,x_{1}\right),\left(t,x_{2}\right)\in U$
-\end_inset
-
-.
- Entonces
-\end_layout
-
-\begin_layout Proof
-\begin_inset Formula $\begin{array}{l}
-|\left\langle f,g\right\rangle \left(t,x_{1}\right)-\left\langle f,g\right\rangle \left(t,x_{2}\right)|\\
-=|\left\langle f\left(t,x_{1}\right),g\left(t,x_{1}\right)\right\rangle -\left\langle f\left(t,x_{2}\right),g\left(t,x_{1}\right)\right\rangle \\
-\quad\quad+\left\langle f\left(t,x_{2}\right),g\left(t,x_{1}\right)\right\rangle -\left\langle f\left(t,x_{2}\right),g\left(t,x_{2}\right)\right\rangle |\\
-=|\left\langle f\left(t,x_{1}\right)-f\left(t,x_{2}\right),g\left(t,x_{1}\right)\right\rangle +\left\langle f\left(t,x_{2}\right),g\left(t,x_{1}\right)-g\left(t,x_{2}\right)\right\rangle |\\
-\leq|\left\langle f\left(t,x_{1}\right)-f\left(t,x_{2}\right),g\left(t,x_{1}\right)\right\rangle |+|\left\langle f\left(t,x_{2}\right),g\left(t,x_{1}\right)-g\left(t,x_{2}\right)\right\rangle |\\
-\leq|f\left(t,x_{1}\right)-f\left(t,x_{2}\right)||g\left(t,x_{1}\right)|+|f\left(t,x_{2}\right)||g\left(t,x_{1}\right)-g\left(t,x_{2}\right)|\mbox{(Por C. S.)}\\
-\leq K_{U}^{f}|x_{1}-x_{2}|C+CK_{U}^{g}|x_{1}-x_{2}|\mbox{(Por hipótesis)}\\
-=C\left(K_{U}^{f}+K_{U}^{g}\right)|x_{1}-x_{2}|
-\end{array}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-Por lo tanto 
-\begin_inset Formula $\left\langle f,g\right\rangle $
-\end_inset
-
- es localmente Lipschitz en 
-\begin_inset Formula $x$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout Proposition
-
-\shape up
-Sean 
-\begin_inset Formula $F:\mathbb{R}_{+}^{n}\rightarrow\mathbb{R}^{m}$
-\end_inset
-
- función de clase 
-\begin_inset Formula $C^{1}$
-\end_inset
-
- en 
-\begin_inset Formula $\mathbb{R}_{+}^{n}$
-\end_inset
-
-.
- Entonces 
-\begin_inset Formula $F$
-\end_inset
-
- es localmente Lipschitz.
-\end_layout
-
-\begin_layout Proof
-Sea 
-\begin_inset Formula $U\subset D$
-\end_inset
-
- cerrado y acotado.
- Sean 
-\begin_inset Formula $x_{1},x_{2}\in U$
-\end_inset
-
-.
- Dado que 
-\begin_inset Formula $[x_{1},x_{2}]$
-\end_inset
-
- (segmento de recta) es cerrado y acotado, 
-\begin_inset Formula $\exists m_{\left[x_{1},x_{2}\right]}={\displaystyle \max_{\left[x_{1},x_{2}\right]}|\partial F|}$
-\end_inset
-
-, y por la Desigualdad del Valor Medio
-\end_layout
-
-\begin_layout Proof
-\begin_inset Formula $\begin{array}{c}
-|F\left(x_{1}\right)-F\left(x_{2}\right)|\leq m_{\left[x_{1},x_{2}\right]}|x_{1}-x_{2}|\end{array}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-Puesto que 
-\begin_inset Formula $U$
-\end_inset
-
- es acotado, 
-\begin_inset Formula $\exists C$
-\end_inset
-
- tal que 
-\begin_inset Formula $|x|\leq C$
-\end_inset
-
- 
-\begin_inset Formula $\forall x\in U$
-\end_inset
-
- y se cumple que 
-\begin_inset Formula $\left[x_{1},x_{2}\right]\subset B=\left\{ x\in\mathbb{R}_{+}^{n},\,|x|\leq C\right\} $
-\end_inset
-
- cerrado y acotado.
- Luego como 
-\begin_inset Formula $\partial F$
-\end_inset
-
- es continua
-\end_layout
-
-\begin_layout Proof
-\begin_inset Formula $\begin{array}{l}
-m_{\left[x_{1},x_{2}\right]}\leq{\displaystyle \max_{B}|\partial F|}<\infty^{+}\\
-\Rightarrow|F\left(x_{1}\right)-F\left(x_{2}\right)|\leq{\displaystyle \max_{B}|\partial F|}|x_{1}-x_{2}|
-\end{array}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-Por lo tanto 
-\begin_inset Formula $F$
-\end_inset
-
- es localmente Lipschitz.
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout Proposition
-Sean 
-\begin_inset Formula $a,t\in\mathbb{R}$
-\end_inset
-
- y 
 \begin_inset Formula $x,y\in\mathbb{R}^{n}$
 \end_inset
 
@@ -1962,21 +984,7 @@ Sean
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $t\leq\left[t\right]_{+}\leq|t|$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $|t-a|\leq|\left[t\right]_{+}-a|$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $|\left[t\right]_{+}-\left[a\right]_{+}|\leq|t-a|$
+\begin_inset Formula $x\leq\left[x\right]_{+}\leq|x|$
 \end_inset
 
 
@@ -2009,62 +1017,79 @@ Basta usar la definición de
 \end_layout
 
 \begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "lema:compa"
+
+\end_inset
+
 Sea 
 \begin_inset Formula $U\subset\mathbb{R}^{n+1}$
 \end_inset
 
- cerrado y acotado.
+ compacto.
  Entonces 
 \begin_inset Formula $\left[U\right]_{+}$
 \end_inset
 
- es cerrado y acotado.
+ es compacto.
 \end_layout
 
 \begin_layout Proof
 Sea 
-\begin_inset Formula $\left(\left[t\right]_{+},\left[x\right]_{+}\right)\in\left[U\right]_{+}$
+\begin_inset Formula $\left[x\right]_{+}\in\left[U\right]_{+}$
 \end_inset
 
-, entonces
-\end_layout
+.
+ Utilizando la Proposición 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "propo:basic"
 
-\begin_layout Proof
-\begin_inset Formula $\begin{array}{l}
-|\left(\left[t\right]_{+},\left[x\right]_{+}\right)|\\
-=|\left[t\right]_{+}|+|\left[x_{1}\right]_{+}|+...+|\left[x_{n}\right]_{n}|\\
-=\left[t\right]_{+}+\left[x_{1}\right]_{+}+...+\left[x_{n}\right]_{n}\\
-\leq|t|+|x_{1}|+...+|x_{n}|\\
-=|\left(t,x\right)|\leq C\mbox{ (Pues \ensuremath{U}es acotado)}
-\end{array}$
 \end_inset
 
+ tenemos que
+\begin_inset Formula 
+\[
+\begin{array}{l}
+|\left[x\right]_{+}|=|\left[x_{1}\right]_{+}|+...+|\left[x_{n}\right]_{+}|\\
+=\left[x_{1}\right]_{+}+...+\left[x_{n}\right]_{n}\\
+\leq|x_{1}|+...+|x_{n}|=|x|.
+\end{array}
+\]
 
-\end_layout
+\end_inset
 
-\begin_layout Proof
-Por lo tanto 
+Por lo tanto, como 
+\begin_inset Formula $U$
+\end_inset
+
+ es acotado entonces 
 \begin_inset Formula $\left[U\right]_{+}$
 \end_inset
 
 es acotado.
-\end_layout
-
-\begin_layout Proof
-Sea 
-\begin_inset Formula $\left(\left[t_{m}\right]_{+},\left[x_{m}\right]_{+}\right)$
+ Sea 
+\begin_inset Formula $\left[x_{m}\right]_{+}$
 \end_inset
 
-una sucesión en 
+ una sucesión en 
 \begin_inset Formula $\left[U\right]_{+}$
 \end_inset
 
- tal que 
-\begin_inset Formula ${\displaystyle \lim_{m\rightarrow\infty^{+}}\left(\left[t_{m}\right]_{+},\left[x_{m}\right]_{+}\right)=\left(t^{*},x^{*}\right)}$
+ y 
+\begin_inset Formula ${\displaystyle \lim_{m\rightarrow\infty}\left[x_{m}\right]_{+}=x^{*}}$
 \end_inset
 
 .
- Entonces 
+ Utilizando la Proposición 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "propo:basic"
+
+\end_inset
+
+ y la definición de límite de una suceción, se tiene que 
 \begin_inset Formula $\forall\varepsilon>0$
 \end_inset
 
@@ -2072,23 +1097,17 @@ una sucesión en
 \begin_inset Formula $\exists m_{0}$
 \end_inset
 
- tal que
-\end_layout
+ tal que 
+\begin_inset Formula 
+\[
+\begin{array}{l}
+|x_{m}-x^{*}|\leq|\left[x_{m}\right]_{+}-x^{*}|<\varepsilon\quad\forall m\geq m_{0}\mbox{ }\end{array}.
+\]
 
-\begin_layout Proof
-\begin_inset Formula $\begin{array}{l}
-|\left(t_{m},x_{m}\right)-\left(t^{*},x^{*}\right)|\\
-\leq|\left(\left[t_{m}\right]_{+},\left[x_{m}\right]_{+}\right)-\left(t^{*},x^{*}\right)|\mbox{ (Por la proposición anterior)}\\
-<\varepsilon\quad\forall m\geq m_{0}\mbox{ (Por la definición de límite)}
-\end{array}$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Proof
 Luego 
-\begin_inset Formula ${\displaystyle \lim_{m\rightarrow\infty^{+}}\left(t_{m},x_{m}\right)=\left(t^{*},x^{*}\right)}.$
+\begin_inset Formula ${\displaystyle \lim_{m\rightarrow\infty}x_{m}=x^{*}}.$
 \end_inset
 
  Como 
@@ -2096,16 +1115,23 @@ Luego
 \end_inset
 
  es cerrado 
-\begin_inset Formula $\left(t^{*},x^{*}\right)\in U$
+\begin_inset Formula $x^{*}\in U$
 \end_inset
 
 .
  Entonces 
-\begin_inset Formula $\left(\left[t^{*}\right]_{+},\left[x^{*}\right]_{+}\right)\in\left[U\right]_{+}$
+\begin_inset Formula $\left[x^{*}\right]_{+}\in\left[U\right]_{+}$
 \end_inset
 
 .
- Entonces 
+ De nuevo, utilizando la definición de límite y la Proposición 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "propo:basic"
+
+\end_inset
+
+ se tiene que 
 \begin_inset Formula $\forall\varepsilon>0$
 \end_inset
 
@@ -2114,41 +1140,41 @@ Luego
 \end_inset
 
  tal que 
-\end_layout
+\begin_inset Formula 
+\[
+\begin{array}{l}
+|\left[x_{m}\right]_{+}-\left[x^{*}\right]_{+}|\leq|x_{m}-x^{*}|<\varepsilon\quad\forall m\geq m_{0}\end{array}
+\]
 
-\begin_layout Proof
-\begin_inset Formula $\begin{array}{l}
-|\left(\left[t_{m}\right]_{+},\left[x_{m}\right]_{+}\right)-\left(\left[t^{*}\right]_{+},\left[x^{*}\right]_{+}\right)|\\
-\leq|\left(t_{m},x_{m}\right)-\left(t^{*},x^{*}\right)|\mbox{ (Por la proposición anterior)}\\
-<\varepsilon\quad\forall m\geq m_{0}\mbox{ (Por la definición de límite)}
-\end{array}$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Proof
 Luego 
-\begin_inset Formula ${\displaystyle \lim_{m\rightarrow\infty^{+}}\left(\left[t_{m}\right]_{+},\left[x_{m}\right]_{+}\right)=\left(\left[t^{*}\right]_{+},\left[x^{*}\right]_{+}\right)}.$
+\begin_inset Formula ${\displaystyle \lim_{m\rightarrow\infty}\left[x_{m}\right]_{+}=\left[x^{*}\right]_{+}}.$
 \end_inset
 
  Por unicidad del límite 
-\begin_inset Formula $\left(t^{*},x^{*}\right)=\left(\left[t^{*}\right]_{+},\left[x^{*}\right]_{+}\right)$
+\begin_inset Formula $x^{*}=\left[x^{*}\right]_{+}$
 \end_inset
 
  y 
-\begin_inset Formula $\left(t^{*},x^{*}\right)\in\left[U\right]_{+}$
+\begin_inset Formula $x^{*}\in\left[U\right]_{+}$
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Proof
-Por lo tanto 
+ Por lo tanto 
 \begin_inset Formula $\left[U\right]_{+}$
 \end_inset
 
 es cerrado.
+ Luego, como 
+\begin_inset Formula $\left[U\right]_{+}$
+\end_inset
+
+ es cerrado y acotado, entonces 
+\begin_inset Formula $\left[U\right]_{+}$
+\end_inset
+
+ es compacto.
 \end_layout
 
 \begin_layout --Separator--
@@ -2156,26 +1182,38 @@ es cerrado.
 \end_layout
 
 \begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "Teo:extencion"
 
-\shape up
-Sean 
-\begin_inset Formula $t\in\mathbb{R}$
 \end_inset
 
- , 
-\begin_inset Formula $\left(t,x\right)\in\mathbb{R}_{+}^{n+1}$
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\shape up
+Extensión
+\end_layout
+
+\end_inset
+
+Sean 
+\begin_inset Formula $x\in\mathbb{R}_{+}^{n}$
 \end_inset
 
 , 
-\begin_inset Formula $f:\mathbb{R}_{+}^{n+1}\rightarrow\mathbb{R}^{m}$
+\begin_inset Formula $f:\mathbb{R}_{+}^{n}\rightarrow\mathbb{R}^{m}$
 \end_inset
 
  y 
-\begin_inset Formula $\tilde{f}:\mathbb{R}^{n+1}\rightarrow\mathbb{R}^{m}$
+\begin_inset Formula $\tilde{f}:\mathbb{R}^{n}\rightarrow\mathbb{R}^{m}$
 \end_inset
 
  definida como 
-\begin_inset Formula $\tilde{f}\left(t,x\right)=f\left(\left[t\right]_{+},\left[x\right]_{+}\right)$
+\begin_inset Formula $\tilde{f}\left(x\right)=f\left(\left[x\right]_{+}\right)$
 \end_inset
 
 .
@@ -2183,15 +1221,1019 @@ Sean
 \begin_inset Formula $f$
 \end_inset
 
- es localmente Lipschitz en 
-\begin_inset Formula $x$
-\end_inset
-
- entonces 
+ es localmente Lipschitz entonces 
 \begin_inset Formula $\tilde{f}$
 \end_inset
 
- es localmente Lipchitz en 
+ es localmente Lipschitz.
+\end_layout
+
+\begin_layout Proof
+Sea 
+\begin_inset Formula $U\subset\mathbb{R}^{n}$
+\end_inset
+
+ un conjunto compacto, entonces 
+\begin_inset Formula $\left[U\right]_{+}\subset\mathbb{R}_{+}^{n}$
+\end_inset
+
+ es compacto por el Lema 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "lema:compa"
+
+\end_inset
+
+.
+ Sean 
+\begin_inset Formula $x_{1},x_{2}\in U$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\left[x_{1}\right]_{+},\left[x_{2}\right]_{+}\in\left[U\right]_{+}$
+\end_inset
+
+ .
+ Por la definición de función localmente Lipschitz y la Proposición 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "propo:basic"
+
+\end_inset
+
+ existe 
+\begin_inset Formula $L_{\left[U\right]_{+}}>0$
+\end_inset
+
+ tal que
+\begin_inset Formula 
+\[
+\begin{array}{l}
+|\tilde{f}\left(x_{1}\right)-\tilde{f}\left(x_{2}\right)|\\
+=|f\left(\left[x_{1}\right]_{+}\right)-f\left(\left[x_{2}\right]_{+}\right)|\\
+\leq L_{\left[U\right]_{+}}|\left[x_{1}\right]_{+}-\left[x_{2}\right]_{+}|\\
+\leq L_{\left[U\right]_{+}}|x_{1}-x_{2}|.
+\end{array}
+\]
+
+\end_inset
+
+Por lo tanto 
+\begin_inset Formula $\tilde{f}$
+\end_inset
+
+ es localmente Lipschitz.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "propo:conti"
+
+\end_inset
+
+Sean 
+\begin_inset Formula $D\subset\mathbb{R}^{n}$
+\end_inset
+
+ abierto y 
+\begin_inset Formula $f:D\rightarrow\mathbb{R}^{m}$
+\end_inset
+
+.
+ Si para cada 
+\begin_inset Formula $x\in D$
+\end_inset
+
+ existe un entorno abierto 
+\begin_inset Formula $U$
+\end_inset
+
+ de 
+\begin_inset Formula $x$
+\end_inset
+
+ contenido en 
+\begin_inset Formula $D$
+\end_inset
+
+ y 
+\begin_inset Formula $L>0$
+\end_inset
+
+ tal que
+\begin_inset Formula 
+\[
+|f\left(x_{1}\right)-f\left(x_{2}\right)|\leq L|x_{1}-x_{2}|;\quad\forall\,x_{1},\,x_{2}\,\in U
+\]
+
+\end_inset
+
+entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ es continua en 
+\begin_inset Formula $D$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Dado 
+\begin_inset Formula $x_{0}\in D$
+\end_inset
+
+ (abierto), existe un entorno abierto 
+\begin_inset Formula $U$
+\end_inset
+
+ de 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ contenido en 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ Entonces existe 
+\begin_inset Formula $r>0$
+\end_inset
+
+ tal que 
+\begin_inset Formula 
+\[
+x_{0}\subset B\left(x_{0},r\right)\subset U\land|f\left(x_{1}\right)-f\left(x_{2}\right)|\leq L|x_{1}-x_{2}|;\quad\forall\,x_{1},\,x_{2}\,\in B\left(x_{0},r\right)\subset U
+\]
+
+\end_inset
+
+Dado 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+, tomamos 
+\begin_inset Formula $\delta=\mbox{min}\left\{ r,\varepsilon/L\right\} $
+\end_inset
+
+ tal que si
+\begin_inset Formula 
+\[
+\forall x\in D\wedge|x-x_{0}|<\delta\Rightarrow|f\left(x\right)-f\left(x_{0}\right)|\leq L|x-x_{0}|<L\delta\leq\varepsilon,
+\]
+
+\end_inset
+
+como 
+\begin_inset Formula $x$
+\end_inset
+
+ es arbitrario, 
+\begin_inset Formula $f$
+\end_inset
+
+ es continua en 
+\begin_inset Formula $D$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "teo:equivalenciall"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\shape up
+Equivalencia
+\end_layout
+
+\end_inset
+
+Sean 
+\begin_inset Formula $D\subset\mathbb{R}^{n}$
+\end_inset
+
+ abierto y 
+\begin_inset Formula $f:D\rightarrow\mathbb{R}^{m}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $f$
+\end_inset
+
+ es localmente Lipschitz si y solo si para cada 
+\begin_inset Formula $x\in D$
+\end_inset
+
+ existe un entorno abierto 
+\begin_inset Formula $U$
+\end_inset
+
+ de 
+\begin_inset Formula $x$
+\end_inset
+
+ contenido en 
+\begin_inset Formula $D$
+\end_inset
+
+ y 
+\begin_inset Formula $L>0$
+\end_inset
+
+ tal que
+\begin_inset Formula 
+\[
+|f\left(x_{1}\right)-f\left(x_{2}\right)|\leq L|x_{1}-x_{2}|;\quad\forall\,x_{1},\,x_{2}\,\in U.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+A continuación demostraremos las dos implicaciones.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\left[\Longrightarrow\right]$
+\end_inset
+
+Sea 
+\begin_inset Formula $x\in D$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $D$
+\end_inset
+
+ es un conjunto abierto, 
+\begin_inset Formula $\exists\,\varepsilon>0$
+\end_inset
+
+ tal que
+\begin_inset Formula 
+\[
+\bar{B}\left(x,\dfrac{\varepsilon}{2}\right)\subset B\left(x,\varepsilon\right)\subset D.
+\]
+
+\end_inset
+
+Como 
+\begin_inset Formula $\bar{B}\left(x,\dfrac{\varepsilon}{2}\right)\subset D$
+\end_inset
+
+ es compacto, por hipótesis, 
+\begin_inset Formula $\exists L>0$
+\end_inset
+
+ tal que
+\begin_inset Formula 
+\[
+|f\left(x_{1}\right)-f\left(x_{2}\right)|\leq L|x_{1}-x_{2}|;\quad\forall\,x_{1},\,x_{2}\in\bar{B}\left(x,\dfrac{\varepsilon}{2}\right).
+\]
+
+\end_inset
+
+La desigualdad anterior también se cumple para 
+\begin_inset Formula $U=B\left(x,\dfrac{\varepsilon}{2}\right)$
+\end_inset
+
+, el cual es un entorno abierto de 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Por lo tanto, tomamos un 
+\begin_inset Formula $x\in D$
+\end_inset
+
+ y probamos que existen 
+\begin_inset Formula $U=B\left(x,\dfrac{\varepsilon}{2}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $L>0$
+\end_inset
+
+ tal que
+\begin_inset Formula 
+\[
+|f\left(x_{1}\right)-f\left(x_{2}\right)|\leq L|x_{1}-x_{2}|;\quad\forall\,x_{1},\,x_{2}\in U,
+\]
+
+\end_inset
+
+que es lo que queríamos demostrar.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\left[\Longleftarrow\right]$
+\end_inset
+
+Sea 
+\begin_inset Formula $C$
+\end_inset
+
+ un compacto contenido en 
+\begin_inset Formula $D$
+\end_inset
+
+ y sea 
+\begin_inset Formula $x\in C$
+\end_inset
+
+.
+ Por hipótesis, existen un entorno abierto 
+\begin_inset Formula $U_{x}$
+\end_inset
+
+ de 
+\begin_inset Formula $x$
+\end_inset
+
+ , con 
+\begin_inset Formula $U_{x}$
+\end_inset
+
+ contenido en 
+\begin_inset Formula $D$
+\end_inset
+
+, y 
+\begin_inset Formula $L_{x}>0$
+\end_inset
+
+ tal que
+\begin_inset Formula 
+\[
+|f\left(x_{1}\right)-f\left(x_{2}\right)|\leq L_{x}|x_{1}-x_{2}|;\quad\forall\,x_{1},\,x_{2}\in U_{x}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Como 
+\begin_inset Formula $U_{x}$
+\end_inset
+
+ es abierto, existe 
+\begin_inset Formula $\varepsilon_{x}>0$
+\end_inset
+
+ tal que
+\begin_inset Formula 
+\[
+\begin{array}{c}
+x\in B\left(x,\dfrac{\varepsilon_{x}}{2}\right)\subset B\left(x,\varepsilon_{x}\right)\subset U_{x},\\
+C\subset{\displaystyle \bigcup_{x\in C}}B\left(x,\dfrac{\varepsilon_{x}}{2}\right).
+\end{array}
+\]
+
+\end_inset
+
+Como 
+\begin_inset Formula $C$
+\end_inset
+
+ es compacto, existen 
+\begin_inset Formula $x_{1},\ldots,x_{n}$
+\end_inset
+
+ , 
+\begin_inset Formula $\varepsilon_{1},\ldots,\varepsilon_{n}$
+\end_inset
+
+ , 
+\begin_inset Formula $L_{1},\ldots,L_{n}$
+\end_inset
+
+ y 
+\begin_inset Formula $U_{1},\ldots,U_{n}$
+\end_inset
+
+ tal que
+\begin_inset Formula 
+\[
+\begin{array}{c}
+C\subset\bigcup_{i=1}^{n}B\left(x_{i},\dfrac{\varepsilon_{i}}{2}\right)\subset\bigcup_{i=1}^{n}B\left(x_{i},\varepsilon_{i}\right)\subset\bigcup_{i=1}^{n}U_{i}\\
+|f\left(x_{1}\right)-f\left(x_{2}\right)|\leq L_{i}|x_{1}-x_{2}|;\quad\forall\,x_{1},\,x_{2}\in U_{i}
+\end{array}
+\]
+
+\end_inset
+
+Sea 
+\begin_inset Formula $M=\sup\left\{ |f\left(x\right)|,\:x\in C\right\} $
+\end_inset
+
+(
+\begin_inset Formula $M$
+\end_inset
+
+ existe pues 
+\begin_inset Formula $f$
+\end_inset
+
+ es continua por Proposición 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "propo:conti"
+
+\end_inset
+
+ y 
+\begin_inset Formula $C$
+\end_inset
+
+ compacto), 
+\begin_inset Formula $L'={\displaystyle \max_{i=1,\ldots,n}}\left\{ L_{i}\right\} $
+\end_inset
+
+ y 
+\begin_inset Formula $\delta<{\displaystyle \min_{i=1,\ldots,n}}\left\{ \dfrac{\varepsilon_{i}}{2}\right\} $
+\end_inset
+
+.
+ Supongamos 
+\begin_inset Formula $A\subset C$
+\end_inset
+
+ es tal que 
+\begin_inset Formula $\mbox{diam}\left(A\right)<\delta$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $a\in A$
+\end_inset
+
+, entonces 
+\begin_inset Formula $a\in C$
+\end_inset
+
+ y por lo tanto existe 
+\begin_inset Formula $j\in\left\{ 1,\ldots,n\right\} $
+\end_inset
+
+ tal que 
+\begin_inset Formula $a\in B\left(x_{j},\dfrac{\varepsilon_{j}}{2}\right)$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ arbitrario, entonces
+\begin_inset Formula 
+\[
+|x-x_{j}|\leq|x-a|+|a-x_{j}|<\delta+\dfrac{\varepsilon_{j}}{2}<\varepsilon_{j},
+\]
+
+\end_inset
+
+y por lo tanto 
+\begin_inset Formula $A\subset B\left(x_{j},\varepsilon_{j}\right)\subset U_{j}$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $L=\max\left\{ L',2M/\delta\right\} $
+\end_inset
+
+.
+ Para 
+\begin_inset Formula $x,\,y\in C$
+\end_inset
+
+ consideraremos dos casos:
+\end_layout
+
+\begin_layout Proof
+(i) Si 
+\begin_inset Formula $|x-y|<\delta$
+\end_inset
+
+, entonces existe 
+\begin_inset Formula $j$
+\end_inset
+
+ tal que 
+\begin_inset Formula $|f\left(x\right)-f\left(y\right)|\leq L_{j}|x-y|\leq L|x-y|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+(ii) Si
+\begin_inset Formula $|x-y|\geq\delta$
+\end_inset
+
+, 
+\begin_inset Formula $|f\left(x\right)-f\left(y\right)|\leq2M=\dfrac{2M\delta}{\delta}\leq L|x-y|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Por lo tanto, para 
+\begin_inset Formula $C$
+\end_inset
+
+ compacto contenido en 
+\begin_inset Formula $D$
+\end_inset
+
+, existe 
+\begin_inset Formula $L>0$
+\end_inset
+
+ tal que
+\begin_inset Formula 
+\[
+|f\left(x\right)-f\left(y\right)|\leq L|x-y|,\quad\forall\,x,\,y\in C
+\]
+
+\end_inset
+
+que es lo que queríamos demostrar.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "propo:suma-ll"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\shape up
+Suma
+\end_layout
+
+\end_inset
+
+Sean 
+\begin_inset Formula $D\subset\mathbb{R}^{n}$
+\end_inset
+
+, 
+\begin_inset Formula $f:D\rightarrow\mathbb{R}^{m}$
+\end_inset
+
+ y 
+\begin_inset Formula $g:D\rightarrow\mathbb{R}^{m}$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $f$
+\end_inset
+
+ y 
+\begin_inset Formula $g$
+\end_inset
+
+ son localmente Lipschitz 
+\begin_inset Formula $f\pm g$
+\end_inset
+
+ es localmente Lipschitz.
+\end_layout
+
+\begin_layout Proof
+Sean 
+\begin_inset Formula $C\subset D$
+\end_inset
+
+ compacto y 
+\begin_inset Formula $x_{1},\,x_{2}\in C$
+\end_inset
+
+.
+ Entonces existen 
+\begin_inset Formula $L_{C}^{f},\:L_{C}^{g}>0$
+\end_inset
+
+ tal que
+\begin_inset Formula 
+\[
+\begin{array}{l}
+|\left(f\pm g\right)\left(x_{1}\right)-\left(f\pm g\right)\left(x_{2}\right)|\\
+=|\left(f\left(x_{1}\right)\pm g\left(x_{1}\right)\right)-\left(f\left(x_{2}\right)\pm g\left(x_{2}\right)\right)|\\
+\leq|f\left(x_{1}\right)-f\left(x_{2}\right)|+|g\left(x_{1}\right)-g\left(x_{2}\right)|\\
+\leq L_{C}^{f}|x_{1}-x_{2}|+L_{C}^{g}|x_{1}-x_{2}|\\
+=\left(L_{C}^{f}+L_{C}^{g}\right)|x_{1}-x_{2}|
+\end{array}
+\]
+
+\end_inset
+
+Por lo tanto 
+\begin_inset Formula $f\pm g$
+\end_inset
+
+ es localmente Lipschitz.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\shape up
+Multiplicación por un Escalar
+\end_layout
+
+\end_inset
+
+Sean 
+\begin_inset Formula $\lambda\in\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda\neq0$
+\end_inset
+
+, 
+\begin_inset Formula $D\subset\mathbb{R}^{n}$
+\end_inset
+
+, 
+\begin_inset Formula $f:D\rightarrow\mathbb{R}^{m}$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es localmente Lipschitz entonces 
+\begin_inset Formula $\lambda f$
+\end_inset
+
+ es localmente Lipschitz.
+\end_layout
+
+\begin_layout Proof
+Sean 
+\begin_inset Formula $C\subset D$
+\end_inset
+
+ compacto y 
+\begin_inset Formula $x_{1},\,x_{2}\in C$
+\end_inset
+
+.
+ Entonces existe 
+\begin_inset Formula $L_{C}>0$
+\end_inset
+
+ tal que
+\begin_inset Formula 
+\[
+\begin{array}{l}
+|\left(\lambda f\right)\left(x_{1}\right)-\left(\lambda f\right)\left(x_{2}\right)|=|\lambda f\left(x_{1}\right)-\lambda f\left(x_{2}\right)|\leq|\lambda|L_{C}|x_{1}-x_{2}|\end{array}
+\]
+
+\end_inset
+
+Por lo tanto 
+\begin_inset Formula $\lambda f$
+\end_inset
+
+ es localmente Lipschitz.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "propo:multipli-ll"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status collapsed
+
+\begin_layout Plain Layout
+
+\shape up
+Multiplicación
+\end_layout
+
+\end_inset
+
+Sean 
+\begin_inset Formula $D\subset\mathbb{R}^{n}$
+\end_inset
+
+, 
+\begin_inset Formula $f:D\rightarrow\mathbb{R}^{m}$
+\end_inset
+
+ y 
+\begin_inset Formula $g:D\rightarrow\mathbb{R}^{m}$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $f$
+\end_inset
+
+ y 
+\begin_inset Formula $g$
+\end_inset
+
+ son continuas y localmente Lipschitz entonces 
+\begin_inset Formula $\left\langle f,g\right\rangle $
+\end_inset
+
+ es localmente Lipschitz.
+\end_layout
+
+\begin_layout Proof
+Sean 
+\begin_inset Formula $C\subset D$
+\end_inset
+
+ compacto y 
+\begin_inset Formula $x_{1},x_{2}\in C$
+\end_inset
+
+.
+ Entonces existen 
+\begin_inset Formula $L_{C}^{f},L_{C}^{g}>0$
+\end_inset
+
+ y 
+\begin_inset Formula $M=\max\left\{ \sup_{x\in C}|f\left(x\right)|,\sup_{x\in C}|g\left(x\right)|\right\} $
+\end_inset
+
+ (los supremos existen pues las funciones son continuas) tal que
+\begin_inset Formula 
+\[
+\begin{array}{l}
+|\left\langle f,g\right\rangle \left(x_{1}\right)-\left\langle f,g\right\rangle \left(x_{2}\right)|\\
+=|\left\langle f\left(x_{1}\right),g\left(x_{1}\right)\right\rangle -\left\langle f\left(x_{2}\right),g\left(x_{1}\right)\right\rangle +\left\langle f\left(x_{2}\right),g\left(x_{1}\right)\right\rangle -\left\langle f\left(x_{2}\right),g\left(x_{2}\right)\right\rangle |\\
+=|\left\langle f\left(x_{1}\right)-f\left(x_{2}\right),g\left(x_{1}\right)\right\rangle +\left\langle f\left(x_{2}\right),g\left(x_{1}\right)-g\left(x_{2}\right)\right\rangle |\\
+\leq|\left\langle f\left(x_{1}\right)-f\left(x_{2}\right),g\left(x_{1}\right)\right\rangle |+|\left\langle f\left(x_{2}\right),g\left(x_{1}\right)-g\left(x_{2}\right)\right\rangle |\\
+\leq|f\left(x_{1}\right)-f\left(t,x_{2}\right)||g\left(x_{1}\right)|+|f\left(x_{2}\right)||g\left(x_{1}\right)-g\left(x_{2}\right)|\mbox{(Desigualdad de C.S. \eqref{teo:CS})}\\
+\leq L_{C}^{f}|x_{1}-x_{2}|M+ML_{C}^{g}|x_{1}-x_{2}|=M\left(L_{C}^{f}+L_{C}^{g}\right)|x_{1}-x_{2}|
+\end{array}
+\]
+
+\end_inset
+
+Por lo tanto 
+\begin_inset Formula $\left\langle f,g\right\rangle $
+\end_inset
+
+ es localmente Lipschitz.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "propo:fi-ll"
+
+\end_inset
+
+Sea 
+\begin_inset Formula $D\subset\mathbb{R}^{n}$
+\end_inset
+
+ y 
+\begin_inset Formula $f:D\rightarrow\mathbb{R}^{m}$
+\end_inset
+
+ 
+\begin_inset Formula $f\left(x\right)=\left(f_{1}\left(x\right),\ldots,f_{m}\left(x\right)\right)$
+\end_inset
+
+.
+ Si cada 
+\begin_inset Formula $f_{i}$
+\end_inset
+
+ es localmente Lipschitz, entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ es localmente Lipschitz.
+\end_layout
+
+\begin_layout Proof
+Sean 
+\begin_inset Formula $C\subset D$
+\end_inset
+
+ compacto.
+ Entonces existen 
+\begin_inset Formula $L_{C}^{i}>0$
+\end_inset
+
+ tal que
+\begin_inset Formula 
+\[
+|f_{i}\left(x_{1}\right)-f_{i}\left(x_{2}\right)|\leq L_{C}^{i}|x_{1}-x_{2}|,\:i=1,\ldots,m,\quad\forall x_{1},x_{2}\in C
+\]
+
+\end_inset
+
+Tomando 
+\begin_inset Formula $L_{C}=L_{C}^{1}+\ldots+L_{C}^{m}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+|f\left(x_{1}\right)-f\left(x_{2}\right)|=|f_{i}\left(x_{1}\right)-f_{1}\left(x_{2}\right)|+\ldots+|f_{m}\left(x_{1}\right)-f_{m}\left(x_{2}\right)|\leq L_{C}|x_{1}-x_{2}|
+\]
+
+\end_inset
+
+Por lo tanto 
+\begin_inset Formula $f$
+\end_inset
+
+ es loclamente Lipschitz.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "propo:c1-ll"
+
+\end_inset
+
+Sean 
+\begin_inset Formula $F:\mathbb{R}_{+}^{n}\rightarrow\mathbb{R}^{m}$
+\end_inset
+
+ 
+\begin_inset Formula $C^{1}\left(\mathbb{R}_{+}^{n}\right)$
+\end_inset
+
+ .
+ Entonces 
+\begin_inset Formula $F$
+\end_inset
+
+ es localmente Lipschitz.
+\end_layout
+
+\begin_layout Proof
+Sean 
+\begin_inset Formula $C\subset\mathbb{R}_{+}^{n}$
+\end_inset
+
+ compacto y 
+\begin_inset Formula $x_{1},\,x_{2}\in C$
+\end_inset
+
+.
+ Dado que 
+\begin_inset Formula $[x_{1},x_{2}]$
+\end_inset
+
+ (segmento de recta) es compacto, 
+\begin_inset Formula $\exists m_{\left[x_{1},x_{2}\right]}={\displaystyle \max_{\left[x_{1},x_{2}\right]}|\partial F|}$
+\end_inset
+
+, y por la Desigualdad del Valor Medio
+\begin_inset Formula 
+\[
+\begin{array}{c}
+|F\left(x_{1}\right)-F\left(x_{2}\right)|\leq m_{\left[x_{1},x_{2}\right]}|x_{1}-x_{2}|\end{array}
+\]
+
+\end_inset
+
+Puesto que 
+\begin_inset Formula $C$
+\end_inset
+
+ es acotado, 
+\begin_inset Formula $\exists C$
+\end_inset
+
+ tal que 
+\begin_inset Formula $|x|\leq M$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\in C$
+\end_inset
+
+ y se cumple que 
+\begin_inset Formula $\left[x_{1},x_{2}\right]\subset B=\left\{ x\in\mathbb{R}_{+}^{n},\,|x|\leq M\right\} $
+\end_inset
+
+ el cual es compacto.
+ Luego como 
+\begin_inset Formula $\partial F$
+\end_inset
+
+ es continua
+\begin_inset Formula 
+\[
+\begin{array}{l}
+m_{\left[x_{1},x_{2}\right]}\leq{\displaystyle \max_{B}|\partial F|}<\infty^{+}\\
+\Rightarrow|F\left(x_{1}\right)-F\left(x_{2}\right)|\leq{\displaystyle \max_{B}|\partial F|}|x_{1}-x_{2}|
+\end{array}
+\]
+
+\end_inset
+
+Por lo tanto 
+\begin_inset Formula $F$
+\end_inset
+
+ es localmente Lipschitz.
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "propo:ext-t"
+
+\end_inset
+
+Sea 
+\begin_inset Formula $F:\mathbb{R}^{n}\rightarrow\mathbb{R}^{m}$
+\end_inset
+
+ continua y localmente Lipschitz, entonces la función
+\begin_inset Formula 
+\[
+\begin{array}{c}
+f:\mathbb{R}\times\mathbb{R}^{n}\rightarrow\mathbb{R}^{m}\\
+f\left(t,x\right)=F\left(x\right)
+\end{array}
+\]
+
+\end_inset
+
+es continua y localmente Lipschitz en 
 \begin_inset Formula $x$
 \end_inset
 
@@ -2200,40 +2242,69 @@ Sean
 
 \begin_layout Proof
 Sea 
-\begin_inset Formula $U\subset\mathbb{R}^{n+1}$
+\begin_inset Formula $\left(t_{0},x_{0}\right)\in\mathbb{R}\times\mathbb{R}^{n}$
 \end_inset
 
- cerrado y acotado.
- Sean 
-\begin_inset Formula $\left(t,x_{1}\right),\left(t,x_{2}\right)\in U$
+ y 
+\begin_inset Formula $\varepsilon>0$
 \end_inset
 
 .
- Entonces 
-\begin_inset Formula $\left[U\right]_{+}\subset\mathbb{R}_{+}^{n+1}$
+ Entonces existe 
+\begin_inset Formula $\delta>0$
 \end_inset
 
- es cerrado y acotado por el lema anterior.
-\end_layout
+ tal que
+\begin_inset Formula 
+\[
+|x-x_{0}|<\delta\Rightarrow|F\left(x\right)-F\left(x_{0}\right)|<\varepsilon
+\]
 
-\begin_layout Proof
-\begin_inset Formula $\begin{array}{l}
-|\tilde{f}\left(t,x_{1}\right)-\tilde{f}\left(t,x_{2}\right)|\\
-=|f\left(\left[t\right]_{+},\left[x_{1}\right]_{+}\right)-f\left(\left[t\right]_{+},\left[x_{2}\right]_{+}\right)|\\
-\leq K_{\left[U\right]_{+}}|\left[x_{1}\right]_{+}-\left[x_{2}\right]_{+}|\mbox{(Pues \ensuremath{f}es localmente Lipschitz)}\\
-\leq K_{\left[U\right]_{+}}|x_{1}-x_{2}|\mbox{ (Por la proposición anterior)}
-\end{array}$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Proof
-Por lo tanto 
-\begin_inset Formula $\tilde{f}$
+por lo tanto se cumple que si 
+\begin_inset Formula $\left(t,x\right)$
 \end_inset
 
- es localmente Lipchitz en 
+ es tal que
+\begin_inset Formula 
+\[
+|t-t_{0}|+|x-x_{0}|<\delta\Rightarrow|f\left(t,x\right)-f\left(t_{0},x_{0}\right)|=|F\left(x\right)-F\left(x_{0}\right)|<\varepsilon
+\]
+
+\end_inset
+
+Luego 
+\begin_inset Formula $f$
+\end_inset
+
+ es continua.
+ Sea 
+\begin_inset Formula $C$
+\end_inset
+
+ un compacto y 
+\begin_inset Formula $\left(t_{1},x_{1}\right),\left(t_{2},x_{2}\right)\in C$
+\end_inset
+
+.
+ Por hipótesis existe 
+\begin_inset Formula $L>0$
+\end_inset
+
+ tal que
+\begin_inset Formula 
+\[
+|f\left(t_{1},x_{1}\right)-f\left(t_{2},x_{2}\right)|=|F\left(x_{1}\right)-F\left(x_{2}\right)|\leq L|x_{1}-x_{2}|
+\]
+
+\end_inset
+
+Luego 
+\begin_inset Formula $f$
+\end_inset
+
+ es localmente Lipschitz en 
 \begin_inset Formula $x$
 \end_inset
 
@@ -2249,6 +2320,22 @@ Teoremas de Existencia y Unicidad
 \end_layout
 
 \begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "teo:exis-unic"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Existencia y Unicidad
+\end_layout
+
+\end_inset
+
 Si 
 \begin_inset Formula $f(t,x)$
 \end_inset
@@ -2257,7 +2344,7 @@ Si
 \begin_inset Formula $D$
 \end_inset
 
- y localmente lipschitz con respecto a 
+ abierto y localmente lipschitz con respecto a 
 \begin_inset Formula $x$
 \end_inset
 
@@ -2344,6 +2431,12 @@ key "HODE1980"
 \end_layout
 
 \begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "propo:positividad"
+
+\end_inset
+
 Considere la ecuación diferencial en 
 \begin_inset Formula $R^{n}$
 \end_inset
@@ -2439,7 +2532,16 @@ key "TMPB2003"
 
 \end_inset
 
+ o 
+\color blue
 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "smith1995theory"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout --Separator--
@@ -2596,7 +2698,7 @@ key "TMPB2003"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout --Separator--

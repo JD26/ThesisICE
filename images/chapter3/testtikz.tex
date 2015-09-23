@@ -1,0 +1,98 @@
+\documentclass{article}
+\usepackage[x11names, rgb]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{snakes,arrows,shapes}
+\usepackage{amsmath}
+%
+%
+
+%
+
+%
+
+\begin{document}
+\pagestyle{empty}
+%
+%
+%
+
+\enlargethispage{100cm}
+% Start of code
+% \begin{tikzpicture}[anchor=mid,>=latex',line join=bevel,]
+\begin{tikzpicture}[>=latex',line join=bevel,]
+  \pgfsetlinewidth{1bp}
+%%
+\pgfsetcolor{black}
+  % Edge: X3 -> X1
+  \draw [->] (300.59bp,21.911bp) .. controls (276.42bp,16.046bp) and (240.14bp,8.1822bp)  .. (208bp,5bp) .. controls (182.35bp,2.4599bp) and (175.65bp,2.4599bp)  .. (150bp,5bp) .. controls (122.01bp,7.772bp) and (90.869bp,14.097bp)  .. (57.411bp,21.911bp);
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (169bp,9.8bp) node[right] {a};
+  \draw (176bp,9.8bp) node[right] {31};
+  % Edge: X1 -> X1
+  \draw [->] (16.691bp,54.963bp) .. controls (12.54bp,73.963bp) and (16.643bp,93bp)  .. (29bp,93bp) .. controls (39.137bp,93bp) and (43.719bp,80.19bp)  .. (41.309bp,54.963bp);
+  \draw (19bp,97.8bp) node[right] {a};
+  \draw (26bp,97.8bp) node[right] {11};
+  % Edge: X1 -> X2
+  \draw [->] (51.253bp,47.317bp) .. controls (63.151bp,56.76bp) and (78.646bp,67.778bp)  .. (94bp,75bp) .. controls (108.52bp,81.83bp) and (125.49bp,86.783bp)  .. (150.26bp,92.399bp);
+  \draw (94bp,86.8bp) node[right] {a};
+  \draw (101bp,86.8bp) node[right] {12};
+  % Edge: X2 -> X1
+  \draw [->] (155.89bp,79.712bp) .. controls (144bp,71.055bp) and (128.77bp,60.962bp)  .. (114bp,54bp) .. controls (99.351bp,47.096bp) and (82.362bp,41.611bp)  .. (57.628bp,34.983bp);
+  \draw (94bp,58.8bp) node[right] {a};
+  \draw (101bp,58.8bp) node[right] {21};
+  % Edge: X1 -> X3
+  \draw [->] (58.035bp,29bp) .. controls (111.61bp,29bp) and (228.63bp,29bp)  .. (299.82bp,29bp);
+  \draw (169bp,33.8bp) node[right] {a};
+  \draw (176bp,33.8bp) node[right] {13};
+  % Edge: X3 -> X3
+  \draw [->] (316.69bp,54.963bp) .. controls (312.54bp,73.963bp) and (316.64bp,93bp)  .. (329bp,93bp) .. controls (339.14bp,93bp) and (343.72bp,80.19bp)  .. (341.31bp,54.963bp);
+  \draw (319bp,97.8bp) node[right] {a};
+  \draw (326bp,97.8bp) node[right] {33};
+  % Edge: X2 -> X3
+  \draw [->] (207.74bp,92.399bp) .. controls (224.55bp,88.97bp) and (246.13bp,83.406bp)  .. (264bp,75bp) .. controls (276.11bp,69.301bp) and (288.32bp,61.239bp)  .. (306.75bp,47.317bp);
+  \draw (244bp,86.8bp) node[right] {a};
+  \draw (251bp,86.8bp) node[right] {23};
+  % Edge: X2 -> X2
+  \draw [->] (166.69bp,122.96bp) .. controls (162.54bp,141.96bp) and (166.64bp,161bp)  .. (179bp,161bp) .. controls (189.14bp,161bp) and (193.72bp,148.19bp)  .. (191.31bp,122.96bp);
+  \draw (169bp,165.8bp) node[right] {a};
+  \draw (176bp,165.8bp) node[right] {22};
+  % Edge: X3 -> X2
+  \draw [->] (300.37bp,34.983bp) .. controls (283.6bp,39.155bp) and (262.03bp,45.502bp)  .. (244bp,54bp) .. controls (232.46bp,59.439bp) and (220.64bp,66.789bp)  .. (202.11bp,79.712bp);
+  \draw (244bp,58.8bp) node[right] {a};
+  \draw (251bp,58.8bp) node[right] {32};
+  % Node: X2
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (179bp,97bp) ellipse (29bp and 29bp);
+  \draw (169bp,94.2bp) node[right] {X};
+  \draw (180bp,94.2bp) node[right] {2};
+\end{scope}
+  % Node: X3
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (329bp,29bp) ellipse (29bp and 29bp);
+  \draw (319bp,26.2bp) node[right] {X};
+  \draw (330bp,26.2bp) node[right] {3};
+\end{scope}
+  % Node: X1
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (29bp,29bp) ellipse (29bp and 29bp);
+  \draw (19bp,26.2bp) node[right] {X};
+  \draw (30bp,26.2bp) node[right] {1};
+\end{scope}
+%
+\end{tikzpicture}
+% End of code
+
+%
+\end{document}
+%
+
+
+

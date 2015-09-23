@@ -14,7 +14,9 @@
 % that links to image floats jumps to the beginning
 % of the float and not to its caption
 \usepackage[figure]{hypcap}
-
+%\LinesNumbered
+%\usepackage{algorithm} 
+%\usepackage{algorithmic}
 % the pages of the TOC is numbered roman
 % and a pdf-bookmark for the TOC is added
 \let\myTOC\tableofcontents
@@ -37,7 +39,7 @@
 
 % increases the bottom float placement fraction
 \renewcommand{\bottomfraction}{0.5}
-
+\algolang{spanish}
 % avoids that floats are placed above its sections
 \let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
 \end_preamble
@@ -51,6 +53,7 @@ theorems-sec-bytype
 tabs-within-sections
 figs-within-sections
 eqs-within-sections
+algolyx
 \end_modules
 \maintain_unincluded_children false
 \language spanish
@@ -281,1036 +284,81 @@ thepage
 \end_layout
 
 \begin_layout Chapter
-Modelos
+Métodos Numéricos
 \end_layout
 
 \begin_layout Section
-Modelo I
+Polinomio Característico
 \end_layout
 
 \begin_layout Subsection
-Una única especie
+Método de Faddeev Leverrier
 \end_layout
 
 \begin_layout Standard
-Los parámetros son
-\end_layout
-
-\begin_layout Standard
-\begin_inset Tabular
-<lyxtabular version="3" rows="8" columns="2">
-<features rotate="0" tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="left" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-M
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-Biomasa de la especie(consumidor)
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-F
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-Biomasa del alimento(recurso)
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\Lambda$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-Tasa a la que el recurso ingresa al sistema
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\nu$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-Tasa de degradación del recurso
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\beta$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-Per unidad de biomasa ganada por el consumidor de una unidad de recurso
- per unidad de tiempo
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\gamma$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-Per unidad de biomasa ganada por el consumidor de una unidad de recurso
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\mu$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-Tasa de mortalidad de la especie
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\begin_inset Formula $\alpha$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\Lambda$
-\end_inset
-
-, 
-\begin_inset Formula $\nu$
-\end_inset
-
-, 
-\begin_inset Formula $\beta$
-\end_inset
-
-, 
-\begin_inset Formula $\gamma$
-\end_inset
-
-, 
-\begin_inset Formula $\mu$
-\end_inset
-
-, 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
-\begin_inset Formula $\alpha$
-\end_inset
-
- 
-\begin_inset Formula $>0$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-Libre de competencia
-\end_layout
-
-\begin_layout Standard
-A continuación estudiamos el siguiente sistema de ecuaciones diferenciales
-\begin_inset Formula 
-\begin{equation}
-\begin{array}{ccc}
-F' & = & \Lambda-\nu F-\dfrac{\beta}{\gamma}FM\\
-M' & = & \beta FM-\mu M
-\end{array}\label{eq:ecu_model_I}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-que representa a una especie consumiendo un recurso limitado.
- No existe competencia entre los organismos de la especie.
- Se considera una tasa constante de muerte para la especie.
- El recurso se degrada a tasa constante lo que limita su abundancia.
- Nos interesa solamente valores no negativos de 
-\begin_inset Formula $F$
-\end_inset
-
- y 
-\begin_inset Formula $M$
-\end_inset
-
-.
- El campo vectorial asociado es
-\begin_inset Formula 
-\[
-X\left(F,M\right)=\left(\Lambda-\nu F-\dfrac{\beta}{\gamma}FM,\beta FM-\mu M\right)
-\]
-
-\end_inset
-
 Sea 
-\begin_inset Formula $R_{0}^{F}=\dfrac{\Lambda}{\nu}$
-\end_inset
-
- y 
-\begin_inset Formula $R_{0}^{M}=\dfrac{\beta}{\mu}$
+\begin_inset Formula $A=\left[a_{ij}\right]\,\in M_{n}\left(\mathbb{R}\right)$
 \end_inset
 
 .
- La matriz jacobiana es dada por
-\begin_inset Formula 
-\[
-J\left(F,M\right)=\left[\begin{array}{cc}
--\nu-\dfrac{\beta}{\gamma}M & -\dfrac{\beta}{\gamma}F\\
-\beta M & \beta F-\mu
-\end{array}\right]
-\]
-
+ El polinomio característico de 
+\begin_inset Formula $A$
 \end_inset
 
-Los puntos de equilibrio son
-\begin_inset Formula 
-\[
-\left\{ \begin{array}{lc}
-P_{1}^{*}=\left(R_{0}^{F},0\right)\\
-P_{2}^{*}=\left(\dfrac{1}{R_{0}^{M}},\left(R_{0}^{F}-\dfrac{1}{R_{0}^{M}}\right)\dfrac{\nu}{\mu}\gamma\right) & \mbox{,}\,R_{0}^{M}R_{0}^{F}>1
-\end{array}\right.
-\]
-
+ puede ser obtenido por un método propuesto por D.
+ K.
+ Faddeev.
+ Este método es una modificación de un método de U.
+ J.
+ J.
+ Leverrier (1840), el cual, según A.
+ S.
+ Householder, fue 
+\begin_inset Quotes eld
 \end_inset
 
-La matriz jacobiana en 
-\begin_inset Formula $P_{1}^{*}$
+redescubierto y mejorado
+\begin_inset Quotes erd
 \end_inset
 
- es
-\begin_inset Formula 
-\[
-J\left(P_{1}^{*}\right)=\left[\begin{array}{cc}
--\nu & -\dfrac{\beta\Lambda}{\gamma\nu}\\
-0 & \beta\dfrac{\Lambda}{\nu}-\mu
-\end{array}\right]
-\]
-
+ a finales de los años cuarenta también por J.
+ M.
+ Souriau y J.
+ S.
+ Frame.
+ Aunque este método no es óptimo desde el punto de vista computacional,
+ es elegante y bastante fácil de programar.
+ El método consiste de los siguientes pasos (
+\begin_inset Formula $I$
 \end_inset
 
-La matriz jacobiana en 
-\begin_inset Formula $P_{2}^{*}$
-\end_inset
-
- es
-\begin_inset Formula 
-\[
-J\left(P_{2}^{*}\right)=\left[\begin{array}{cc}
--\nu-\beta\left(R_{0}^{F}-\dfrac{1}{R_{0}^{M}}\right)\dfrac{\nu}{\mu} & -\dfrac{\beta}{\gamma R_{0}^{M}}\\
-\beta\left(R_{0}^{F}-\dfrac{1}{R_{0}^{M}}\right)\dfrac{\nu}{\mu}\gamma & 0
-\end{array}\right]
-\]
-
-\end_inset
-
-Y la matriz cualtitiva para 
-\begin_inset Formula $J\left(P_{2}^{*}\right)$
-\end_inset
-
- es
-\begin_inset Formula 
-\[
-\mbox{sign}\left(J\left(P_{2}^{*}\right)\right)=\left[\begin{array}{cc}
-- & -\\
-+ & 0
-\end{array}\right]
-\]
-
-\end_inset
-
-
+ denota la matriz indentidad)
 \end_layout
 
 \begin_layout Standard
-El grafo asociado es
-\end_layout
-
-\begin_layout Standard
-\noindent
-\align center
-\begin_inset Graphics
-	filename images/chapter4/modelI_grafo.pdf
-	scale 40
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-El punto de equilibrio 
-\begin_inset Formula $P_{2}^{*}$
-\end_inset
-
- existe si 
-\begin_inset Formula $R_{0}^{M}R_{0}^{F}>1$
-\end_inset
-
-.
- Esto es para asegurar un valor positivo.
- Si 
-\begin_inset Formula $R_{0}^{M}R_{0}^{F}=1$
-\end_inset
-
- solamente existe un punto de equilibrio (
-\begin_inset Formula $P_{1}^{*}$
-\end_inset
-
-)
-\end_layout
-
-\begin_layout Standard
-Los autovalores son
 \begin_inset Formula 
 \[
-\begin{array}{cll}
-P_{1}^{*}:\mbox{\,} & \lambda_{1}=-\nu & \,\lambda_{2}=\beta\left(R_{0}^{F}-\dfrac{1}{R_{0}^{M}}\right)\\
-P_{2}^{*}:\mbox{\,} & \lambda_{1}=\dfrac{-\nu a+\sqrt{\left(\nu a\right)^{2}-4\mu\nu\left(a-1\right)}}{2} & \,\lambda_{2}=\dfrac{-\nu a-\sqrt{\left(\nu a\right)^{2}-4\mu\nu\left(a-1\right)}}{2}
+\begin{array}{rclc}
+A_{1} & = & A,\\
+c_{i} & = & -\dfrac{\mbox{traza}\left(A_{i}\right)}{i} & 1\leq i\leq n,\\
+A_{i+1} & = & A\left(A_{i}+c_{i}I\right) & 1\leq i\leq n-1,
 \end{array}
 \]
 
 \end_inset
 
-Con 
-\begin_inset Formula $a=R_{0}^{M}R_{0}^{F}$
-\end_inset
-
-.
- Si 
-\begin_inset Formula $R_{0}^{M}R_{0}^{F}=1$
-\end_inset
-
-(un solo punto de equilibrio) los autovalores son 
-\begin_inset Formula $\lambda_{1}$
-\end_inset
-
-
-\begin_inset Formula $=$
-\end_inset
-
-
-\begin_inset Formula $-\nu$
-\end_inset
-
- y 
-\begin_inset Formula $\lambda_{2}$
-\end_inset
-
-
-\begin_inset Formula $=$
-\end_inset
-
-
-\begin_inset Formula $0$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-A continuación presentaremos condiciones para la estabilidad de los puntos
- de equilibrio.
-\end_layout
-
-\begin_layout Theorem
-Se cumple que
-\end_layout
-
-\begin_layout Theorem
-\begin_inset Formula $P_{1}^{*}$
-\end_inset
-
- es estable si solo si 
-\begin_inset Formula $R_{0}^{F}R_{0}^{M}<1$
-\end_inset
-
-(Extinción de la especie)
-\end_layout
-
-\begin_layout Theorem
-\begin_inset Formula $P_{2}^{*}$
-\end_inset
-
- es estable si solo si 
-\begin_inset Formula $R_{0}^{M}R_{0}^{F}>1$
-\end_inset
-
-(Supervivencia de la especie)
-\end_layout
-
-\begin_layout Proof
-Veremos que la parte real de los autovalores es negativa.
- Para 
-\begin_inset Formula $P_{1}^{*}$
-\end_inset
-
-, 
-\begin_inset Formula $\lambda_{1}<0$
-\end_inset
-
-.
- Como 
-\begin_inset Formula $R_{0}^{F}R_{0}^{M}<1$
-\end_inset
-
- entonces 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
-\begin_inset Formula $\lambda_{2}=\beta\left(R_{0}^{F}-\dfrac{1}{R_{0}^{M}}\right)<0$
-\end_inset
-
-.
- Para 
-\begin_inset Formula $P_{2}^{*}$
-\end_inset
-
-, si 
-\begin_inset Formula $\left(\nu a\right)^{2}-4\mu\nu\left(a-1\right)\leq0$
-\end_inset
-
- entonces 
-\begin_inset Formula $Re\left(\lambda_{1}\right)$
-\end_inset
-
-
-\begin_inset Formula $=$
-\end_inset
-
-
-\begin_inset Formula $Re\left(\lambda_{2}\right)$
-\end_inset
-
-
-\begin_inset Formula $=$
-\end_inset
-
-
-\begin_inset Formula $-\nu a$
-\end_inset
-
-
-\begin_inset Formula $<0$
-\end_inset
-
-.
- Si 
-\begin_inset Formula $\left(\nu a\right)^{2}-4\mu\nu\left(a-1\right)>0$
-\end_inset
-
-, y como 
-\begin_inset Formula $a-1$
-\end_inset
-
-
-\begin_inset Formula $=$
-\end_inset
-
-
-\begin_inset Formula $R_{0}^{M}R_{0}^{F}-1$
-\end_inset
-
-
-\begin_inset Formula $>$
-\end_inset
-
-
-\begin_inset Formula $0$
-\end_inset
-
-, entonces 
-\begin_inset Formula $\lambda_{1},\lambda_{2}$
-\end_inset
-
-
-\begin_inset Formula $<$
-\end_inset
-
-
-\begin_inset Formula $0$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout --Separator--
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\noindent
-\align center
-\begin_inset CommandInset label
-LatexCommand label
-name "vector_field_model_1"
-
+entonces el polinomio característico de la matriz 
+\begin_inset Formula $A$
 \end_inset
 
-
-\begin_inset Graphics
-	filename images/chapter4/condition_1_model_1.pdf
-	scale 50
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename images/chapter4/condition_2_model_1.pdf
-	scale 50
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Campo de vectores.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Debemos notar que si 
-\begin_inset Formula $R_{0}^{F}R_{0}^{M}\leq1$
-\end_inset
-
- entonces solo existe un punto de equilibrio en el primer cuadrante.
- Si 
-\begin_inset Formula $R_{0}^{M}R_{0}^{F}>1$
-\end_inset
-
- existen dos puntos en equilibrio en el primer cuadrante.
-\end_layout
-
-\begin_layout Standard
-El primer punto en equilibrio representa la extinción de la especie.
- Como 
-\begin_inset Formula $R_{0}^{F}R_{0}^{M}<1$
-\end_inset
-
-(para estabilidad), supongamos que 
-\begin_inset Formula $R_{0}^{F}<R_{0}^{M}$
-\end_inset
-
-(ver región A en 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "stability_region_model_1"
-
-\end_inset
-
-), entonces
+ es dado por 
 \begin_inset Formula 
 \[
-R_{0}^{F}R_{0}^{F}<R_{0}^{F}R_{0}^{M}<1\Rightarrow R_{0}^{F}<1
-\]
-
-\end_inset
-
-lo que significa que la tasa de degradación (
-\begin_inset Formula $\nu$
-\end_inset
-
-) es muy alta (o al menos mayor que la fuente del recurso) y por lo tanto
- existe poco alimento disponible - o consumible - para la especie.
- Esto tiene como consecuencia la extinción de la especie debido a que el
- recurso no es suficiente para satisfacer a una población con mayor tasa
- de crecimiento(
-\begin_inset Formula $R_{0}^{F}$
-\end_inset
-
-
-\begin_inset Formula $<$
-\end_inset
-
-
-\begin_inset Formula $R_{0}^{M}$
-\end_inset
-
-).
- Se podría decir también que la población supera la capacidad de carga.
- Si 
-\begin_inset Formula $R_{0}^{F}$
-\end_inset
-
-
-\begin_inset Formula $>$
-\end_inset
-
-
-\begin_inset Formula $R_{0}^{M}$
-\end_inset
-
-(ver región B en 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "stability_region_model_1"
-
-\end_inset
-
-)
-\begin_inset Formula 
-\[
-R_{0}^{M}R_{0}^{M}<R_{0}^{F}R_{0}^{M}<1\Rightarrow R_{0}^{M}<1
-\]
-
-\end_inset
-
-es decir, aunque el recurso es sufieciente para satisfacer las necesidades
- de la población, esta tiene una alta tasa de muerte(
-\begin_inset Formula $\mu$
-\end_inset
-
-) debido a la depredación de otras especies, a la caza, ect., lo que tiene
- como consecuencia la extinción.
- El segundo punto en equilibrio representa la supervivencia de la especie.
- Para este caso se cumple que 
-\begin_inset Formula $R_{0}^{M}R_{0}^{F}>1$
-\end_inset
-
-(para estabilidad).
- Supongamos que 
-\begin_inset Formula $R_{0}^{F}<R_{0}^{M}$
-\end_inset
-
-(ver región C en 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "stability_region_model_1"
-
-\end_inset
-
-), entonces
-\begin_inset Formula 
-\[
-1<R_{0}^{M}R_{0}^{F}<R_{0}^{M}R_{0}^{M}\Rightarrow R_{0}^{M}>1
-\]
-
-\end_inset
-
-en otras palabras, a pesar de que el recurso pueda no satisfacer las necesidades
- de la especie, esta tiene una tasa de crecimiento mayor que la tasa de
- muerte lo que permite su supervivencia.
- Si 
-\begin_inset Formula $R_{0}^{F}>R_{0}^{M}$
-\end_inset
-
-(ver región D en 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "stability_region_model_1"
-
-\end_inset
-
-),
-\begin_inset Formula 
-\[
-1<R_{0}^{F}R_{0}^{M}<R_{0}^{F}R_{0}^{F}\Rightarrow R_{0}^{F}>1
-\]
-
-\end_inset
-
-es decir, la velocidad a la que el recurso ingresa o surge en el sistema
- es mayor a su degradación, por lo tanto existe la cantidad necesaria para
- satisfacer a la especie.
- Por ultimo veamos que si
-\begin_inset Formula 
-\[
-R_{0}^{F}=R_{0}^{M}=R_{0}\Rightarrow\begin{cases}
-R_{0}<1 & \;,\mbox{si }R_{0}^{M}R_{0}^{F}<1\\
-R_{0}>1 & \;,\mbox{si }R_{0}^{M}R_{0}^{F}>1
-\end{cases}
-\]
-
-\end_inset
-
-Entonces 
-\begin_inset Formula $R_{0}<1$
-\end_inset
-
- representa un escenario donde el recurso se degrada muy rapido y la especie
- tiene una alta tasa de muerte, por lo tanto la especie se extinge.
- 
-\begin_inset Formula $R_{0}>1$
-\end_inset
-
- representa un escenario donde la especie prospera debido a su alta tasa
- de crecimiento y a la abundancia del recurso que consume.
- Podemos ver las regiones de estabilidad en la 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "stability_region_model_1"
-
-\end_inset
-
-.
- El campo de vectores se muestra en la 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "vector_field_model_1"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Si las condiciónes iniciales 
-\begin_inset Formula $\left(F\left(0\right),M\left(0\right)\right)$
-\end_inset
-
- estan en la región 
-\begin_inset Formula 
-\[
-\Omega=\left\{ \left(F,M\right)/0\leq F\leq\dfrac{\varLambda}{\nu},\:0\leq M\right\} 
-\]
-
-\end_inset
-
-entonces las soluciones de 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:ecu_model_I"
-
-\end_inset
-
- permanecerán en esta región.
- Esto se puede ver mediante el análisis de la dirección del flujo de 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:ecu_model_I"
-
-\end_inset
-
- en la frontera de 
-\begin_inset Formula $\Omega$
-\end_inset
-
-.
- Primero, notamos que 
-\begin_inset Formula $\left(\dfrac{\Lambda}{\nu},0\right)$
-\end_inset
-
- es un punto de equilibrio.
- En la frontera izquierda de 
-\begin_inset Formula $\Omega$
-\end_inset
-
-, 
-\begin_inset Formula $F=0$
-\end_inset
-
-, 
-\begin_inset Formula $M\geq0$
-\end_inset
-
-, 
-\begin_inset Formula $F'=\Lambda>0$
-\end_inset
-
-.
- En la frontera derecha de 
-\begin_inset Formula $\Omega$
-\end_inset
-
-, 
-\begin_inset Formula $F=\dfrac{\Lambda}{\nu}$
-\end_inset
-
-, 
-\begin_inset Formula $M>0$
-\end_inset
-
-, 
-\begin_inset Formula $F'=-\dfrac{\beta\Lambda}{\gamma\mu}M<0$
-\end_inset
-
-.
- En la frontera inferior de 
-\begin_inset Formula $\Omega$
-\end_inset
-
-, 
-\begin_inset Formula $0\leq F<\dfrac{\varLambda}{\nu}$
-\end_inset
-
-, 
-\begin_inset Formula $M=0$
-\end_inset
-
-, 
-\begin_inset Formula $M'=0$
-\end_inset
-
-.
- Por lo tanto, todas las orbitas que comienzan en 
-\begin_inset Formula $\Omega$
-\end_inset
-
-, no pueden escapar de su frontera para todo 
-\begin_inset Formula $t\geq0$
-\end_inset
-
-.
- Por consiguiente la región 
-\begin_inset Formula $\Omega$
-\end_inset
-
- es un conjunto positivamente invariante para el sistema que representa
- la 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:ecu_model_I"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\noindent
-\align center
-\begin_inset CommandInset label
-LatexCommand label
-name "stability_region_model_1"
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename images/chapter4/region_model_1.pdf
-	scale 35
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Regiones de estabilidad.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-Con competencia interespecífica
-\end_layout
-
-\begin_layout Standard
-A continuación estudiamos el siguiente sistema de ecuaciones
-\begin_inset Formula 
-\begin{equation}
-\begin{array}{ccc}
-F' & = & \Lambda-\nu F-\dfrac{\beta}{\gamma}FM\\
-M' & = & \beta FM-\mu M-\alpha M^{2}
-\end{array}\label{eq:ecu_model_II}
-\end{equation}
-
-\end_inset
-
-que representa a una especie con competencia interespecífica consumiendo
- un recurso limitado.
- El campo vectorial asociado es
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-X\left(F,M\right)=\left(\Lambda-\nu F-\dfrac{\beta}{\gamma}FM,\beta FM-\mu M-\alpha M^{2}\right)
+p\left(\lambda\right)=\lambda^{n}+c_{1}\lambda^{n-1}+\ldots+c_{n}.
 \]
 
 \end_inset
@@ -1319,342 +367,107 @@ X\left(F,M\right)=\left(\Lambda-\nu F-\dfrac{\beta}{\gamma}FM,\beta FM-\mu M-\al
 \end_layout
 
 \begin_layout Standard
-La matriz jacobiana es dada por
-\begin_inset Formula 
-\[
-J\left(F,M\right)=\left[\begin{array}{cc}
--\nu-\dfrac{\beta}{\gamma}M & -\dfrac{\beta}{\gamma}F\\
-\beta M & \beta F-\mu-2\alpha M
-\end{array}\right]
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Damos la siguiente proposición para los puntos en equilibrio
-\end_layout
-
-\begin_layout Proposition
-El sistema 
+El Algoritmo 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:ecu_model_II"
+reference "algo:fa-leve"
 
 \end_inset
 
- tiene un punto de equilibrio de la forma 
-\begin_inset Formula $P_{1}^{*}=\left(F_{1}^{*},0\right)$
-\end_inset
-
- con 
-\begin_inset Formula $F_{1}^{*}$
-\end_inset
-
- positivo y un punto de equilibrio de la forma 
-\begin_inset Formula $P_{2}^{*}=\left(F_{2}^{*},M_{2}^{*}\right)$
-\end_inset
-
-con 
-\begin_inset Formula $F_{2}^{*}$
-\end_inset
-
-, 
-\begin_inset Formula $M_{2}^{*}$
-\end_inset
-
- positivos.
-\end_layout
-
-\begin_layout Proof
-Nos interesa los puntos de equilibrio con valores no negativos.
- Resolviendo el sistema de ecuaciones no lineales
-\begin_inset Formula 
-\[
-\begin{array}{ccc}
-\Lambda-\nu F-\dfrac{\beta}{\gamma}FM & = & 0\\
-\beta FM-\mu M-\alpha M^{2} & = & 0
-\end{array}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-Tenemos que 
-\begin_inset Formula $\beta FM-\mu M-\alpha M^{2}=0$
-\end_inset
-
-
-\begin_inset Formula $\Leftrightarrow$
-\end_inset
-
-
-\begin_inset Formula $M=0$
-\end_inset
-
-
-\begin_inset Formula $\vee$
-\end_inset
-
-
-\begin_inset Formula $M=\dfrac{\beta F-\mu}{\alpha}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-Si 
-\begin_inset Formula $\Lambda-\nu F-\dfrac{\beta}{\gamma}FM=0$
-\end_inset
-
- 
-\begin_inset Formula $\wedge$
-\end_inset
-
- 
-\begin_inset Formula $M=0$
-\end_inset
-
- 
-\begin_inset Formula $\Rightarrow$
-\end_inset
-
- 
-\begin_inset Formula $F=\dfrac{\Lambda}{\nu}$
-\end_inset
-
-.
- Entonces obtenemos el punto de equilibrio
-\begin_inset Formula 
-\[
-\left(F_{1}^{*},0\right)=\left(\dfrac{\Lambda}{\nu},0\right)
-\]
-
-\end_inset
-
-Si 
-\begin_inset Formula $\Lambda-\nu F-\dfrac{\beta}{\gamma}FM=0$
-\end_inset
-
- 
-\begin_inset Formula $\wedge$
-\end_inset
-
- 
-\begin_inset Formula $M=\dfrac{\beta F-\mu}{\alpha}$
-\end_inset
-
- 
-\begin_inset Formula $\Rightarrow$
-\end_inset
-
- 
-\begin_inset Formula $\Lambda-\nu F-\dfrac{\beta}{\gamma}F\left(\dfrac{\beta F-\mu}{\alpha}\right)=0$
-\end_inset
-
-.
- 
-\begin_inset Formula $F$
-\end_inset
-
- corresponde a las raíces del polinomio de grado 2
-\begin_inset Formula 
-\[
-P\left(x\right)=Ax^{2}+Bx+C=0
-\]
-
-\end_inset
-
-con
-\end_layout
-
-\begin_layout Proof
-\begin_inset Formula $\begin{array}{ccc}
-A & = & \dfrac{\beta^{2}}{\gamma\alpha}\\
-B & = & \nu-\dfrac{\beta\mu}{\gamma\alpha}\\
-C & = & -\Lambda
-\end{array}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-Entonces el punto equilibrio de la forma 
-\begin_inset Formula $\left(F_{2}^{*},M_{2}^{*}\right)$
-\end_inset
-
- esta dado por
-\begin_inset Formula 
-\[
-\begin{array}{ccc}
-F_{2}^{*} & = & x\\
-M_{2}^{*} & = & \dfrac{\beta x-\mu}{\alpha}
-\end{array}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-con 
-\begin_inset Formula $x=\dfrac{-B+\sqrt{B^{2}-4AC}}{2A}$
-\end_inset
-
-.
- Es facil ver que 
-\begin_inset Formula $x$
-\end_inset
-
- es positivo.
- En el lemaX veremos que si 
-\begin_inset Formula $M_{2}^{*}=0$
-\end_inset
-
- entonces no necesariamente 
-\begin_inset Formula $\left(F_{2}^{*},M_{2}^{*}\right)$
-\end_inset
-
- es un punto de equilibrio.
- Veremos en el lemaX la condición para que 
-\begin_inset Formula $M_{2}^{*}$
-\end_inset
-
- sea positivo.
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout Lemma
-Si 
-\begin_inset Formula $\dfrac{\Lambda\beta}{\nu\mu}>1\Rightarrow M_{2}^{*}>0$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-\begin_inset Formula $M_{2}^{*}\leq0\Leftrightarrow\dfrac{\beta F_{2}^{*}-\mu}{\alpha}\leq0\Leftrightarrow F_{2}^{*}\leq\dfrac{\mu}{\beta}$
-\end_inset
-
-.
- Es fácil ver que 
-\begin_inset Formula $P\left(x\right)=Ax^{2}+Bx+C$
-\end_inset
-
- es creciente en 
-\begin_inset Formula $[0,\infty^{+}>$
-\end_inset
-
-.
- 
-\begin_inset Formula 
-\[
-0=P\left(F_{2}^{*}\right)\leq P\left(\dfrac{\mu}{\beta}\right)=\dfrac{\nu\mu}{\beta}-\Lambda
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-Por lo tanto 
-\begin_inset Formula $\dfrac{\Lambda\beta}{\nu\mu}\leq1$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout --Separator--
-
-\end_layout
-
-\begin_layout Lemma
-Si 
-\begin_inset Formula $\dfrac{\Lambda\beta}{\nu\mu}=1\wedge M_{2}^{*}=0$
-\end_inset
-
-, entonces
-\begin_inset Formula 
-\[
-\left(F_{1}^{*},0\right)=\left(F_{2}^{*},M_{2}^{*}\right)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-Tenemos que 
-\begin_inset Formula $M_{2}^{*}=0\Leftrightarrow\dfrac{\beta F_{2}^{*}-\mu}{\alpha}=0\Leftrightarrow F_{2}^{*}=\dfrac{\mu}{\beta}$
-\end_inset
-
-.
- Entonces 
-\begin_inset Formula $F'=0$
-\end_inset
-
- y 
-\begin_inset Formula $F_{2}^{*}=\dfrac{\Lambda}{\nu}=F_{1}^{*}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout --Separator--
-
+ cálcula los coeficientes del polinomio característico por el método de
+ Faddeev Leverrier.
 \end_layout
 
 \begin_layout Standard
-La matriz jacobiana en 
-\begin_inset Formula $P_{1}^{*}$
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Algorithm
+entrada 
+\begin_inset Formula $A$
 \end_inset
 
- es 
+(matriz), 
+\begin_inset Formula $n$
+\end_inset
+
+(dimensión)
 \end_layout
 
-\begin_layout Standard
-\begin_inset Formula 
-\[
-J\left(P_{1}^{*}\right)=\left[\begin{array}{cc}
--\nu & -\dfrac{\beta\Lambda}{\gamma\nu}\\
-0 & \beta\dfrac{\Lambda}{\nu}-\mu
-\end{array}\right]
-\]
+\begin_layout Algorithm
+salida 
+\begin_inset Formula $c_{1},\ldots,c_{n}$
+\end_inset
 
+(coeficientes)
+\end_layout
+
+\begin_layout Algorithm
+* 
+\begin_inset Formula $C=A$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-La matriz jacobiana en 
-\begin_inset Formula $P_{2}^{*}$
+\begin_layout Algorithm
+para 
+\begin_inset Formula $i=1:n-1$
 \end_inset
 
- es 
+ 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Formula 
-\[
-J\left(P_{2}^{*}\right)=\left[\begin{array}{cc}
--\nu-\dfrac{\beta}{\gamma}M & -\dfrac{\beta}{\gamma}F\\
-\beta M & \beta F-\mu-2\alpha M
-\end{array}\right]
-\]
+\begin_deeper
+\begin_layout Algorithm
+* 
+\begin_inset Formula $c_{i}=-\dfrac{\mbox{tr}\left(C\right)}{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Algorithm
+* 
+\begin_inset Formula $C=A\left(C+c_{i}I\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Algorithm
+finpara
+\end_layout
+
+\begin_layout Algorithm
+* 
+\begin_inset Formula $c_{n}=\dfrac{-\mbox{tr}\left(C\right)}{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Faddeev Leverrier.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "algo:fa-leve"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -1662,15 +475,19 @@ J\left(P_{2}^{*}\right)=\left[\begin{array}{cc}
 \end_layout
 
 \begin_layout Subsection
-Varias especies
+Método de CHACM
+\end_layout
+
+\begin_layout Subsection
+Método de Budde
 \end_layout
 
 \begin_layout Section
-Modelo II
+Estabilidad Cualitativa
 \end_layout
 
 \begin_layout Section
-Modelo III
+Ecuaciones Diferenciales Ordinarias
 \end_layout
 
 \end_body

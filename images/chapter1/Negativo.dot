@@ -1,0 +1,9 @@
+digraph G {
+graph [bgcolor = "transparent", size = "18!,18!", nodesep="1", ranksep="2", rankdir="LR"];
+node [fixedsize=true, fontname="Sans", fontsize="76.85", shape=circle, height="2", width="2", style="setlinewidth(4)"];
+X [label=<<i>X</i><sub>j</sub>>]
+Y [label=<<i>X</i><sub>i</sub>>]
+edge [style="setlinewidth(3)", arrowsize=3];
+		X [color=""];
+				X -> Y  [color="", dir=both, arrowhead=odot, arrowtail=none];
+}

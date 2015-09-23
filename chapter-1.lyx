@@ -285,203 +285,621 @@ Introducción
 \end_layout
 
 \begin_layout Section
-Dinámica de Poblaciones
-\end_layout
-
-\begin_layout Section
-Un Caso Particular : Dinámica de Poblaciones de Peces
-\end_layout
-
-\begin_layout Section
-Contaminación Ambiental y Ecotoxicología
-\end_layout
-
-\begin_layout Section
-Modelos Matemáticos para el Impacto de Contaminantes en Poblaciones
-\end_layout
-
-\begin_layout Section
-Soporte Matemático y Computacional
+Antecedentes
 \end_layout
 
 \begin_layout Subsection
-Control y la gestión del código
+Modelos matemáticos para el impacto de un contaminante
 \end_layout
 
 \begin_layout Standard
-Para el control y la gestión del código fuente de los programas y del documento
- de tesis utilizamos un sistema de control de versiones.
- Control de versiones es un sistema que registra todos los cambios que se
- realizan a un archivo o conjunto de archivos a través del tiempo permitiendo
- recuperar después una versión específica 
+Tal vez el primer trabajo en utilizar ecuaciones diferenciales para modelar
+ el efecto de un contaminante en la dinámica de una población sea el de
+ 
+\color blue
+
 \begin_inset CommandInset citation
 LatexCommand cite
-key "GITVC"
+key "HaI"
+
+\end_inset
+
+
+\color inherit
+.
+ En este se propone un sistema de ecuaciones diferenciales ordinarias, con
+ una ecuación que representa la dinámica de la población y una ecuación
+ que representa la dinámica de la concentración del contaminante en el organismo
+, acoplados por una función dosis-respuesta.
+ Se asume que la dinámica de la población es modelada por una ecuación logística
+ y que las tasas de nacimiento y mortalidad dependen de la concentración
+ del contaminante en el organismo.
+ En la ecuación logística se identifica un parámetro que representa competición
+ intraespecífica.
+ Analiza la supervivencia y extinción de la población mediante las isoclinas
+ del modelo.
+\end_layout
+
+\begin_layout Standard
+En 
+\color blue
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HaII"
+
+\end_inset
+
+
+\color inherit
+, se propone un sistema de ecuaciones differenciales ordinarias con tres
+ variables de estado: la biomasa de la población, la concentración del contamina
+nte en el organismo y la concetración del contaminante en el entorno, acoplados
+ por una función dosis-respuesta lineal.
+ Como en 
+\color blue
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HaI"
+
+\end_inset
+
+
+\color inherit
+, aquí se utiliza un modelo poblacional logístico.
+ La concentración del contaminante en el organismo sigue una cinética de
+ primer orden.
+ Se asume que la tasa de crecimiento es una función lineal de la cocentración
+ del contaminante en el organismo.
+ También se considera una tasa de ingreso del contaminante en el entorno
+ dependiente del tiempo.
+ Se asume que la única fuente de contaminante es el entorno, es decir, se
+ ignora el acceso al contaminante a través de la cadena alimenticia.
+\end_layout
+
+\begin_layout Standard
+Existen deficiencias en estos modelos como en cualquier modelo matemático.
+ Como se indica en la literatura, el punto de vista logístico es inadecuado
+ ( 
+\color blue
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PMaEc"
+
+\end_inset
+
+
+\color inherit
+, 
+\color blue
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HaCl81"
+
+\end_inset
+
+
+\color inherit
+).
+ Sin embargo, la ecuación logística ha sido usada como un modelo para varias
+ poblaciones.
+\end_layout
+
+\begin_layout Standard
+La función dosis-respuesta lineal es útil para algunos contaminantes, pero
+ las funciones dosis-respuesta no lineales (por ejemplo, sigmoideas), son
+ más características de los químicos.
+\end_layout
+
+\begin_layout Standard
+En 
+\color blue
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HaLuIII"
+
+\end_inset
+
+
+\color inherit
+ se investiga un modelo considerando el acceso al contaminante por la cadena
+ alimenticia y por el entorno.
+ Modela la dinámica de la población utilizando una modificación de la ecuación
+ de Smith 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Smith"
 
 \end_inset
 
 .
- Hemos utilizado Git y GitHub.
+ La concentración del contaminante es gobernada por una cinética de primer
+ orden.
+ Las ecuaciones se acoplan por una función dosis-respuesta lineal en la
+ tasa de crecimiento.
+ Se dan condiciones suficientes para la supervivencia y extinción de la
+ población.
+ También se considera un modelo (reducción del primero) que ignora el acceso
+ al contaminante por la cadena alimenticia y contrastan los resultados.
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LuHaIV"
+
+\end_inset
+
+
+\color inherit
+, consideran tres modelos.
+ Cada uno con diferente ecuación para la interación recurso-consumidor.
+ El primer modelo incluye un subsistema recurso-consimidor tipo Leslie;
+ el segundo utiliza un subsistema recurso-consumidor tipo Gallopin; el tercero
+ utiliza un subsistema recurso-consumidor tipo cultivo continuo 
+\color blue
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HerCul"
+
+\end_inset
+
+
+\color inherit
+.
+ En cada uno de los modelos, se incorpora los efectos del contaminante en
+ el subsistema recurso-consumidor, en la tasa de creciemiento.
+\end_layout
+
+\begin_layout Standard
+En los trabajos anteriores (
+\color blue
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HaI"
+
+\end_inset
+
+
+\color inherit
+, 
+\color blue
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HaII"
+
+\end_inset
+
+
+\color inherit
+, 
+\color blue
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HaLuIII"
+
+\end_inset
+
+
+\color inherit
+, 
+\color blue
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LuHaIV"
+
+\end_inset
+
+
+\color inherit
+), la tasa de crecimiento depende linealmente de la concentración del contaminan
+te en la población pero no consideran el efecto de la concentración del
+ contaminante del entorno en la capacidad de carga de la población.
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Fre91"
+
+\end_inset
+
+
+\color inherit
+ proponen un modelo para el impacto de un contaminante en una especie y
+ otro en un sistema depredador-presa.
+ La concentración del contaminante en el entorno afecta la capacidad de
+ carga de la población.
+ La concentración del contaminante en el apoblación afecta la tasa de crecimient
+o.
+ Se consideran los casos en que el contaminante ingresa en el entorno a
+ tasa constante y a tasa variable (periódica).
+ 
+\color blue
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ThoPE"
+
+\end_inset
+
+
+\color inherit
+ consideran que la concentración del tóxico en la población afecta a la
+ tasa de crecimiento y a la capacidad de carga.
+ Además establece un control sobre el la concetración de contaminante en
+ el entorno.
+\end_layout
+
+\begin_layout Standard
+Resaltamos que en todos estos modelos la tasa de crecimiento de la población
+ es modelada por la ecuación logística.
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wan94"
+
+\end_inset
+
+
+\color inherit
+ estudian tres modelos del efecto de un contaminante en una población: una
+ generalización del modelo de 
+\color blue
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HaII"
+
+\end_inset
+
+
+\color inherit
+, un modelo de dos especie Lotka-Volterra con efecto de un contaminante
+ y un modelo de 
+\begin_inset Formula $n$
+\end_inset
+
+ poblaciones en un entorno contaminado).
+ Asumen que el contaminante ingresa en el entorno de forma periódica.
+ Obtienen resultados que garantizan la permanencia de las poblaciones.
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ma95"
+
+\end_inset
+
+
+\color inherit
+ estudian los efectos de un contaminante en dos sistemas de tres especies:
+ uno consiste de dos predadores en competencia y una presa y el otro de
+ un predador y dos presas en competencia.
  
 \end_layout
 
 \begin_layout Standard
-Git es un sistema distribuido de control de versiones libre y de código
- abierto.
- Git esta diseñado para lidiar con todo tipo de proyectos, desde muy pequeños
- hasta muy grandes, con velocidad y eficiencia 
+
+\color blue
 \begin_inset CommandInset citation
 LatexCommand cite
-key "GIT"
+key "Ma97"
 
 \end_inset
 
-.
- Git es uno de los sistemas de control de versiones más usados en la actualidad.
- Fue creado por las mismas personas que desarrollaron Linux.
- Todo es almacenado en repositorios locales en la computadora.
- El siguiente link es sobre como Git fue desarrollado y de como comenzar
- a usarlo 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "GITSH"
 
-\end_inset
-
-.
- ¡Git es multiplataforma!
+\color inherit
+ establecen condiciones para la supervivencia en un modelo de cadena alimenticia
+ n-dimensional en un entorno contaminado.
+ Usan un modelo de tipo Volterra depredador-presa para las poblaciones.
+ Consideran como variables de estado la concentración del contaminante en
+ cada poblacion y en el entorno.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
+También han habido esfuerzos en esta área utilizando ecuaciones diferenciales
+ parciales.
+ Aunque para el propósito de esta esta tesis estamos interesados en modelos
+ basados en ecuaciones diferenciales ordinarias, mencionamos el trabajo
+ de 
+\color blue
 
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-\noindent
-\align center
-\begin_inset Graphics
-	filename images/chapter1/git.pdf
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Logos de Git y GitHub.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-GitHub es un sitio web que fue desarrollado más recientemente y que permite
- colaborar en proyectos de mayor escala.
- Y es aquí donde el potencial de Git entra en escena.
- GitHub es un servicio de hosting en internet para desarrollo de software
- que usa el control de versiones de Git.
- Lo que permite hacer GitHub es trabajar y tener proyectos online de tal
- forma que otras personas puedan verlos y contribuir con ellos también.
- Entonces, básicamente lo que GitHub hace es permitir a los usuarios enviar
- y extraer información de repositorios remotos en internet.
- Provee a los usuarios de una página inicial que les muestra todos sus repositor
-ios y hace una copia de seguridad de los mismos.
- Mas el aspecto clave de GitHub es el aspecto social, que permite que los
- usuarios se sigan y compartan proyectos.
- Una de las cosas que se puede percibir sobre GitHub es que cuando usted
- ve el trabajo de otras personas puede aprender sobre lo que los otros están
- trabajando, como funciona el código o si existe alguna mejor forma de hacer
- las cosas 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "GITHUB"
+key "DuHu0"
 
 \end_inset
 
-.
+
+\color inherit
+ que estudia un modelo para el efecto de un contaminante en la interacción
+ de dos especies con un término difusivo pero también hace el estudio del
+ modelo sin difusión.
 \end_layout
 
 \begin_layout Standard
-El código de los programas (R, C++) los puedes encontrar en 
-\begin_inset Flex URL
-status open
 
-\begin_layout Plain Layout
-
-https://github.com/JD26/ICE
-\end_layout
+\color blue
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Jin0"
 
 \end_inset
 
- y del documento de tesis (Latex) en 
-\begin_inset Flex URL
-status open
 
-\begin_layout Plain Layout
-
-https://github.com/JD26/ThesisICE
+\color inherit
+ estudian los efectos de un contaminante para un n-dimensional sistema en
+ competencia.
+ Usan un modelo de tipo Volterra para la competencia entre las especies.
 \end_layout
+
+\begin_layout Standard
+
+\color blue
+\begin_inset CommandInset citation
+LatexCommand cite
+key "XaLa01"
 
 \end_inset
 
+
+\color inherit
+ proponen un modelo para el crecimiento de una población en un entorno contamina
+do considerando dos etapas en la población: inmadurez y madurez.
+ Considera los efectos del contaminate solo sobre la población en etapa
+ inmadura.
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+\begin_inset CommandInset citation
+LatexCommand cite
+key "TMPB2003"
+
+\end_inset
+
+
+\color inherit
+, dedica un cápitulo de su libro a estudiar el impacto de un contaminante
+ en una especie acuática.
+ A diferencia de la mayoría de los trabajos en este tema, el utiliza la
+ ecuación de Beverton-Holt para el crecimiento de la especie.
+ Asume que el contaminante afecta a la tasa de nacimiento.
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SaMa4"
+
+\end_inset
+
+ 
+\color inherit
+estudian un modelo de una sola especie que es afectada por un contaminante.
+ Utilizan la ecuación logistica para el crecimiento de la especie.
+ Dos casos son estudiados: en el primer caso asumen que el contaminante
+ ingresa en el entorno a tasa constante, y en el segundo caso asumen que
+ el ingreso del contaminante tiene un comportamiento stocástico.
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+\begin_inset CommandInset citation
+LatexCommand cite
+key "DuHu6"
+
+\end_inset
+
+
+\color inherit
+, proponen un modelo para una especie que depende de un recurso en un entorno
+ contaminado.
+ Obtienen criterios para la inestabilidad, estabiidad local y estabilidad
+ global.
+ Modela el crecimiento del recurso y de la especie utilizando la ecuación
+ logística.
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ta09"
+
+\end_inset
+
+
+\color inherit
+ investiga un sistema predador-presa en pesquería, en el cual amabas especies
+ son afectadas por un contaminante y además ambas son capturadas (explotadas).
+ No considera como variables de estado el contaminante en el entorno ni
+ en las especies.
+ Asume que el efecto se da a través de un término que resta a las tasas
+ de crecimiento.
+ El crecimiento de la presa es modelado por una acuación logísitica.
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Si10A"
+
+\end_inset
+
+
+\color inherit
+, estudian un modelo de dos especies en competencia bajo los efectos de
+ un contaminante y de una afección (enfermedad).
+ Se considera la afección solo sobre una de las especies.
+ En 
+\color blue
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Si10B"
+
+\end_inset
+
+
+\color inherit
+, se investiga un sistema predador-presa que es afectado por un contaminante
+ en el que la presa esta infectada por un parásito.
+ Se asume que las presas infectadas son más vulnerables a los efectos del
+ contaminante y de la predación.
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Se11"
+
+\end_inset
+
+
+\color inherit
+, estudian la dinámica de un sistema predador-presa en un entorno contaminado.
+ Asumen que el predador tiene la capacidad de biodegradadar el contaminante,
+ por lo tanto el contaminante solo afecta a la presa.
+ Utilizan una respuesta funcional Holling Tipo II para modelar la predación.
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Sa12"
+
+\end_inset
+
+
+\color inherit
+, propone un modelo Lotka-Volterra para dos especies en un entorno contaminado.
+ Investiga diferentes escenarios entre las dos especies: predador-presa,
+ competición y mutualismo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LuHe14"
+
+\end_inset
+
+ y 
+\color blue
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LuFa14"
+
+\end_inset
+
+
+\color inherit
+ proponen modelos en ecuaciones diferenciales parciales.
+ Investigan dos problemas de control óptimo para un sistema edad-dependiente
+ en un entorno contaminado: para una especie y para dos especies en competencia.
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hu13"
+
+\end_inset
+
+
+\color inherit
+ investigan una modificación del modelo propuesto por 
+\color blue
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "TMPB2003"
+
+\end_inset
+
+
+\color inherit
 .
+ Consideran que el contaminante, además de afectar a la tasa de crecimiento
+ y reproducción, afecta la tasa de muerte.
+ Obtienen los valores de los parámetros de la ecuación a partir de datos
+ reales.
+ 
+\color blue
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hu15"
+
+\end_inset
+
+
+\color inherit
+, extienden el modelo propuesto en 
+\color blue
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hu13"
+
+\end_inset
+
+
+\color inherit
+ a un sistema predador-presa.
+\end_layout
+
+\begin_layout Standard
+Existen también trabajos que modelan el impacto de un contaminante utilizando
+ ecuaciones diferenciales impulsivas.
+\end_layout
+
+\begin_layout Subsection
+Análisis cualitativo y dinámica de poblaciones
+\end_layout
+
+\begin_layout Standard
+(Comentar sobre el loop analysis)
 \end_layout
 
 \begin_layout Section
 Una Breve Descripción de esta Tesis
-\end_layout
-
-\begin_layout Standard
-En el capítulo 2 : 
-\end_layout
-
-\begin_layout Standard
-En el capítulo 3
-\end_layout
-
-\begin_layout Standard
-En el capítulo 4
-\end_layout
-
-\begin_layout Standard
-En el capítulo 5
-\end_layout
-
-\begin_layout Standard
-Teoría de Perturbaciones
-\end_layout
-
-\begin_layout Standard
-Derivación del Modelo
-\end_layout
-
-\begin_layout Standard
-Análisis Cualitativo
-\end_layout
-
-\begin_layout Standard
-Análisis Numérico
 \end_layout
 
 \end_body

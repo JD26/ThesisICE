@@ -1,0 +1,2360 @@
+% This file was created with JabRef 2.10b2.
+% Encoding: Cp1252
+
+
+@Article{Abgr07,
+  Title                    = {Lab-on-chip technologies: making a microfluidic network and coupling it into a complete microsystem---a review},
+  Author                   = {P. Abgrall and A.-M. Gué},
+  Journal                  = {J. Micromech. Microeng.},
+  Year                     = {2007},
+  Pages                    = {R15\,-\,R49},
+  Volume                   = {17},
+
+  Doi                      = {10.1088/0960-1317/17/5/R01},
+  File                     = {Abgrall07-Review.pdf:Photolacke\\Abgrall07-Review.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1088/0960-1317/17/5/R01}
+}
+
+@Article{Abgr06,
+  Title                    = {A novel fabrication method of flexible and monolithic {3D microfluidic structures using lamination of SU-8} films},
+  Author                   = {P. Abgrall and others},
+  Journal                  = {J. Micromech. Microeng.},
+  Year                     = {2006},
+  Pages                    = {113\,-\,121},
+  Volume                   = {16},
+
+  Doi                      = {10.1088/0960-1317/16/1/016},
+  File                     = {SU-8-selbst-hergestellt.pdf:Photolacke\\SU-8-selbst-hergestellt.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1088/0960-1317/16/1/016}
+}
+
+@Article{Abol05,
+  Title                    = {Submillimeter Dielectric Barrier Discharges at Atmospheric Pressure: Edge Effect},
+  Author                   = {S.N. Abolmasov and T. Shirafuji and K. Tachibana},
+  Journal                  = {IEEE Trans. Plasma Sci.},
+  Year                     = {2005},
+  Pages                    = {941\,-\,948},
+  Volume                   = {33},
+
+  Doi                      = {10.1109/TPS.2005.845093},
+  File                     = {Abolmasov-submillimeter-discharge-2005.pdf:DBD\\Abolmasov-submillimeter-discharge-2005.pdf:PDF},
+  Review                   = {Priorität 1 Gute Berechnungsgrundlage, noch zwei Bücher der Literaturliste besorgen.},
+  Url                      = {http://dx.doi.org/10.1109/TPS.2005.845093}
+}
+
+@Article{Akis03,
+  Title                    = {Comparison of the AC Barrier Corona with DC Positive and Negative Coronas and Barrier Discharge},
+  Author                   = {Yu.S. Akishev and A.V. Dem\textrm{'}yanov and V.B. Karal\textrm{'}nik and A.E. Monich and N.I. Trushkin},
+  Journal                  = {Plasma Physics Reports},
+  Year                     = {2003},
+  Pages                    = {90\,-\,100},
+  Volume                   = {29},
+
+  Doi                      = {10.1134/1.1538505},
+  File                     = {Akishev-Comparison-BC-dischages-2003.pdf:DBD\\Akishev-Comparison-BC-dischages-2003.pdf:PDF},
+  Url                      = {http://www.triniti.ru/CTF\&VM/Articles/Demyanov3.pdf}
+}
+
+@Article{Baba01,
+  Title                    = {Deposition of silicon dioxide films with a non-equilibrium atmospheric-pressure plasma jet},
+  Author                   = {S.E. Babayan and others},
+  Journal                  = {Plasma Sources Sci. Technol.},
+  Year                     = {2001},
+  Number                   = {4},
+  Pages                    = {573\,-\,578},
+  Volume                   = {10},
+
+  Doi                      = {10.1088/0963-0252/10/4/305},
+  File                     = {:DBD\\Babayan-SiOx-2001.pdf:PDF},
+  Publisher                = {Bristol, UK: IOP Pub.; Woodbury, NY: American Institute of Physics, c1991-},
+  Url                      = {http://dx.doi.org/10.1088/0963-0252/10/4/305}
+}
+
+@Article{Beck06,
+  Title                    = {Microplasmas and applications},
+  Author                   = {K.H. Becker and K.H. Schoenbach and J.G. Eden},
+  Journal                  = {J. Phys. D: Appl. Phys.},
+  Year                     = {2006},
+  Pages                    = {R55\,-\,R70},
+  Volume                   = {39},
+
+  Doi                      = {10.1088/0022-3727/39/3/R01},
+  File                     = {:DBD\\Becker_Overview microplasmas-2006.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1088/0022-3727/39/3/R01}
+}
+
+@Article{Bile04,
+  Title                    = {PMMA to SU-8 bonding for polymer based lab-on-a-chip systems with integrated optics},
+  Author                   = {B. Bilenberg and T. Nielsen and B. Clausen and A. Kristensen},
+  Journal                  = {J. Micromech. Microeng.},
+  Year                     = {2004},
+  Pages                    = {814\,-\,818},
+  Volume                   = {14},
+
+  Doi                      = {10.1088/0960-1317/14/6/008},
+  File                     = {Bile04.pdf:Photolacke\\Bile04.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1088/0960-1317/14/6/008}
+}
+
+@Article{Blan04,
+  Title                    = {Novel three-dimensional embedded {SU-8} microchannels fabricated using a low temperature full wafer adhesive bonding},
+  Author                   = {F. J. Blanco and others},
+  Journal                  = {J. Micromech. Microeng.},
+  Year                     = {2004},
+  Pages                    = {1047\,-\,1056},
+  Volume                   = {14},
+
+  Doi                      = {10.1088/0960-1317/14/7/027},
+  File                     = {Blan04.pdf:Photolacke\\Blan04.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1088/0960-1317/14/7/027}
+}
+
+@Article{Boga02,
+  Title                    = {Gas discharge plasmas and their applications},
+  Author                   = {A. Bogaerts and E. Neyts and R. Gijbels and J. van der Mullen},
+  Journal                  = {Spectrochim. Acta. B Atom. Spectros.},
+  Year                     = {2002},
+  Number                   = {4},
+  Pages                    = {609--658},
+  Volume                   = {57},
+
+  Doi                      = {10.1016/S0584-8547(01)00406-2},
+  File                     = {:Allgemein\\2002_gas discharge plasmas and their applications.pdf:PDF},
+  Publisher                = {Elsevier},
+  Url                      = {\href{http://dx.doi.org/10.1016/S0584-8547(01)00406-2}{http://dx.doi.org/10.1016/S0584-8547(01)00406-2}}
+}
+
+@Book{Bohl1989,
+  Title                    = {Technische Strömungslehre},
+  Author                   = {Willi Bohl},
+  Publisher                = {Vogel-Verlag, Würzburg},
+  Year                     = {1989},
+  Edition                  = {8th},
+
+  Url                      = {http://www.worldcat.org/oclc/315749265}
+}
+
+@Article{Bran07,
+  Title                    = {Antimicrobial Treatment of Heat Sensitive Materials by Means of Atmospheric Pressure {Rf}-Driven Plasma Jet},
+  Author                   = {R. Brandenburg and others},
+  Journal                  = {Contrib. Plasma Phys.},
+  Year                     = {2007},
+  Pages                    = {72\,-\,79},
+  Volume                   = {47},
+
+  Doi                      = {10.1002/ctpp.200710011},
+  File                     = {:DBD\\Brandenburg07-PlasmaJet-microbial.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1002/ctpp.200710011}
+}
+
+@Article{Bran05,
+  Title                    = {Axial and radial development of microdischarges of barrier discharges in {N2/O2} mixtures at atmospheric pressure},
+  Author                   = {R. Brandenburg and H.-E. Wagner and A.M. Morozov and K.V. Kozlov},
+  Journal                  = {J. Phys. D: Appl. Phys.},
+  Year                     = {2005},
+  Number                   = {11},
+  Pages                    = {1649\,-\,1657},
+  Volume                   = {38},
+
+  Doi                      = {10.1088/0022-3727/38/11/003},
+  File                     = {:DBD\\Brandenburg-DBD-characteristics-05.pdf:PDF},
+  Publisher                = {London: The Institute of Physics and The Physical Society.},
+  Url                      = {http://dx.doi.org/10.1088/0022-3727/38/11/003}
+}
+
+@Conference{Brea09,
+  Title                    = {Dry film photoresist, saving time and money without compromising on performance},
+  Author                   = {M.C. Breadmore and E. Candish and R.M. Guijt},
+  Booktitle                = {\textmu TAS 2009},
+  Year                     = {2009}
+}
+
+@Book{Bruu08,
+  Title                    = {Theoretical Microfluidics},
+  Author                   = {Henrik Bruus},
+  Publisher                = {Oxford University Press},
+  Year                     = {2008},
+
+  Url                      = {http://www.worldcat.org/oclc/176807166}
+}
+
+@Article{Bull01,
+  Title                    = {Direct imaging of plasma-polymerized chemical micropatterns},
+  Author                   = {N.A. Bullett and others},
+  Journal                  = {Surf. Interface Anal.},
+  Year                     = {2001},
+  Number                   = {11},
+  Pages                    = {1074\,-\,1076},
+  Volume                   = {31},
+
+  Doi                      = {10.1002/sia.1146},
+  File                     = {:DBD\\Bullett-SEM mask pattern-2001.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1002/sia.1146}
+}
+
+@Article{Carl04,
+  Title                    = {Integrated microfluidics based on multi-layered SU-8 for mass spectrometry analysis},
+  Author                   = {J. Carlier and others},
+  Journal                  = {J. Micromech. Microeng.},
+  Year                     = {2004},
+  Pages                    = {619\,-\,624},
+  Volume                   = {14},
+
+  Doi                      = {10.1088/0960-1317/14/4/024},
+  File                     = {Carlier04.pdf:Photolacke\\Carlier04.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1088/0960-1317/14/4/024}
+}
+
+@Article{Carl1977,
+  Title                    = {The weatherability of polypropylene monofilaments. Effects of fiber production conditions},
+  Author                   = {Carlsson, DJ and Garton, A. and Wiles, DM},
+  Journal                  = {Journal of Applied Polymer Science},
+  Year                     = {1977},
+  Number                   = {11},
+  Pages                    = {2963\,-\,2978},
+  Volume                   = {21},
+
+  Doi                      = {10.1002/app.1977.070211112},
+  File                     = {:DBD\\Carlsson-PP-oxidation-1977.pdf:PDF},
+  Publisher                = {Wiley Subscription Services, Inc., A Wiley Company New York},
+  Url                      = {http://dx.doi.org/10.1002/app.1977.070211112}
+}
+
+@Article{Carr1903,
+  Title                    = {On the Laws Governing Electric Discharges in Gases at Low Pressures},
+  Author                   = {W.R. Carr},
+  Journal                  = {Phil. Trans. Roy. Soc. Lond. Math. Phys. Sci.},
+  Year                     = {1903},
+  Pages                    = {403-433},
+  Volume                   = {201},
+
+  Doi                      = {10.1098/rsta.1903.0020},
+  File                     = {:DBD\\Carr-Electric dischare at low pressure-1903.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1098/rsta.1903.0020}
+}
+
+@Article{Chang00,
+  Title                    = {{UV-LIGA process for high aspect ratio structure using stress barrier and C-shaped etch hole}},
+  Author                   = {H.-K. Chang and Y.-K. Kim},
+  Journal                  = {Sensors and Actuators A},
+  Year                     = {2000},
+  Pages                    = {342\,-\,350},
+  Volume                   = {84},
+
+  Doi                      = {10.1016/S0924-4247(00)00408-8},
+  File                     = {SU-8-Aspektverhaeltnis-Springer.pdf:Photolacke\\SU-8-Aspektverhaeltnis-Springer.pdf:PDF},
+  Url                      = {\href{http://dx.doi.org/10.1016/S0924-4247(00)00408-8}{http://dx.doi.org/10.1016/S0924-4247(00)00408-8}}
+}
+
+@Article{Char1967,
+  Title                    = {Electrical Breakdown between Metal Electrodes in High Vacuum. I. Theory},
+  Author                   = {F.M. Charbonnier and C.J. Bennette and L.W.~Swanson},
+  Journal                  = {J. Appl. Phys.},
+  Year                     = {1967},
+  Pages                    = {627\,-\,633},
+  Volume                   = {38},
+
+  Doi                      = {10.1063/1.1709385},
+  File                     = {:DBD\\Charbonnier-Breakdown-1967.pdf:PDF},
+  Publisher                = {AIP},
+  Url                      = {http://dx.doi.org/10.1063/1.1709385}
+}
+
+@Article{Char1967-2,
+  Title                    = {Electrical Breakdown between Metal Electrodes in High Vacuum. II. Experimental},
+  Author                   = {F.M. Charbonnier and C.J. Bennette and L.W. Swanson},
+  Journal                  = {J. Appl. Phys.},
+  Year                     = {1967},
+  Pages                    = {634\,-\,640},
+  Volume                   = {38},
+
+  Doi                      = {10.1063/1.1709386},
+  File                     = {:DBD\\Charbonnier-Breakdown-1967-2.pdf:PDF},
+  Publisher                = {AIP},
+  Url                      = {http://dx.doi.org/10.1063/1.1709386}
+}
+
+@Article{Coog1996,
+  Title                    = {Distribution of {OH} within silent discharge plasma reactors},
+  Author                   = {J.J. Coogan and A.D. Sappey},
+  Journal                  = {IEEE Trans. Plasma Sci.},
+  Year                     = {1996},
+  Number                   = {1},
+  Pages                    = {91\,-\,92},
+  Volume                   = {24},
+
+  Doi                      = {10.1109/27.491706},
+  File                     = {:DBD\\Coogan-FilamentDiameter-1996.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1109/27.491706}
+}
+
+@Article{Cutl1993,
+  Title                    = {Theory of electron emission in high fields from atomically sharp emitters: Validity of the Fowler-Nordheim equation},
+  Author                   = {P. Cutler},
+  Journal                  = {Progress in Surface Science},
+  Year                     = {1993},
+  Number                   = {1-4},
+  Pages                    = {169\,-\,185},
+  Volume                   = {42},
+
+  Doi                      = {10.1016/0079-6816(93)90068-7},
+  File                     = {:DBD\\Cutler-Emission in high fields-1993.pdf:PDF},
+  Url                      = {\href{http://dx.doi.org/10.1016/0079-6816(93)90068-7}{http://dx.doi.org/10.1016/0079-6816(93)90068-7}}
+}
+
+@Article{Ta09,
+  Title                    = {Harvesting of a prey predator fishery in the presence of toxicity},
+  Author                   = {Tapasi Das and R.N. Mukherjee and K.S. Chaudhuri},
+  Journal                  = {Applied Mathematical Modelling},
+  Year                     = {2009},
+  Pages                    = {2282\,-\,2292},
+  Volume                   = {33},
+
+  File                     = {:DBD\\Das-2009-26.pdf:PDF},
+  Publisher                = {Elsevier},
+  Url                      = {http://dx.doi.org/10.1016/j.apm.2008.06.008}
+}
+
+@Book{Davi1998,
+  Title                    = {Metals handbook: desk edition},
+  Author                   = {J.R. Davis},
+  Publisher                = {ASM International},
+  Year                     = {1998},
+  Edition                  = {2nd},
+
+  Pages                    = {1128}
+}
+
+@Article{Dikm04,
+  Title                    = {A new compact disc format of high density array synthesis applied to peptide nucleic acids and in situ {MALDI} analysis},
+  Author                   = {A.J. Dikmans and others},
+  Journal                  = {Molecular diversity},
+  Year                     = {2004},
+  Number                   = {3},
+  Pages                    = {197\,-\,207},
+  Volume                   = {8},
+
+  Doi                      = {10.1023/B:MODI.0000036234.66238.4e},
+  File                     = {:Allgemein\\Dikmans-Amino-array-2004.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1023/B:MODI.0000036234.66238.4e}
+}
+
+@PhdThesis{Dora02,
+  Title                    = {Modeling of Atmospheric Pressure Plasma Processing of Gases and Surfaces},
+  Author                   = {Rajesh Dorai},
+  School                   = {University of Illinois at Urbana-Champaign},
+  Year                     = {2002},
+
+  File                     = {:DBD\\Dorai-plasma-reactions-2002.pdf:PDF},
+  Url                      = {http://uigelz.eecs.umich.edu/pub/theses/rajesh_phd_thesis.pdf}
+}
+
+@Article{Dora03,
+  Title                    = {A model for plasma modification of polypropylene using atmospheric pressure discharges},
+  Author                   = {R. Dorai and M.J. Kushner},
+  Journal                  = {J. Phys. D: Appl. Phys},
+  Year                     = {2003},
+  Number                   = {6},
+  Pages                    = {666\,-\,685},
+  Volume                   = {36},
+
+  Doi                      = {10.1088/0022-3727/36/6/309},
+  File                     = {:DBD\\Dorai-PP-Surface-chemistry-2003.pdf:PDF},
+  Publisher                = {IOP PUBLISHING LTD},
+  Url                      = {http://dx.doi.org/10.1088/0022-3727/36/6/309}
+}
+
+@Article{DuHu6,
+  Title                    = {Modelling the Survival of Species Dependent on a Resource in a Polluted Environment},
+  Author                   = {B. Dubey and J. Hussain},
+  Journal                  = {Nonlinear Analysis: Real World Applications},
+  Year                     = {2006},
+  Pages                    = {187\,-\,210},
+  Volume                   = {7},
+
+  File                     = {:DBD\\Dubey-Hussain-2006.pdf:PDF},
+  Publisher                = {Elsevier},
+  Url                      = {http://dx.doi.org/10.1016/j.nonrwa.2005.02.003}
+}
+
+@Article{DuHu0,
+  Title                    = {Modelling the Interaction of Two Biological Species in a Polluted Environment},
+  Author                   = {B. Dubey and J. Hussain},
+  Journal                  = {Mathematical Analysis and Applications},
+  Year                     = {2000},
+  Pages                    = {58\,-\,79},
+  Volume                   = {246},
+
+  File                     = {:DBD\\Dubey-Hussain-2000-33.pdf:PDF},
+  Publisher                = {Academic Press},
+  Url                      = {http://dx.doi.org/10.1006/jmaa.2000.6741}
+}
+
+@Article{Dush1923,
+  Title                    = {Electron Emission from Metals as a Function of Temperature},
+  Author                   = {S. Dushman},
+  Journal                  = {Physical Review},
+  Year                     = {1923},
+  Pages                    = {623\,-\,636},
+  Volume                   = {21},
+
+  Doi                      = {10.1103/PhysRev.21.623},
+  File                     = {:DBD\\Dushman-Thermionic-Emission-1923.pdf:PDF},
+  Publisher                = {APS},
+  Url                      = {http://dx.doi.org/10.1103/PhysRev.21.623}
+}
+
+@Article{Eden03,
+  Title                    = {Microplasma devices fabricated in silicon, ceramic, and metal/polymer structures: arrays, emitters and photodetectors},
+  Author                   = {J.G. Eden and others},
+  Journal                  = {J. Phys. D: Appl. Phys.},
+  Year                     = {2003},
+  Pages                    = {2869\,-\,2877},
+  Volume                   = {36},
+
+  Doi                      = {10.1088/0022-3727/36/23/001},
+  File                     = {:DBD\\Eden-Cavity Silicon-2003.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1088/0022-3727/36/23/001}
+}
+
+@Conference{Eich05,
+  Title                    = {{Ortsselektive Atmosphärendruck-Plasmavorbehandlung für das Direkt-Wafer-Bonden bei niedrigen Temperaturen}},
+  Author                   = {M. Eichler and M. Thomas and H. Mewes and C.-P. Klages},
+  Booktitle                = {Mikrosystemtechnik Kongress 2005 : 10. bis 12. Oktober 2005 in Freiburg. Berlin: VDE-Verlag, 2005, pp. 115-118},
+  Year                     = {2005},
+
+  File                     = {Waferbonden_Eichler.pdf:DBD\\Waferbonden_Eichler.pdf:PDF},
+  Url                      = {http://www.vde-verlag.de/data/buecher.php?action=bookdetail\&vertriebsnr=562926}
+}
+
+@Article{Elia1991,
+  Title                    = {Modeling and applications of silent discharge plasmas},
+  Author                   = {B. Eliasson and U. Kogelschatz},
+  Journal                  = {IEEE Trans. Plasma Sci.},
+  Year                     = {1991},
+  Number                   = {2},
+  Pages                    = {309\,-\,323},
+  Volume                   = {19},
+
+  Doi                      = {10.1109/27.106829},
+  File                     = {:DBD\\Eliasson-Modelling-1991.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1109/27.106829}
+}
+
+@Article{Klei03,
+  Title                    = {NMR Spectroscopy Characterization and Self-Diffusion Study of Partially Swollen Polymer Networks.},
+  Author                   = {F.Kleinschmidt, U.Stöhr, K.Saalwächter and others},
+  Journal                  = {Macromol. Chem. Phys.},
+  Year                     = {2003},
+  Pages                    = {F24\,-\,F25},
+  Volume                   = {204}
+}
+
+@InProceedings{Fahl01,
+  Title                    = {Deposition of multilayer optical coatings onto plastic webs by pulse magnetron sputtering; challenges and opportunities},
+  Author                   = {M. Fahland and C. Charton and V. Kirchhoff and U. Stöhr},
+  Booktitle                = {Proceedings 6th. International Symposium on Sputtering and Plasma Processes (ISSP), p. 189, Kanazawa, Japan},
+  Year                     = {2001},
+
+  File                     = {:Allgemein\\Fahrland-Sputtering-2001.pdf:PDF}
+}
+
+@Conference{Flac02,
+  Title                    = {Characterization of a novel photoresist redistribution material for advanced packaging applications},
+  Author                   = {W.W. Flack and H.A. Nguyen and E. Capsuto},
+  Booktitle                = {Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series},
+  Year                     = {2002},
+  Pages                    = {1203\,-\,1216},
+  Volume                   = {4690},
+
+  Doi                      = {10.1117/12.474198},
+  File                     = {:Photolacke\\SINR-resist-2002.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1117/12.474198}
+}
+
+@Article{Forb1999,
+  Title                    = {Refining the application of Fowler-Nordheim theory},
+  Author                   = {R.G. Forbes},
+  Journal                  = {Ultramicroscopy},
+  Year                     = {1999},
+  Pages                    = {11\,-\,23},
+  Volume                   = {79},
+
+  Doi                      = {10.1016/S0304-3991(99)00097-2},
+  File                     = {:DBD\\Forbes - Refining the application of Fowler-Nordheim theory.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1016/S0304-3991(99)00097-2}
+}
+
+@Article{Fowl1928,
+  Title                    = {Electron Emission in Intense Electric Fields},
+  Author                   = {R.H. Fowler and L. Nordheim},
+  Journal                  = {Proceedings of the Royal Society of London. Series A, Containing Papers of a Mathematical and Physical Character},
+  Year                     = {1928},
+
+  Month                    = {May},
+  Number                   = {781},
+  Pages                    = {173\,-\,181},
+  Volume                   = {119},
+
+  File                     = {:DBD\\Fowler-Nordheim-1928.pdf:PDF},
+  Url                      = {http://www.jstor.org/pss/95023}
+}
+
+@Article{Fre91,
+  Title                    = {Models for the Effect of Toxicant in Single-Species and Predator-Prey Systems},
+  Author                   = {H.I. Freedman and J.B. Shukla},
+  Journal                  = {Mathematical Biology},
+  Year                     = {1991},
+  Pages                    = {15\,-\,30},
+  Volume                   = {30},
+
+  File                     = {:DBD\\Freedman-Shukla-1991.pdf:PDF},
+  Publisher                = {Springer-Verlag},
+  Url                      = {http://dx.doi.org/10.1088/0960-1317/16/9/013}
+}
+
+@Article{Gabo1993,
+  Title                    = {Microwave plasma reactions of solid monomers with silicone elastomer surfaces: a spectroscopic study},
+  Author                   = {S.R. Gaboury and M.W. Urban},
+  Journal                  = {Langmuir},
+  Year                     = {1993},
+  Number                   = {11},
+  Pages                    = {3225\,-\,3233},
+  Volume                   = {9},
+
+  Doi                      = {10.1021/la00035a076},
+  File                     = {:DBD\\Gaboury-Epoxy-on-PDMS-1993.pdf:PDF},
+  Publisher                = {American Chemical Society},
+  Url                      = {http://dx.doi.org/10.1021/la00035a076}
+}
+
+@Misc{GEKA,
+  Title                    = {Destroying chemical warfare agents and contaminated military waste},
+
+  Author                   = {{GEKA~mbH}},
+  HowPublished             = {Internet: http://www.geka-munster.de/Seiten-engl/vernichtung/plasma-index.html (accessed 06-09-2009)},
+
+  Owner                    = {usti},
+  Url                      = {http://www.geka-munster.de/Seiten-engl/vernichtung/plasma-index.html}
+}
+
+@MastersThesis{Gerb03,
+  Title                    = {{Trocknung dicker Photoresistschichten mittels unterschiedlicher Trocknungsverfahren}},
+  Author                   = {M. Gerbracht},
+  School                   = {Fachhochschule Düsseldorf},
+  Year                     = {2003},
+  Type                     = {Diplomarbeit},
+
+  File                     = {:Photolacke\\Resiste_Diplomarbeit_Gerbracht.pdf:PDF}
+}
+
+@InProceedings{Golub02-2,
+  Title                    = {Stability of the barrier discharge relative to the filamentation},
+  Author                   = {Yu.B. Golubovskii and V.A. Maiorov v J. Behnke and J.F. Behnke},
+  Booktitle                = {Proc. of 16th ESCAMPIG/5th ICRP (Grenoble, France, 14-18 July 2002), Vol. 1, p. 235-236},
+  Year                     = {2002},
+
+  File                     = {Golubovskii02-Filament-stability.pdf:DBD\\Golubovskii02-Filament-stability.pdf:PDF},
+  Url                      = {http://optics.phys.spbu.ru/~golub/articles/barrier2d\_16ESCAMPIG.pdf}
+}
+
+@Article{Golub03,
+  Title                    = {Modelling of the homogeneous barrier discharge in helium at atmospheric pressure},
+  Author                   = {Yu.B. Golubovskii and V.A. Maiorov and J. Behnke and J.F. Behnke},
+  Journal                  = {J. Phys. D: Appl. Phys.},
+  Year                     = {2003},
+  Pages                    = {39\,-\,49},
+  Volume                   = {36},
+
+  Doi                      = {10.1088/0022-3727/36/1/306},
+  File                     = {DBD_Heliumatmosphäre_Golubovskii03.pdf:DBD_Heliumatmosphäre_Golubovskii03.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1088/0022-3727/36/1/306}
+}
+
+@InProceedings{Golub01,
+  Title                    = {The role of emission from the dielectric surface in a homogeneous barrier discharge in nitrogen},
+  Author                   = {Yu.B. Golubovskii and V.A. Maiorov and J. Behnke and J.F. Behnke},
+  Booktitle                = {Proc. of 15th Int. Symp. on Plasma Chemistry (Orléans, France, 10-13 July 2001) vol VIII p 3239-3244},
+  Year                     = {2001},
+
+  File                     = {DBD_EmissionenausDielektrikum_Golubovskii01.pdf:DBD\\DBD_EmissionenausDielektrikum_Golubovskii01.pdf:PDF},
+  Url                      = {http://optics.phys.spbu.ru/~golub/articles/DBD\_ISPC15.pdf}
+}
+
+@Misc{Filament,
+  Author                   = {Yu. B. Golubovskii},
+  HowPublished             = {Internet:\newline http://optics.phys.spbu.ru/\textasciitilde{}golub/images/filament.jpg (accessed 07-09-2009)},
+
+  Owner                    = {usti},
+  Url                      = {http://optics.phys.spbu.ru/~golub/images/filament.jpg}
+}
+
+@InProceedings{Golub02,
+  Title                    = {Some Aspects of the Modeling of an Uniform Barrier Discharge in Nitrogen},
+  Author                   = {Yu. B. Golubovskii and V. A. Maiorov and J. Behnke and J. F. Behnke},
+  Booktitle                = {Proc. of 16th ESCAMPIG/5th ICRP (Grenoble, France, 14-18 July 2002), Vol. 1, p. 233-234},
+  Year                     = {2002},
+
+  File                     = {DBD_N2Atmosphäre_Golubovskii02.pdf:DBD\\DBD_N2Atmosphäre_Golubovskii02.pdf:PDF},
+  Url                      = {http://optics.phys.spbu.ru/~golub/articles/DBD\_N2\_16ESCAMPIG.pdf}
+}
+
+@Misc{GolubWeb,
+  Title                    = {Homogeneous barrier discharge},
+
+  Author                   = {Yu. B. Golubovskii and others},
+  HowPublished             = {Internet: http://optics.phys.spbu.ru/\textasciitilde{}golub/english/barrier.html},
+
+  Url                      = {http://optics.phys.spbu.ru/~golub/english/barrier.html}
+}
+
+@Article{Goos1998,
+  Title                    = {Gas-Phase Synthesis of Nanostructured Anatase $\mathrm{TiO_2}$},
+  Author                   = {A. Goossens and E.L. Maloney and J Schoonman},
+  Journal                  = {Chemical Vapor Deposition},
+  Year                     = {1998},
+  Number                   = {3},
+  Pages                    = {109\,-\,114},
+  Volume                   = {4},
+
+  Doi                      = {10.1002/(SICI)1521-3862(199805)04:03<109::AID-CVDE109>3.0.CO;2-U},
+  File                     = {:DBD\\Goossens-TiCl4-1998.pdf:PDF},
+  Publisher                = {WILEY-VCH Verlag GmbH Weinheim},
+  Url                      = {\href{http://dx.doi.org/10.1002/(SICI)1521-3862(199805)04:03<109::AID-CVDE109>3.0.CO;2-U}{http://dx.doi.org/10.1002/(SICI)1521-3862(199805)04:03<109::AID-CVDE109>3.0.CO;2-U}}
+}
+
+@Article{Graz08,
+  Title                    = {Micropatterned atmospheric pressure discharge surface modification of fluorinated polymer films for mammalian cell adhesion and protein binding},
+  Author                   = {I. Graz and A. Ebner and S. Bauer and C. Romanin and H. Gruber},
+  Journal                  = {Appl. Phys. A},
+  Year                     = {2008},
+  Pages                    = {547\,-\,555},
+  Volume                   = {92},
+
+  Doi                      = {10.1007/s00339-008-4614-z},
+  File                     = {:DBD\\Graz-Patterned surface treatment-2008.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1007/s00339-008-4614-z}
+}
+
+@Book{HODE1980,
+  Title                    = {Ordinary Differential Equations},
+  Author                   = {Jack K. Hale},
+  Publisher                = {Robert E. Krieger Publishing Company Inc.},
+  Year                     = {1980}
+}
+
+@Article{HaCl81,
+  Title                    = {Non-Autonomous Logistic Equations as Models of Populations in a Deteriorating Environment},
+  Author                   = {T.G. Hallam and C.E. Clark},
+  Journal                  = {Journal of Theoretical Biology},
+  Year                     = {1981},
+  Pages                    = {303\,-\,311},
+  Volume                   = {93},
+
+  File                     = {:DBD\\Hallam-Clark-1981.pdf:PDF},
+  Publisher                = {Elsevier},
+  Url                      = {http://dx.doi.org/10.1016/0022-5193(81)90106-5}
+}
+
+@Article{HaII,
+  Title                    = {Effects of Toxicants on Populations: A Qualitative Approach II. First Order Kinetics},
+  Author                   = {T.G. Hallam and C.E. Clark and G.S. Jordan},
+  Journal                  = {Mathematical Biology},
+  Year                     = {1983},
+  Pages                    = {25\,-\,37},
+  Volume                   = {18},
+
+  File                     = {:DBD\\Hallam-II-1983.pdf:PDF},
+  Publisher                = {Springer-Verlag},
+  Url                      = {http://dx.doi.org/10.1007/BF00275908}
+}
+
+@Article{HaI,
+  Title                    = {Effects of Toxicants on Population: A Qualitative Approach I. Equilibrium Environmental Exposure},
+  Author                   = {T.G. Hallam and C.E. Clark and R.R. Lassiter},
+  Journal                  = {Ecological Modelling},
+  Year                     = {1983},
+  Pages                    = {291\,-\,304},
+  Volume                   = {18},
+
+  File                     = {:DBD\\Hallam-I-1983.pdf:PDF},
+  Publisher                = {Elsevier},
+  Url                      = {http://dx.doi.org/10.1016/0304-3800(83)90019-4}
+}
+
+@Article{HaLuIII,
+  Title                    = {Effects of Toxicants on Populations: A Qualitative Approach III. Environmental and Food Chain Pathways},
+  Author                   = {T.G. Hallam and J.T. De Luna},
+  Journal                  = {Theorical Biology},
+  Year                     = {1984},
+  Pages                    = {411\,-\,429},
+  Volume                   = {109},
+
+  File                     = {:DBD\\Hallam-Luna-III-1984.pdf:PDF},
+  Publisher                = {Elsevier},
+  Url                      = {http://dx.doi.org/10.1016/S0022-5193(84)80090-9}
+}
+
+@Article{Han04,
+  Title                    = {{3D microfabrication with inclined/rotated UV lithography}},
+  Author                   = {M. Han and W. Lee and S.-K. Lee and S.S. Lee},
+  Journal                  = {Sensors and Actuators A},
+  Year                     = {2003},
+  Pages                    = {14\,-\,20},
+  Volume                   = {111},
+
+  Doi                      = {10.1016/j.sna.2003.10.006},
+  File                     = {Rotated UV.pdf:Photolacke\\Rotated UV.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1016/j.sna.2003.10.006}
+}
+
+@Article{Hand00,
+  Title                    = {{Nanoliter liquid metering in microchannels using hydrophobic patterns}},
+  Author                   = {K. Handique and D.T. Burke and C.H. Mastrangelo and M.A. Burns},
+  Journal                  = {Anal. Chem.},
+  Year                     = {2000},
+  Number                   = {17},
+  Pages                    = {4100\,-\,4109},
+  Volume                   = {72},
+
+  Doi                      = {10.1021/ac000064s},
+  File                     = {:Allgemein\\Handique-hydrophobic-channels-2000.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1021/ac000064s}
+}
+
+@Article{Hei04,
+  Title                    = {Sterilization of Polymer Foils with Dielectric Barrier Discharges at Atmospheric Pressure},
+  Author                   = {M. Heise and W. Neff and O. Franken and P. Muranyi and J. Wunderlich},
+  Journal                  = {Plasmas polym.},
+  Year                     = {2004},
+  Pages                    = {23\,-\,33},
+  Volume                   = {9},
+
+  Doi                      = {10.1023/B:PAPO.0000039814.70172.c0},
+  File                     = {DBD_Sterilisation_Heise2004.pdf:DBD\\DBD_Sterilisation_Heise2004.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1023/B:PAPO.0000039814.70172.c0}
+}
+
+@Article{Hens07,
+  Title                    = {Electrical and Optical Properties of {AC} Microdischarges in Porous Ceramics},
+  Author                   = {K. Hensel and others},
+  Journal                  = {Plasma Process. Polym.},
+  Year                     = {2007},
+  Pages                    = {682\,-\,693},
+  Volume                   = {4},
+
+  Doi                      = {10.1002/ppap.200700022},
+  File                     = {:DBD\\Hensel-DBD-in-Ceramics-2007.pdf:PDF},
+  Publisher                = {WILEY-VCH Verlag Weinheim},
+  Url                      = {http://dx.doi.org/10.1002/ppap.200700022}
+}
+
+@Article{HerCul,
+  Title                    = {The Continuous Culture of Bacteria: a Theoretical and Experimental Study},
+  Author                   = {D. Herbert and R. Elsworth and R. C. Telling},
+  Journal                  = {Microbiology},
+  Year                     = {1956},
+  Pages                    = {601\,-\,622},
+  Volume                   = {14},
+
+  File                     = {:DBD\\Herbert-1956.pdf:PDF},
+  Publisher                = {Society for General Microbiology},
+  Url                      = {http://dx.doi.org/10.1099/00221287-14-3-601}
+}
+
+@Article{Heul04,
+  Title                    = {Patterning colloidal suspensions by selective wetting of microcontact-printed surfaces},
+  Author                   = {M. Heule and U.P. Schönholzer and L.J. Gauckler},
+  Journal                  = {J. Eur. Ceram. Soc.},
+  Year                     = {2003},
+  Pages                    = {2733\,-\,2739},
+  Volume                   = {24},
+
+  Doi                      = {10.1016/j.jeurceramsoc.2003.09.011},
+  File                     = {:DBD\\Heule2004.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1016/j.jeurceramsoc.2003.09.011}
+}
+
+@Article{Heusch1998,
+  Title                    = {Buried microchannels in photopolymer for delivering of solutions to neurons in a network},
+  Author                   = {M.O. Heuschkel and L. Guérin and B. Buisson and D. Bertrand and P. Renaud},
+  Journal                  = {Sensors and Actuators B},
+  Year                     = {1998},
+  Pages                    = {356\,-\,361},
+  Volume                   = {48},
+
+  Doi                      = {10.1016/S0925-4005(98)00071-9},
+  File                     = {buried microchannels in photopolymer.pdf:Photolacke\\buried microchannels in photopolymer.pdf:PDF},
+  Url                      = {\href{http://dx.doi.org/10.1016/S0925-4005(98)00071-9}{http://dx.doi.org/10.1016/S0925-4005(98)00071-9}}
+}
+
+@Article{Ho04,
+  Title                    = {State of the art in wire electrical discharge machining {(WEDM)}},
+  Author                   = {K.H. Ho and S.T. Newman and S. Rahimifard and R.D. Allen},
+  Journal                  = {Int. J. Mach. Tool. Manufact.},
+  Year                     = {2004},
+  Number                   = {12\,-\,13},
+  Pages                    = {1247\,-\,1259},
+  Volume                   = {44},
+
+  Doi                      = {10.1016/j.ijmachtools.2004.04.017},
+  Publisher                = {Elsevier},
+  Url                      = {http://dx.doi.org/10.1016/j.ijmachtools.2004.04.017}
+}
+
+@Book{Hof1973,
+  Title                    = {Algebra Lineal},
+  Author                   = {K. Hoffman and R. Kunze},
+  Publisher                = {Prentice Hall},
+  Year                     = {1973}
+}
+
+@Article{Huang20141721,
+  Title                    = {Bifurcations in a predator-prey system of Leslie type with generalized Holling type \{III\} functional response},
+  Author                   = {Jicai Huang and Shigui Ruan and Jing Song},
+  Journal                  = {Journal of Differential Equations },
+  Year                     = {2014},
+  Number                   = {6},
+  Pages                    = {1721 - 1752},
+  Volume                   = {257},
+
+  Doi                      = {http://dx.doi.org/10.1016/j.jde.2014.04.024},
+  ISSN                     = {0022-0396},
+  Keywords                 = {Predator�prey system},
+  Owner                    = {josue},
+  Timestamp                = {2015.08.17},
+  Url                      = {http://www.sciencedirect.com/science/article/pii/S0022039614001843}
+}
+
+@Article{Hu13,
+  Title                    = {A Model for the Impact of Contaminants on Fish Population Dynamics},
+  Author                   = {Q. Huang and L. Parshotam and H. Wang and C. Bampfylde and M.A. Lewis},
+  Journal                  = {Journal of Theoretical Biology},
+  Year                     = {2013},
+  Pages                    = {71\,-\,79},
+  Volume                   = {334},
+
+  File                     = {:DBD\\Huang-Impact-2013.pdf:PDF},
+  Publisher                = {Elsevier},
+  Url                      = {http://dx.doi.org/10.1016/j.jtbi.2013.05.018}
+}
+
+@Article{Hu15,
+  Title                    = {The Impact of Environmental Toxins on Predator-Prey Dynamics},
+  Author                   = {Q. Huang and H. Wang and M.A. Lewis},
+  Journal                  = {Journal of Theoretical Biology},
+  Year                     = {2015},
+  Pages                    = {12\,-\,30},
+  Volume                   = {378},
+
+  File                     = {:DBD\\Huang-Impact-2015.pdf:PDF},
+  Publisher                = {Elsevier},
+  Url                      = {http://dx.doi.org/10.1016/j.jtbi.2015.04.019}
+}
+
+@Book{Hump2004,
+  Title                    = {Numbers, Groups and Codes},
+  Author                   = {J.F. Humphreys and M.Y. Prest},
+  Publisher                = {Cambridge University Press},
+  Year                     = {2004},
+
+  Url                      = {http://www.cambridge.org/9780521540506}
+}
+
+@Article{Inag1998,
+  Title                    = {Plasma polymer deposition from mixture of tetramethoxysilane and oxygen on {PET} films and their oxygen gas barrier properties},
+  Author                   = {N. Inagaki and S. Tasaka and M. Makino},
+  Journal                  = {J. Appl. Polym. Sci.},
+  Year                     = {1998},
+  Number                   = {6},
+  Pages                    = {1031\,-\,1039},
+  Volume                   = {64},
+
+  Doi                      = {10.1002/%28SICI%291097-4628%2819970509%2964%3A6%3C1031%3A%3AAID-APP1%3E3.0.CO%3B2-M},
+  File                     = {:DBD\\Inagaki-SiOx-oxygen-barrier-1996.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1002/\%28SICI\%291097-4628\%2819970509\%2964\%3A6\%3C1031\%3A\%3AAID-APP1\%3E3.0.CO\%3B2-M}
+}
+
+@Article{Ito07,
+  Title                    = {Characterization of a microfluidic device fabricated using a photosensitive sheet},
+  Author                   = {T. Ito and others},
+  Journal                  = {J. Micromech. Microeng.},
+  Year                     = {2007},
+  Pages                    = {432\,-\,438},
+  Volume                   = {17},
+
+  Doi                      = {10.1088/0960-1317/17/3/003},
+  File                     = {Ito07.pdf:Photolacke\\Ito07.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1088/0960-1317/17/3/003}
+}
+
+@Article{Jack01,
+  Title                    = {Microfluidic systems with on-line UV detection fabricated in photodefinable epoxy},
+  Author                   = {R.J. Jackman and T.M. Floyd and R. Ghodssi and M.A. Schmidt and K.F. Jensen},
+  Journal                  = {J. Micromech. Microeng.},
+  Year                     = {2001},
+  Pages                    = {1\,-\,8},
+  Volume                   = {11},
+
+  Doi                      = {10.1088/0960-1317/11/3/316},
+  File                     = {Jack01.pdf:Photolacke\\Jack01.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1088/0960-1317/11/3/316}
+}
+
+@Article{jeffries1987qualitative,
+  Title                    = {Qualitative stability of linear systems},
+  Author                   = {Jeffries, Clark and Klee, Victor and van den Driessche, Pauline},
+  Journal                  = {Linear Algebra and Its Applications},
+  Year                     = {1987},
+  Pages                    = {1--48},
+  Volume                   = {87},
+
+  Publisher                = {Elsevier}
+}
+
+@TechReport{jeffries1976matrix,
+  Title                    = {When is a Matrix Sign Stable.},
+  Author                   = {Jeffries, Clark and Klee, Victor and Van den Driessche, Pauline},
+  Institution              = {DTIC Document},
+  Year                     = {1976}
+}
+
+@Article{Jens03,
+  Title                    = {Electron emission theory and its application: Fowler--Nordheim equation and beyond},
+  Author                   = {K.L. Jensen},
+  Journal                  = {J. Vac. Sci. Technol. B},
+  Year                     = {2003},
+  Pages                    = {1528\,-\,1544},
+  Volume                   = {21(4)},
+
+  Doi                      = {10.1116/1.1573664},
+  File                     = {:DBD\\2003_Electron emission theory and its application.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1116/1.1573664}
+}
+
+@Article{Jens02,
+  Title                    = {Theory of Field Emission},
+  Author                   = {K.L. Jensen},
+  Journal                  = {Vacuum Microelectronics},
+  Year                     = {2002},
+  Pages                    = {33\,-\,104},
+  Volume                   = {Chapter 3},
+
+  Doi                      = {10.1002/0471224332.ch3},
+  Url                      = {http://dx.doi.org/10.1002/0471224332.ch3}
+}
+
+@Article{Jide06,
+  Title                    = {Electrical characterization of microdischarges produced by dielectric barrier discharge in dry air at atmospheric pressure},
+  Author                   = {N. Jidenko and M. Petit and J.P. Borra},
+  Journal                  = {J. Phys. D: Appl. Phys.},
+  Year                     = {2006},
+  Number                   = {2},
+  Pages                    = {281\,-\,293},
+  Volume                   = {39},
+
+  Doi                      = {10.1088/0022-3727/39/2/008},
+  File                     = {:DBD\\Jidenko-Plasma-Control-2006.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1088/0022-3727/39/2/008}
+}
+
+@Article{Jigu06,
+  Title                    = {Effect of filler behavior on nanocomposite {SU8} photoresist for moving micro-parts},
+  Author                   = {S. Jigueta and M. Judelewicza and S. Mischlerb and A. Bertchc and P. Renaudc},
+  Journal                  = {Microelectron. Eng.},
+  Year                     = {2006},
+  Pages                    = {1273\,-\,1276},
+  Volume                   = {83},
+
+  Doi                      = {10.1016/j.mee.2006.01.068},
+  File                     = {Jiguet_SU-8_filler.pdf:Photolacke\\Jiguet_SU-8_filler.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1016/j.mee.2006.01.068}
+}
+
+@Article{Jin0,
+  Title                    = {Thresholds of Survival for an n-Dimensional Volterra Mutualistic System in a Polluted Environment},
+  Author                   = {P. Jinxiao and J. Zhen and M. Zhien},
+  Journal                  = {Mathematical Analysis and Applications},
+  Year                     = {2000},
+  Pages                    = {519\,-\,531},
+  Volume                   = {252},
+
+  File                     = {:DBD\\Jinxiao-2000-21.pdf:PDF},
+  Publisher                = {Academic Press},
+  Url                      = {http://dx.doi.org/10.1006/jmaa.2000.6853}
+}
+
+@Article{jorgensen2000variance,
+  Title                    = {On the variance of eigenvalues of the community matrix: derivation and appraisal},
+  Author                   = {Jorgensen, Jane and Rossignol, Annette MacKay and Puccia, Charles J and Levins, Richard and Rossignol, Philippe A},
+  Journal                  = {Ecology},
+  Year                     = {2000},
+  Number                   = {10},
+  Pages                    = {2928--2931},
+  Volume                   = {81},
+
+  Publisher                = {Eco Soc America}
+}
+
+@Article{justus2006loop,
+  Title                    = {Loop analysis and qualitative modeling: limitations and merits},
+  Author                   = {Justus, James},
+  Journal                  = {Biology and Philosophy},
+  Year                     = {2006},
+  Number                   = {5},
+  Pages                    = {647--666},
+  Volume                   = {21},
+
+  Publisher                = {Springer}
+}
+
+@Article{Kang03,
+  Title                    = {Numerical study on influences of barrier arrangements on dielectric barrier discharge characteristics},
+  Author                   = {W.S. Kang and J.M. Park and Y. Kim and S.H. Hong},
+  Journal                  = {IEEE Trans. Plasma Sci.},
+  Year                     = {2003},
+  Number                   = {4},
+  Pages                    = {504\,-\,510},
+  Volume                   = {31},
+
+  Doi                      = {10.1109/TPS.2003.815469},
+  File                     = {:DBD\\Kang-StreamerSimulations-2003.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1109/TPS.2003.815469}
+}
+
+@Article{Kawa1969,
+  Title                    = {Reaction of fluorescein-isothiocyanate with proteins and amino acids: {II.} Preparation of FIuorescein-Thiohydantoin Amino Acids and Their Thin-layer Chromatography},
+  Author                   = {H. Kawauchi and K. Tuzimura and H. Maeda and N. Ishida},
+  Journal                  = {Journal of Biochemistry},
+  Year                     = {1969},
+  Number                   = {6},
+  Pages                    = {783\,-\,789},
+  Volume                   = {66},
+
+  File                     = {:Allgemein\\Kawauchi-FITC-reaction-1969.pdf:PDF},
+  Publisher                = {Jpn Biochemical Soc},
+  Url                      = {http://jb.oxfordjournals.org/cgi/content/abstract/66/6/783}
+}
+
+@InProceedings{Kien04,
+  Title                    = {{3D} Polymer Microstructures by Laminating {SU-8} Films},
+  Author                   = {J. Kieninger and G. Jobst and G. Igel and I. Moser and G. Urban},
+  Booktitle                = {{Proceedings of \textmu TAS 2004}},
+  Year                     = {2004},
+  Pages                    = {363\,-\,365},
+  Volume                   = {2},
+
+  File                     = {:Photolacke\\Kieninger-Manuscript_microTAS04_SU.-8pdf.pdf:PDF}
+}
+
+@Article{Kim04,
+  Title                    = {{A tapered hollow metallic microneedle array using backside exposure of SU-8}},
+  Author                   = {K. Kim and others},
+  Journal                  = {J. Micromech. Microeng.},
+  Year                     = {2004},
+  Pages                    = {597\,-\,603},
+  Volume                   = {14},
+
+  Doi                      = {10.1088/0960-1317/14/4/021},
+  File                     = {Hollow Needles.pdf:Photolacke\\Hollow Needles.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1088/0960-1317/14/4/021}
+}
+
+@Article{Kim03,
+  Title                    = {Arrays of Microplasma Devices Fabricated in Photodefinable Glass and Excited {AC or DC} by Interdigitated Electrodes},
+  Author                   = {S.-O. Kim and J.G. Eden},
+  Journal                  = {IEEE Photonics Technology Letters},
+  Year                     = {2005},
+  Pages                    = {1543\,-\,1545},
+  Volume                   = {17},
+
+  Doi                      = {10.1109/LPT.2005.848260},
+  File                     = {:DBD\\Kim-Cavity Array Foturan-2005.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1109/LPT.2005.848260}
+}
+
+@InProceedings{Kim08,
+  Title                    = {Deposition of super hydrophobic {a-C:F} films by dielectric barrier discharge at atmospheric pressure},
+  Author                   = {Y.K. Kim and D. J. Kim},
+  Booktitle                = {Book of Abstract of 11th International Conference on Plasma Surface Engineering PSE 2008},
+  Year                     = {2008},
+
+  File                     = {:DBD\\Kim-CxFy-surface-DBD-2008.pdf:PDF},
+  Url                      = {http://www.pse2008.net/pdf\_edit/tmp/PO1063-PSE2008-2f1418.pdf}
+}
+
+@Article{Klag07-2,
+  Title                    = {Microplasma-Based Treatment of Inner Surfaces in Microfluidic Devices},
+  Author                   = {C.P. Klages and C. Berger and M. Eichler and M. Thomas},
+  Journal                  = {Contributions to Plasma Physics},
+  Year                     = {2007},
+  Pages                    = {49\,-\,56},
+  Volume                   = {47},
+
+  Doi                      = {10.1002/ctpp.200710008},
+  File                     = {:DBD\\Klages-plasmaprinting-channels-2007.pdf:PDF},
+  Publisher                = {WILEY-VCH Verlag Berlin},
+  Url                      = {http://dx.doi.org/10.1002/ctpp.200710008}
+}
+
+@Article{Klag00,
+  Title                    = {Surface functionalization at atmospheric pressure by {DBD}-based pulsed plasma polymerization},
+  Author                   = {C.P. Klages and K. Höpfner and N. Kläke and R. Thyen},
+  Journal                  = {Plasmas and Polymers},
+  Year                     = {2000},
+  Number                   = {2},
+  Pages                    = {79\,-\,89},
+  Volume                   = {5},
+
+  Doi                      = {10.1023/A:1009583815474},
+  File                     = {:DBD\\Klages-Epoxy-groups-2000.pdf:PDF},
+  Publisher                = {Springer},
+  Url                      = {\newline http://dx.doi.org/10.1023/A:1009583815474}
+}
+
+@Article{Klag07,
+  Title                    = {Surface Technology with Cold Microplasmas},
+  Author                   = {C.P. Klages and others},
+  Journal                  = {Plasma Process. Polym.},
+  Year                     = {2007},
+  Number                   = {3},
+  Pages                    = {208\,-\,218},
+  Volume                   = {4},
+
+  Doi                      = {10.1002/ppap.200600116},
+  File                     = {:DBD\\Klages-Overview-07.pdf:PDF},
+  Publisher                = {John Wiley \& Sons, Ltd},
+  Url                      = {\newline http://dx.doi.org/10.1002/ppap.200600116}
+}
+
+@Article{Kogel03,
+  Title                    = {Dielectric-barrier Discharges: Their History, Discharge Physics, and Industrial Applications},
+  Author                   = {U. Kogelschatz},
+  Journal                  = {Plasma Chem. Plasma Process.},
+  Year                     = {2003},
+  Pages                    = {1\,-\,46},
+  Volume                   = {23},
+
+  Doi                      = {10.1023/A:1022470901385},
+  File                     = {kogelschatz.pdf:DBD\\kogelschatz.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1023/A:1022470901385}
+}
+
+@Article{Kogel02,
+  Title                    = {Filamentary, Patterned, and Diffuse Barrier Discharges},
+  Author                   = {U. Kogelschatz},
+  Journal                  = {IEEE Trans. Plasma Sci.},
+  Year                     = {2002},
+  Number                   = {4},
+  Pages                    = {1400\,-\,1408},
+  Volume                   = {30},
+
+  Doi                      = {10.1109/TPS.2002.804201},
+  File                     = {:DBD\\Kogelschatz-Filaments-2002.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1109/TPS.2002.804201}
+}
+
+@Article{Koid07,
+  Title                    = {Hydrogen-doped $\mathrm{In_{2}O_{3}}$ as High-mobility Transparent Conductive Oxide},
+  Author                   = {T. Koida and H. Fujiwara and M. Kondo},
+  Journal                  = {Jpn. J. Appl. Phys.},
+  Year                     = {2007},
+  Number                   = {28},
+  Pages                    = {L685\,-\,L687},
+  Volume                   = {46},
+
+  Doi                      = {10.1143/JJAP.46.L685},
+  File                     = {:Allgemein\\Koida-ITO-2007.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1143/JJAP.46.L685}
+}
+
+@Article{Kozl05,
+  Title                    = {Barrier discharges in {N2/O}2 mixtures},
+  Author                   = {K.V. Kozlov and others},
+  Journal                  = {J. Phys. D: Appl. Phys.},
+  Year                     = {2005},
+  Pages                    = {518\,-\,529},
+  Volume                   = {38},
+
+  Doi                      = {10.1088/0022-3727/38/4/003},
+  File                     = {:DBD\\Kozlov-oxygen-impurity-2005.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1088/0022-3727/38/4/003}
+}
+
+@Article{Krei05,
+  Title                    = {Patterned {DBD} treatment for area-selective metallization of polymers-plasma printing},
+  Author                   = {S. Kreitz and C. Penache and M. Thomas and C.-P. Klages},
+  Journal                  = {Surf. Coat. Technol.},
+  Year                     = {2005},
+  Pages                    = {676\,-\,679},
+  Volume                   = {200},
+
+  Doi                      = {10.1016/j.surfcoat.2005.01.085},
+  File                     = {:DBD\\Kreitz05-Patterned DBD treatment.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1016/j.surfcoat.2005.01.085}
+}
+
+@Article{Kukh03,
+  Title                    = {Electroplating moulds using dry film thick negative photoresist.},
+  Author                   = {E. Kukharenka and M.M. Farooqui and L. Grigore and M. Kraft and N. Hollinshead},
+  Journal                  = {J. Micromech. Microeng.},
+  Year                     = {2003},
+  Pages                    = {S67\,-\,S74},
+  Volume                   = {13},
+
+  Doi                      = {10.1088/0960-1317/13/4/311},
+  File                     = {Ordyl-1.pdf:Photolacke\\Ordyl-1.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1088/0960-1317/13/4/311}
+}
+
+@Article{Kunh00,
+  Title                    = {Generation of Large-Volume, Atmospheric-Pressure, Nonequilibrium Plasmas},
+  Author                   = {E.E. Kunhardt},
+  Journal                  = {IEEE Trans. Plasma Sci.},
+  Year                     = {2000},
+  Pages                    = {189\,-\,200},
+  Volume                   = {28},
+
+  Doi                      = {10.1109/27.842901},
+  File                     = {:DBD\\Kunhardt00-Frequency-Ignition.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1109/27.842901}
+}
+
+@Article{Kwak03,
+  Title                    = {Improvement of Luminance Efficiency in Xenon Dielectric Barrier Discharge Flat Lamp},
+  Author                   = {M.G. Kwak and others},
+  Journal                  = {IEEE Trans. Plasma Sci.},
+  Year                     = {2003},
+  Pages                    = {176\,-\, 178},
+  Volume                   = {31},
+
+  Doi                      = {10.1109/TPS.2003.808867},
+  File                     = {Kwak-Xenon-Lamp-2002.pdf:DBD\\Kwak-Xenon-Lamp-2002.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1109/TPS.2003.808867}
+}
+
+@Article{Lang05,
+  Title                    = {Microscale Plasma-Initiated Patterning (\textmu {PIP})},
+  Author                   = {B.A. Langowski and K.E. Uhrich},
+  Journal                  = {Langmuir},
+  Year                     = {2005},
+  Pages                    = {10509\,-\,10514},
+  Volume                   = {21},
+
+  Doi                      = {10.1021/la052222m},
+  File                     = {:DBD\\Langowski-PDMS plasma patterning-2005.pdf:PDF},
+  Url                      = {\newline http://dx.doi.org/10.1021/la052222m}
+}
+
+@Unpublished{Lede08,
+  Title                    = {Influence of the Electrode Material on the Electrical Breakdown of Argon},
+  Author                   = {L. Ledernez and F. Olcaytug and G. Urban and H. Yasuda},
+  Note                     = {accepted for Plasma Sources Science and Technology}
+}
+
+@Article{Leve1944,
+  Title                    = {A method for the solution of certain non-linear problems in least squares},
+  Author                   = {K. Levenberg},
+  Journal                  = {Q. Appl. Math},
+  Year                     = {1944},
+  Number                   = {2},
+  Pages                    = {164\,-\,168},
+  Volume                   = {2}
+}
+
+@Book{EAR22004,
+  Title                    = {Análise Real},
+  Author                   = {Elon Lages Lima},
+  Year                     = {2004},
+  Volume                   = {2}
+}
+
+@Article{Lu08,
+  Title                    = {Low temperature plasma channels generated in microcavity trenches with widths of 20\,-\,150\,\textmu{}m and aspect ratios as large as 10\textsuperscript{4}\,:\,1},
+  Author                   = {M. Lu and S.-J. Park and B.T. Cunningham and J.G. Eden},
+  Journal                  = {Appl. Phys. Lett.},
+  Year                     = {2008},
+  Pages                    = {1397\,-\,1402},
+  Volume                   = {92},
+
+  Doi                      = {10.1063/1.2827197},
+  File                     = {:DBD\\Lu-Plasma channels-2008.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1063/1.2827197}
+}
+
+@Article{Lu07,
+  Title                    = {Microcavity Plasma Devices and Arrays Fabricated by Plastic-Based Replica Molding},
+  Author                   = {M. Lu and S.-J. Park and B.T. Cunningham and J.G. Eden},
+  Journal                  = {J. Microelectromech. Syst.},
+  Year                     = {2007},
+  Pages                    = {1397\,-\,1402},
+  Volume                   = {16},
+
+  Doi                      = {10.1109/JMEMS.2006.886034},
+  File                     = {:DBD\\Lu-Microcavities by molding-2007.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1109/JMEMS.2006.886034}
+}
+
+@PhdThesis{Luca09,
+  Title                    = {Microplasma Stamps - An Atmospheric-Pressure Plasma Source for the Area-Selective Modification of Surfaces},
+  Author                   = {N. Lucas},
+  School                   = {Institute for Microtechnology, TU Braunschweig},
+  Year                     = {2009},
+
+  Url                      = {http://www.shaker.de/Online-Gesamtkatalog/details.asp?ID=8983398&CC=3631&ISBN=3-8322-8008-1}
+}
+
+@Article{Luca08-2,
+  Title                    = {Microplasma stamps for selective surface modification: design and characterization},
+  Author                   = {N. Lucas and V. Ermel and M. Kurrat and S. Büttgenbach},
+  Journal                  = {J. Phys. D: Appl. Phys.},
+  Year                     = {2008},
+  Pages                    = {215202 (7pp)},
+  Volume                   = {41},
+
+  Doi                      = {10.1088/0022-3727/41/21/215202},
+  File                     = {:DBD\\Lucas-PDMS-Stamps-2.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1088/0022-3727/41/21/215202}
+}
+
+@Article{Luca08-1,
+  Title                    = {Design and optimization of dielectric barrier discharge microplasma stamps},
+  Author                   = {N. Lucas and A. Hinze and C.-P. Klages and S. Büttgenbach},
+  Journal                  = {J. Phys. D: Appl. Phys.},
+  Year                     = {2008},
+  Pages                    = {194012 (5pp)},
+  Volume                   = {41},
+
+  Doi                      = {10.1088/0022-3727/41/19/194012},
+  File                     = {:DBD\\Lucas-PDMS-Stamps-1.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1088/0022-3727/41/19/194012}
+}
+
+@Article{LuHaIV,
+  Title                    = {Effects of Toxicants on Populations: A Qualitative Approach IV. Resource-Consumer-Toxicant Models},
+  Author                   = {J.T. De Luna and T.G. Hallam},
+  Journal                  = {Ecological Modelling},
+  Year                     = {1987},
+  Pages                    = {249\,-\,273},
+  Volume                   = {35},
+
+  File                     = {:DBD\\Luna-Hallam-IV-1987.pdf:PDF},
+  Publisher                = {Elsevier},
+  Url                      = {http://dx.doi.org/10.1016/0304-3800(87)90115-3}
+}
+
+@Article{LuFa14,
+  Title                    = {Optimal control for an age-dependent competitive species model in a polluted environment},
+  Author                   = {Z. Luo and X. Fan},
+  Journal                  = {Applied Mathematics and Computation},
+  Year                     = {2014},
+  Pages                    = {91\,-\,101},
+  Volume                   = {228},
+
+  File                     = {:DBD\\Luo-Fan-2014.pdf:PDF},
+  Publisher                = {Elsevier},
+  Url                      = {http://dx.doi.org/10.1016/j.amc.2013.11.069}
+}
+
+@Article{LuHe14,
+  Title                    = {Optimal control for age-dependent population hybrid system in a polluted environment},
+  Author                   = {Z. Luo and Z.R. He},
+  Journal                  = {Applied Mathematics and Computation},
+  Year                     = {2014},
+  Pages                    = {68\,-\,76},
+  Volume                   = {228},
+
+  File                     = {:DBD\\Luo-He-2014.pdf:PDF},
+  Publisher                = {Elsevier},
+  Url                      = {http://dx.doi.org/10.1016/j.amc.2013.11.070}
+}
+
+@Article{Ma97,
+  Title                    = {The Thresholds of Survival for an n-Dimensional Food Chain Model in a Polluted Environment},
+  Author                   = {Z. Ma and W. Zong and Z. Luo},
+  Journal                  = {Mathematical Analysis and Applications},
+  Year                     = {1997},
+  Pages                    = {440\,-\,458},
+  Volume                   = {210},
+
+  File                     = {:DBD\\Ma-1997.pdf:PDF},
+  Publisher                = {Academic Press}
+}
+
+@Article{Muel1999,
+  Title                    = {Self-Organized Filaments in Dielectric Barrier Glow Discharges},
+  Author                   = {I. Müller and C. Punset and E. Ammelt and H.-G. Purwins and J.P. Boeuf},
+  Journal                  = {IEEE Trans. Plasma Sci.},
+  Year                     = {1999},
+  Pages                    = {20\,-\,21},
+  Volume                   = {27},
+
+  Doi                      = {10.1109/27.763004},
+  File                     = {Müller-Filaments-glow-discharge-1999.pdf:DBD\\Müller-Filaments-glow-discharge-1999.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1109/27.763004}
+}
+
+@Article{Malk08,
+  Title                    = {Pulsed-Plasma-Induced Micropatterning with Alternating Hydrophilic and Hydrophobic Surface Chemistries},
+  Author                   = {G.S. Malkov and others},
+  Journal                  = {Plasma Process. Polym.},
+  Year                     = {2008},
+  Number                   = {2},
+  Pages                    = {129\,-\,145},
+  Volume                   = {5},
+
+  Doi                      = {10.1002/ppap.200700118},
+  File                     = {:DBD\\Malkov-SEM mask pattern-2008.pdf:PDF},
+  Publisher                = {John Wiley \& Sons, Ltd},
+  Url                      = {http://dx.doi.org/10.1002/ppap.200700118}
+}
+
+@Article{Marq1963,
+  Title                    = {An Algorithm for Least-Squares Estimation of Nonlinear Parameters},
+  Author                   = {Donald W. Marquardt},
+  Journal                  = {SIAM Journal on Applied Mathematics},
+  Year                     = {1963},
+  Number                   = {2},
+  Pages                    = {431\,-\,441},
+  Volume                   = {11},
+
+  Doi                      = {10.1137/0111030},
+  Publisher                = {SIAM},
+  Url                      = {http://dx.doi.org/10.1137\%2F0111030}
+}
+
+@Article{Mart04,
+  Title                    = {Submicrometer-scale patterning of ceramic thin films},
+  Author                   = {C.R. Martin and I.A. Aksay},
+  Journal                  = {J. of Electroceramics},
+  Year                     = {2004},
+  Number                   = {1},
+  Pages                    = {53\,-\,68},
+  Volume                   = {12},
+
+  Doi                      = {10.1023/B:JECR.0000034001.15359.98},
+  File                     = {:Allgemein\\Martin-Patterning-Ceramics-Overview-2004.pdf:PDF},
+  Publisher                = {Springer},
+  Url                      = {http://dx.doi.org/10.1023/B:JECR.0000034001.15359.98}
+}
+
+@Article{Mart1997,
+  Title                    = {Deposition of $\mathrm{SiO_2}$ and $\mathrm{TiO_2}$ thin films by plasma enhanced chemical vapor deposition for antireflection coating},
+  Author                   = {C. Martinet and V. Paillard and A. Gagnaire and J. Joseph},
+  Journal                  = {J. Non-Cryst. Solids},
+  Year                     = {1997},
+  Pages                    = {77\,-\,82},
+  Volume                   = {216},
+
+  Doi                      = {10.1016/S0022-3093(97)00175-0},
+  File                     = {:DBD\\Martinet-SiO2-TiO2-1997.pdf:PDF},
+  Url                      = {\href{http://dx.doi.org/10.1016/S0022-3093(97)00175-0}{http://dx.doi.org/10.1016/S0022-3093(97)00175-0}}
+}
+
+@Article{Mass01,
+  Title                    = {The role of dielectric barrier discharge atmosphere and physics on polypropylene surface treatment},
+  Author                   = {F. Massines and others},
+  Journal                  = {Plasmas and Polymers},
+  Year                     = {2001},
+  Number                   = {1},
+  Pages                    = {35\,-\,49},
+  Volume                   = {6},
+
+  Doi                      = {10.1023/A:1011365306501},
+  File                     = {:DBD\\Massines-oxygen-impurities-2001.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1023/A:1011365306501}
+}
+
+@Article{Masu1998,
+  Title                    = {{Recent trends in EDM/ECM technologies in Japan}},
+  Author                   = {T. Masuzawa and T. Takawashi},
+  Journal                  = {VDI BERICHTE},
+  Year                     = {1998},
+  Pages                    = {1\,-\,16},
+  Volume                   = {1405},
+
+  Publisher                = {VDI VERLAG GMBH}
+}
+
+@Article{Mata06,
+  Title                    = {Fabrication of multi-layer {SU-8} microstructures},
+  Author                   = {A. Mata and A.J. Fleischmann and S. Roy},
+  Journal                  = {J. Micromech. Microeng.},
+  Year                     = {2006},
+  Pages                    = {276\,-\,284},
+  Volume                   = {16},
+
+  Doi                      = {10.1088/0960-1317/16/2/012},
+  File                     = {SU-8-Aspektverhaeltnis-jmm6_2_012.pdf:Photolacke\\SU-8-Aspektverhaeltnis-jmm6_2_012.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1088/0960-1317/16/2/012}
+}
+
+@Article{Melz1996,
+  Title                    = {Driving forces for {DNA} adsorption to silica in perchlorate solutions},
+  Author                   = {K.A. Melzak and C.S. Sherwood and R.F.B. Turner and C.A. Haynes},
+  Journal                  = {J. Colloid Interface Sci.},
+  Year                     = {1996},
+  Number                   = {2},
+  Pages                    = {635\,-\,644},
+  Volume                   = {181},
+
+  Doi                      = {10.1006/jcis.1996.0421},
+  File                     = {:Allgemein\\Melzak-DNA-SiOx-Adsorption-1996.pdf:PDF},
+  Publisher                = {Elsevier},
+  Url                      = {\newline http://dx.doi.org/10.1006/jcis.1996.0421}
+}
+
+@Conference{Menz02,
+  Title                    = {Non-conventional machining for microsystems},
+  Author                   = {W. Menz and R. Förster and A. Schoth and C. Müller},
+  Booktitle                = {Proc. 3rd Euspen Int. Conf.},
+  Year                     = {2002},
+  Pages                    = {37}
+}
+
+@Manual{guiaminam,
+  Title                    = {Gu�a Ambiental Para el Manejo de Relaves Mineros},
+  Author                   = {MINEM},
+  Organization             = {Ministerio de Energ�a y Minas del Per�},
+
+  Owner                    = {josue},
+  Timestamp                = {2015.08.18},
+  Url                      = {http://www.minem.gob.pe/minem/archivos/file/DGAAM/guias/relaveminero.pdf}
+}
+
+@Article{Mira00,
+  Title                    = {Electrical and Optical Diagnostics of Dielectric Barrier Discharges {(DBD) in He and N2} for Polymer Treatment},
+  Author                   = {S.F. Miralaï and others},
+  Journal                  = {Plasmas and Polymers},
+  Year                     = {2000},
+  Number                   = {2},
+  Pages                    = {63\,-\,77},
+  Volume                   = {5},
+
+  Doi                      = {10.1023/A:1009531831404},
+  File                     = {:DBD\\Miralai-oxygen-impurity-2000.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1023/A:1009531831404}
+}
+
+@InProceedings{TOK06,
+  Title                    = {Faster sensitivity and non-antimonite permanent photoresist for {MEMS}},
+  Author                   = {K. Misumi and others},
+  Booktitle                = {Advances in Resist Technology and Processing XXIII},
+  Year                     = {2006},
+  Editor                   = {Qinghuang Lin},
+  Organization             = {SPIE},
+  Pages                    = {61534F},
+  Series                   = {Proceedings of SPIE},
+  Volume                   = {6153},
+
+  Doi                      = {10.1117/12.656249},
+  File                     = {TOK-Faster Sensitivity and Non-Antimonite Permanent Photoresist for MEMS.pdf:Photolacke\\TOK-Faster Sensitivity and Non-Antimonite Permanent Photoresist for MEMS.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1117/12.656249}
+}
+
+@Article{TOK06-2,
+  Title                    = {Minute Tunnel Structure Formation with Permanent Film Photoresist},
+  Author                   = {K. Misumi and K. Saito and A. Yamanouchi and T. Senzaki and H. Honma},
+  Journal                  = {J. Photopolym. Sci. Technol.},
+  Year                     = {2006},
+  Pages                    = {57\,-\,62},
+  Volume                   = {19},
+
+  Doi                      = {10.2494/photopolymer.19.57},
+  File                     = {TOK-Minute tunnel structure formation with permanent film photoresist.pdf:Photolacke\\TOK-Minute tunnel structure formation with permanent film photoresist.pdf:PDF},
+  Url                      = {\newline http://dx.doi.org/10.2494/photopolymer.19.57}
+}
+
+@Article{Mull1988,
+  Title                    = {Surface properties of silicon and aluminum oxide powders},
+  Author                   = {W.M. Mullins and B.L. Averbach},
+  Journal                  = {Surface Science},
+  Year                     = {1988},
+  Number                   = {1-2},
+  Pages                    = {41\,-\,51},
+  Volume                   = {206},
+
+  Doi                      = {10.1016/0039-6028(88)90013-1},
+  File                     = {:DBD\\Mullins-Work function of AluOxide-1988.pdf:PDF},
+  Publisher                = {Elsevier},
+  Url                      = {\href{http://dx.doi.org/10.1016/0039-6028(88)90013-1}{http://dx.doi.org/10.1016/0039-6028(88)90013-1}}
+}
+
+@Article{Murp1956,
+  Title                    = {Thermionic Emission, Field Emission, and the Transition Region},
+  Author                   = {E.L. Murphy and R.H. {Good, Jr.}},
+  Journal                  = {Phys. Rev.},
+  Year                     = {1956},
+  Pages                    = {1464 - 1473},
+  Volume                   = {102},
+
+  Doi                      = {10.1103/PhysRev.102.1464},
+  File                     = {:DBD\\Murphy,Good - Thermionic Emission, Field Emission, and the Transition Region.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1103/PhysRev.102.1464}
+}
+
+@Article{Naka01,
+  Title                    = {Recent studies on super-hydrophobic films},
+  Author                   = {A. Nakajima and K. Hashimoto and T. Watanabe},
+  Journal                  = {Monatshefte für Chemie\,/\,Chemical Monthly},
+  Year                     = {2001},
+  Pages                    = {31\,-\,41},
+  Volume                   = {132},
+
+  Doi                      = {10.1007/s007060170142},
+  File                     = {:Allgemein\\TiO2-hydrophobic-Nakajima-2001.pdf:PDF},
+  Publisher                = {Springer},
+  Url                      = {http://dx.doi.org/10.1007/s007060170142}
+}
+
+@Article{Niem1995,
+  Title                    = {A generalized approach to partial discharge modeling},
+  Author                   = {L. Niemeyer},
+  Journal                  = {IEEE Transactions on Dielectrics and Electrical Insulation},
+  Year                     = {1995},
+  Number                   = {4},
+  Pages                    = {510\,-\,528},
+  Volume                   = {2},
+
+  Doi                      = {10.1109/94.407017},
+  File                     = {:DBD\\Niemeyer 95 generalized approach partial discharges.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1109/94.407017}
+}
+
+@Article{Noes04,
+  Title                    = {Plasma jet treatment of five polymers at atmospheric pressure: surface modifications and the relevance for adhesion},
+  Author                   = {M. Noeske and J. Degenhardt and S. Strudthoff and U. Lommatzsch},
+  Journal                  = {International Journal of Adhesion \& Adhesives},
+  Year                     = {2004},
+  Pages                    = {171\,-\,177},
+  Volume                   = {24},
+
+  Doi                      = {10.1016/j.ijadhadh.2003.09.006},
+  File                     = {:DBD\\Noeske03-plasma jet treatment.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1016/j.ijadhadh.2003.09.006}
+}
+
+@Article{Nord1928,
+  Title                    = {Zur Theorie der thermischen Emission und der Reflexion von Elektronen an Metallen},
+  Author                   = {L. Nordheim},
+  Journal                  = {Zeitschrift für Physik A Hadrons and Nuclei},
+  Year                     = {1928},
+
+  Month                    = {November},
+  Number                   = {11\,-\,12},
+  Pages                    = {833\,-\,855},
+  Volume                   = {46},
+
+  Doi                      = {10.1007/BF01391020},
+  File                     = {:DBD\\Nordheim-1928.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1007/BF01391020}
+}
+
+@Conference{Nuss09,
+  Title                    = {Micromixing Structures for Lab-on Chip Applications: Fabrication and Simulation of 90° Zigzag Microchann els in Dry Film Resist},
+  Author                   = {D. Nußbaum and D. Herrmann and T. Knoll and T. Velten},
+  Booktitle                = {4M\,/\,ICOMM 2009 Conference},
+  Year                     = {2009},
+  Pages                    = {215\,-\,218},
+
+  Doi                      = {10.1243/17547164C0012009041},
+  File                     = {:Photolacke\\Nußbaum-PerMX-2009.pdf:PDF},
+  Owner                    = {usti},
+  Url                      = {http://dx.doi.org/10.1243/17547164C0012009041}
+}
+
+@Article{Obri01,
+  Title                    = {Advanced photoresist technologies for microsystems},
+  Author                   = {J. O'Brien},
+  Journal                  = {J. Micromech. Microeng.},
+  Year                     = {2001},
+  Pages                    = {353\,-\,358},
+  Volume                   = {11},
+
+  Doi                      = {10.1088/0960-1317/11/4/312},
+  File                     = {OBrien01.pdf:Photolacke\\OBrien01.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1088/0960-1317/11/4/312}
+}
+
+@Article{Ohl1999,
+  Title                    = {Plasma-induced chemical micropatterning for cell culturing applications: a brief review},
+  Author                   = {A. Ohl and K. Schröder},
+  Journal                  = {Surf. Coat. Technol.},
+  Year                     = {1999},
+  Pages                    = {820\,-\,830},
+  Volume                   = {116},
+
+  Doi                      = {10.1016/S0257-8972(99)00150-4},
+  File                     = {:DBD\\Ohl-SEM grid pattern-1999.pdf:PDF},
+  Publisher                = {Elsevier},
+  Url                      = {\href{http://dx.doi.org/10.1016/S0257-8972(99)00150-4}{http://dx.doi.org/10.1016/S0257-8972(99)00150-4}}
+}
+
+@PhdThesis{Olss1998,
+  Title                    = {Valve-less Diffuser Micropumps},
+  Author                   = {Anders Olsson},
+  School                   = {School of Electrical Engineering, Royal Institute of Technology, Stockholm, Sweden},
+  Year                     = {1998},
+
+  File                     = {:Allgemein\\1998 Valve-less diffuser micropumps.pdf:PDF},
+  Url                      = {http://www.s3.kth.se/instrlab/research/dissertations/pdf/andersodoc.pdf}
+}
+
+@Article{Pan02,
+  Title                    = {A low-temperature wafer bonding technique using patternable materials},
+  Author                   = {C.-T. Pan and H. Yang and S.-C. Shen and M.-C. Chou and H.-P. Chou},
+  Journal                  = {J. Micromech. Microeng.},
+  Year                     = {2002},
+  Pages                    = {611\,-\,615},
+  Volume                   = {12},
+
+  Doi                      = {10.1088/0960-1317/12/5/315},
+  File                     = {Wafer-Bonding-Pan.pdf:Photolacke\\Wafer-Bonding-Pan.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1088/0960-1317/12/5/315}
+}
+
+@Article{Park01,
+  Title                    = {Discharge phenomena of an atmospheric pressure radio-frequency capacitive plasma source},
+  Author                   = {J. Park and I. Henins and H.W. Herrmann and G.S. Selwyn},
+  Journal                  = {J. Appl. Phys.},
+  Year                     = {2001},
+  Pages                    = {20\,-\,28},
+  Volume                   = {89},
+
+  Doi                      = {10.1063/1.1323753},
+  File                     = {:DBD\\Park01-Discharge phenomena.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1063/1.1323753}
+}
+
+@Article{Park05,
+  Title                    = {Nanoporous alumina as a dielectric for microcavity plasma devices: Multilayer {Al/AlO} structures},
+  Author                   = {S.-J. Park and K.S. Kim and J.G. Eden},
+  Journal                  = {Appl. Phys. Lett.},
+  Year                     = {2005},
+  Pages                    = {221501},
+  Volume                   = {86},
+
+  Doi                      = {10.1063/1.1923747},
+  File                     = {:DBD\\Park-Cavitiy Al2O3-2005.pdf:PDF},
+  Publisher                = {AIP},
+  Url                      = {http://dx.doi.org/10.1063/1.1923747}
+}
+
+@Article{Pasc1889,
+  Title                    = {{Ueber die zum Funkenübergang in Luft, Wasserstoff und Kohlensäure bei verschiedenen Drucken erforderliche Potentialdifferenz}},
+  Author                   = {F. Paschen},
+  Journal                  = {Annalen der Physik},
+  Year                     = {1889},
+  Number                   = {5},
+  Pages                    = {69\,-\,96},
+  Volume                   = {273},
+
+  Doi                      = {10.1002/andp.18892730505},
+  File                     = {:DBD\\Paschen-1889.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1002/andp.18892730505}
+}
+
+@Article{Payn02,
+  Title                    = {The Growth and Decay of Miniature Dielectric Barrier Discharges in Helium, Neon, and Argon},
+  Author                   = {W.G. Payne and B.W. James and I.S. Falconer},
+  Journal                  = {IEEE Trans. Plasma Sci.},
+  Year                     = {2002},
+  Pages                    = {170\,-\,171},
+  Volume                   = {30},
+
+  Doi                      = {10.1109/TPS.2002.1003978},
+  File                     = {Payne-Discharge-Growth-2002.pdf:DBD\\Payne-Discharge-Growth-2002.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1109/TPS.2002.1003978}
+}
+
+@Misc{PCI,
+  Title                    = {{PCI} Conventional specifications},
+
+  Author                   = {{PCI-SIG}},
+  HowPublished             = {Internet:\newline http://www.pcisig.com/specifications/conventional (accessed 08-01-2010)},
+
+  Url                      = {http://www.pcisig.com/specifications/conventional}
+}
+
+@Article{Pena04,
+  Title                    = {Plasma printing: patterned surface functionalisation and coating at atmospheric pressure},
+  Author                   = {C. Penache and C. Gessner and T. Betker and V. Bartels and C.-P. Klages},
+  Journal                  = {IEE Proc.-Nanobiotechnol.},
+  Year                     = {2004},
+  Pages                    = {139\,-\,144},
+  Volume                   = {151},
+
+  Booktitle                = {Proceedings. 2nd VDE World Microtechnologies Congress, October 13 - 15, 2003},
+  Doi                      = {10.1049/ip-nbt:20040836},
+  File                     = {:DBD\\Penache04-Printing.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1049/ip-nbt:20040836}
+}
+
+@Article{Phel1999,
+  Title                    = {Cold-cathode discharges and breakdown in argon: surface and gas phase production of secondary electrons},
+  Author                   = {A.V. Phelps and Z.Lj. Petrovic},
+  Journal                  = {Plasma Sources Sci. Technol.},
+  Year                     = {1999},
+  Pages                    = {21\,-\,44},
+  Volume                   = {8},
+
+  Doi                      = {10.1088/0963-0252/8/3/201},
+  File                     = {:DBD\\Phelps-Petrovic-Secondary-emission-1999.pdf:PDF},
+  Publisher                = {IOP PUBLISHING},
+  Url                      = {http://dx.doi.org/10.1088/0963-0252/8/3/201}
+}
+
+@Book{PMaEc,
+  Title                    = {Mathematical Ecology},
+  Author                   = {E.C. Pielou},
+  Publisher                = {John Wiley \& Sons},
+  Year                     = {1977}
+}
+
+@InProceedings{Rada07,
+  Title                    = {A {3D} Micromoxer Fabricated with Dry Film Resist},
+  Author                   = {A.D. Radadia and L. Cao and H.-K. Jeong and M.A. Shannon and R.I. Masel},
+  Booktitle                = {Proc. of MEMS 2007},
+  Year                     = {2007},
+  Pages                    = {361\,-\,364},
+
+  Doi                      = {10.1109/MEMSYS.2007.4433110},
+  File                     = {:Photolacke\\Radadia-3D micromixer-2007.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1109/MEMSYS.2007.4433110}
+}
+
+@Article{Radm07,
+  Title                    = {Modelling of breakdown behavior by {PIC/MCC} code with improved secondary emission models},
+  Author                   = {M. Radmilovic-Radjenovic and Z.L. Petrovic and B. Radjenovic},
+  Journal                  = {J. Phys.: Conf. Ser.},
+  Year                     = {2007},
+  Number                   = {1},
+  Pages                    = {012007},
+  Volume                   = {71},
+
+  Booktitle                = {Journal of Physics: Conference Series},
+  Doi                      = {10.1088/1742-6596/71/1/012007},
+  File                     = {:DBD\\Radjenovic-secondary-emisson-2007.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1088/1742-6596/71/1/012007}
+}
+
+@Article{Radu03,
+  Title                    = {Diagnostics of Dielectric Barrier Discharges in Noble Gases: Atmospheric Pressure Glow and Pseudoglow Discharges and Spatio-Temporal Patterns},
+  Author                   = {I. Radu and R. Bartnikas and G. Czeremuszkin and M.R. Wertheimer},
+  Journal                  = {IEEE Trans. Plasma Sci.},
+  Year                     = {2003},
+  Number                   = {3},
+  Pages                    = {411\,-\,421},
+  Volume                   = {31},
+
+  Doi                      = {10.1109/TPS.2003.811647},
+  File                     = {:DBD\\Radu-filament-noble-gases-2003.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1109/TPS.2003.811647}
+}
+
+@Article{Radu05,
+  Title                    = {Diagnostics and modelling of noble gas atmospheric pressure dielectric barrier discharges in homogeneous or diverging electric fields},
+  Author                   = {I. Radu and R. Bartnikas and M.R. Wertheimer},
+  Journal                  = {J. Phys. D: Appl. Phys.},
+  Year                     = {2005},
+  Pages                    = {539\,-\,546},
+  Volume                   = {38},
+
+  Doi                      = {10.1088/0022-3727/38/4/005},
+  File                     = {Radu-filament-noble-gases-2005.pdf:DBD\\Radu-filament-noble-gases-2005.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1088/0022-3727/38/4/005}
+}
+
+@Article{Rao05,
+  Title                    = {Microfabricated deposition nozzles for direct-write assembly of three-dimensional periodic structures},
+  Author                   = {R.B. Rao and K.L. Krafcik and A.M. Morales and J. Lewis},
+  Journal                  = {Adv. Mater.},
+  Year                     = {2005},
+  Number                   = {3},
+  Pages                    = {289\,-\,293},
+  Volume                   = {17},
+
+  Doi                      = {10.1002/adma.200400514},
+  File                     = {:Allgemein\\Rao-3D-ink-hexagonal-2005.pdf:PDF},
+  Publisher                = {Wiley-VCH Verlag GmbH},
+  Url                      = {http://dx.doi.org/10.1002/adma.200400514}
+}
+
+@Book{Rich1921,
+  Title                    = {The Emission of Electricity from Hot Bodies},
+  Author                   = {O.W. Richardson},
+  Publisher                = {Longmans, Green and co.},
+  Year                     = {1921},
+
+  Url                      = {http://www.worldcat.org/wcpa/oclc/946804}
+}
+
+@Book{RISP1974,
+  Title                    = {Introducction to Singular Perturbation},
+  Author                   = {Robert E. O'Malley, Jr.},
+  Publisher                = {Academic Press Inc.},
+  Year                     = {1974}
+}
+
+@Article{Sa12,
+  Title                    = {Analysis of nonautonomus two species system in a polluted environment},
+  Author                   = {G.P. Samanta},
+  Journal                  = {Mathematica Slovaca},
+  Year                     = {2012},
+  Pages                    = {567\,-\,586},
+  Volume                   = {62},
+
+  File                     = {:DBD\\Samanta-2012.pdf:PDF},
+  Publisher                = {Versita},
+  Url                      = {http://dx.doi.org/10.2478/s12175-012-0031-z}
+}
+
+@Article{SaMa4,
+  Title                    = {Dynamical model of a single-species system in a polluted environment},
+  Author                   = {G.P. Samanta and A. Maiti},
+  Journal                  = {Applied Mathematics and Computing},
+  Year                     = {2004},
+  Pages                    = {231\,-\,242},
+  Volume                   = {16},
+
+  File                     = {:DBD\\Dubey-Hussain-2000-33.pdf:PDF},
+  Publisher                = {Springer-Verlag},
+  Url                      = {http://dx.doi.org/10.1007/BF02936164}
+}
+
+@Article{Sarr06,
+  Title                    = {A study of atmospheric pressure plasma discharges for surface functionalization of {PTFE} used in biomedical applications},
+  Author                   = {C. Sarra-Bournet and S. Turgeon and D. Mantovani and G. Laroche},
+  Journal                  = {J. Phys. D: Appl. Phys.},
+  Year                     = {2006},
+  Number                   = {16},
+  Pages                    = {3461\,-\,3469},
+  Volume                   = {39},
+
+  Doi                      = {10.1088/0022-3727/39/16/S03},
+  File                     = {:DBD\\Sarra-Bournet-treatment-time-2006.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1088/0022-3727/39/16/S03}
+}
+
+@Article{Sawa1995,
+  Title                    = {Synthesis of plasma-polymerized tetraethoxysilane and hexamethyldisiloxane films prepared by atmospheric pressure glow discharge},
+  Author                   = {Y. Sawada and S. Ogawa and M. Kogoma},
+  Journal                  = {J. Phys. D: Appl. Phys.},
+  Year                     = {1995},
+  Pages                    = {1661\,-\,1661},
+  Volume                   = {28},
+
+  Doi                      = {10.1088/0022-3727/28/8/015},
+  File                     = {:DBD\\Sawada-TEOS-SiOx-1995.pdf:PDF},
+  Publisher                = {IOP PUBLISHING LTD},
+  Url                      = {http://dx.doi.org/10.1088/0022-3727/28/8/015}
+}
+
+@Article{Scho1999,
+  Title                    = {Ceramic parts patterned in the micrometer range},
+  Author                   = {U.P Schönholzer and L.J. Gauckler},
+  Journal                  = {Adv. Mater.},
+  Year                     = {1999},
+  Number                   = {8},
+  Pages                    = {630\,-\,632},
+  Volume                   = {11},
+
+  File                     = {:Allgemein\\Schoenholzer-KeramikStrukturiertSintern1-1999.pdf:PDF},
+  Publisher                = {WILEY-VCH Verlag GmbH Weinheim},
+  Url                      = {\href{http://www.cheric.org/research/tech/periodicals/doi.php?art_seq=646499}{http://www.cheric.org/research/tech/periodicals/doi.php?art\_seq=\newline 646499}}
+}
+
+@Article{Sche07,
+  Title                    = {Microstructured Electrode Arrays: Optical analysis of the Glow Discharge in a Magnified Electrode Gap},
+  Author                   = {A. Schenk and others},
+  Journal                  = {Plasma Process. Polym.},
+  Year                     = {2007},
+  Pages                    = {S927\,-\,S930},
+  Volume                   = {4},
+
+  Doi                      = {10.1002/ppap.200732301},
+  File                     = {:DBD\\Schenk-Optical-Analysis.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1002/ppap.200732301}
+}
+
+@Article{Scho04,
+  Title                    = {Self-organization in cathode boundary layer microdischarges},
+  Author                   = {K.H. Schoenbach and M. Moselhy and W. Shi},
+  Journal                  = {Plasma Sources Sci. Technol.},
+  Year                     = {2004},
+  Number                   = {1},
+  Pages                    = {177\,-\,185},
+  Volume                   = {13},
+
+  Doi                      = {10.1088/0963-0252/13/1/023},
+  File                     = {:DBD\\Schoenbach-FilamentDiameter-2004.pdf:PDF},
+  Publisher                = {Bristol, UK: IOP Pub.; Woodbury, NY: American Institute of Physics, c1991-},
+  Url                      = {http://dx.doi.org/10.1088/0963-0252/13/1/023}
+}
+
+@Article{Se11,
+  Title                    = {Stability of Limit Cycle in a Prey Predator System with Pollutant},
+  Author                   = {A. Sen and D. Mukhejee and B.C. Giri and P. Das},
+  Journal                  = {Applied Mathematical Sciences},
+  Year                     = {2011},
+  Pages                    = {1025\,-\,1036},
+  Volume                   = {5},
+
+  File                     = {:DBD\\Sen-Mukhejee-2011.pdf:PDF},
+  Publisher                = {Hikari Ltd},
+  Url                      = {http://www.m-hikari.com/ams/ams\-2011/ams\-21\-24\-2011 senAMS21-24-2011.pdf}
+}
+
+@Article{Si10A,
+  Title                    = {Modelling a predator-prey system with infected prey in polluted environment},
+  Author                   = {S. Sinha and O.P. Misra and J. Dhar},
+  Journal                  = {Applied Mathematical Modelling},
+  Year                     = {2010},
+  Pages                    = {1861\,-\,1872},
+  Volume                   = {34},
+
+  File                     = {:DBD\\Sinha-2-2010-14.pdf:PDF},
+  Publisher                = {Elsevier},
+  Url                      = {http://dx.doi.org/10.1016/j.apm.2009.10.003}
+}
+
+@Article{Si10B,
+  Title                    = {A two species competition model under the simultaneous effect of toxicant and disease},
+  Author                   = {S. Sinha and O.P. Misra and J. Dhar},
+  Journal                  = {Nonlinear Analysis: Real World Applications},
+  Year                     = {2010},
+  Pages                    = {1131\,-\,1142},
+  Volume                   = {11},
+
+  File                     = {:DBD\\Sinha-2010-3.pdf:PDF},
+  Publisher                = {Elsevier},
+  Url                      = {http://dx.doi.org/10.1016/j.nonrwa.2009.02.007}
+}
+
+@Article{Smit00,
+  Title                    = {Chemical vapour deposition of the oxides of titanium, zirconium and hafnium for use as high-k materials in microelectronic devices. A carbon-free precursor for the synthesis of hafnium dioxide},
+  Author                   = {R.C. Smith and others},
+  Journal                  = {Adv. Mater. Opt. and Electron.},
+  Year                     = {2000},
+  Number                   = {3-5},
+  Pages                    = {105\,-\,114},
+  Volume                   = {10},
+
+  Doi                      = {10.1002/1099-0712(200005/10)10:3/5<105::AID-AMO402>3.0.CO;2-J},
+  File                     = {:DBD\\Smith-Ti-and-others-2000.pdf:PDF},
+  Publisher                = {John Wiley \& Sons, Ltd. Chichester, UK},
+  Url                      = {\href{http://dx.doi.org/10.1002/1099-0712(200005/10)10:3/5<105::AID-AMO402>3.0.CO;2-J}{http://dx.doi.org/10.1002/1099-0712(200005/10)10:3/5<105::AID-AMO402>3.0.CO;2-J}}
+}
+
+@Book{Socr1994,
+  Title                    = {Infrared and Raman characteristic group frequencies: tables and charts},
+  Author                   = {G. Socrates},
+  Publisher                = {John Wiley \& Sons},
+  Year                     = {1994},
+  Edition                  = {2nd}
+}
+
+@Misc{Lightning,
+  Title                    = {Toronto thunderstorm},
+
+  Author                   = {J. R. Southern},
+  HowPublished             = {Internet: \newline http://en.wikipedia.org/wiki/File:Krunkwerke\_-\_IMG\_4515\_\%28by-sa\%29.jpg (accessed 07-09-2009)},
+
+  Url                      = {http://en.wikipedia.org/wiki/File:Krunkwerke_-_IMG_4515_%28by-sa%29.jpg}
+}
+
+@Article{Stoe10,
+  Title                    = {Porous photoresist stamps for selective plasma treatment},
+  Author                   = {U. Stöhr and others},
+  Journal                  = {Plasma Processes Polym.},
+  Year                     = {2010},
+  Number                   = {1},
+  Pages                    = {9\,-\,15},
+  Volume                   = {7},
+
+  Doi                      = {10.1002/ppap.200900063},
+  File                     = {:DBD\\Stöhr-PlasmaStampSinterMetal-2010.pdf:PDF},
+  Url                      = {\newline http://dx.doi.org/10.1002/ppap.200900063}
+}
+
+@Article{Stoe09,
+  Title                    = {Multilayer Photoresist Stamps for Selective Plasma Treatment in Micrometer Scales},
+  Author                   = {Uwe Stöhr and others},
+  Journal                  = {Plasma Process. Polym.},
+  Year                     = {2009},
+  Number                   = {4},
+  Pages                    = {228\,-\,233},
+  Volume                   = {6},
+
+  Doi                      = {10.1002/ppap.200800217},
+  File                     = {:DBD\\PlasmaPaper-Photoresist-finally-printed.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1002/ppap.200800217}
+}
+
+@Article{Stoe08,
+  Title                    = {High-resolution permanent photoresist laminate for microsystem applications},
+  Author                   = {U. Stöhr and P. Vulto and P. Hoppe and G. Urban and H. Reinecke},
+  Journal                  = {J. Micro/Nanolith. MEMS MOEMS},
+  Year                     = {2008},
+  Pages                    = {033009},
+  Volume                   = {7},
+
+  Doi                      = {10.1117/1.2964217},
+  File                     = {:Photolacke\\TMMFPaperSPIE-2Draft.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1117/1.2964217}
+}
+
+@Conference{Stal07,
+  Title                    = {{Silicon Carbide (SiC) D-MOS for grid-feeding solar-inverters}},
+  Author                   = {O. Stalter and B. Burger and S. Lehrmann},
+  Booktitle                = {European Conference on Power Electronics and Applications, 2007},
+  Year                     = {2007},
+  Pages                    = {1\,-\,10},
+
+  Doi                      = {10.1109/EPE.2007.4417654},
+  File                     = {:Allgemein\\Stalter-SiC-Inverters-2007.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1109/EPE.2007.4417654}
+}
+
+@Article{Star06,
+  Title                    = {Plasma assisted ignition and combustion},
+  Author                   = {S.M. Starikovskaia},
+  Journal                  = {J. Phys. D: Appl. Phys.},
+  Year                     = {2006},
+  Number                   = {16},
+  Pages                    = {R265\,-\,R299},
+  Volume                   = {39},
+
+  Doi                      = {10.1088/0022-3727/39/16/R01},
+  File                     = {:DBD\\Starikovskaia-Streamer-overview-2006.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1088/0022-3727/39/16/R01}
+}
+
+@Article{Step07,
+  Title                    = {Fast prototyping using a dry film photoresist: microfabrication of soft-lithography masters for microfluidic structures},
+  Author                   = {K. Stephan and others},
+  Journal                  = {J. Micromech. Microeng.},
+  Year                     = {2007},
+  Pages                    = {N69\,-\,N74},
+  Volume                   = {17},
+
+  Doi                      = {10.1088/0960-1317/17/10/N01},
+  File                     = {:Photolacke\\Stephan-DFR-Etertec-HQ-2007.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1088/0960-1317/17/10/N01}
+}
+
+@Article{Suk07,
+  Title                    = {Capillary flow control using hydrophobic patterns},
+  Author                   = {J.W. Suk and J. Cho},
+  Journal                  = {J. Micromech. Microeng.},
+  Year                     = {2007},
+  Number                   = {4},
+  Pages                    = {N11\,-\,N15},
+  Volume                   = {17},
+
+  Doi                      = {10.1088/0960-1317/17/4/N01},
+  File                     = {:Allgemein\\Suk-hydrophobic-channels-2007.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.1088/0960-1317/17/4/N01}
+}
+
+@Article{Tan06,
+  Title                    = {Localized Plasma Treatment of Poly(dimethylsiloxane) Surfaces and Its Application to Controlled Cell Cultivation},
+  Author                   = {H.M.L. Tan and T. Akagi and T. Ichiki},
+  Journal                  = {J. Photopolym. Sci. Technol.},
+  Year                     = {2006},
+  Pages                    = {245\,-\,250},
+  Volume                   = {19},
+
+  Doi                      = {10.2494/photopolymer.19.245},
+  File                     = {:DBD\\Tan06-Plasmajet.pdf:PDF},
+  Url                      = {http://dx.doi.org/10.2494/photopolymer.19.245}
+}
+
+@Misc{LyX,
+  Title                    = {LyX 1.6.x},
+
+  Author                   = {{The LyX Team}},
+  HowPublished             = {Internet: http://www.lyx.org},
+
+  Url                      = {http://www.lyx.org}
+}
+
+@Article{Ther03,
+  Title                    = {Chaotic mixing in three-dimensional microvascular networks fabricated by direct-write assembly},
+  Author                   = {D. Therriault and S.R. White and J.A. Lewis},
+  Journal                  = {Nature Materials},
+  Year                     = {2003},
+  Number                   = {4},
+  Pages                    = {265\,-\,271},
+  Volume                   = {2},
+
+  Doi                      = {10.1038/nmat863},
+  File                     = {:Allgemein\\Therriault-Ink-Channels-2003.pdf:PDF},
+  Publisher                = {Nature Publishing Group},
+  Url                      = {http://dx.doi.org/10.1038/nmat863}
+}
+
+@Book{TMPB2003,
+  Title                    = {Mathematics in Population Biology},
+  Author                   = {Horst R. Thieme},
+  Publisher                = {Princeton University Press},
+  Year                     = {2003}
+}
+
+@Article{ThoPE,
+  Title                    = {A Control Problem in a Polluted Environment},
+  Author                   = {D.M. Thomas and T.W. Snell and S.M. Jaffar},
+  Journal                  = {Mathematical Biosciences},
+  Year                     = {1996},
+  Pages                    = {139\,-\,163},
+  Volume                   = {133},
+
+  File                     = {:DBD\\Thomas-Snell-Jaffar-1996.pdf:PDF},
+  Publisher                = {Elsevier},
+  Url                      = {http://dx.doi.org/10.1016/0025-5564(95)00091-7}
+}
+
+@InProceedings{Thom06,
+  Title                    = {Coating with Atmospheric Pressure Plasma Processes: From Large Area to \textmu{}-Structures},
+  Author                   = {M. Thomas and M. Eichler and C.-P. Klages},
+  Booktitle                = {49th Annual Technical Conference Proceedings},
+  Year                     = {2006},
+  Organization             = {Society of Vacuum Coaters},
+
+  Url                      = {http://tinyurl.com/Thomas06}
+}
+
+@Article{Thom07,
+  Title                    = {Generation of Stable Coatings with Carboxylic Groups by Copolymerization of {MAA} and {VTMS} using {DBD} at Atmospheric Pressure},
+  Author                   = {M. Thomas and M. von Hausen and C.-P. Klages and P. Baumhof},
+  Journal                  = {Plasma Process. Polym.},
+  Year                     = {2007},
+  Pages                    = {S475\,-\,S481},
+  Volume                   = {4},
+
+  Doi                      = {10.1002/ppap.200731210},
+  File                     = {:DBD\\Thomas-Carboxy-groups-2007.pdf:PDF},
+  Publisher                = {WILEY-VCH Verlag Weinheim},
+  Url                      = {http://dx.doi.org/10.1002/ppap.200731210}
+}
+
+@Book{Town1910,
+  Title                    = {The Theory of Ionization of Gases by Collision},
+  Author                   = {J.S. Townsend},
+  Publisher                = {Constable},
+  Year                     = {1910},
+
+  Url                      = {http://www.worldcat.org/wcpa/oclc/8460026}
+}
+
+@Conference{Vult07,
+  Title                    = {Full wafer fabrication process for microfluidic glass chips with electroplated electrodes},
+  Author                   = {P. Vulto and G. Igel and G.A. Urban},
+  Booktitle                = {Solid-State Sensors, Actuators and Microsystems Conference, 2007. TRANSDUCERS 2007.},
+  Year                     = {2007},
+  Pages                    = {117\,-\,120},
+
+  Doi                      = {10.1109/SENSOR.2007.4300085},
+  File                     = {:Photolacke\\Vult07.pdf:PDF},
+  Journal                  = {Solid-State Sensors, Actuators and Microsystems Conference, 2007. TRANSDUCERS 2007.},
+  Url                      = {http://ieeexplore.ieee.org/xpls/abs\_all.jsp?arnumber=4300085}
+}
+
+@InProceedings{Vult06-2,
+  Title                    = {{tmRNA} purification by electrophoretic filtration for genomic identification of bacteria on-a-chip},
+  Author                   = {P. Vulto and C. Klaunick and G. Igel and G. Urban},
+  Booktitle                = {Proceedings of \textmu{}TAS 2006},
+  Year                     = {2006},
+  Pages                    = {377\,-\,379},
+  Volume                   = {2},
+
+  File                     = {:Photolacke\\tmRNA purification - MicroTAS2006.pdf:PDF}
+}
+
+@Article{Wan94,
+  Title                    = {Permanence of Population in a Polluted Environment},
+  Author                   = {W. Wang and Z. Ma},
+  Journal                  = {Mathematical Biosciences},
+  Year                     = {1994},
+  Pages                    = {235\,-\,248},
+  Volume                   = {122},
+
+  File                     = {:DBD\\Wang-1994.pdf:PDF},
+  Publisher                = {Elsevier},
+  Url                      = {http://dx.doi.org/10.1016/0025-5564(94)90060-4}
+}
+
+@Conference{Wash05,
+  Title                    = {Multilayer ultra thick resist development for {MEMS}},
+  Author                   = {Y. Washio and others},
+  Booktitle                = {Proceedings of SPIE},
+  Year                     = {2005},
+  Pages                    = {959},
+  Volume                   = {5753},
+
+  Doi                      = {10.1117/12.600227},
+  Url                      = {http://dx.doi.org/10.1117/12.600227}
+}
+
+@Article{XaLa01,
+  Title                    = {Effects of toxicants on a stage-structured population growth model},
+  Author                   = {Y. Xiao and L. Chen},
+  Journal                  = {Applied Mathematics and Computation},
+  Year                     = {2001},
+  Pages                    = {63\,-\,73},
+  Volume                   = {123},
+
+  File                     = {:DBD\\Xiao-Chen-2001-15.pdf:PDF},
+  Publisher                = {Elsevier},
+  Url                      = {http://dx.doi.org/10.1016/S0096-3003(00)00057-6}
+}
+
+@Book{Zha2013,
+  Title                    = {Matrix Theory},
+  Author                   = {X. Zhan},
+  Publisher                = {American Mathematical Society},
+  Year                     = {2013}
+}
+
+@Article{Ma95,
+  Title                    = {The threshold of survival for predator Prey Volterra system of three species in a polluted environment},
+  Author                   = {M. Zhien and L. Zhixue and J. Zhen and Z. Hengbao},
+  Journal                  = {Systems Science and Complexity},
+  Year                     = {1995},
+  Pages                    = {373\,-\,382},
+  Volume                   = {8},
+
+  Publisher                = {Systems Science and Complexity},
+  Url                      = {http://www.sysmath.com/jweb\_xtkxyfzx/EN/Y1995/V8/I4/373}
+}
+
+@Standard{GIT,
+  Title                    = {Sitio web oficial. git --everything-is-local},
+  Organization             = {Git},
+  Url                      = {http://git-scm.com/}
+}
+
+@Standard{GITHUB,
+  Title                    = {Sitio web oficial.},
+  Organization             = {GitHub},
+  Url                      = {https://github.com/}
+}
+
+@Standard{GITSH,
+  Title                    = {A Short History of Git},
+  Organization             = {Git},
+  Url                      = {http://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git}
+}
+
+@Standard{GITVC,
+  Title                    = {Getting Started - About Version Control},
+  Organization             = {Git},
+  Url                      = {http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control}
+}
+
+@Standard{ISO10780,
+  Title                    = {{ISO}~10780:1994, Stationary source emissions -- Measurement of velocity and volume flowrate of gas streams in ducts},
+  Organization             = {ISO},
+  Url                      = {http://www.iso.org/iso/catalogue\_detail.htm?csnumber=18855}
+}
+
